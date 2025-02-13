@@ -1,0 +1,144 @@
+/* Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    height: 3rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .menu-navbar {
+    display: flex;
+  }
+  
+  .menu-navbar-lista {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-navbar-lista-item {
+    margin: 0 1rem;
+  }
+  
+  .menu-navbar-lista-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .menu-navbar-lista-item a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+  }
+  
+  .menu-navbar-lista-item a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f39c12;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-navbar-lista-item a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Estilos del dropdown de idioma */
+  .idioma-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .idioma-dropdown {
+    position: absolute;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .idioma-dropdown button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .menu-navbar {
+      display: none;
+      flex-direction: column;
+      background: rgba(20, 20, 20, 0.95);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .menu-navbar.activo {
+      display: flex;
+    }
+  
+    .menu-navbar-lista {
+      flex-direction: column;
+    }
+  
+    .menu-navbar-lista-item {
+      margin: 1rem 0;
+    }
+  }
+  
