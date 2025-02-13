@@ -1,0 +1,16 @@
+.inicio{
+    padding-top: 5rem;
+    height: 100vh;
+    background-image: url(/assets/Imagenes/fondo.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.contenedor-contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}

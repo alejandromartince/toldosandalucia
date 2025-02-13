@@ -1,0 +1,67 @@
+.productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.productos-contenedor {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.productos-texto {
+  margin-bottom: 2rem;
+}
+
+.productos-titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.productos-descripcion {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.productos-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================
+=== Iconos Productos ======
+=========================*/
+
+.informacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding-top: 2rem;
+  color: var(--verde-oscuro);
+}
+
+.informacion h1 {
+  font-size: large;
+  padding: 1rem 0 1rem 0;
+}
+
+.informacion p {
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: smaller;
+}
+
+.imagenInfo {
+  width: 5rem;
+}
