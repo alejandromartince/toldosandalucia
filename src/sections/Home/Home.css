@@ -1,16 +1,72 @@
-.inicio{
-    padding-top: 5rem;
-    height: 100vh;
-    background-image: url(/assets/Imagenes/fondo.jpg);
-    background-size: cover;
-    background-position: center bottom;
+.inicio {
+  padding-top: 5rem;
+  height: 100vh;
+  background-image: url(/assets/Imagenes/fondoo.png);
+  background-size: cover;
+  background-position: center bottom;
 }
 
-.contenedor-contenido{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: white;
+.contenido-descripcion {
+  display: flex;
+  padding-right: 7rem;
+  padding-top: 3rem;
+  text-align: end; /* Alinea el texto a la derecha */
+  align-items: flex-start;
+  justify-content: flex-end; /* Empuja el contenido hacia la derecha */
+  height: 100%;
+  color: white;
+}
+
+.contenido-descripcion .descripcion {
+  width: 40%;
+}
+
+.logo-inicio {
+  width: 20%;
+  height: auto;
+}
+
+/*========================
+  =======CONTROL CANVAS=====
+  ==========================*/
+.contenido3d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width: 50%; /* Aumentado para que el Canvas se vea más grande */
+  height: 60vh; /* Aumentado para mejorar visibilidad */
+  padding-left: 3rem; /* Añadido margen izquierdo */
+  justify-content: space-between;
+}
+
+
+
+@media (max-width:768px) {
+
+    .contenido-descripcion{
+        padding:1rem 2rem 0;
+    }
+    .contenido-descripcion h1{
+        text-align: center;
+    }
+
+    .contenido-descripcion p{
+        text-align: justify;
+        padding-top: 1rem;
+    }
+    .contenido-descripcion .descripcion {
+      width: 100%;
+    }
+
+    .contenido3d {
+      width: 100%; /* Ajuste para pantallas pequeñas */
+      height: 50vh;
+      padding-left: 0;
+    }
+    
+    Canvas {
+      width: 90%; /* Más grande en móviles */
+    }
 }
