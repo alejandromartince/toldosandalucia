@@ -1,72 +1,168 @@
 .inicio {
+  position: relative;
   padding-top: 5rem;
-  height: 100vh;
+  height: 95vh;
   background-image: url(/assets/Imagenes/fondoo.png);
   background-size: cover;
   background-position: center bottom;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Izquierda ocupa 1fr, derecha 2fr */
+  align-items: center;
+  color: white; /* Asegura que el texto sea visible */
 }
 
-.contenido-descripcion {
-  display: flex;
-  padding-right: 7rem;
-  padding-top: 3rem;
-  text-align: end; /* Alinea el texto a la derecha */
-  align-items: flex-start;
-  justify-content: flex-end; /* Empuja el contenido hacia la derecha */
+.inicio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  color: white;
+  background: rgba(0, 0, 0, 0.397);
+  z-index: 0;
 }
 
-.contenido-descripcion .descripcion {
-  width: 40%;
+.inicio > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== IZQUIERDA: Imagen y Canvas ========== */
+.contenido-visual {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  height: 100%;
+  transition: background-color 0.3s ease;
+  grid-column: 1 / 2; /* Ocupa la primera columna */
+}
+
+.contenido3d {
+  width: 70vh;
+  margin-left: 5rem;
+  margin-top: 2rem;
+  height: 75%;
+  display: flex;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.473);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.541);
+  cursor: grab;
+}
+
+.contenido3d:active {
+  cursor: grabbing;
+}
+
+.contenedor-presupuesto {
+  display: flex;
+  justify-content: flex-start;
+  margin: 3rem 0 0 5rem;
+}
+
+.presupuesto {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-radius 0.5s ease;
+}
+
+.presupuesto:hover {
+  background-color: white;
+  color: black;
+  border-radius: 2rem;
+}
+
+.presupuesto:not(:hover) {
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+/* ========== DERECHA: Texto y Botón ========== */
+.contenido-texto {
+  grid-column: 2 / 3; /* Asegura que ocupe la segunda columna */
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye los elementos uniformemente */
+  color: white;
+  height: 85%;
+  padding: 1rem 3rem 1rem 0;
+}
+
+.contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-inicio {
-  width: 20%;
+  width: 60%; /* Ajusta el tamaño para que se vea bien */
   height: auto;
+  margin-bottom: 2rem;
 }
 
-/*========================
-  =======CONTROL CANVAS=====
-  ==========================*/
-.contenido3d {
+.descripcion {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  width: 50%; /* Aumentado para que el Canvas se vea más grande */
-  height: 60vh; /* Aumentado para mejorar visibilidad */
-  padding-left: 3rem; /* Añadido margen izquierdo */
-  justify-content: space-between;
+  text-align: justify; /* Cambiar a izquierda */
 }
 
+.descripcion h1 {
+  text-align: center;
+}
 
+.beneficios {
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 4rem;
+}
 
-@media (max-width:768px) {
+.beneficios h1 {
+  padding-bottom: 1rem;
+  text-align: center;
+}
 
-    .contenido-descripcion{
-        padding:1rem 2rem 0;
-    }
-    .contenido-descripcion h1{
-        text-align: center;
-    }
+.beneficios-lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
 
-    .contenido-descripcion p{
-        text-align: justify;
-        padding-top: 1rem;
-    }
-    .contenido-descripcion .descripcion {
-      width: 100%;
-    }
+.item-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem 0 1rem;
+  gap: 1rem;
+}
 
-    .contenido3d {
-      width: 100%; /* Ajuste para pantallas pequeñas */
-      height: 50vh;
-      padding-left: 0;
-    }
-    
-    Canvas {
-      width: 90%; /* Más grande en móviles */
-    }
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .inicio {
+    grid-template-columns: 1fr; /* Una sola columna */
+    text-align: center;
+  }
+
+  .contenido-texto {
+    padding-right: 0;
+    align-items: center;
+  }
+
+  .contenido-texto .descripcion {
+    width: 100%;
+  }
+
+  .contenido3d {
+    height: 50vh;
+  }
+
+  .contenedor-presupuesto {
+    margin-right: 2rem;
+  }
 }

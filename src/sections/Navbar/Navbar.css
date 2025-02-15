@@ -31,8 +31,6 @@
 =============================*/
 .qlwapp-close {
   position: relative;
-  font-size: 1rem;
-  color: white;
   cursor: pointer;
   display: inline-block;
 }
@@ -69,9 +67,13 @@
 
 .menu-navbar-lista a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.705);
+  transition: color 0.3s ease;
 }
 
+.menu-navbar-lista a:hover {
+  color: white;
+}
 .menu-navbar-lista-item {
   position: relative;
 }
@@ -131,6 +133,7 @@
   margin-top: 1.5rem;
   transform: translateY(-10px);
   visibility: hidden;
+  background-color: #0000006b;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 

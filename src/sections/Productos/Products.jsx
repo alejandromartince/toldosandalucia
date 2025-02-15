@@ -1,41 +1,15 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import { FaLightbulb, FaTools } from "react-icons/fa";
-import { IoArrowBack, IoArrowForward } from "react-icons/io5"; // Iconos de navegación
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+
 import CanvasLoader from "../../components/CanvasLoader";
-import CasaHome from "../../components/CasaHome"; // Modelo 1
-import Toldo from "../../components/Toldo"; // Modelo 2 (Ejemplo)
+import { getSlides } from "../../constants/slides"; // Importa la función
+
 import "./Products.css";
 
-const slides = [
-  {
-    id: 1,
-    title: "Diseño de toldos",
-    description:
-      "Diseñamos a medida toldos manuales, automatizados y domótica; rotulamos todo tipo de toldos.",
-    icon: <FaLightbulb size={60} />,
-    model: <CasaHome scale={1.2} position={[8, -6, 0]} />,
-  },
-  {
-    id: 2,
-    title: "Fabricación de toldos",
-    description:
-      "Trabajamos con más de 500 colores en lonas del tipo acrílicas, técnicas, ignífugas e impermeables.",
-    icon: <img src='/assets/Imagenes/lapiz.svg' alt='diseño' className='imagenInfo' />,
-    model: <Toldo scale={1.2} position={[8, -6, 0]} />, // Aquí puedes cambiar el modelo
-  },
-  {
-    id: 3,
-    title: "Instalación de toldos",
-    description:
-      "Tenemos el personal idóneo para la instalación de toldos en todo tipo de construcción.",
-    icon: <FaTools size={60} />,
-    model: <CasaHome scale={1.2} position={[8, -6, 0]} />, // Puedes usar otro modelo si tienes más
-  },
-];
-
 const Products = () => {
+  const slides = getSlides(); // Llama a la función dentro del componente
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

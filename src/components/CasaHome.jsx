@@ -9,7 +9,7 @@ const CasaHome = (props) => {
   const { nodes, materials } = useGLTF('/models/home.glb')
   return (
     <group {...props} dispose={null}>
-      <group position={[-0.099, 0, -0.309]} rotation={[-Math.PI / 2, 0, 0]} scale={0.225}>
+      <group position={[-0.099, 0.482, -0.309]} rotation={[-Math.PI / 2, 0, 0]} scale={0.225}>
         <mesh
           castShadow
           receiveShadow
@@ -235,24 +235,6 @@ const CasaHome = (props) => {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Object_46.geometry}
-          material={materials.SolarWorld_Aluminum_Blue}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_47.geometry}
-          material={materials.SolarWorld_Iron}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_48.geometry}
-          material={materials.SolarWorld_Plastic_White}
-        />
-        <mesh
-          castShadow
-          receiveShadow
           geometry={nodes.Object_49.geometry}
           material={materials.Specialty_Equipment}
         />
@@ -322,17 +304,615 @@ const CasaHome = (props) => {
           geometry={nodes.Object_8.geometry}
           material={materials.Cabinet}
         />
+      </group>
+      <group
+        position={[-1.693, 0, -0.436]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={[0.059, 0.06, 0.042]}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Object_9.geometry}
-          material={materials.Cabinets}
+          geometry={nodes.Object_2001.geometry}
+          material={materials['Material.003']}
+          scale={0.818}
         />
       </group>
-      <mesh castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.Material} />
+      <group
+        position={[-6.536, -0.227, 0.995]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+        scale={[0.004, 0.008, 0.008]}>
+        <group rotation={[Math.PI / 2, 0, 0]}>
+          <group position={[0, 322.796, 0]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Group_001_1_Mat_0.geometry}
+              material={materials.material}
+              position={[0, 0, 3.499]}
+              scale={[1, 1, 1.385]}
+            />
+          </group>
+        </group>
+      </group>
+      <group position={[-4.277, 0.002, 3.908]} rotation={[-Math.PI / 2, 0, 0]} scale={0.024}>
+        <group position={[-36.009, -36.92, -0.159]}>
+          <group position={[25.433, 51.289, 0]} rotation={[0, 0, 0.034]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2020.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 0, 0]}
+              rotation={[-Math.PI, 0, 0]}
+              scale={-1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2021.geometry}
+              material={materials.Color_C09}
+              position={[2, 0.239, 18.134]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2022.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 20.274, 36.655]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2023.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 18.618, 28.224]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2024.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.722, 33.845]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2025.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.17, 31.034]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2019.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[18, 0, 0]}
+            />
+          </group>
+          <group position={[44.92, 21.043, 0]} rotation={[0, 0, Math.PI]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2027.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 0, 0]}
+              rotation={[-Math.PI, 0, 0]}
+              scale={-1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2028.geometry}
+              material={materials.Color_C09}
+              position={[2, 0.24, 18.134]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2029.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 20.274, 36.655]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2030.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 18.618, 28.224]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2031.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.722, 33.845]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2032.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.17, 31.034]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2026.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[18, 0, 0]}
+            />
+          </group>
+          <group position={[21.043, 27.355, 0]} rotation={[0, 0, Math.PI / 2]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2034.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 0, 0]}
+              rotation={[-Math.PI, 0, 0]}
+              scale={-1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2035.geometry}
+              material={materials.Color_C09}
+              position={[2, 0.24, 18.134]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2036.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 20.274, 36.655]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2037.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 18.618, 28.224]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2038.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.722, 33.845]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2039.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.17, 31.034]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2033.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[18, 0, 0]}
+            />
+          </group>
+          <group position={[49.569, 49.057, 0]} rotation={[0, 0, -1.66]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2013.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 0, 0]}
+              rotation={[Math.PI, 0, 0]}
+              scale={-1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2014.geometry}
+              material={materials.Color_C09}
+              position={[2, 0.239, 18.134]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2015.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 20.274, 36.655]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2016.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 18.618, 28.224]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2017.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.722, 33.845]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2018.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[2.5, 19.17, 31.034]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2012.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[18, 0, 0]}
+            />
+          </group>
+          <group position={[15.009, 74.92, 0]} rotation={[-Math.PI, 0, -Math.PI]} scale={-1}>
+            <group position={[1.557, 18.315, 32.5]}>
+              <group position={[0, 0, 1.5]}>
+                <mesh
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Material2003.geometry}
+                  material={materials.Vidrio}
+                />
+                <mesh
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Material2004.geometry}
+                  material={materials.Vidrio}
+                />
+              </group>
+              <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Material2002.geometry}
+                material={materials['0135_gris_mximo']}
+              />
+            </group>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[25.584, 32.481, 0]}
+              rotation={[0, 0, -1.368]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2001.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[15.87, 33.026, 0]}
+              rotation={[0, 0, -2.962]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2005.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[13.029, 29.929, 20.872]}
+            />
+          </group>
+          <group position={[15.009, -1.08, 0]}>
+            <group position={[1.557, 18.315, 32.5]}>
+              <group position={[0, 0, 1.5]}>
+                <mesh
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Material2009.geometry}
+                  material={materials.Vidrio}
+                />
+                <mesh
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Material2010.geometry}
+                  material={materials.Vidrio}
+                />
+              </group>
+              <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Material2008.geometry}
+                material={materials['0135_gris_mximo']}
+              />
+            </group>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2006.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[25.584, 32.481, 0]}
+              rotation={[0, 0, -1.368]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2007.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[15.87, 33.026, 0]}
+              rotation={[0, 0, -2.962]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Material2011.geometry}
+              material={materials['0135_gris_mximo']}
+              position={[13.029, 29.929, 20.872]}
+            />
+          </group>
+        </group>
+      </group>
+      <group position={[-2.21, 2.05, 3.848]} rotation={[-Math.PI / 2, 0, 0]} scale={[2.196, 1, 1]}>
+        <group rotation={[Math.PI / 2, 0, 0]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Awning_Awning_0.geometry}
+            material={materials['Awning.001']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={0.025}
+          />
+        </group>
+      </group>
+      <group
+        position={[-6.663, 0, -4.067]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={[1.019, 0.933, 0.933]}>
+        <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh1__18_0.geometry}
+            material={materials['material.001']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh1_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh1_Translucent_Glass_Gray_0.geometry}
+            material={materials.Translucent_Glass_Gray}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh8__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh9_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh10__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh11_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh12__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh13_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh2__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh3_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh14__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh15_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh16__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh17_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh18__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh19_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh20__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh21_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh22__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh23_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh24__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh25_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh26__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh27_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh28__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh29_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh30__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh31_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh32__18_0.geometry}
+            material={materials['material.001']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh32_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh32_Translucent_Glass_Gray_0.geometry}
+            material={materials.Translucent_Glass_Gray}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh33__18_0.geometry}
+            material={materials['material.001']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh34__18_0.geometry}
+            material={materials['material.001']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh4__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh5_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh7_M_7016_Antracietgrijs_0.geometry}
+            material={materials.M_7016_Antracietgrijs}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh6__2_0.geometry}
+            material={materials.material_3}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh35__18_0.geometry}
+            material={materials['material.001']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh35__4_0.geometry}
+            material={materials.material_6}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Mesh35_Carpet_Berber_Pattern_Gray_0.geometry}
+            material={materials.Carpet_Berber_Pattern_Gray}
+          />
+        </group>
+      </group>
     </group>
   )
 }
 
 useGLTF.preload('/models/home.glb')
+
 export default CasaHome

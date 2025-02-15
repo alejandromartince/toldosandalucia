@@ -61,8 +61,8 @@ const Navbar = () => {
                 src="https://animatedicons.co/get-icon?name=Calling%20V4&style=minimalistic&token=859dc27a-a900-4715-b449-a72e5ee0270a"
                 trigger="loop-on-hover"
                 attributes='{"variationThumbColour":"#FFFFFF","variationName":"Normal","variationNumber":1,"numberOfGroups":1,"backgroundIsGroup":false,"strokeWidth":0.5,"defaultColours":{"group-1":"#000000","background":"#FFFFFF"}}'
-                height="2.5rem"
-                width="2.5rem"
+                height="2.1rem"
+                width="2.1rem"
               ></animated-icons>
             </p>
           </a>
