@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll"; // Importa Link desde react-scroll
 import { useIdioma } from "../../contexts/IdiomaContext";
 import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
@@ -7,19 +8,6 @@ const Navbar = () => {
   const { idioma, cambiarIdioma } = useIdioma();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  // Cargar el script para animated-icons
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://animatedicons.co/scripts/embed-animated-icons.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Limpiar el script cuando el componente se desmonte
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,44 +32,37 @@ const Navbar = () => {
       <nav className="menu">
         {/* Zona Izquierda: Logo */}
         <div className="menu-izquierda">
-          <a
-            className="qlwapp-toggle"
-            data-action="open"
-            data-phone="34679847618"
-            data-message=""
-            role="button"
-            tabIndex="0"
-            target="_blank"
-            href="https://web.whatsapp.com/send?phone=34679847618&text="
-            style={{ textDecoration: "none" }}
-          >
-            <p className="qlwapp-icon qlwapp-whatsapp-icon"></p>
-            <p className="qlwapp-close" data-action="close">
-              <animated-icons
-                src="https://animatedicons.co/get-icon?name=Calling%20V4&style=minimalistic&token=859dc27a-a900-4715-b449-a72e5ee0270a"
-                trigger="loop-on-hover"
-                attributes='{"variationThumbColour":"#FFFFFF","variationName":"Normal","variationNumber":1,"numberOfGroups":1,"backgroundIsGroup":false,"strokeWidth":0.5,"defaultColours":{"group-1":"#000000","background":"#FFFFFF"}}'
-                height="2.1rem"
-                width="2.1rem"
-              ></animated-icons>
-            </p>
-          </a>
+          <Link to="inicio" smooth={true} duration={500} offset={-50} className="logo">
+            <img
+              src="../assets/Logo/Logo_Transparent.png"
+              alt="logo"
+              style={{ height: "2rem" }}
+            />
+          </Link>
         </div>
 
         {/* Zona Central: Menú de navegación */}
         <div className={`menu-centro ${isMenuOpen ? "activo" : ""}`}>
           <ul className="menu-navbar-lista">
             <li className="menu-navbar-lista-item subrayado">
-              <a href="/">{idioma === "es" ? "Inicio" : "Home"}</a>
+              <Link to="inicio" smooth={true} duration={500} offset={-50}>
+                {idioma === "es" ? "Inicio" : "Home"}
+              </Link>
             </li>
             <li className="menu-navbar-lista-item subrayado">
-              <a href="/">{idioma === "es" ? "Productos" : "Products"}</a>
+              <Link to="productos" smooth={true} duration={500} offset={-50}>
+                {idioma === "es" ? "Productos" : "Products"}
+              </Link>
             </li>
             <li className="menu-navbar-lista-item subrayado">
-              <a href="/">{idioma === "es" ? "Contacto" : "Contact"}</a>
+              <Link to="contacto" smooth={true} duration={500} offset={-50}>
+                {idioma === "es" ? "Contacto" : "Contact"}
+              </Link>
             </li>
             <li className="menu-navbar-lista-item subrayado">
-              <a href="/">{idioma === "es" ? "Blog" : "Blog"}</a>
+              <Link to="blog" smooth={true} duration={500} offset={-50}>
+                {idioma === "es" ? "Blog" : "Blog"}
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,8 +1,9 @@
 .navbar {
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.856),
-    rgba(0, 0, 0, 0.001)
+    #000000ee 0%,     /* Negro en la parte superior */
+    #00000096 70%,    /* Mantiene el negro hasta el 90% */
+    rgba(0, 0, 0, 0) 100% /* Se vuelve más transparente al final */
   );
   width: 100%;
   position: fixed;
@@ -27,15 +28,15 @@
 }
 
 /* ============================= 
-====== ZONA IZQUIERDA ==========
+====== ZONA IZQUIERDA ========== 
 =============================*/
-.qlwapp-close {
+.logo {
   position: relative;
   cursor: pointer;
   display: inline-block;
 }
 
-.qlwapp-close::after {
+.logo::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -48,7 +49,7 @@
   transition: transform 0.3s ease;
 }
 
-.qlwapp-close:hover::after {
+.logo:hover::after {
   transform: scaleX(1);
 }
 
@@ -66,13 +67,14 @@
 }
 
 .menu-navbar-lista a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.705);
+  color: rgb(204, 204, 204);
   transition: color 0.3s ease;
+  cursor: pointer;
+
 }
 
 .menu-navbar-lista a:hover {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .menu-navbar-lista-item {
   position: relative;
@@ -257,5 +259,4 @@
   .idioma-container.activo .idioma-button {
     display: none;
   }
-
 }

@@ -1,25 +1,10 @@
+/* =============================================
+========== PAGINA PRINCIPAL =================== */
 .inicio {
   position: relative;
-  padding-top: 5rem;
-  height: 95vh;
-  background-image: url(/assets/Imagenes/fondoo.png);
-  background-size: cover;
-  background-position: center bottom;
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* Izquierda ocupa 1fr, derecha 2fr */
-  align-items: center;
+  height: 100vh;
   color: white; /* Asegura que el texto sea visible */
-}
-
-.inicio::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.397);
-  z-index: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .inicio > * {
@@ -27,36 +12,37 @@
   z-index: 1;
 }
 
-/* ========== IZQUIERDA: Imagen y Canvas ========== */
-.contenido-visual {
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
+/* =============================================
+========== GRID =============================== */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Izquierda ocupa 1fr, derecha 2fr */
   height: 100%;
-  transition: background-color 0.3s ease;
-  grid-column: 1 / 2; /* Ocupa la primera columna */
 }
 
+/* =============================================
+========== CONTENIDO 3D ====================== */
 .contenido3d {
-  width: 70vh;
-  margin-left: 5rem;
-  margin-top: 2rem;
-  height: 75%;
   display: flex;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.473);
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.541);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  grid-column: span 1; /* Ocupa la primera columna de la izquierda */
+  height: 100%;
+  flex-direction: column;
+}
+
+.casa{
+  height: 80%;
+  width: 90%;
   cursor: grab;
 }
 
-.contenido3d:active {
+.casa:active{
   cursor: grabbing;
-}
-
-.contenedor-presupuesto {
-  display: flex;
-  justify-content: flex-start;
-  margin: 3rem 0 0 5rem;
+  .presupuesto{
+    display: none;
+  }
 }
 
 .presupuesto {
@@ -70,99 +56,46 @@
 
 .presupuesto:hover {
   background-color: white;
-  color: black;
+  color: rgb(0, 0, 0);
   border-radius: 2rem;
 }
 
 .presupuesto:not(:hover) {
   transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
-/* ========== DERECHA: Texto y Botón ========== */
-.contenido-texto {
-  grid-column: 2 / 3; /* Asegura que ocupe la segunda columna */
-  margin-left: 4rem;
+
+/* =============================================
+========== INFORMACION ====================== */
+.informacion {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribuye los elementos uniformemente */
-  color: white;
-  height: 85%;
-  padding: 1rem 3rem 1rem 0;
-}
-
-.contenedor-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-inicio {
-  width: 60%; /* Ajusta el tamaño para que se vea bien */
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-.descripcion {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: justify; /* Cambiar a izquierda */
-}
-
-.descripcion h1 {
-  text-align: center;
-}
-
-.beneficios {
-  width: 100%;
-  border-radius: 1rem;
-  margin-top: 4rem;
-}
-
-.beneficios h1 {
-  padding-bottom: 1rem;
-  text-align: center;
-}
-
-.beneficios-lista {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  gap: 0.2rem;
-}
-
-.item-lista {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem 0 1rem;
   gap: 1rem;
+  grid-column: span 2; /* Ocupa las dos columnas de la derecha */
+  background-image: url('/assets/Imagenes/fondoo.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem;
+  position: relative; /* Necesario para el pseudo-elemento */
 }
 
-/* ======= RESPONSIVE ======= */
-@media (max-width: 768px) {
-  .inicio {
-    grid-template-columns: 1fr; /* Una sola columna */
-    text-align: center;
-  }
+.informacion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.336); /* Ajusta la opacidad según lo oscuro que quieras */
+  z-index: 0;
+}
 
-  .contenido-texto {
-    padding-right: 0;
-    align-items: center;
-  }
-
-  .contenido-texto .descripcion {
-    width: 100%;
-  }
-
-  .contenido3d {
-    height: 50vh;
-  }
-
-  .contenedor-presupuesto {
-    margin-right: 2rem;
-  }
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  gap: 1rem;
+  padding: 0 10rem;
+  position: relative; /* Para que el texto esté por encima del oscurecimiento */
+  z-index: 1;
 }
