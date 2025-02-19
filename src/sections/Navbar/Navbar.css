@@ -1,0 +1,13 @@
+.nav-container{
+  position: fixed;
+}
+
+.nav_link {
+  color: #000;
+  text-decoration: none;
+}
+
+.active_link {
+  color: #ff0000; /* Cambia el color o estilo que quieras para el enlace activo */
+  font-weight: bold;
+}
