@@ -5,6 +5,8 @@ import CasaHome from "../components/CasaHome";
 import Terraza from "../components/Terraza";
 import Pergola from "../components/Pergola";
 import Capota from "../components/Capota";
+import Veranda from "../components/Veranda";
+import Cofre from "../components/Cofre";
 
 export const getSlides = () => {
   const { idioma } = useIdioma(); // Accedemos al idioma desde el contexto
@@ -17,7 +19,7 @@ export const getSlides = () => {
         idioma === "es"
           ? "Los toldos veranda son estructuras retráctiles que protegen del sol y la lluvia en terrazas y jardines. Ofrecen sombra ajustable y están hechos de materiales resistentes como aluminio y telas impermeables."
           : "Veranda awnings are retractable structures that protect from sun and rain in terraces and gardens. They offer adjustable shade and are made of durable materials like aluminum and waterproof fabrics.",
-      model: <CasaHome scale={1.2} position={[8, -6, 0]} />,
+      model: <Veranda scale={1} position={[0, 0, 0]} />,
     },
     {
       id: 2,
@@ -48,7 +50,7 @@ export const getSlides = () => {
           ? "Los toldos cofre son toldos retráctiles que se alojan en un cofre protector cuando se retraen. Este diseño mantiene la tela a salvo de los elementos climáticos, garantizando una mayor durabilidad. Son ideales para terrazas y ventanas, proporcionando una apariencia limpia y moderna mientras ofrecen una protección solar efectiva."
           : "Cassette awnings are retractable awnings that are housed in a protective cassette when retracted. This design keeps the fabric safe from weather elements, ensuring longer durability. Ideal for terraces and windows, it provides a clean, modern look while offering effective sun protection.",
       
-      model: <Terraza scale={1.2} position={[8, -6, 0]} />,
+      model: <Cofre scale={.1} position={[0, 0, 0]} />,
     },
     
     {
@@ -81,7 +83,7 @@ export const getSlides = () => {
           ? "La capota es una cubierta retráctil utilizada comúnmente en ventanas o vehículos para proporcionar sombra y protección contra los elementos. Está diseñada para una fácil instalación y remoción, y puede ser controlada manualmente o de manera automática. Ofrece una solución práctica para proteger espacios exteriores y mejorar la comodidad."
           : "A hood is a retractable cover often used on windows or vehicles to provide shade and protection from the elements. Typically designed for easy installation and removal, it can be manually or automatically controlled. It offers a practical solution for protecting outdoor spaces and improving comfort.",
       
-      model: <Capota scale={1.2} position={[0, 0, 10]} />,
+      model: <Capota scale={1} position={[0, 0, 10]} />,
     },    
   ];
 

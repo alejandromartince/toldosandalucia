@@ -33,3 +33,20 @@ export const useCasaHomeControls = () => ({
   CasaRotationY: 0,
   CasaRotationZ: 0,
 });
+
+export const useToldosControls = () => ({
+  // Para la cámara
+  CameraPosX: 30.85,
+  CameraPosY: 6.2,
+  CameraPosZ: 12.8,
+  CameraFov: 45,
+
+  // Para la luz ambiental
+  AmbientLightIntensity: 1,
+
+  // Para la luz direccional
+  DirectionalLightPosX: -4.2,
+  DirectionalLightPosY: 24.4,
+  DirectionalLightPosZ: 6.2,
+  DirectionalLightIntensity: 1.8,
+});

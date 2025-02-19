@@ -5,6 +5,7 @@ import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 import CanvasLoader from "../../components/CanvasLoader";
 import { getSlides } from "../../constants/slides"; // Importa la función
+import { useToldosControls } from "../../constants/levaControls";
 
 import { useIdioma } from "../../contexts/IdiomaContext"; // Usa el contexto de idioma
 
@@ -25,10 +26,22 @@ const Products = () => {
     );
   };
 
+  const {
+    CameraPosX,
+    CameraPosY,
+    CameraPosZ,
+    CameraFov,
+    AmbientLightIntensity,
+    DirectionalLightIntensity,
+    DirectionalLightPosX,
+    DirectionalLightPosY,
+    DirectionalLightPosZ,
+  } = useToldosControls();
+
   return (
     <section className="products" id="products">
       <h1 className="titulo-productos">
-        {idioma === 'es' ? 'Nuestros Productos' : 'Our Products'}
+        {idioma === "es" ? "Nuestros Productos" : "Our Products"}
       </h1>
       <div className="productos-contenedor">
         {/* Izquierda: Slider de Texto */}
@@ -50,13 +63,33 @@ const Products = () => {
         {/* Derecha: Canvas con el Modelo */}
         <div className="productos-canvas">
           <Canvas style={{ height: "70vh", width: "100%" }}>
-            <PerspectiveCamera makeDefault position={[0, 15, 50]} fov={45} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[5, 10, 5]} intensity={1.5} />
+            <PerspectiveCamera
+              makeDefault
+              position={[CameraPosX, CameraPosY, CameraPosZ]}
+              fov={CameraFov}
+            />
+            <ambientLight intensity={AmbientLightIntensity} />
+            <directionalLight
+              position={[
+                DirectionalLightPosX,
+                DirectionalLightPosY,
+                DirectionalLightPosZ,
+              ]}
+              intensity={DirectionalLightIntensity}
+            />
             <Suspense fallback={<CanvasLoader />}>
+              <group scale={0.5}>
               {slides[currentIndex].model}
+                <OrbitControls
+                  makeDefault
+                  enableRotate={true}
+                  // maxPolarAngle={Math.PI / 2}
+                  maxDistance={15}
+                  minDistance={5}
+                  enablePan={true}
+                />
+              </group>
             </Suspense>
-            <OrbitControls enableRotate enableZoom={false} />
           </Canvas>
         </div>
       </div>
