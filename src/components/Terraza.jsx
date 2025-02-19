@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const Toldo = (props) => {
-  const { nodes, materials } = useGLTF('/models/cc0_-_awning.glb')
+  const { nodes, materials } = useGLTF('/models/tterraza.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -25,5 +25,5 @@ const Toldo = (props) => {
   )
 }
 
-useGLTF.preload('/models/cc0_-_awning.glb')
+useGLTF.preload('/models/tterraza.glb')
 export default Toldo
