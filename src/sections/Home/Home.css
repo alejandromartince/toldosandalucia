@@ -119,7 +119,7 @@
   grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
   gap: 2rem; /* Espacio entre columnas */
   margin-top: 1rem;
-  padding: 0 2rem;
+  padding: 0 5rem;
 }
 
 .beneficio-item {
@@ -129,12 +129,22 @@
 }
 
 .beneficio-item img {
-  width: 20%;
+  width: 24%;
   height: auto;
   max-width: 300px; /* Controla el tamaño máximo de las imágenes */
 }
 
 .beneficio-item p {
-  text-align: center; /* Centra el texto debajo de las imágenes */
+  text-align: justify; /* Centra el texto debajo de las imágenes */
   margin-top: 1rem; /* Espacio entre la imagen y la descripción */
+  word-spacing: -.2rem;
 }
+
+.beneficio-item p:first-of-type {
+  word-spacing: -0.3rem; /* Ajusta el valor según lo necesites */
+}
+
+
+
+
+

@@ -100,19 +100,19 @@ const Navbar = () => {
               activeSection === "products" ? "active_link" : ""
             }`}
             spy={true}
-            offset={0}
+            offset={-65}
           >
             {idioma === "es" ? "Productos" : "Products"}
           </Link>
           <Link
-            to="contact"
+            to="contacto"
             smooth={true}
             duration={300}
             className={`nav_link ${
-              activeSection === "contact" ? "active_link" : ""
+              activeSection === "contacto" ? "active_link" : ""
             }`}
             spy={true}
-            offset={0}
+            offset={-60}
           >
             {idioma === "es" ? "Contacto" : "Contact"}
           </Link>

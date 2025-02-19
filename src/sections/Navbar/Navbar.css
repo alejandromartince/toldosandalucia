@@ -1,9 +1,10 @@
-.nav-container{
+.nav-container {
   background: linear-gradient(
     to bottom,
-    #000000ee 0%,     /* Negro en la parte superior */
-    #00000096 70%,    /* Mantiene el negro hasta el 90% */
-    rgba(0, 0, 0, 0) 100% /* Se vuelve más transparente al final */
+    #000000ee 0%,
+    /* Negro en la parte superior */ #00000096 75%,
+    /* Mantiene el negro hasta el 90% */ rgba(0, 0, 0, 0) 100%
+      /* Se vuelve más transparente al final */
   );
   width: 100%;
   position: fixed;
@@ -18,7 +19,6 @@
   align-items: center;
   padding: 0 2rem;
 }
-
 
 /* ============================= 
 ====== ZONA IZQUIERDA ========== 
@@ -68,6 +68,7 @@
   padding: 0.1rem 0;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .nav_link:not(.active_link):after {
@@ -92,7 +93,6 @@
   border-bottom: 2px solid var(--verde-logo);
 }
 
-
 /* ==================================
 =========== MENU DERECHA ===========
 ===================================*/
@@ -107,41 +107,49 @@
 /* ============================ 
       Language Selector
 ============================ */
+/* Contenedor del selector de idioma */
 .language-container {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Botón que abre el menú */
 .language-button {
   border: none;
-  background: none;
+  background: transparent; /* Mismo fondo que el menú */
   color: white;
   cursor: pointer;
   transition: transform 0.3s ease;
-  height: 100%;
-  width: 100%;
+  height: 2.5rem; /* Ajusta la altura */
+  width: 4rem; /* Ajusta el ancho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .language-button:hover {
   transform: scale(1.1);
 }
 
+/* Menú desplegable */
 .language-dropdown {
   position: absolute;
-  border-top: 0.1rem solid white;
   top: 100%;
   right: 0;
   opacity: 0;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem; /* Reduce la separación */
   transform: translateY(-10px);
   visibility: hidden;
-  background-color: #0000006b;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  border-radius: 5px;
+  width: 100%; /* Igual al botón */
+  text-align: center;
 }
 
-.language-dropdown li:hover {
-  background-color: rgb(0, 0, 0);
-}
-
+/* Mostrar el menú al hacer focus o al pasar el mouse */
 .language-button:focus + .language-dropdown,
 .language-dropdown:hover {
   opacity: 1;
@@ -149,10 +157,12 @@
   visibility: visible;
 }
 
+/* Elementos dentro del menú */
 .language-dropdown li {
-  text-align: center;
   list-style-type: none;
   transition: background-color 0.3s ease;
+  margin: 0.3rem 0; /* Agrega espacio vertical entre opciones */
+
 }
 
 .language-dropdown li button {
@@ -162,8 +172,13 @@
   cursor: pointer;
   padding: 0.5rem;
   font-size: inherit;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.703);
 }
 
+
+
+/* Ajuste de la bandera */
 .language-flag {
   height: 1rem;
 }
@@ -171,6 +186,7 @@
 .language-flag.special {
   padding: 0.5rem;
 }
+
 
 /* Hamburger menu button */
 .menu-button {

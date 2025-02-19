@@ -1,3 +1,123 @@
-.products{
-    height: 100vh;
+/* ==============================================
+   GENERAL STYLES
+==============================================*/
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.titulo-productos {
+  font-size: 2.5rem;
+  color: var(--verde-logo);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.productos-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 3rem;
+}
+
+.productos-slider {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  justify-content: space-between; /* Distribuye el contenido */
+}
+
+.productos-slider:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.productos-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.productos-slide h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.productos-slide p {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.productos-controles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto; /* Empuja los botones hacia abajo */
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.productos-btn {
+  background: none;
+  border: 2px solid var(--verde-logo);
+  color: var(--verde-logo);
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.productos-btn:hover {
+  background-color: var(--verde-oscuro);
+  color: white;
+}
+
+.productos-canvas {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ==============================================
+   RESPONSIVE STYLES
+==============================================*/
+@media (max-width: 768px) {
+  .productos-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .productos-slider {
+    padding: 1.5rem;
+  }
+
+  .productos-slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .productos-slide p {
+    font-size: 1rem;
+  }
+
+  .productos-btn {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
 }
