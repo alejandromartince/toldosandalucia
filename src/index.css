@@ -27,6 +27,7 @@
   /* Establecer la tipografía global */
   body {
     font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
+    background-color: rgba(0, 0, 0, 0.899);
   }
   
   html{

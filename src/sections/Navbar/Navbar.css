@@ -1,13 +1,183 @@
 .nav-container{
+  background: linear-gradient(
+    to bottom,
+    #000000ee 0%,     /* Negro en la parte superior */
+    #00000096 70%,    /* Mantiene el negro hasta el 90% */
+    rgba(0, 0, 0, 0) 100% /* Se vuelve más transparente al final */
+  );
+  width: 100%;
   position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+
+/* ============================= 
+====== ZONA IZQUIERDA ========== 
+=============================*/
+.menu-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.logo {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-center {
+  display: flex;
+  gap: 2rem; /* Espacio entre los enlaces */
+}
+
+/* ==========================
+===== MENU CENTRAL ==========
+============================*/
+
 .nav_link {
-  color: #000;
   text-decoration: none;
+  color: white;
+  position: relative;
+  padding: 0.1rem 0;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav_link:not(.active_link):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav_link:hover::after {
+  transform: scaleX(1); /* Muestra el subrayado al pasar el ratón */
 }
 
 .active_link {
-  color: #ff0000; /* Cambia el color o estilo que quieras para el enlace activo */
-  font-weight: bold;
+  color: var(--verde-logo); /* Puedes cambiar el color de la sección activa */
+  border-bottom: 2px solid var(--verde-logo);
+}
+
+
+/* ==================================
+=========== MENU DERECHA ===========
+===================================*/
+.menu-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* ============================ 
+      Language Selector
+============================ */
+.language-container {
+  position: relative;
+}
+
+.language-button {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.language-button:hover {
+  transform: scale(1.1);
+}
+
+.language-dropdown {
+  position: absolute;
+  border-top: 0.1rem solid white;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  margin-top: 1.5rem;
+  transform: translateY(-10px);
+  visibility: hidden;
+  background-color: #0000006b;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.language-dropdown li:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.language-button:focus + .language-dropdown,
+.language-dropdown:hover {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.language-dropdown li {
+  text-align: center;
+  list-style-type: none;
+  transition: background-color 0.3s ease;
+}
+
+.language-dropdown li button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: inherit;
+}
+
+.language-flag {
+  height: 1rem;
+}
+
+.language-flag.special {
+  padding: 0.5rem;
+}
+
+/* Hamburger menu button */
+.menu-button {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: none;
 }
