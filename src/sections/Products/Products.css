@@ -1,0 +1,126 @@
+/* ==============================================
+   GENERAL STYLES
+============================================== */
+.products {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.productos-contenedor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative; /* Necesario para que productos-canvas se posicione correctamente */
+}
+
+.productos-slider, .productos-canvas{
+  height: 100%;
+}
+
+.productos-slider {
+  background: var(--verde-muy-oscuro); /* Azul */
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  z-index: 2; /* Coloca el slider por encima del canvas */
+  width: 30%; /* Ajusta el ancho del slider */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 5rem;
+}
+
+.productos-canvas {
+  background: var(--verde-oscuro); /* Dorado */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, -100% 100%);
+  z-index: 1; /* Coloca el canvas por detrás del slider */
+  width: 80%; /* Hace el canvas más ancho */
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo{
+  text-align: left;
+  padding-top: 2rem;
+}
+
+.productos-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+
+.productos-slide h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.productos-slide p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.productos-controles {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 2rem 0;
+  width: 85%;
+}
+
+.productos-btn {
+  background: none;
+  border: 2px solid white;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.productos-btn:hover {
+  background-color: var(--verde-oscuro);
+  border: 2px solid var(--verde-oscuro);
+  transform: scale(1.1);
+}
+
+/* ==============================================
+   RESPONSIVE STYLES
+============================================== */
+@media (max-width: 768px) {
+  .productos-contenedor {
+    flex-direction: column;
+  }
+
+  .productos-slider {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .productos-canvas {
+    position: relative;
+    width: 100%;
+    clip-path: none; /* Se elimina el clip-path para pantallas pequeñas */
+  }
+
+  .productos-slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .productos-slide p {
+    font-size: 1rem;
+  }
+
+  .productos-btn {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
+}
