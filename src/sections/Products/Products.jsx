@@ -40,29 +40,30 @@ const Products = () => {
 
   return (
     <section className="products" id="products">
-      <h1 className="titulo-productos">
-        {idioma === "es" ? "Nuestros Productos" : "Our Products"}
-      </h1>
       <div className="productos-contenedor">
         {/* Izquierda: Slider de Texto */}
         <div className="productos-slider">
-          <div className="productos-slide">
-            <h1>{slides[currentIndex].title}</h1>
-            <p>{slides[currentIndex].description}</p>
+          <div className="titulo">
+            <h1>{idioma === "es" ? "Nuestros Productos" : "Our Products"}</h1>
           </div>
-          <div className="productos-controles">
-            <button onClick={prevSlide} className="productos-btn">
-              <IoArrowBack />
-            </button>
-            <button onClick={nextSlide} className="productos-btn">
-              <IoArrowForward />
-            </button>
+          
+            <div className="productos-slide">
+              <h1>{slides[currentIndex].title}</h1>
+              <p>{slides[currentIndex].description}</p>
+            </div>
+            <div className="productos-controles">
+              <button onClick={prevSlide} className="productos-btn">
+                <IoArrowBack />
+              </button>
+              <button onClick={nextSlide} className="productos-btn">
+                <IoArrowForward />
+              </button>
           </div>
         </div>
 
         {/* Derecha: Canvas con el Modelo */}
         <div className="productos-canvas">
-          <Canvas style={{ height: "70vh", width: "100%" }}>
+          <Canvas style={{ height: "100%", width: "100%", cursor: "grab" }}>
             <PerspectiveCamera
               makeDefault
               position={[CameraPosX, CameraPosY, CameraPosZ]}
@@ -79,7 +80,7 @@ const Products = () => {
             />
             <Suspense fallback={<CanvasLoader />}>
               <group scale={0.5}>
-              {slides[currentIndex].model}
+                {slides[currentIndex].model}
                 <OrbitControls
                   makeDefault
                   enableRotate={true}
@@ -87,6 +88,7 @@ const Products = () => {
                   maxDistance={15}
                   minDistance={5}
                   enablePan={true}
+                  enableZoom={false}
                 />
               </group>
             </Suspense>

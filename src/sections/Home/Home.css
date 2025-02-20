@@ -40,9 +40,6 @@
 
 .casa:active {
   cursor: grabbing;
-  .presupuesto {
-    display: none;
-  }
 }
 
 .presupuesto {
@@ -73,6 +70,7 @@
   background-size: cover;
   background-position: center;
   position: relative; /* Necesario para el pseudo-elemento */
+  padding-top: 2rem;
 }
 
 .informacion::before {
