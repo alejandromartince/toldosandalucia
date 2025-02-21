@@ -1,12 +1,84 @@
 /* Estilos generales */
 .contacto {
-  max-width: 600px;
-  margin: 3rem auto;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgb(10, 10, 10);
   color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.informacion-grid-izquierda {
+  grid-column: span 1;
+}
+
+.informacion-grid-izquierda h1 {
+  font-size: 3rem;
+}
+
+.informacion-grid-izquierda .dot {
+  font-size: 5rem;
+  color: var(--verde-logo);
+}
+
+.contenedor-contacto {
+  background-color: black;
+  box-shadow: 0px 10px 20px rgb(0, 0, 0);
+}
+
+.contenedor-formulario {
+  position: relative;
+  width: 30rem; /* Ajusta según necesites */
+  padding: 2rem;
+  max-width: 30rem;
+}
+
+/* Esquinas superiores */
+.contenedor-formulario::before,
+.contenedor-formulario::after {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid white;
+}
+
+.contenedor-formulario::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.contenedor-formulario::after {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Esquinas inferiores */
+.esquina {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid white;
+}
+
+.esquina.esquina-inferior-izq {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.esquina.esquina-inferior-der {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
 }
 
 .contact-title {
@@ -21,6 +93,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
+  background-color: rgb(40, 40, 40);
 }
 
 label {
@@ -33,7 +107,7 @@ textarea {
   padding: 0.8rem;
   border: none;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9);
+  background: gray;
   font-size: 1rem;
 }
 
@@ -59,13 +133,13 @@ textarea {
   font-size: 0.8rem;
   text-align: justify;
   margin-top: 1rem;
-  color: #ddd;
+  color: gray;
 }
 
 /* Botón de enviar */
 button {
   padding: 0.8rem;
-  background: #27ae60;
+  background: var(--verde-logo);
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -76,7 +150,7 @@ button {
 }
 
 button:hover {
-  background: #219150;
+  background: var(--verde-oscuro);
 }
 
 /* Responsive */

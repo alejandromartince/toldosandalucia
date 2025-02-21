@@ -74,10 +74,10 @@ const Home = () => {
                 intensity={DirectionalLightIntensity}
               />
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={0.5}>
+                <group scale={0.7}>
                   <CasaHome
                     castShadow
-                    scale={0.9}
+                    scale={1}
                     position={[CasaPosX, CasaPosY, CasaPosZ]}
                     rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
                   />
@@ -86,7 +86,7 @@ const Home = () => {
                     makeDefault
                     enableRotate={true}
                     maxPolarAngle={Math.PI / 2}
-                    maxDistance={15}
+                    maxDistance={20}
                     minDistance={5}
                     enablePan={true}
                   />

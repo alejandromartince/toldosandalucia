@@ -11,7 +11,7 @@ export const useNombreControls = () => {
 
 export const useCasaHomeControls = () => ({
   // Para la cámara
-  CameraPosX: 30.85,
+  CameraPosX: 20.,
   CameraPosY: 6.2,
   CameraPosZ: 12.8,
   CameraFov: 45,

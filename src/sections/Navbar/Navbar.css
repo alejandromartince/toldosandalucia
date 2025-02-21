@@ -68,7 +68,6 @@
   padding: 0.1rem 0;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .nav_link:not(.active_link):after {

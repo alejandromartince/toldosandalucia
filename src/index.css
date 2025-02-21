@@ -1,38 +1,36 @@
 :root {
-    font-family: "Cuprum", Helvetica, Arial, Lucida, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    --verde-logo: #4ba13efc;
-    --verde-oscuro: #155d27;
-    --verde-muy-oscuro:#0b3916;
-    --verde: #4ad66d;
-    --verde-claro: #30e15c;
-  
-    --gris: #454955;
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-    --blanco: #ffff;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  /* Establecer la tipografía global */
-  body {
-    font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
-    background-color: rgba(0, 0, 0, 0.899);
-  }
-  
-  html{
-    width: 100%;
-    height: 100%;
-  }
-  
+  --verde-logo: #4ba13efc;
+  --verde-oscuro: #155d27;
+  --verde-muy-oscuro: #0b3916;
+  --verde: #4ad66d;
+  --verde-claro: #30e15c;
+
+  --gris: #454955;
+
+  --blanco: #ffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Establecer la tipografía global */
+body {
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
+  background-color: rgba(0, 0, 0, 0.899);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}

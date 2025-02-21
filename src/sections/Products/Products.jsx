@@ -42,22 +42,30 @@ const Products = () => {
     <section className="products" id="products">
       <div className="productos-contenedor">
         {/* Izquierda: Slider de Texto */}
-        <div className="productos-slider">
-          <div className="titulo">
-            <h1>{idioma === "es" ? "Nuestros Productos" : "Our Products"}</h1>
-          </div>
-          
-            <div className="productos-slide">
-              <h1>{slides[currentIndex].title}</h1>
-              <p>{slides[currentIndex].description}</p>
-            </div>
-            <div className="productos-controles">
-              <button onClick={prevSlide} className="productos-btn">
-                <IoArrowBack />
-              </button>
-              <button onClick={nextSlide} className="productos-btn">
-                <IoArrowForward />
-              </button>
+          <div>
+            <div className="productos-slider">
+              <div className="titulo">
+                <img src="../assets/Imagenes/icono-productos.png" alt="icono" />
+                <h1>
+                  {idioma === "es" ? "NUESTROS PRODUCTOS" : "OUR PRODUCTS"}
+                </h1>
+              </div>
+              <div className="descripciones-toldo">
+                <div className="productos-slide">
+                  <h1>{slides[currentIndex].title}</h1>
+                  <div className="parrafo">
+                    <p>{slides[currentIndex].description}</p>
+                  </div>
+                </div>
+                <div className="productos-controles">
+                  <button onClick={prevSlide} className="productos-btn">
+                    <IoArrowBack />
+                  </button>
+                  <button onClick={nextSlide} className="productos-btn">
+                    <IoArrowForward />
+                  </button>
+                </div>
+              </div>
           </div>
         </div>
 
@@ -85,7 +93,7 @@ const Products = () => {
                   makeDefault
                   enableRotate={true}
                   // maxPolarAngle={Math.PI / 2}
-                  maxDistance={15}
+                  maxDistance={10}
                   minDistance={5}
                   enablePan={true}
                   enableZoom={false}
