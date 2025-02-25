@@ -70,7 +70,7 @@
   background-size: cover;
   background-position: center;
   position: relative; /* Necesario para el pseudo-elemento */
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .informacion::before {
@@ -80,12 +80,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.475
-  ); /* Ajusta la opacidad según lo oscuro que quieras */
+  background-color: rgba(0, 0, 0, 0.668); /* Ajusta la opacidad según lo oscuro que quieras */
   z-index: 0;
 }
 
@@ -107,41 +102,3 @@ h1 {
   font-weight: 400;
 }
 
-/* ============================
-===== BENEFICIOS ==============
-=============================*/
-.beneficios {
-  color: white;
-  position: relative;
-  z-index: 1;
-}
-
-.beneficios h1 {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.beneficios-descripcion {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
-  gap: 2rem; /* Espacio entre columnas */
-  margin-top: 2rem;
-  padding: 0 5rem;
-}
-
-.beneficio-item {
-  display: flex;
-  flex-direction: column; /* Organiza la imagen y la descripción verticalmente */
-  align-items: center; /* Centra el contenido */
-}
-
-.beneficio-item img {
-  width: 24%;
-  height: auto;
-  max-width: 300px; /* Controla el tamaño máximo de las imágenes */
-}
-
-.beneficio-item p {
-  text-align: center; /* Centra el texto debajo de las imágenes */
-  margin-top: 1rem; /* Espacio entre la imagen y la descripción */
-}

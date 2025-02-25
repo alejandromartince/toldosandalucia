@@ -93,8 +93,8 @@ const Products = () => {
             />
             <Suspense fallback={<CanvasLoader />}>
               <group scale={0.5}>
-                <CasaProductos position={[CasaPosX, CasaPosY, CasaPosZ]} rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]} scale={1} />
-                {/* {slides[currentIndex].model} */}
+                {/* <CasaProductos position={[CasaPosX, CasaPosY, CasaPosZ]} rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]} scale={1} /> */}
+                {slides[currentIndex].model}
                 <OrbitControls
                   makeDefault
                   enableRotate={true}

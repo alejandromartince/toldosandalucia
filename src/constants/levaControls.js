@@ -25,7 +25,7 @@ export const useCasaHomeControls = () => ({
   CasaPosX: 1,
   CasaPosY: -1.05,
   CasaPosZ: 0.05,
-  CasaRotationX: 0.0,
+  CasaRotationX: 0,
   CasaRotationY: 0,
   CasaRotationZ: 0,
 });
