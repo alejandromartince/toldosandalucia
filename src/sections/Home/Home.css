@@ -80,7 +80,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.475); /* Ajusta la opacidad según lo oscuro que quieras */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.475
+  ); /* Ajusta la opacidad según lo oscuro que quieras */
   z-index: 0;
 }
 
@@ -94,6 +99,12 @@
   padding: 0 5rem;
   position: relative; /* Para que el texto esté por encima del oscurecimiento */
   z-index: 1;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
 
 /* ============================
@@ -114,7 +125,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
   gap: 2rem; /* Espacio entre columnas */
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0 5rem;
 }
 
@@ -131,16 +142,6 @@
 }
 
 .beneficio-item p {
-  text-align: justify; /* Centra el texto debajo de las imágenes */
+  text-align: center; /* Centra el texto debajo de las imágenes */
   margin-top: 1rem; /* Espacio entre la imagen y la descripción */
-  word-spacing: -.2rem;
 }
-
-.beneficio-item p:first-of-type {
-  word-spacing: -0.3rem; /* Ajusta el valor según lo necesites */
-}
-
-
-
-
-

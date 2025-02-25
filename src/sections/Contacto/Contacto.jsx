@@ -28,7 +28,7 @@ const Contacto = () => {
   }, []);
 
   return (
-    <section className="contacto">
+    <section className="contacto" id="contacto">
       <div className="grid-contacto">
         <div className="informacion-grid-izquierda">
           <h1>

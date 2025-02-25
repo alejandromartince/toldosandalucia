@@ -10,6 +10,7 @@ import { useIdioma } from "../../contexts/IdiomaContext";
 
 import { TfiRulerPencil } from "react-icons/tfi";
 import { GiFactoryArm } from "react-icons/gi";
+import { GrUserWorker } from "react-icons/gr";
 
 import "./Home.css";
 
@@ -40,11 +41,9 @@ const Home = () => {
     CameraPosY,
     CameraPosZ,
     CameraFov,
-    AmbientLightIntensity,
     DirectionalLightPosX,
     DirectionalLightPosY,
     DirectionalLightPosZ,
-    DirectionalLightIntensity,
     CasaPosX,
     CasaPosY,
     CasaPosZ,
@@ -58,29 +57,41 @@ const Home = () => {
       <div className="grid">
         <div className="contenido3d">
           <div className="casa">
-            <Canvas style={{ width: "100%", height: "100%" }}>
+            <Canvas shadows style={{ width: "100%", height: "100%" }}>
               <PerspectiveCamera
                 makeDefault
                 position={[CameraPosX, CameraPosY, CameraPosZ]}
                 fov={CameraFov}
               />
-              <ambientLight intensity={AmbientLightIntensity} />
+
+              {/* Luz ambiental tenue para no eliminar el contraste */}
+              <ambientLight intensity={0.6} />
+
+              {/* Luz direccional principal (lanza sombras) */}
               <directionalLight
+                castShadow
                 position={[
                   DirectionalLightPosX,
                   DirectionalLightPosY,
                   DirectionalLightPosZ,
-                ]}
-                intensity={DirectionalLightIntensity}
+                ]} // Iluminación desde arriba a la derecha
+                intensity={4}
+                shadow-mapSize={[2048, 2048]} // Mayor resolución de sombras
               />
+
+              {/* Luz direccional de relleno para suavizar sombras muy duras */}
+              <directionalLight position={[-10, 15, -10]} intensity={1.5} />
+
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={0.7}>
+                <group scale={0.6}>
+                  {/* Modelo con sombra */}
                   <CasaHome
                     castShadow
                     scale={1}
                     position={[CasaPosX, CasaPosY, CasaPosZ]}
                     rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
                   />
+
                   <OrbitControls
                     ref={controlsRef}
                     makeDefault
@@ -113,43 +124,43 @@ const Home = () => {
         </div>
         <div className="informacion">
           <div className="texto">
-            <h1>
-              {idioma === "es"
-                ? "Servicio de instalación de toldos en Málaga"
-                : "Awnings installation service in Malaga"}
-            </h1>
+            <h1>{idioma === "es" ? "¿QUIÉNES SOMOS?" : "WHO ARE WE?"}</h1>
             <p>
               {idioma === "es"
-                ? "Si estás buscando una forma efectiva de proteger tu hogar del sol abrasador o de las lluvias inesperadas en Málaga, los toldos pueden ser la solución perfecta. Los toldos no solo añaden un toque de estilo a tu hogar, sino que también ofrecen una protección invaluable contra los elementos."
-                : "If you're looking for an effective way to protect your home from the scorching sun or unexpected rains in Málaga, awnings can be the perfect solution. Awnings not only add a touch of style to your home but also provide invaluable protection against the elements."}
+                ? "Somos una empresa especializada en la instalación de toldos en Málaga, comprometidos en ofrecer soluciones efectivas para proteger tu hogar del sol y las lluvias. Con más de 25 años de experiencia, diseñamos e instalamos toldos a medida que no solo brindan una protección duradera, sino que también aportan estilo y funcionalidad a tu espacio. Nuestra misión es ofrecerte el mejor servicio con productos de alta calidad, adaptados a tus necesidades y con un toque de diseño único."
+                : "We are a company specialized in the installation of awnings in Málaga, committed to offering effective solutions to protect your home from the sun and rain. With more than 25 years of experience, we design and install custom awnings that not only provide lasting protection, but also add style and functionality to your space. Our mission is to offer you the best service with high-quality products, adapted to your needs and with a unique design touch."}
             </p>
           </div>
 
           <div className="beneficios">
-            <h1>Nuestros Beneficios</h1>
+            <h1>
+              {idioma === "es"
+                ? "BENEFICIOS DE TRABAJAR CON NOSOTROS"
+                : "BENEFITS OF WORKING WITH US"}
+            </h1>
             <div className="beneficios-descripcion">
               <div className="beneficio-item">
                 <TfiRulerPencil size={60} />
                 <p>
                   {idioma === "es"
-                    ? "Diseñamos a medida toldos manuales, automatizados y domótica; rotulamos todo tipo de toldos."
-                    : "We design custom manual awnings, automated awnings, and home automation; we provide signage for all types of awnings."}
+                    ? "Diseñamos e instalamos toldos a medida, tanto manuales como automatizados, integrando soluciones de domótica. Además, ofrecemos el servicio de rotulación para todo tipo de toldos."
+                    : "We design and install custom-made awnings, both manual and automated, integrating smart home solutions. Additionally, we offer lettering services for all types of awnings."}
                 </p>
               </div>
               <div className="beneficio-item">
                 <GiFactoryArm size={60} />
                 <p>
                   {idioma === "es"
-                    ? "Trabajamos con más de 500 colores en lonas del tipo acrílicas, técnicas, ignifugas e impermeables. Taller propio de costura con equipos de última generación, diseñando cada toldo a medida."
+                    ? "Trabajamos con más de 500 colores en lonas del tipo acrílicas, técnicas, ignifugas e impermeables. Disponemos de un taller propio de costura con equipos de última generación, diseñando cada toldo a medida."
                     : "We work with over 500 colors in fabrics such as acrylics, technical fabrics, fire-resistant, and waterproof materials. We have our own sewing workshop with state-of-the-art equipment, designing each awning to measure."}
                 </p>
               </div>
               <div className="beneficio-item">
-                <img src="../assets/Imagenes/Worker.png" alt="Beneficio 3" />
+                <GrUserWorker size={60} />
                 <p>
                   {idioma === "es"
-                    ? "Tenemos el personal idóneo para la instalación de toldos en todo tipo de construcción."
-                    : "We have the ideal staff for the installation of awnings in all types of constructions."}
+                    ? "Contamos con un equipo altamente cualificado para la instalación de toldos en todo tipo de construcciones, garantizando un trabajo profesional y adaptado a las necesidades de cada proyecto."
+                    : "We have a highly qualified team for the installation of awnings in all types of construction, guaranteeing a professional job and adapted to the needs of each project."}
                 </p>
               </div>
             </div>
