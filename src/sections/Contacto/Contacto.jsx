@@ -1,30 +1,34 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
-
 import "./Contacto.css";
 
 const Contacto = () => {
-  const [captcha, setCaptcha] = useState(0);
-  const [userCaptcha, setUserCaptcha] = useState("");
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  const { idioma, cambiarIdioma } = useIdioma(); // Obtén el idioma y la función para cambiarlo
-
-  const generarCaptcha = () => {
-    return 7 + 10; // Simulación de captcha estático
-  };
+  const { idioma } = useIdioma(); // Obtén el idioma
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (parseInt(userCaptcha) !== captcha) {
-      alert("Captcha incorrecto");
-      return;
-    }
     alert("Formulario enviado");
+    // Aquí podrías hacer el envío real del formulario si lo deseas
   };
 
-  useState(() => {
-    setCaptcha(generarCaptcha());
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  useEffect(() => {
+    // Lógica de inicialización si es necesario
   }, []);
 
   return (
@@ -48,49 +52,80 @@ const Contacto = () => {
           <span className="esquina esquina-inferior-izq"></span>
           <span className="esquina esquina-inferior-der"></span>
 
-          <div>
-            <h1 className="contact-title">Formulario de contacto</h1>
+          <h1 className="contact-title">
+            {idioma === "es" ? "Formulario de contacto" : "Contact Form"}
+          </h1>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <label>Nombre</label>
-              <input type="text" name="nombre" required />
+          <form className="form" onSubmit={handleSubmit}>
+            <p className="message">
+              {idioma === "es"
+                ? "Regístrate ahora y obtén acceso completo a nuestra aplicación."
+                : "Signup now and get full access to our app."}
+            </p>
 
-              <label>Teléfono</label>
-              <input type="tel" name="telefono" required />
-
-              <label>Dirección de correo electrónico</label>
-              <input type="email" name="email" required />
-
-              <label>Mensaje</label>
-              <textarea name="mensaje" required></textarea>
-
-              <div className="contact-checkbox">
-                <input type="checkbox" id="privacidad" required />
-                <label htmlFor="privacidad">
-                  (*) Acepto Política de privacidad
-                </label>
-              </div>
-
-              <p className="contact-info">
-                Responsable de los datos: Indutol 2002 S.L. Finalidad de los
-                datos: Envío de boletines de noticias y ofertas. | Legitimación:
-                Tu consentimiento | Destinatario: Abansys & Hostytec, S.L (UE)
-                Derechos: Derecho al acceso, rectificación, supresión,
-                limitación, portabilidad y olvido de sus datos según nuestra
-                política de privacidad.
-              </p>
-
-              <label>7 + 10 = </label>
+            <label>
               <input
-                type="number"
-                value={userCaptcha}
-                onChange={(e) => setUserCaptcha(e.target.value)}
+                className="input"
+                type="text"
+                name="firstname"
+                value={formData.firstname}
+                onChange={handleInputChange}
+                placeholder=""
                 required
               />
+              <span>{idioma === "es" ? "Nombre" : "Firstname"}</span>
+            </label>
 
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
+            <label>
+              <input
+                className="input"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder=""
+                required
+              />
+              <span>Email</span>
+            </label>
+
+            <label>
+              <input
+                className="input"
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder=""
+                required
+              />
+              <span>Password</span>
+            </label>
+
+            <label>
+              <input
+                className="input"
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+                placeholder=""
+                required
+              />
+              <span>Confirm Password</span>
+            </label>
+
+            <button className="submit" type="submit">
+              {idioma === "es" ? "Enviar" : "Submit"}
+            </button>
+
+            <p className="signin">
+              {idioma === "es"
+                ? "¿Ya tienes cuenta?"
+                : "Already have an account?"}{" "}
+              <a href="#">{idioma === "es" ? "Inicia sesión" : "Signin"}</a>
+            </p>
+          </form>
         </div>
       </div>
     </section>

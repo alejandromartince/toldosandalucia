@@ -6,7 +6,7 @@ export const useNombreControls = () => {
     NombrePosX: { value: 0, step: 0.05, min: -10, max: 10 },
     NombrePosY: { value: 0, step: 0.05, min: -10, max: 10 },
     NombrePosZ: { value: 0, step: 0.05, min: -10, max: 10 },
-  });
+  }, {collapsed:true});
 };
 
 export const useCasaHomeControls = () => ({
@@ -54,5 +54,5 @@ export const useToldosControls = () => {
     CasaRotationX: { value: 0, step: 0.05, min: -10, max: 10 },
     CasaRotationY: { value: -1.50, step: 0.05, min: -10, max: 10 },
     CasaRotationZ: { value: 0, step: 0.05, min: -10, max: 10 },
-  });
+  }, {collapsed:true});
 };

@@ -12,6 +12,8 @@
   --gris: #454955;
 
   --blanco: #ffff;
+  --negro: black;
+  --negro-claro:#1a1a1a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -1,11 +1,11 @@
 .nav-container {
   background: linear-gradient(
     to bottom,
-    #000000ee 0%,
-    /* Negro en la parte superior */ #00000096 75%,
-    /* Mantiene el negro hasta el 90% */ rgba(0, 0, 0, 0) 100%
-      /* Se vuelve más transparente al final */
+    #000000ee 0%,   /* Negro opaco arriba */
+    #00000096 75%,  /* Negro semi-transparente */
+    rgba(0, 0, 0, 0) 100%  /* Transparente abajo */
   );
+  backdrop-filter: blur(2px); /* Aplica desenfoque al fondo */
   width: 100%;
   position: fixed;
   z-index: 1000;

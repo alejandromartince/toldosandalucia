@@ -113,6 +113,9 @@ const Home = () => {
               target="_blank"
               href="https://web.whatsapp.com/send?phone=34679847618&text="
               style={{ textDecoration: "none" }}
+              data-text={
+                idioma === "es" ? "Realizar presupuesto" : "Make a quote"
+              }
             >
               {idioma === "es" ? "Realizar presupuesto" : "Make a quote"}
             </a>
@@ -127,8 +130,6 @@ const Home = () => {
                 : "We are a company specialized in the installation of awnings in Málaga, committed to offering effective solutions to protect your home from the sun and rain. With more than 25 years of experience, we design and install custom awnings that not only provide lasting protection, but also add style and functionality to your space. Our mission is to offer you the best service with high-quality products, adapted to your needs and with a unique design touch."}
             </p>
           </div>
-
-          
         </div>
       </div>
     </section>
