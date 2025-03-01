@@ -86,6 +86,7 @@ const Home = () => {
                     scale={1}
                     position={[CasaPosX, CasaPosY, CasaPosZ]}
                     rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
+                    
                   />
 
                   <OrbitControls
@@ -96,6 +97,8 @@ const Home = () => {
                     maxDistance={20}
                     minDistance={5}
                     enablePan={true}
+                    autoRotate
+                    autoRotateSpeed={1.3}
                   />
                   <LimitarPan controlsRef={controlsRef} />
                 </group>

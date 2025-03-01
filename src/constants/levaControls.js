@@ -22,7 +22,7 @@ export const useCasaHomeControls = () => ({
   DirectionalLightPosZ: 10,
 
   // Para la Casa
-  CasaPosX: 1,
+  CasaPosX: 2,
   CasaPosY: -1.05,
   CasaPosZ: 0.05,
   CasaRotationX: 0,

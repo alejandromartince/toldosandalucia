@@ -1,7 +1,7 @@
 /* Estilos generales */
 .contacto {
-  padding: 2rem;
   color: white;
+  height: 100vh;
 }
 
 .grid-contacto {
@@ -30,6 +30,7 @@
 .contenedor-formulario {
   position: relative;
   width: 30rem; /* Ajusta según necesites */
+  margin-top: 4rem;
   padding: 2rem;
   max-width: 30rem;
   display: flex;

@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-
 import { useIdioma } from "../../contexts/IdiomaContext";
 import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
 
 import "./Navbar.css";
 
 const Navbar = () => {
-  // Estado para el link activo
   const [activeSection, setActiveSection] = useState("");
-
   const { idioma, cambiarIdioma } = useIdioma();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Función que detecta la sección activa según la posición del scroll
   const handleScroll = () => {
@@ -24,25 +22,22 @@ const Navbar = () => {
         section.offsetTop <= scrollPosition &&
         section.offsetTop + section.offsetHeight > scrollPosition
       ) {
-        setActiveSection(section.id); // Establece el ID de la sección activa
+        setActiveSection(section.id);
       }
     });
+
+    // Cálculo del progreso de la página
+    const scrollHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = (window.scrollY / scrollHeight) * 100;
+    setScrollProgress(scrollPercentage);
   };
 
   useEffect(() => {
-    // Llama a handleScroll para que detecte la sección activa cuando el componente se carga
     handleScroll();
-
-    // Se ejecuta al hacer scroll
     window.addEventListener("scroll", handleScroll);
-
-    // Limpia el evento al desmontar el componente
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -61,14 +56,13 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <nav className="menu">
-        {/* MENU IZQUIERDA */}
         <div className="menu-left">
           <Link
             to="home"
             smooth={true}
             duration={500}
             offset={-50}
-            className={"logo"}
+            className="logo"
           >
             <img
               src="../assets/Logo/Logo_Transparent.png"
@@ -78,7 +72,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* MENU CENTRAL */}
         <div className="menu-center">
           <Link
             to="home"
@@ -130,9 +123,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* MENU DERECHA */}
         <div className="menu-right">
-          {/* Language selector */}
           <div className={`language-container ${isMenuOpen ? "active" : ""}`}>
             <button onClick={toggleDropdown} className="language-button">
               <img src={rutaImagen} alt="Spain" className="language-flag" />
@@ -168,12 +159,21 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Hamburger menu button */}
-          <button className="menu-button" onClick={toggleMenu}>
+          <button
+            className="menu-button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </nav>
+
+      <div className="progress-bar-container">
+        <div
+          className="progress-bar"
+          style={{ width: `${scrollProgress}%` }}
+        ></div>
+      </div>
     </div>
   );
 };

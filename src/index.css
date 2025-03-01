@@ -1,19 +1,24 @@
+
 :root {
   font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   --verde-logo: #4ba13efc;
-  --verde-oscuro: #155d27;
+  --verde-logo-brillo: #118100fc;
+  --verde-oscuro: #3c7e4d;
   --verde-muy-oscuro: #0b3916;
   --verde: #4ad66d;
-  --verde-claro: #30e15c;
+  --verde-claro: #2fc555;
 
-  --gris: #454955;
+  --gris: #000000;
+  --gris-claro: #242424;
 
   --blanco: #ffff;
-  --negro: black;
-  --negro-claro:#1a1a1a;
+  --blanco-roto: #e4e4dc;
+  --negro: rgb(14, 14, 14);
+  --negro-oscuro: black;
+  --negro-claro: #161616;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

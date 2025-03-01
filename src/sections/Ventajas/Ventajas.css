@@ -1,0 +1,111 @@
+/*======================
+    SECCIÓN BENEFICIOS
+======================*/
+.section-beneficios {
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/*======================
+    GRID CONTAINER
+======================*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+  position: relative;
+  transition: background-image 0.5s ease; /* Añadido para animación de fondo */
+}
+
+.grid-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.356); /* Fondo negro con opacidad */
+  z-index: 1; /* Asegura que esté por debajo del contenido */
+  pointer-events: none; /* Para evitar que interfiera con los clics */
+}
+
+/*======================
+    GRID IZQUIERDA
+======================*/
+.grid-izquierda {
+  text-align: center;
+  padding: 4rem 2rem;
+  z-index: 2; /* Asegura que la información esté encima del fondo */
+}
+
+/*======================
+    GRID DERECHA
+======================*/
+.grid-derecha {
+  overflow: hidden;
+  align-items: baseline;
+  display: flex;
+  z-index: 2;
+  padding: 4rem 2rem;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+}
+
+/*======================
+    TARJETAS
+======================*/
+.card {
+  opacity: 0.9; /* Opacidad para las cards no activas */
+  transform: scaleX(0.8); /* Reducción de tamaño para cards no activas */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+  cursor: pointer; /* Cursor de tipo puntero */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50%;
+  aspect-ratio: 10 / 16;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.986);
+}
+
+/* Card activa en el centro */
+.card.center {
+  width: 100%; /* Tamaño más grande para la card activa */
+  opacity: 1; /* Opacidad al 100% */
+  transform: scaleX(1); /* Card activa al tamaño original */
+}
+
+/* Cards a la derecha */
+.card.right {
+  width: 100%;
+  opacity: 0.9;
+  transform: scaleX(0.8);
+}
+
+/* Cards a la izquierda */
+.card.left {
+  width: 100%;
+  opacity: 0.9;
+  transform: scaleX(0.8);
+}
+
+.card-inner {
+  padding: 1rem;
+}
+
+.card-content {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+/* Barra abajo color */
+.barra-abajo-carta-color {
+  background-color: #ff6347;
+}
