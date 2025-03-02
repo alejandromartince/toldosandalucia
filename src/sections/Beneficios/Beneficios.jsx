@@ -28,7 +28,6 @@ const Beneficios = () => {
     beforeChange: (oldIndex, newIndex) => setIndexActivo(newIndex),
     draggable: false, // Deshabilita la capacidad de arrastrar
   };
-  
 
   return (
     <section className="section-beneficios" id="home">
@@ -40,7 +39,16 @@ const Beneficios = () => {
 
         <div className="grid-derecha">
           <div className="beneficios-titulo">
-            {idioma === "es" ? "Beneficios de trabajar con nosotros" : "Benefits of working with us"}
+            <h1>
+              {idioma === "es"
+                ? "Beneficios de trabajar con nosotros"
+                : "Benefits of working with us"}
+            </h1>
+            <p>
+              {idioma === "es"
+                ? "Desde la planificación hasta el mantenimiento, en Toldos Andalucía ofrecemos una instalación de toldos precisa y de calidad, cuidando en cada detalle. Además, realizamos pruebas para asegurar su funcionamiento óptimo y te asesoramos en su mantenimiento para una mayor durabilidad."
+                : "From planning to maintenance, at Toldos Andalucía we offer precise and high-quality awning installation, taking care of every detail. Additionally, we conduct tests to ensure optimal performance and provide guidance on maintenance for greater durability."}
+            </p>
           </div>
           <div className="beneficios-slider">
             <Slider ref={sliderRef} {...settings}>
@@ -54,6 +62,7 @@ const Beneficios = () => {
                       backgroundPosition: "center",
                       transition: "opacity 0.3s ease-in-out",
                     }}
+                    onClick={() => sliderRef.current.slickGoTo(index)}
                   >
                     <div className="background-overlay"></div>
                     <p className="beneficio-texto">{beneficio.portada}</p>

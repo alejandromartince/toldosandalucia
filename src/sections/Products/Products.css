@@ -37,7 +37,7 @@
 }
 
 .productos-canvas {
-  background: var(--verde-oscuro);
+  background: rgba(255, 255, 255, 0.849);
   z-index: 1; /* Mantiene el canvas detrás */
   display: flex;
   position: absolute;
