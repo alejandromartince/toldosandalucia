@@ -1,7 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
 import { informacionSlider } from "../../constants/slides";
 import Slider from "react-slick";
+import Button from "../../components/Button"; // Importamos el nuevo botón
+
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,55 +17,72 @@ const Beneficios = () => {
   const [indexActivo, setIndexActivo] = useState(0);
   const sliderRef = useRef(null);
 
-  var settings = {
-    dots: true,
+  const settings = {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
     slidesToShow: 4,
     autoplay: false,
     autoplaySpeed: 10000,
+    arrows: false, // Ocultamos los botones de Slick
     beforeChange: (oldIndex, newIndex) => setIndexActivo(newIndex),
+    draggable: false, // Deshabilita la capacidad de arrastrar
   };
+  
 
   return (
     <section className="section-beneficios" id="home">
-      <div
-        className={`grid-container`}
-        style={{
-          backgroundImage: `url(${
-            beneficios[
-              indexActivo === 0 ? beneficios.length - 1 : indexActivo - 1
-            ].imagen
-          })`,
-        }}
-      >
+      <div className="grid-container">
         <div className="grid-izquierda">
-          <h1>hola</h1>
+          <h1>{beneficios[indexActivo].portada}</h1>
+          <p>{beneficios[indexActivo].texto}</p>
         </div>
+
         <div className="grid-derecha">
+          <div className="beneficios-titulo">
+            {idioma === "es" ? "Beneficios de trabajar con nosotros" : "Benefits of working with us"}
+          </div>
           <div className="beneficios-slider">
             <Slider ref={sliderRef} {...settings}>
               {beneficios.map((beneficio, index) => (
-                <div
-                  className="card"
-                  key={index}
-                  onClick={() => {
-                    setIndexActivo(index);
-                    sliderRef.current.slickGoTo(index);
-                  }}
-                >
-                  <div className="card-content">
-                    <img
-                      src={beneficio.imagen} // Asumiendo que 'imagen' es la propiedad de la URL de la imagen en 'beneficio'
-                      alt={beneficio.portada}
-                      className="beneficio-imagen"
-                    />
-                    <p className="beneficio-texto">{beneficio.icon}</p>
+                <div className="card" key={index}>
+                  <div
+                    className="card-content"
+                    style={{
+                      backgroundImage: `url(${beneficio.imagen})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      transition: "opacity 0.3s ease-in-out",
+                    }}
+                  >
+                    <div className="background-overlay"></div>
+                    <p className="beneficio-texto">{beneficio.portada}</p>
                   </div>
                 </div>
               ))}
             </Slider>
+
+            <div className="arrow-hr-number">
+              <div className="botones-slider">
+                <Button
+                  className="prev"
+                  onClick={() => sliderRef.current.slickPrev()}
+                >
+                  <FaArrowLeft size={30} />
+                </Button>
+                <Button
+                  className="next"
+                  onClick={() => sliderRef.current.slickNext()}
+                >
+                  <FaArrowRight size={30} />
+                </Button>
+              </div>
+
+              <div className="horizontal-line-container">
+                <hr className="horizontal-line" />
+                <span className="number">0{indexActivo + 1}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

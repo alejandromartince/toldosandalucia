@@ -22,8 +22,8 @@ export const useCasaHomeControls = () => ({
   DirectionalLightPosZ: 10,
 
   // Para la Casa
-  CasaPosX: 2,
-  CasaPosY: -1.05,
+  CasaPosX: 0,
+  CasaPosY: -3.05,
   CasaPosZ: 0.05,
   CasaRotationX: 0,
   CasaRotationY: 0,
@@ -45,7 +45,7 @@ export const useToldosControls = () => {
     DirectionalLightPosX: { value: -4.2, step: 0.05, min: -10, max: 10 },
     DirectionalLightPosY: { value: 24.4, step: 0.05, min: -10, max: 10 },
     DirectionalLightPosZ: { value: 6.2, step: 0.05, min: -10, max: 10 },
-    DirectionalLightIntensity: { value: 1.8, step: 0.05, min: -10, max: 10 },
+    DirectionalLightIntensity: { value: 1, step: 0.05, min: -10, max: 10 },
 
     // Para la Casa
     CasaPosX: { value: 0, step: 0.05, min: -10, max: 10 },

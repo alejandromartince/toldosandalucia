@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import { useCasaHomeControls } from "../../constants/levaControls";
-import CasaHome from "../../components/CasaHome";
+import CasaHome from "../../components/Toldos/CasaHome";
 import CanvasLoader from "../../components/CanvasLoader";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
@@ -79,7 +79,7 @@ const Home = () => {
               <directionalLight position={[-10, 15, -10]} intensity={1.5} />
 
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={0.6}>
+                <group scale={.7}>
                   {/* Modelo con sombra */}
                   <CasaHome
                     castShadow

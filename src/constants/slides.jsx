@@ -1,8 +1,8 @@
-import Terraza from "../components/Terraza";
-import Pergola from "../components/Pergola";
-import Capota from "../components/Capota";
-import Veranda from "../components/Veranda";
-import Cofre from "../components/Cofre";
+import Terraza from "../components/Toldos/Terraza";
+import Pergola from "../components/Toldos/Pergola";
+import Capota from "../components/Toldos/Capota";
+import Veranda from "../components/Toldos/Veranda";
+import Cofre from "../components/Toldos/Cofre";
 
 import { TfiRulerPencil } from "react-icons/tfi";
 import { GiFactoryArm } from "react-icons/gi";

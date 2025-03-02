@@ -24,18 +24,23 @@
   ========== CONTENIDO 3D ====================== */
 .contenido3d {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 1rem;
   grid-column: span 1; /* Ocupa la primera columna de la izquierda */
   height: 100%;
   flex-direction: column;
-  background: linear-gradient(to top left, var(--negro-claro), var(--gris-claro));
+  background: linear-gradient(
+    to top left,
+    var(--negro-claro),
+    var(--gris-claro)
+  );
 }
 
 .casa {
-  height: 80%;
+  height: 60%;
   width: 90%;
+  margin-top: 1rem;
+
   cursor: grab;
 }
 
@@ -46,28 +51,31 @@
 .presupuesto {
   cursor: pointer;
   position: relative;
-  padding: .4rem 1.4rem;
+  padding: 0.4rem 1.4rem;
   font-size: 1.1rem;
   color: var(--blanco);
-  border-bottom: 1px solid var(--blanco); 
+  border-bottom: 1px solid var(--blanco);
   border-top: transparent;
   font-weight: 400;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .5s ease, border-radius .4s ease;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease,
+    border-radius 0.4s ease;
   overflow: hidden;
 }
 
 .presupuesto::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; /* Ahora ocupa todo el botón */
   height: 100%;
   border-radius: inherit;
-  transform: scaleX(0); /* Cambiamos scale a scaleX para evitar que se expanda fuera */
+  transform: scaleX(
+    0
+  ); /* Cambiamos scale a scaleX para evitar que se expanda fuera */
   background-color: var(--blanco);
   z-index: -1;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .presupuesto:hover::before {
@@ -86,20 +94,18 @@
   scale: 1;
 }
 
-
 /* =============================================
   ========== INFORMACION ====================== */
 .informacion {
   display: grid;
   grid-column: span 2; /* Ocupa las dos columnas de la derecha */
-  background-image: url("/assets/Imagenes/fondohome.JPG");
-  background-size: auto;
+  background-image: url("/assets/Imagenes/fondo1.jpg");
+  background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+  background-position: top center; /* Se centra horizontalmente y se fija en la parte superior */
   background-repeat: no-repeat;
-  background-position: center;
   position: relative; /* Necesario para el pseudo-elemento */
   padding: 3rem 2rem;
   z-index: -1;
-
 }
 
 .informacion::before {
@@ -109,8 +115,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background:  
-   rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -131,4 +136,3 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
-

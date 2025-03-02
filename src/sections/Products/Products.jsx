@@ -8,7 +8,7 @@ import { getSlides } from "../../constants/slides"; // Importa la función
 import { useToldosControls } from "../../constants/levaControls";
 import { IconoProducto } from "../../constants/svg"; // Importa el componente
 
-import CasaProductos from "../../components/CasaProductos";
+import CasaProductos from "../../components/Toldos/CasaProductos";
 
 import { useIdioma } from "../../contexts/IdiomaContext"; // Usa el contexto de idioma
 
@@ -35,7 +35,6 @@ const Products = () => {
     CameraPosZ,
     CameraFov,
     AmbientLightIntensity,
-    DirectionalLightIntensity,
     DirectionalLightPosX,
     DirectionalLightPosY,
     DirectionalLightPosZ,
@@ -53,7 +52,7 @@ const Products = () => {
         {/* Izquierda: Slider de descripciones */}
         <div className="productos-slider">
           <div className="titulo">
-            <IconoProducto /> 
+            <IconoProducto />
             <h1>{idioma === "es" ? "NUESTROS PRODUCTOS" : "OUR PRODUCTS"}</h1>
           </div>
           <div className="descripciones-toldo">
@@ -76,7 +75,10 @@ const Products = () => {
 
         {/* Derecha: Canvas con el Modelo */}
         <div className="productos-canvas">
-          <Canvas style={{ height: "100%", width: "70%", cursor: "grab" }}>
+          <Canvas
+            style={{ height: "100%", width: "70%", cursor: "grab" }}
+            shadows
+          >
             <PerspectiveCamera
               makeDefault
               position={[CameraPosX, CameraPosY, CameraPosZ]}
@@ -84,16 +86,22 @@ const Products = () => {
             />
             <ambientLight intensity={AmbientLightIntensity} />
             <directionalLight
+              castShadow
+              shadow-mapSize={[2048, 2048]}
               position={[
                 DirectionalLightPosX,
                 DirectionalLightPosY,
                 DirectionalLightPosZ,
               ]}
-              intensity={DirectionalLightIntensity}
+              intensity={4}
             />
             <Suspense fallback={<CanvasLoader />}>
               <group scale={0.5}>
-                <CasaProductos position={[CasaPosX, CasaPosY, CasaPosZ]} rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]} scale={1} />
+                <CasaProductos
+                  position={[CasaPosX, CasaPosY, CasaPosZ]}
+                  rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
+                  scale={1}
+                />
                 {slides[currentIndex].model}
                 <OrbitControls
                   makeDefault
