@@ -33,8 +33,20 @@ const Beneficios = () => {
     <section className="section-beneficios" id="home">
       <div className="grid-container">
         <div className="grid-izquierda">
-          <h1>{beneficios[indexActivo].portada}</h1>
-          <p>{beneficios[indexActivo].texto}</p>
+          <div>
+            <h1>{beneficios[indexActivo].portada}</h1>
+            <p>{beneficios[indexActivo].texto}</p>
+          </div>
+          <img
+            src="/assets/Logo/1999.png"
+            alt="Logo1999"
+            style={{
+              width: "15rem",
+              position: "absolute",
+              bottom: "4rem",
+              left: "-2rem",
+            }}
+          />
         </div>
 
         <div className="grid-derecha">
@@ -46,7 +58,7 @@ const Beneficios = () => {
             </h1>
             <p>
               {idioma === "es"
-                ? "Desde la planificación hasta el mantenimiento, en Toldos Andalucía ofrecemos una instalación de toldos precisa y de calidad, cuidando en cada detalle. Además, realizamos pruebas para asegurar su funcionamiento óptimo y te asesoramos en su mantenimiento para una mayor durabilidad."
+                ? "Desde la planificación hasta el mantenimiento, en Toldos Andalucía ofrecemos una instalación de toldos precisa y de calidad, cuidando cada detalle. Además, realizamos pruebas para asegurar su funcionamiento óptimo y te asesoramos en su mantenimiento para una mayor durabilidad."
                 : "From planning to maintenance, at Toldos Andalucía we offer precise and high-quality awning installation, taking care of every detail. Additionally, we conduct tests to ensure optimal performance and provide guidance on maintenance for greater durability."}
             </p>
           </div>

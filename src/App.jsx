@@ -7,6 +7,7 @@ import Contacto from "./sections/Contacto/Contacto";
 
 import { IdiomaProvider } from "./contexts/IdiomaContext";
 import Beneficios from "./sections/Beneficios/Beneficios";
+import SectionDivider from "./components/Section";
 
 
 
@@ -15,7 +16,7 @@ const App = () => {
     <IdiomaProvider>
       <Navbar />
       <Home />
-      {/* <Ventajas /> */}
+      <SectionDivider />
       <Beneficios />
       <Products />
       <Contacto />
