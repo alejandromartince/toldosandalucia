@@ -4,7 +4,7 @@ import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 import CanvasLoader from "../../components/CanvasLoader";
-import { getSlides } from "../../constants/slides"; // Importa la función
+import { getSlides } from "../../constants/index"; // Importa la función
 import { useToldosControls } from "../../constants/levaControls";
 import { IconoProducto } from "../../constants/svg"; // Importa el componente
 
@@ -13,6 +13,7 @@ import CasaProductos from "../../components/Toldos/CasaProductos";
 import { useIdioma } from "../../contexts/IdiomaContext"; // Usa el contexto de idioma
 
 import "./Products.css";
+import BotonSubrayado from "../../components/BotonSubrayado";
 
 const Products = () => {
   const { idioma } = useIdioma(); // Obtén el idioma y la función para cambiarlo
@@ -72,49 +73,52 @@ const Products = () => {
             </div>
           </div>
         </div>
-
-        {/* Derecha: Canvas con el Modelo */}
-        <div className="productos-canvas">
-          <Canvas
-            style={{ height: "100%", width: "70%", cursor: "grab" }}
-            shadows
-          >
-            <PerspectiveCamera
-              makeDefault
-              position={[CameraPosX, CameraPosY, CameraPosZ]}
-              fov={CameraFov}
-            />
-            <ambientLight intensity={AmbientLightIntensity} />
-            <directionalLight
-              castShadow
-              shadow-mapSize={[2048, 2048]}
-              position={[
-                DirectionalLightPosX,
-                DirectionalLightPosY,
-                DirectionalLightPosZ,
-              ]}
-              intensity={4}
-            />
-            <Suspense fallback={<CanvasLoader />}>
-              <group scale={0.5}>
-                <CasaProductos
-                  position={[CasaPosX, CasaPosY, CasaPosZ]}
-                  rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
-                  scale={1}
-                />
-                {slides[currentIndex].model}
-                <OrbitControls
-                  makeDefault
-                  enableRotate={true}
-                  maxPolarAngle={Math.PI / 2}
-                  maxDistance={10}
-                  minDistance={5}
-                  enablePan={true}
-                  enableZoom={false}
-                />
-              </group>
-            </Suspense>
-          </Canvas>
+        <div className="grid-derecha-canvas">
+          <div className="productos-canvas">
+            <Canvas
+              style={{ height: "100%", width: "70%", cursor: "grab" }}
+              shadows
+            >
+              <PerspectiveCamera
+                makeDefault
+                position={[CameraPosX, CameraPosY, CameraPosZ]}
+                fov={CameraFov}
+              />
+              <ambientLight intensity={AmbientLightIntensity} />
+              <directionalLight
+                castShadow
+                shadow-mapSize={[2048, 2048]}
+                position={[
+                  DirectionalLightPosX,
+                  DirectionalLightPosY,
+                  DirectionalLightPosZ,
+                ]}
+                intensity={4}
+              />
+              <Suspense fallback={<CanvasLoader />}>
+                <group scale={0.5}>
+                  <CasaProductos
+                    position={[CasaPosX, CasaPosY, CasaPosZ]}
+                    rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
+                    scale={1}
+                  />
+                  {slides[currentIndex].model}
+                  <OrbitControls
+                    makeDefault
+                    enableRotate={true}
+                    maxPolarAngle={Math.PI / 2}
+                    maxDistance={10}
+                    minDistance={5}
+                    enablePan={true}
+                    enableZoom={false}
+                  />
+                </group>
+              </Suspense>
+            </Canvas>
+          </div>
+          <div className="contenedor-presupuesto">
+            <BotonSubrayado idioma={idioma} id="Products" className="saber-mas" />
+          </div>
         </div>
       </div>
     </section>

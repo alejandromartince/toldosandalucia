@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
-import { informacionSlider } from "../../constants/slides";
+import { informacionSlider } from "../../constants/index";
 import Slider from "react-slick";
 import Button from "../../components/Button"; // Importamos el nuevo botón
 

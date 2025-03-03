@@ -3,9 +3,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense } from "react";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
-import { useCasaHomeControls } from "../../constants/levaControls";
 import CasaHome from "../../components/Toldos/CasaHome";
 import CanvasLoader from "../../components/CanvasLoader";
+import BotonSubrayado from "../../components/BotonSubrayado";
+
+import { useCasaHomeControls } from "../../constants/levaControls";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 import "./Home.css";
@@ -79,14 +81,13 @@ const Home = () => {
               <directionalLight position={[-10, 15, -10]} intensity={1.5} />
 
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={.7}>
+                <group scale={0.7}>
                   {/* Modelo con sombra */}
                   <CasaHome
                     castShadow
                     scale={1}
                     position={[CasaPosX, CasaPosY, CasaPosZ]}
                     rotation={[CasaRotationX, CasaRotationY, CasaRotationZ]}
-                    
                   />
 
                   <OrbitControls
@@ -106,22 +107,11 @@ const Home = () => {
             </Canvas>
           </div>
           <div className="contenedor-presupuesto">
-            <a
+            <BotonSubrayado
+              idioma={idioma}
               className="presupuesto"
-              data-action="open"
-              data-phone="34679847618"
-              data-message=""
-              role="button"
-              tabIndex="0"
-              target="_blank"
-              href="https://web.whatsapp.com/send?phone=34679847618&text="
-              style={{ textDecoration: "none" }}
-              data-text={
-                idioma === "es" ? "Realizar presupuesto" : "Make a quote"
-              }
-            >
-              {idioma === "es" ? "Realizar presupuesto" : "Make a quote"}
-            </a>
+              id="Home" // Este debe ser el id correcto
+            />
           </div>
         </div>
         <div className="informacion">
