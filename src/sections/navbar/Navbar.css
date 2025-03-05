@@ -1,0 +1,114 @@
+/* ========================================
+        PARTE GENERAL
+======================================= */
+
+.nav-container {
+  background-color: var(--negro-claro);
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 0 2rem; /* Añade un poco de espacio en los laterales */
+}
+
+.logo-nav-container {
+  padding: 1rem;
+}
+
+.logo-nav-container img {
+  width: 6.25rem;
+}
+
+/* ========================================
+        PARTE DEL MENU CENTRAL 
+======================================= */
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+  margin: 0; /* Elimina márgenes para evitar desplazamientos no deseados */
+  flex-grow: 1; /* Hace que ocupe el espacio disponible */
+  justify-content: center; /* Centra los elementos en el espacio disponible */
+}
+
+/* ========================================
+        PARTE DEL IDIOMA
+======================================= */
+
+.language-button-container {
+  position: relative; /* Necesario para posicionar el dropdown fuera del nav */
+}
+
+/* Botón que abre el menú */
+.language-button {
+  border: none;
+  background: transparent; /* Mismo fondo que el menú */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 2.5rem; /* Ajusta la altura */
+  width: 4rem; /* Ajusta el ancho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  
+}
+
+.language-button:hover {
+  transform: scale(1.1);
+  background-color: black;
+}
+
+/* Menú desplegable */
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  margin-top: 0.5rem; /* Reduce la separación */
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  border-radius: 5px;
+  width: 100%; /* Igual al botón */
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+/* Mostrar el menú al hacer focus o al pasar el mouse */
+.language-button:focus + .language-dropdown,
+.language-dropdown:hover {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Elementos dentro del menú */
+.language-dropdown li {
+  list-style-type: none;
+  transition: background-color 0.3s ease;
+  margin: 0.3rem 0; /* Agrega espacio vertical entre opciones */
+
+}
+
+.language-dropdown li button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: inherit;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.703);
+}
+
+/* Ajuste de la bandera */
+.language-flag {
+  height: 1rem;
+}
+
+.language-flag.special {
+  padding: 0.5rem;
+}
