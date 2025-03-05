@@ -25,13 +25,14 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Estado para controlar el menú desplegable
   const scrollProgress = useScrollProgress(); // Usar el hook para obtener el progreso
-  const isMenuOpen = useWindowSize();
-
+  const tamanoPantallaPequeno = useWindowSize();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dropdownRef = useRef(null); // Referencia para el dropdown
 
   // Usamos los hooks personalizados
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   useClickOutsideEffect(dropdownRef, setIsDropdownOpen); // Hook para manejar clics fuera del dropdown
+  console.log(isMenuOpen)
 
   return (
     <header className="header-nav">
@@ -40,9 +41,19 @@ const Navbar = () => {
           <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
         </div>
 
-        <div className={`menu ${isMenuOpen ? "menu-open" : ""}`}>
-          <nav>
+        <div
+          className={`menu ${
+            tamanoPantallaPequeno ? "menu-pantalla-pequena" : ""
+          }`}
+        >
+          <nav className="menu-central-navbar">
             <ul>
+              {tamanoPantallaPequeno && (isMenuOpen ? (
+                <FaTimes size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+              ) : (
+                <FaBars size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+              ))}
+
               {secciones.map(({ id, texto, offset }) => (
                 <Link
                   key={id}

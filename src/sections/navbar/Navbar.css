@@ -3,7 +3,6 @@
 ======================================= */
 header {
   font-family: "Open Sans", sans-serif;
- 
 }
 
 .nav-container {
@@ -55,7 +54,7 @@ header {
         PARTE DEL MENU CENTRAL 
 ======================================= */
 
-nav ul {
+.menu-central-navbar ul {
   display: flex;
   justify-content: space-around; /* Centra los elementos en el espacio disponible */
   flex-grow: 1; /* Hace que ocupe el espacio disponible */
@@ -65,7 +64,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul a {
+.menu-central-navbar ul a {
   cursor: pointer;
 }
 
@@ -168,7 +167,4 @@ nav ul a {
 
 /* Dispositivos pequeños (móviles) */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
 }
