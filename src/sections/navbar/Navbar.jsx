@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+// Navbar.jsx
+import React, { useState, useRef } from "react";
 
 // Hooks
 import { useIdioma } from "../../contexts/IdiomaContext";
@@ -7,10 +8,13 @@ import { Link } from "react-scroll";
 // Constants
 import { secciones, idiomas } from "../../constants/navbar";
 
-// Utils
-import { handleScroll } from "../../functions/handleScroll"; // Importa la función handleScroll
+// Hooks personalizados
+import { useScrollEffect } from "../../functions/navbar/useScrollEffect"; // Importa el hook para el scroll
+import { useClickOutsideEffect } from "../../functions/navbar/useClickOutsideEffect"; // Importa el hook para el clic fuera del dropdown
+import useScrollProgress from "../../functions/navbar/barraProgress"; // Importar el hook
+import { useWindowSize } from "../../functions/navbar/useWindowSize";
 
-//Icons
+// Icons
 import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
 
 // Styles
@@ -18,32 +22,16 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { idioma, cambiarIdioma } = useIdioma();
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Estado para controlar el menú desplegable
+  const scrollProgress = useScrollProgress(); // Usar el hook para obtener el progreso
+  const isMenuOpen = useWindowSize();
 
   const dropdownRef = useRef(null); // Referencia para el dropdown
 
-  // Actualiza el texto cuando cambia el idioma
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      handleScroll(secciones, setActiveSection)
-    ); // Usa la función handleScroll
-    return () =>
-      window.removeEventListener("scroll", () =>
-        handleScroll(secciones, setActiveSection)
-      );
-  }, []);
-
-  // Cerrar el dropdown si se hace clic fuera
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // Usamos los hooks personalizados
+  useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
+  useClickOutsideEffect(dropdownRef, setIsDropdownOpen); // Hook para manejar clics fuera del dropdown
 
   return (
     <header className="header-nav">
@@ -52,27 +40,28 @@ const Navbar = () => {
           <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
         </div>
 
-        <nav>
-          <ul>
-            {secciones.map(({ id, es, en, offset }) => (
-              <Link
-                key={id}
-                to={id}
-                spy={true}
-                smooth={true}
-                offset={offset}
-                duration={500}
-                className={`nav_link ${
-                  activeSection === id ? "active_link" : ""
-                }`}
-              >
-                {idioma === "es" ? es : en}
-              </Link>
-            ))}
-          </ul>
-        </nav>
+        <div className={`menu ${isMenuOpen ? "menu-open" : ""}`}>
+          <nav>
+            <ul>
+              {secciones.map(({ id, texto, offset }) => (
+                <Link
+                  key={id}
+                  to={id}
+                  spy={true}
+                  smooth={true}
+                  offset={offset}
+                  duration={500}
+                  className={`nav_link ${
+                    activeSection === id ? "active_link" : ""
+                  }`}
+                >
+                  {texto[idioma]}
+                </Link>
+              ))}
+            </ul>
+          </nav>
+        </div>
 
-        {/* Botón para mostrar el menú desplegable de idiomas */}
         <div className="language-button-container" ref={dropdownRef}>
           <button
             className="language-button"
@@ -83,7 +72,7 @@ const Navbar = () => {
               alt={idioma}
               className="language-flag"
             />
-            <FaArrowDown size={15} style={{ marginLeft: "5px" }}/>
+            <FaArrowDown size={15} style={{ marginLeft: "5px" }} />
           </button>
 
           {isDropdownOpen && (
@@ -105,6 +94,12 @@ const Navbar = () => {
             </ul>
           )}
         </div>
+      </div>
+      <div className="progress-bar-container">
+        <div
+          className="progress-bar"
+          style={{ width: `${scrollProgress}%` }}
+        ></div>
       </div>
     </header>
   );

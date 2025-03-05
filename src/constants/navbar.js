@@ -4,8 +4,8 @@ export const idiomas = {
 };
 
 export const secciones = [
-  { id: "home", es: "Inicio", en: "Home", offset: 0 },
-  { id: "products", es: "Productos", en: "Products", offset: -65 },
-  { id: "contacto", es: "Contacto", en: "Contact", offset: -60 },
-  { id: "blog", es: "Blog", en: "Blog", offset: 0 },
+  { id: "home", texto: { es: "Inicio", en: "Home" }, offset: 0 },
+  { id: "products", texto: { es: "Productos", en: "Products" }, offset: -65 },
+  { id: "contacto", texto: { es: "Contacto", en: "Contact" }, offset: -60 },
+  { id: "blog", texto: { es: "Blog", en: "Blog" }, offset: 0 },
 ];

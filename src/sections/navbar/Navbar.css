@@ -1,14 +1,47 @@
 /* ========================================
         PARTE GENERAL
 ======================================= */
+header {
+  font-family: "Open Sans", sans-serif;
+ 
+}
 
 .nav-container {
-  background-color: var(--negro-claro);
+  color: white;
   display: flex;
   justify-content: space-between; /* Alinea los elementos a los extremos */
   align-items: center; /* Centra los elementos verticalmente */
-  padding: 0 2rem; /* Añade un poco de espacio en los laterales */
+  background-color: var(--negro-claro);
+  position: fixed; /* Hace que se quede fija en la parte superior */
+  top: 0; /* Se coloca en la parte superior de la pantalla */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.514); /* Añade sombra para darle profundidad */
 }
+
+/* Barra de progreso */
+.progress-bar-container {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Altura de la barra */
+  background-color: transparent;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: white; /* Color de la barra de progreso a blanco */
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+/* ==============================
+      PARTE DEL LOGO  
+============================== */
 
 .logo-nav-container {
   padding: 1rem;
@@ -24,12 +57,27 @@
 
 nav ul {
   display: flex;
+  justify-content: space-around; /* Centra los elementos en el espacio disponible */
+  flex-grow: 1; /* Hace que ocupe el espacio disponible */
   list-style-type: none;
   gap: 2rem;
   margin: 0; /* Elimina márgenes para evitar desplazamientos no deseados */
-  flex-grow: 1; /* Hace que ocupe el espacio disponible */
-  justify-content: center; /* Centra los elementos en el espacio disponible */
+  padding: 0;
 }
+
+nav ul a {
+  cursor: pointer;
+}
+
+.nav_link {
+  transition: color 0.3s ease;
+}
+
+.nav_link.active_link {
+  color: var(--verde-claro);
+}
+
+
 
 /* ========================================
         PARTE DEL IDIOMA
@@ -37,6 +85,7 @@ nav ul {
 
 .language-button-container {
   position: relative; /* Necesario para posicionar el dropdown fuera del nav */
+  padding: 1rem;
 }
 
 /* Botón que abre el menú */
@@ -52,12 +101,11 @@ nav ul {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  
 }
 
 .language-button:hover {
   transform: scale(1.1);
-  background-color: black;
+  background-color: var(--negro);
 }
 
 /* Menú desplegable */
@@ -65,16 +113,17 @@ nav ul {
   position: absolute;
   top: 100%;
   right: 0;
+  height: 2.5rem; /* Ajusta la altura */
+  width: 4rem; /* Ajusta el ancho */
   opacity: 0;
   margin-top: 0.5rem; /* Reduce la separación */
+  margin-right: 1rem;
+  padding: 0;
   transform: translateY(-10px);
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   border-radius: 5px;
-  width: 100%; /* Igual al botón */
   text-align: center;
-  margin-top: 1rem;
-
 }
 
 /* Mostrar el menú al hacer focus o al pasar el mouse */
@@ -90,7 +139,6 @@ nav ul {
   list-style-type: none;
   transition: background-color 0.3s ease;
   margin: 0.3rem 0; /* Agrega espacio vertical entre opciones */
-
 }
 
 .language-dropdown li button {
@@ -111,4 +159,16 @@ nav ul {
 
 .language-flag.special {
   padding: 0.5rem;
+}
+
+
+/* ========================================
+        MEDIA QUERIES
+======================================= */
+
+/* Dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
 }
