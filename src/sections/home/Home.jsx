@@ -1,6 +1,5 @@
 import React from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
-import { informacionBoton } from "../../constants/infoBotones";
 
 // Importamos las constantes
 import { textoHome } from "../../constants/infoHome";
@@ -10,6 +9,7 @@ import BotonLinea from "../../components/BotonLinea/BotonLinea";
 
 // Estilos
 import "./Home.css";
+import CasaHome from "../../components/CasaHome";
 
 const Home = () => {
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
@@ -32,7 +32,9 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="right-grid-home">Contenido Derecho</div>
+        <div className="right-grid-home">
+          <CasaHome />
+        </div>
       </div>
     </section>
   );

@@ -18,7 +18,9 @@ import { useWindowSize } from "../../functions/navbar/useWindowSize";
 import { useScrollFondoNavbar } from "../../functions/navbar/fondoNavbar";
 
 // Icons
-import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+
 
 // Styles
 import "./Navbar.css";
@@ -92,7 +94,7 @@ const Navbar = () => {
               alt={idioma}
               className="language-flag"
             />
-            <FaArrowDown size={15} style={{ marginLeft: "5px" }} />
+            <IoIosArrowDown size={20} style={{ marginLeft: "5px" }} />
           </button>
 
           {isDropdownOpen && (
