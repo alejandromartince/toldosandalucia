@@ -1,5 +1,4 @@
 // handleScroll.js
-
 export const handleScroll = (secciones, setActiveSection) => {
     const scrollPosition = window.scrollY + 70;
     secciones.forEach(({ id, offset }) => {

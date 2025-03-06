@@ -6,18 +6,36 @@ header {
 }
 
 .nav-container {
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-container.fondo-transparente {
   color: white;
   display: flex;
   justify-content: space-between; /* Alinea los elementos a los extremos */
   align-items: center; /* Centra los elementos verticalmente */
-  background-color: var(--negro-claro);
+  background-color: transparent;
   position: fixed; /* Hace que se quede fija en la parte superior */
   top: 0; /* Se coloca en la parte superior de la pantalla */
   left: 0; /* Alinea a la izquierda */
   right: 0; /* Alinea a la derecha */
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.514); /* Añade sombra para darle profundidad */
+}
+
+.nav-container.fondo-no-transparente {
+  background-color: var(--negro-claro);
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center; /* Centra los elementos verticalmente */
+  position: fixed; /* Hace que se quede fija en la parte superior */
+  top: 0; /* Se coloca en la parte superior de la pantalla */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+  box-shadow: 0 4px 10px var(--negro);
 }
 
 /* Barra de progreso */
@@ -67,7 +85,7 @@ header {
 
 .menu-central-navbar ul a {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.7;
   transition: color 0.3s ease, opacity 0.3s ease; /* Asegúrate de que opacity también esté en la transición */
 }
 
@@ -84,8 +102,6 @@ header {
   color: var(--verde-claro);
   opacity: 1;
 }
-
-
 
 /* ========================================
         PARTE DEL IDIOMA
@@ -183,15 +199,20 @@ header {
     width: 100%;
     height: auto; /* Ajusta la altura para que no esté fija en 10vh */
   }
+  
+  .nav-container{
+    transition: none;
+  }
 
-  .menu.menu-pantalla-pequena.menu-cerrado{
+  .menu.menu-pantalla-pequena.menu-cerrado {
     display: none;
   }
 
   /* Estilos para el menú central en pantallas pequeñas */
   .menu-central-navbar.menu-central-navbar-pequeno {
     width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    padding: 1rem;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px var(--negro);
   }
 
   /* Estilos para la lista de navegación */
@@ -202,18 +223,18 @@ header {
     margin: 0;
   }
 
-  .language-button-container{
+  .language-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20%;
   }
 
-  .language-button:hover{
+  .language-button:hover {
     background-color: transparent;
   }
 
-  .language-dropdown{
+  .language-dropdown {
     position: absolute;
     transform: none;
     opacity: 1;

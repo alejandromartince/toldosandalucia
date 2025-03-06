@@ -1,18 +1,21 @@
 // Navbar.jsx
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, use } from "react";
+
+// Contextos
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Hooks
-import { useIdioma } from "../../contexts/IdiomaContext";
 import { Link } from "react-scroll";
 
 // Constants
-import { secciones, idiomas } from "../../constants/navbar";
+import { secciones, idiomas } from "../../constants/infoNavbar";
 
-// Hooks personalizados
+// Funciones personalizadas
 import { useScrollEffect } from "../../functions/navbar/useScrollEffect"; // Importa el hook para el scroll
 import { useClickOutsideEffect } from "../../functions/navbar/useClickOutsideEffect"; // Importa el hook para el clic fuera del dropdown
 import useScrollProgress from "../../functions/navbar/barraProgress"; // Importar el hook
 import { useWindowSize } from "../../functions/navbar/useWindowSize";
+import { useScrollFondoNavbar } from "../../functions/navbar/fondoNavbar";
 
 // Icons
 import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
@@ -32,11 +35,14 @@ const Navbar = () => {
   // Usamos los hooks personalizados
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   useClickOutsideEffect(dropdownRef, setIsDropdownOpen); // Hook para manejar clics fuera del dropdown
-  console.log(isMenuOpen);
-
+  const isTransparent = useScrollFondoNavbar();
   return (
     <header className="header-nav">
-      <div className="nav-container">
+      <div
+        className={`nav-container ${
+          isTransparent ? "fondo-transparente" : "fondo-no-transparente"
+        }`}
+      >
         <div className="logo-nav-container">
           <Link to="home" spy={true} smooth={true} duration={500}>
             <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />

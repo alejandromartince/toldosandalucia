@@ -1,8 +1,12 @@
+/*===========================
+ OPCIONES GENERALES
+ ===========================*/
+
 .home-container {
-  padding: 2rem;
-  background-color: #f4f4f4; /* Color de fondo suave */
+  background-color: var(--verde); /* Color de fondo suave */
   height: 100vh; /* Hace que la sección sea más alta para probar el scroll */
-  text-align: center;}
+  color: white;
+}
 
 .home-container h1 {
   font-size: 2.5rem;
@@ -13,4 +17,108 @@
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+}
+
+/* =========================
+OPCIONES GRID
+========================*/
+
+.grid-container-home {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 1rem;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.left-grid-home {
+  grid-column: span 2; /* Ocupa 2 columnas */
+  padding: 2rem;
+  border-radius: 10px;
+  align-content: center;
+  text-shadow: 1px 1px 5px black;
+}
+
+.right-grid-home {
+  grid-column: span 3; /* Ocupa 3 columnas */
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* =========================
+GRID IZQUIERDA
+==============================*/
+.left-grid-home h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.left-grid-home p {
+  font-weight: 300;
+}
+
+
+/* ===================================
+MEDIA QUERIES
+====================================*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .grid-container-home {
+    grid-template-columns: 1fr;
+    padding: 6rem 0;
+    display: grid;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .left-grid-home {
+    background-color: rgba(255, 255, 255, 0.2);
+    grid-column: span 1;
+    padding: 2rem;
+    border-radius: 10px;
+    align-content: center;
+  }
+  
+  .right-grid-home {
+    grid-column: span 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px){
+ 
+  .grid-container-home {
+    grid-template-columns: 1fr;
+    padding: 6rem 0;
+    display: grid;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .left-grid-home {
+    background-color: rgba(255, 255, 255, 0.2);
+    grid-column: span 1;
+    padding: 2rem;
+    border-radius: 10px;
+    align-content: center;
+  }
+  
+  .right-grid-home {
+    grid-column: span 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
 }
