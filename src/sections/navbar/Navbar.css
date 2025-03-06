@@ -48,6 +48,7 @@ header {
 
 .logo-nav-container img {
   width: 6.25rem;
+  cursor: pointer;
 }
 
 /* ========================================
@@ -66,14 +67,22 @@ header {
 
 .menu-central-navbar ul a {
   cursor: pointer;
+  opacity: 0.6;
+  transition: color 0.3s ease, opacity 0.3s ease; /* Asegúrate de que opacity también esté en la transición */
+}
+
+.menu-central-navbar ul a:hover:not(.active_link) {
+  color: white;
+  opacity: 1;
 }
 
 .nav_link {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, opacity 0.3s ease; /* Aplica la transición a opacity también */
 }
 
 .nav_link.active_link {
   color: var(--verde-claro);
+  opacity: 1;
 }
 
 
@@ -160,11 +169,77 @@ header {
   padding: 0.5rem;
 }
 
-
 /* ========================================
         MEDIA QUERIES
 ======================================= */
 
 /* Dispositivos pequeños (móviles) */
 @media (max-width: 768px) {
+  /* Estilos para el contenedor del menú en pantallas pequeñas */
+  .menu.menu-pantalla-pequena {
+    position: absolute;
+    top: 70px;
+    background-color: var(--negro-muy-claro);
+    width: 100%;
+    height: auto; /* Ajusta la altura para que no esté fija en 10vh */
+  }
+
+  .menu.menu-pantalla-pequena.menu-cerrado{
+    display: none;
+  }
+
+  /* Estilos para el menú central en pantallas pequeñas */
+  .menu-central-navbar.menu-central-navbar-pequeno {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    padding: 1rem;
+  }
+
+  /* Estilos para la lista de navegación */
+  .menu-central-navbar ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    flex-direction: column; /* Hace que la lista se muestre de manera vertical */
+    padding: 0;
+    margin: 0;
+  }
+
+  .language-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+
+  .language-button:hover{
+    background-color: transparent;
+  }
+
+  .language-dropdown{
+    position: absolute;
+    transform: none;
+    opacity: 1;
+    margin: 0;
+    right: 60px;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  /* Mostrar icono de hamburguesa y cerrar */
+  .menu-pantalla-pequena .language-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+  }
+
+  .menu-pantalla-pequena .language-button-container .language-button {
+    padding: 0 1rem;
+  }
+
+  .menu-pantalla-pequena .language-dropdown {
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-out;
+  }
 }

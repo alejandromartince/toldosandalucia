@@ -32,28 +32,30 @@ const Navbar = () => {
   // Usamos los hooks personalizados
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   useClickOutsideEffect(dropdownRef, setIsDropdownOpen); // Hook para manejar clics fuera del dropdown
-  console.log(isMenuOpen)
+  console.log(isMenuOpen);
 
   return (
     <header className="header-nav">
       <div className="nav-container">
         <div className="logo-nav-container">
-          <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
+          <Link to="home" spy={true} smooth={true} duration={500}>
+            <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
+          </Link>
         </div>
 
         <div
           className={`menu ${
-            tamanoPantallaPequeno ? "menu-pantalla-pequena" : ""
-          }`}
+            tamanoPantallaPequeno ? "menu-pantalla-pequena" : "menu-grande"
+          } ${isMenuOpen ? "menu-abierto" : "menu-cerrado"}`}
         >
-          <nav className="menu-central-navbar">
+          <nav
+            className={`menu-central-navbar ${
+              tamanoPantallaPequeno
+                ? "menu-central-navbar-pequeno"
+                : "menu-central-navbar-grande"
+            }`}
+          >
             <ul>
-              {tamanoPantallaPequeno && (isMenuOpen ? (
-                <FaTimes size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-              ) : (
-                <FaBars size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-              ))}
-
               {secciones.map(({ id, texto, offset }) => (
                 <Link
                   key={id}
@@ -65,6 +67,7 @@ const Navbar = () => {
                   className={`nav_link ${
                     activeSection === id ? "active_link" : ""
                   }`}
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   {texto[idioma]}
                 </Link>
@@ -104,6 +107,12 @@ const Navbar = () => {
               ))}
             </ul>
           )}
+          {tamanoPantallaPequeno &&
+            (isMenuOpen ? (
+              <FaTimes size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+            ) : (
+              <FaBars size={25} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+            ))}
         </div>
       </div>
       <div className="progress-bar-container">

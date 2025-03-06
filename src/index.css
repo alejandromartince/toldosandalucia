@@ -3,9 +3,10 @@
   /* COLORES */
   --negro: #131313;
   --negro-claro: #272727;
+  --negro-muy-claro: #3b3b3b;
 
   --verde: #1b4332;
-  --verde-claro: #35d693;
+  --verde-claro: #00ff95;
 }
 
 body {
