@@ -2,7 +2,7 @@
   padding: 2rem;
   background-color: #f4f4f4; /* Color de fondo suave */
   height: 100vh; /* Hace que la sección sea más alta para probar el scroll */
-}
+  text-align: center;}
 
 .home-container h1 {
   font-size: 2.5rem;
