@@ -2,24 +2,27 @@ import React from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Importamos las constantes
-import { textoHome, useModelHomeControls } from "../../constants/infoHome";
+import { textoHome } from "../../constants/infoHome";
 
 //Importamos los componentes
 import BotonLinea from "../../components/BotonLinea/BotonLinea";
 import CasaHome from "../../components/CasaHome";
-
 
 // Estilos
 import "./Home.css";
 
 const Home = () => {
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
-  const controls = useModelHomeControls(); // Usa los controles
 
   return (
-    <section className="home-container" id="home">
-      <div className="grid-container-home">
-        <div className="left-grid-home">
+    <section className="home" id="home">
+      <div className="home-container">
+
+        <div className="home-right-container">
+          <CasaHome />
+        </div>
+        
+        <div className="home-left-container">
           <div>
             <h1>{textoHome.titulo[idioma]}</h1>
           </div>
@@ -33,10 +36,6 @@ const Home = () => {
               className="boton-home" // Puedes agregar una clase personalizada si lo necesitas
             />
           </div>
-        </div>
-        <div className="right-grid-home">
-          {/* Pasamos los controles como prop */}
-          <CasaHome controls={controls} />
         </div>
       </div>
     </section>

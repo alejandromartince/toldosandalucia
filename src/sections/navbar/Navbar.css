@@ -98,9 +98,14 @@ header {
   transition: color 0.3s ease, opacity 0.3s ease; /* Aplica la transición a opacity también */
 }
 
+
 .nav_link.active_link {
   color: var(--verde-claro);
   opacity: 1;
+  transition: text-shadow 0.3s ease;
+}
+.nav_link.active_link:hover{
+  text-shadow: 1px 1px 5px var(--verde-claro);
 }
 
 /* ========================================

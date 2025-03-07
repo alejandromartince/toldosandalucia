@@ -1,19 +1,20 @@
-.boton-container{
-    margin-top: 4rem;
+.boton-container {
+  margin-top: 5rem;
+  margin-right: 1rem;
 }
 
 .boton-home {
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-bottom: 1px solid white;
   position: relative;
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  transition: color .5s ease, text-shadow 0.3s ease, border-bottom .5s ease; /* Animación del color */
+  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
   z-index: 1;
   font-family: inherit;
   color: white;
-  overflow: hidden;
+
 }
 
 .boton-home::before {
@@ -27,7 +28,7 @@
   border-radius: 2rem;
   transform: translateX(-50%) scaleX(0); /* Empieza desde el centro con scaleX(0) */
   transition: transform 0.5s cubic-bezier(0.4, 1, 0.6, 1), width 0.5s ease,
-    box-shadow .7s ease, color 0.3s ease; /* Duración igual para ambas transiciones */
+    box-shadow 0.7s ease, color 0.3s ease; /* Duración igual para ambas transiciones */
   z-index: -1;
 }
 
@@ -47,22 +48,21 @@
   scale: 1;
 }
 
+@media (max-width: 769px) {
+  .boton-container {
+    display: flex;
+    justify-content: end;
+  }
 
-@media (max-width: 769px){
-    .boton-container{
-        display: flex;
-        justify-content: end;
-    }
+  .boton-home::before {
+    background-color: transparent;
+  }
 
-    .boton-home::before{
-        background-color: transparent;
-    }
-
-    .boton-home:hover::before{
-        box-shadow: none;
-    }
-    .boton-home:hover{
-        color: white;
-        border-bottom: 1px solid white;
-    }
+  .boton-home:hover::before {
+    box-shadow: none;
+  }
+  .boton-home:hover {
+    color: white;
+    border-bottom: 1px solid white;
+  }
 }

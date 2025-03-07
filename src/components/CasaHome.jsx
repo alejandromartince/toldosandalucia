@@ -1,30 +1,73 @@
+import React from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-} from "@react-three/drei";
+import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import ModelHome from "../objects/ModelHome";
 import { Suspense } from "react";
 import CanvasLoader from "./CanvasLoader";
 
+// Importa los controles de Leva
+import { useModelHomeControls } from "../constants/infoHome"; // Asegúrate de que el archivo sea correcto
+import HomeCamara from "../functions/home/HomeCamara";
+
 const CasaHome = () => {
+  const controls = useModelHomeControls();
+
   return (
     <div className="model-home-container">
       <Canvas className="model-home" shadows>
-        <PerspectiveCamera makeDefault position={[0, 2, 5]} />
+        <PerspectiveCamera
+          makeDefault
+          position={[
+            controls.cameraPosX,
+            controls.cameraPosY,
+            controls.cameraPosZ,
+          ]}
+          fov={controls.cameraFov}
+        />
 
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={controls.ambientLightIntensity} />
         <directionalLight
           castShadow
-          position={[5, 5, 5]}
-          intensity={1}          
+          position={[
+            controls.directionalLightPosX,
+            controls.directionalLightPosY,
+            controls.directionalLightPosZ,
+          ]}
+          intensity={controls.directionalLightIntensity}
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
         />
 
         <Suspense fallback={<CanvasLoader />}>
-          <ModelHome castShadow receiveShadow />
+          {/* Solo renderiza HomeCamara si la pantalla es mayor a 1600px */}
+          <HomeCamara>
+            <group scale={0.6}>
+              <ModelHome
+                castShadow
+                receiveShadow
+                position={[
+                  controls.modelHomePosX,
+                  controls.modelHomePosY,
+                  controls.modelHomePosZ,
+                ]}
+                rotation={[
+                  controls.modelHomeRotX,
+                  controls.modelHomeRotY,
+                  controls.modelHomeRotZ,
+                ]}
+                scale={0.5}
+              />
+            </group>
+          </HomeCamara>
+          )
         </Suspense>
 
-        <OrbitControls />
+        <OrbitControls
+          target={[0, 1, 0]}
+          enableZoom={false}
+          enablePan={false}
+          enableRotate={false}
+        />
       </Canvas>
     </div>
   );
