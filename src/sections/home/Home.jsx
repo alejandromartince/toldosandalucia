@@ -2,17 +2,19 @@ import React from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Importamos las constantes
-import { textoHome } from "../../constants/infoHome";
+import { textoHome, useModelHomeControls } from "../../constants/infoHome";
 
 //Importamos los componentes
 import BotonLinea from "../../components/BotonLinea/BotonLinea";
+import CasaHome from "../../components/CasaHome";
+
 
 // Estilos
 import "./Home.css";
-import CasaHome from "../../components/CasaHome";
 
 const Home = () => {
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
+  const controls = useModelHomeControls(); // Usa los controles
 
   return (
     <section className="home-container" id="home">
@@ -33,7 +35,8 @@ const Home = () => {
           </div>
         </div>
         <div className="right-grid-home">
-          <CasaHome />
+          {/* Pasamos los controles como prop */}
+          <CasaHome controls={controls} />
         </div>
       </div>
     </section>

@@ -65,10 +65,11 @@ GRID DERECHA
 ==============================*/
 .model-home-container{
   height: 100%;
-  background-color: aliceblue;
+  cursor: grab;
 }
-.model-home{
-  height: 10%;
+
+.model-home-container:active{
+  cursor: grabbing;
 }
 /* ===================================
 MEDIA QUERIES
