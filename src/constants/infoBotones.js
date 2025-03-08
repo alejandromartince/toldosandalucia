@@ -9,6 +9,14 @@ export const informacionBoton = (idioma, id) => {
       url: "https://web.whatsapp.com/send?phone=34679847618&text=",
     },
     {
+      id: "Historia",
+      texto: {
+        es: "Contáctanos",
+        en: "Contact us",
+      },
+      url: "/Contact",
+    },
+    {
       id: "Products",
       texto: {
         es: "Saber más",

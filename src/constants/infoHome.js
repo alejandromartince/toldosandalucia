@@ -16,9 +16,9 @@ export const useModelHomeControls = () => ({
   modelHomePosY: 0,
   modelHomePosZ: 0,
 
-  modelHomeRotX: 0,
-  modelHomeRotY: -0.2,
-  modelHomeRotZ: 0.01,
+  modelHomeRotX: -.2,
+  modelHomeRotY: -.2,
+  modelHomeRotZ: 0.02,
 
   // Atributos de la cámara
   cameraPosX: 0,

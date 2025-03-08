@@ -6,11 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //Importamos los estilos
-import "./HistoriaBeneficio.css";
+import "./SliderImagenes.css";
 
-const HistoriaBeneficio = () => {
+const SliderImagenes = () => {
   const settings = {
-    dots: true, // Muestra los puntos de navegación
     infinite: true, // Desplazamiento infinito
     speed: 500, // Velocidad de transición
     slidesToShow: 1, // Cuántas imágenes mostrar a la vez
@@ -26,10 +25,10 @@ const HistoriaBeneficio = () => {
             <img src="/assets/Logo/1999.png" alt="Slide 1" />
           </div>
           <div>
-            <img src="/assets/HistoriaBeneficios/toldo3.jpg" alt="Slide 2" />
+            <img src="/assets/SliderImagenes/toldo3.jpg" alt="Slide 2" />
           </div>
           <div>
-            <img src="/assets/HistoriaBeneficios/toldo1.jpg" alt="Slide 3" />
+            <img src="/assets/SliderImagenes/toldo1.jpg" alt="Slide 3" />
           </div>
         </Slider>
       </div>
@@ -37,4 +36,4 @@ const HistoriaBeneficio = () => {
   );
 };
 
-export default HistoriaBeneficio;
+export default SliderImagenes;

@@ -20,7 +20,6 @@ const HomeCamara = ({ children, sensitivity = 5 }) => {
       delta
     );
 
-    // Si no es móvil, rota el grupo en función del puntero con sensibilidad ajustable
     easing.dampE(
       groupRef.current.rotation,
       [-state.pointer.y / (sensitivity * 3), state.pointer.x / sensitivity, 0],

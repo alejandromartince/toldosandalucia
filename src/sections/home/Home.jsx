@@ -31,7 +31,7 @@ const Home = () => {
                 <BotonLinea
                   idioma={idioma}
                   id="Home" // Pasa un id único si es necesario
-                  className="boton-home" // Puedes agregar una clase personalizada si lo necesitas
+                  className="boton-linea" // Puedes agregar una clase personalizada si lo necesitas
                 />
               </div>
             </div>
