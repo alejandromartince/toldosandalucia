@@ -76,7 +76,7 @@ const Navbar = () => {
                     activeSection === id ? "active_link" : ""
                   }`}
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
+                  >
                   {texto[idioma]}
                 </Link>
               ))}

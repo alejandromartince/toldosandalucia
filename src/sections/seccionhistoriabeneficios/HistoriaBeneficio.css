@@ -1,0 +1,25 @@
+.historia-beneficio{
+    height: 40vh;
+}
+
+.historia-beneficio-container{
+    height: 100%;
+}
+
+.historia-beneficio-container div{
+    height: 100%;
+}
+
+.historia-beneficio-container img {
+    width: 100%;
+    height: 100%; /* Esto asegura que la imagen ocupe todo el contenedor, ajustando la altura también */
+    object-fit: cover;
+    object-position: center; /* Centra la imagen */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+.historia-beneficio-container img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

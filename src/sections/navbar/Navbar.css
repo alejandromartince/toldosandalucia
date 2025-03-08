@@ -38,6 +38,7 @@ header {
   box-shadow: 0 4px 10px var(--negro);
 }
 
+
 /* Barra de progreso */
 .progress-bar-container {
   position: fixed;
@@ -85,23 +86,25 @@ header {
 
 .menu-central-navbar ul a {
   cursor: pointer;
-  opacity: 0.7;
   transition: color 0.3s ease, opacity 0.3s ease; /* Asegúrate de que opacity también esté en la transición */
 }
 
 .menu-central-navbar ul a:hover:not(.active_link) {
   color: white;
-  opacity: 1;
 }
 
-.nav_link {
-  transition: color 0.3s ease, opacity 0.3s ease; /* Aplica la transición a opacity también */
+
+.nav_link:not(.active_link) {
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Aplica la transición a opacity también */
+}
+
+.nav_link:hover{
+  text-shadow: 1px 0px 5px white;
 }
 
 
 .nav_link.active_link {
   color: var(--verde-claro);
-  opacity: 1;
   transition: text-shadow 0.3s ease;
 }
 .nav_link.active_link:hover{

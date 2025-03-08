@@ -1,0 +1,35 @@
+.historia {
+  height: 60vh;
+  background-color: var(--verde);
+  color: white;
+}
+
+.historia-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.info-historia {
+  padding: 0 0rem 0 4rem;
+  width: 50%;
+}
+
+.info-historia h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info-historia p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.4;
+  text-align: left;
+  width: 100%;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
