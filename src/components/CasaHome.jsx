@@ -9,8 +9,12 @@ import CanvasLoader from "./CanvasLoader";
 import { useModelHomeControls } from "../constants/infoHome"; // Asegúrate de que el archivo sea correcto
 import HomeCamara from "../functions/home/HomeCamara";
 
+//Importamos las funciones
+import useWindowSize from "../functions/general/tamanoPantalla";
+
 const CasaHome = () => {
   const controls = useModelHomeControls();
+  const { isPantallaPequena, isMobile, isTablet } = useWindowSize();
 
   return (
     <div className="model-home-container">
@@ -41,7 +45,7 @@ const CasaHome = () => {
         <Suspense fallback={<CanvasLoader />}>
           {/* Solo renderiza HomeCamara si la pantalla es mayor a 1600px */}
           <HomeCamara>
-            <group scale={0.6}>
+            <group scale={isMobile ? .8 : isTablet ? 0.8 : isPantallaPequena ? 0.5 : 0.6}>
               <ModelHome
                 castShadow
                 receiveShadow
@@ -50,11 +54,19 @@ const CasaHome = () => {
                   controls.modelHomePosY,
                   controls.modelHomePosZ,
                 ]}
-                rotation={[
-                  controls.modelHomeRotX,
-                  controls.modelHomeRotY,
-                  controls.modelHomeRotZ,
-                ]}
+                rotation={
+                  isMobile
+                    ? [0, 0, 0]
+                    : isTablet
+                    ? [0, 0, 0]
+                    : isPantallaPequena
+                    ? [0, -0.1, 0]
+                    : [
+                        controls.modelHomeRotX,
+                        controls.modelHomeRotY,
+                        controls.modelHomeRotZ,
+                      ]
+                }
                 scale={0.5}
               />
             </group>

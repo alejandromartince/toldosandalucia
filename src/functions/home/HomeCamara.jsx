@@ -3,24 +3,10 @@ import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 
 import { useModelHomeControls } from "../../constants/infoHome";
+import useWindowSize from "../general/tamanoPantalla";
 
 const HomeCamara = ({ children, sensitivity = 5 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isPantallaPequena, setIsPantallaPequena] = useState(false);
-
-  console.log(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 769); // Cambia el valor de isMobile en función de la ventana
-      setIsPantallaPequena(window.innerWidth < 1600); // Cambia el valor de isPantallaPequena en función de la ventana
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { isMobile, isPantallaPequena, isTablet } = useWindowSize();
 
   const groupRef = useRef();
   const controls = useModelHomeControls();
@@ -35,20 +21,12 @@ const HomeCamara = ({ children, sensitivity = 5 }) => {
     );
 
     // Si no es móvil, rota el grupo en función del puntero con sensibilidad ajustable
-    if (isMobile === false) {
-      if (groupRef.current) {
-        easing.dampE(
-          groupRef.current.rotation,
-          [
-            -state.pointer.y / (sensitivity * 3),
-            state.pointer.x / sensitivity,
-            0,
-          ],
-          0.25,
-          delta
-        );
-      }
-    }
+    easing.dampE(
+      groupRef.current.rotation,
+      [-state.pointer.y / (sensitivity * 3), state.pointer.x / sensitivity, 0],
+      0.25,
+      delta
+    );
   });
 
   return (
@@ -56,7 +34,13 @@ const HomeCamara = ({ children, sensitivity = 5 }) => {
       ref={groupRef}
       scale={1}
       position={
-        isMobile ? [0, 0, 0] : isPantallaPequena ? [2, 0, 0] : [3, 0, 0]
+        isMobile
+          ? [0, 0, 0]
+          : isTablet
+          ? [0, 0, 0]
+          : isPantallaPequena
+          ? [2.5, 0, 0]
+          : [3, 0, 0]
       }
       rotateX={2}
     >
