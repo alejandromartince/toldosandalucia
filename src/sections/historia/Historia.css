@@ -1,6 +1,8 @@
 .historia {
   height: 60vh;
-  background-color: var(--verde);
+  background-image: url(/assets/Logo/fondo-historia.png);
+  background-size: contain;
+  
   color: white;
 }
 

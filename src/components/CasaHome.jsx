@@ -45,7 +45,7 @@ const CasaHome = () => {
         <Suspense fallback={<CanvasLoader />}>
           {/* Solo renderiza HomeCamara si la pantalla es mayor a 1600px */}
           <HomeCamara>
-            <group scale={isMobile ? .8 : isTablet ? 0.8 : isPantallaPequena ? 0.5 : 0.6}>
+            <group scale={isMobile ? .8 : isTablet ? 0.8 : isPantallaPequena ? 0.6 : 0.6}>
               <ModelHome
                 castShadow
                 receiveShadow
@@ -60,7 +60,7 @@ const CasaHome = () => {
                     : isTablet
                     ? [0, 0, 0]
                     : isPantallaPequena
-                    ? [0, -0.1, 0]
+                    ? [0, -.1, 0]
                     : [
                         controls.modelHomeRotX,
                         controls.modelHomeRotY,

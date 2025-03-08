@@ -6,7 +6,6 @@ import Home from "./sections/home/Home";
 import Products from "./sections/products/Products";
 import Historia from "./sections/historia/Historia";
 import Beneficios from "./sections/Beneficios/Beneficios";
-import SliderImagenes from "./sections/SliderImagenes/SliderImagenes";
 
 import { IdiomaProvider } from "./contexts/IdiomaContext";
 const App = () => {
@@ -17,7 +16,6 @@ const App = () => {
       <Home />
       <Historia />
       <Beneficios />
-      <SliderImagenes />
       <Products />
       </IdiomaProvider>
     </>

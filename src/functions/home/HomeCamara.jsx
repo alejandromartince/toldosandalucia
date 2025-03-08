@@ -5,7 +5,7 @@ import { easing } from "maath";
 import { useModelHomeControls } from "../../constants/infoHome";
 import useWindowSize from "../general/tamanoPantalla";
 
-const HomeCamara = ({ children, sensitivity = 5 }) => {
+const HomeCamara = ({ children, sensitivity = 2 }) => {
   const { isMobile, isPantallaPequena, isTablet } = useWindowSize();
 
   const groupRef = useRef();

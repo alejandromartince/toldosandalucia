@@ -22,7 +22,7 @@ export const useModelHomeControls = () => ({
 
   // Atributos de la cámara
   cameraPosX: 0,
-  cameraPosY: 4,
+  cameraPosY: 2,
   cameraPosZ: 10,
 
   cameraFov: 45,

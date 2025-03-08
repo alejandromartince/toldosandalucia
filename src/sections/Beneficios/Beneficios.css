@@ -1,3 +1,50 @@
-.section-beneficios{
-    height: 100vh;
+.section-beneficios {
+  height: 100vh;
+  background-color: white;
+}
+
+.grid-beneficios-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-rows: 1fr; /* Una fila */
+}
+
+.grid-beneficios-derecha,
+.grid-beneficios-izquierda {
+  padding: 4rem 2rem;
+}
+
+.grid-beneficios-izquierda {
+  grid-column: span 1;
+}
+
+.grid-beneficios-derecha {
+  grid-column: span 1;
+}
+
+/* ================================
+OPCIONES GRID DERECHA
+==============================*/
+
+
+.grid-beneficios-derecha h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grid-beneficios-informacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.div3-beneficios {
+  grid-row-start: 2;
+}
+
+.div4-beneficios {
+  grid-row-start: 2;
 }

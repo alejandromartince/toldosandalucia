@@ -3,7 +3,8 @@ OPCIONES GENERALES
 ============================*/
 
 .home {
-  background-color: var(--verde);
+  background-image: url(/assets/Logo/fondo-home.png);
+  background-size: cover;
   color: white;
 }
 
@@ -70,6 +71,12 @@ RESPONSIVE PARA PANTALLAS MENOR A 1600px
 
   .home-left-container {
     padding: 0 0rem 0 4rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+    padding: 0 4rem 0 0;
+    line-height: 1.8rem;
   }
 }
 
