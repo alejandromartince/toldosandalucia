@@ -1,45 +1,4 @@
-/* ========================================
-        Estilos Generales para la Sección
-======================================= */
-.products-container {
-  padding: 2rem;
-  background-color: #f4f4f4; /* Color de fondo suave */
-  color: #333; /* Color de texto */
-  min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la pantalla */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra los elementos en la sección */
-  justify-content: flex-start; /* Alinea los elementos al inicio de la sección */
-}
-
-.products-container h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #2c3e50; /* Color más oscuro para el título */
-  margin-bottom: 1.5rem;
-}
-
-.products-container p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  max-width: 800px; /* Limita el ancho máximo del texto */
-  text-align: justify; /* Alinea el texto de forma justificada */
-}
-
-/* ========================================
-          Estilos Responsivos
-  ======================================= */
-@media (max-width: 768px) {
-  .products-container {
-    padding: 1rem;
-  }
-
-  .products-container h1 {
-    font-size: 2rem; /* Reduce el tamaño del título en pantallas pequeñas */
-  }
-
-  .products-container p {
-    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-  }
+.products-container{
+  height: 100vh;
+  background-image: url(/assets/Logo/fondo-historia.png);
 }

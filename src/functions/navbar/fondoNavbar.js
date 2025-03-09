@@ -15,6 +15,7 @@ export const useScrollFondoNavbar = () => {
       }
     };
 
+
     checkScroll(); // Verificar al cargar la página
 
     window.addEventListener("scroll", checkScroll);

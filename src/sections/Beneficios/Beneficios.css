@@ -1,50 +1,96 @@
+/* Contenedor principal de la sección */
 .section-beneficios {
   height: 100vh;
-  background-color: white;
-}
-
-.grid-beneficios-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
-  grid-template-rows: 1fr; /* Una fila */
-}
-
-.grid-beneficios-derecha,
-.grid-beneficios-izquierda {
-  padding: 4rem 2rem;
-}
-
-.grid-beneficios-izquierda {
-  grid-column: span 1;
-}
-
-.grid-beneficios-derecha {
-  grid-column: span 1;
-}
-
-/* ================================
-OPCIONES GRID DERECHA
-==============================*/
-
-
-.grid-beneficios-derecha h1{
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.grid-beneficios-informacion {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
   text-align: center;
 }
 
-.div3-beneficios {
-  grid-row-start: 2;
+/* Estilo para el título */
+.section-beneficios h1 {
+  color: #2e8b57; /* Verde oscuro */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
-.div4-beneficios {
-  grid-row-start: 2;
+/* Contenedor de los beneficios */
+.beneficios-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Contenedor de la información de los beneficios */
+.beneficios-informacion {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+/* Estilo para cada beneficio */
+.div-medicion-beneficios,
+.div-diseno-beneficios,
+.div-fabricacion-beneficios,
+.div-instalacion-beneficios {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  border-radius: 8px;
+  padding: 2rem;
+  width: 22%;
+  min-width: 250px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.div-medicion-beneficios:hover,
+.div-diseno-beneficios:hover,
+.div-fabricacion-beneficios:hover,
+.div-instalacion-beneficios:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono de cada beneficio */
+.div-medicion-beneficios div,
+.div-diseno-beneficios div,
+.div-fabricacion-beneficios div,
+.div-instalacion-beneficios div {
+  font-size: 3rem;
+  color: #2e8b57; /* Verde oscuro */
+  margin-bottom: 1rem;
+}
+
+/* Título de cada beneficio */
+.div-medicion-beneficios h3,
+.div-diseno-beneficios h3,
+.div-fabricacion-beneficios h3,
+.div-instalacion-beneficios h3 {
+  color: #333; /* Negro */
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Descripción de cada beneficio */
+.div-medicion-beneficios p,
+.div-diseno-beneficios p,
+.div-fabricacion-beneficios p,
+.div-instalacion-beneficios p {
+  color: #555; /* Gris oscuro */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .beneficios-informacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div-medicion-beneficios,
+  .div-diseno-beneficios,
+  .div-fabricacion-beneficios,
+  .div-instalacion-beneficios {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
 }

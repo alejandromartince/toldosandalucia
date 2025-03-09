@@ -42,22 +42,19 @@ const Beneficios = () => {
 
   return (
     <section className="section-beneficios" id="beneficios">
-      <div className="grid-beneficios-container">
-        <div className="grid-beneficios-izquierda">hola</div>
-        <div className="grid-beneficios-derecha">
-          <h1>{tituloBeneficio[idioma]}</h1>
-          <div className="grid-beneficios-informacion">
-            {beneficios.map((beneficio) => (
-              <div
-                key={beneficio.key}
-                className={`div-${beneficio.key}-beneficios`}
-              >
-                <div>{beneficio.icono}</div>
-                <h3>{beneficio.titulo}</h3>
-                <p>{beneficio.informacion}</p>
-              </div>
-            ))}
-          </div>
+      <div className="beneficios-container">
+        <h1>{tituloBeneficio[idioma]}</h1>
+        <div className="beneficios-informacion">
+          {beneficios.map((beneficio) => (
+            <div
+              key={beneficio.key}
+              className={`div-${beneficio.key}-beneficios`}
+            >
+              <div>{beneficio.icono}</div>
+              <h3>{beneficio.titulo}</h3>
+              <p>{beneficio.informacion}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

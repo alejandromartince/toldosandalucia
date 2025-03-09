@@ -130,5 +130,9 @@ RESPONSIVE PARA PANTALLAS MENOR A 768px (móviles)
   .home p {
     font-size: 1rem; /* Reducir aún más el tamaño del texto */
   }
+
+  .boton-container {
+    margin-top: 2rem;
+  }
 }
 

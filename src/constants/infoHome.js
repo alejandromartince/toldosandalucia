@@ -16,9 +16,9 @@ export const useModelHomeControls = () => ({
   modelHomePosY: 0,
   modelHomePosZ: 0,
 
-  modelHomeRotX: -.2,
-  modelHomeRotY: -.2,
-  modelHomeRotZ: 0.02,
+  modelHomeRotX: 0.0,
+  modelHomeRotY: -0.3,
+  modelHomeRotZ: 0.0,
 
   // Atributos de la cámara
   cameraPosX: 0,
@@ -28,7 +28,7 @@ export const useModelHomeControls = () => ({
   cameraFov: 45,
 
   // Atributos de la luz ambiental
-  ambientLightIntensity: 1.25,
+  ambientLightIntensity: 1.3,
 
   // Atributos de la luz direccional
   directionalLightPosX: 2.45,

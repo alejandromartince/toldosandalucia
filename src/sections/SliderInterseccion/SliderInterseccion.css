@@ -1,0 +1,11 @@
+.slider-interseccion-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden; /* Evita que las imágenes sobresalgan */
+}
+
+.slider-interseccion-img {
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin recortar */
+    width: 100%;
+    height: 100%;
+}

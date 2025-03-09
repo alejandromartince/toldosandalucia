@@ -1,6 +1,6 @@
 export const tituloBeneficio = {
-  es: "¿Por qué nos debes elegir?",
-  en: "Why should you choose us?"
+  es: "Lo que nos diferencia",
+  en: "What sets us apart",
 };
 
 import { TfiRulerPencil } from "react-icons/tfi";

@@ -19,9 +19,11 @@ const Historia = () => {
     <section className="historia" id="historia">
       <div className="historia-container">
         <div className="info-historia">
-          <h1>{infoHistoria[idioma].titulo}</h1>
-          <p>{infoHistoria[idioma].contenido}</p>
-          <BotonLinea idioma={idioma} id="Historia" className={"boton-linea"}/>
+          <div>
+            <h1>{infoHistoria[idioma].titulo}</h1>
+            <p>{infoHistoria[idioma].contenido}</p>
+          </div>
+          <BotonLinea idioma={idioma} id="Historia" className={"boton-linea"} />
         </div>
         <div className="historia-logo">
           <img src="/assets/Logo/1999_blanco.png" alt="logo1999" />

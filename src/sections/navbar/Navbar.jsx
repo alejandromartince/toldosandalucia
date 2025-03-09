@@ -21,7 +21,6 @@ import { useScrollFondoNavbar } from "../../functions/navbar/fondoNavbar";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 
-
 // Styles
 import "./Navbar.css";
 
@@ -34,6 +33,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dropdownRef = useRef(null); // Referencia para el dropdown
 
+  
   // Usamos los hooks personalizados
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   useClickOutsideEffect(dropdownRef, setIsDropdownOpen); // Hook para manejar clics fuera del dropdown
@@ -76,7 +76,7 @@ const Navbar = () => {
                     activeSection === id ? "active_link" : ""
                   }`}
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  >
+                >
                   {texto[idioma]}
                 </Link>
               ))}

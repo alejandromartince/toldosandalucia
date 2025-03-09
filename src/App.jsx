@@ -8,6 +8,7 @@ import Historia from "./sections/historia/Historia";
 import Beneficios from "./sections/Beneficios/Beneficios";
 
 import { IdiomaProvider } from "./contexts/IdiomaContext";
+import SliderInterseccion from "./sections/SliderInterseccion/SliderInterseccion";
 const App = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const App = () => {
       <Home />
       <Historia />
       <Beneficios />
+      <SliderInterseccion />
       <Products />
       </IdiomaProvider>
     </>
