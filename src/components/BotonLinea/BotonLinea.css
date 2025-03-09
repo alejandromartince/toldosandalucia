@@ -1,3 +1,7 @@
+
+/* ==============================================
+BOTON LINEA
+==============================================*/
 .boton-container {
   margin-top: 5rem;
   margin-right: 1rem;
@@ -14,7 +18,6 @@
   z-index: 1;
   font-family: inherit;
   color: white;
-
 }
 
 .boton-linea::before {
@@ -64,5 +67,74 @@
   .boton-linea:hover {
     color: white;
     border-bottom: 1px solid white;
+  }
+}
+
+/* ==============================================
+ BOTON LINEA NEGRA
+==============================================*/
+.boton-container-linea-negra {
+  margin-top: 5rem;
+}
+
+.boton-linea-negra {
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--negro-claro);
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
+  z-index: 1;
+  font-family: inherit;
+  color: var(--negro-claro);
+}
+
+.boton-linea-negra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%; /* Empieza en el centro */
+  width: 0%; /* Empieza con 0% de ancho */
+  height: 100%; /* Altura del botón */
+  background-color: var(--verde-logo);
+  border-radius: 2rem;
+  transform: translateX(-50%) scaleX(0); /* Empieza desde el centro con scaleX(0) */
+  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), width 0.4s ease,
+    box-shadow 0.7s ease, color 0.3s ease; /* Duración igual para ambas transiciones */
+  z-index: -1;
+}
+
+.boton-linea-negra:hover::before {
+  transform: translateX(-50%) scaleX(1); /* Expande completamente el color al hacer hover */
+  width: 100%; /* El ancho del color llega al 100% */
+  box-shadow: 0 0px 10px rgb(255, 255, 255);
+}
+
+.boton-linea-negra:hover {
+  color: white; /* Cambia el color del texto */
+  text-shadow: none;
+  border-bottom: 1px solid transparent;
+}
+
+.boton-linea-negra:active {
+  scale: 1;
+}
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .boton-container-linea-negra {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .boton-container-linea-negra {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .boton-container-linea-negra {
+    margin-top: 1rem;
   }
 }

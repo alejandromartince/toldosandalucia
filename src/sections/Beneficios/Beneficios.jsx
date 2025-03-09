@@ -1,10 +1,14 @@
 import React from "react";
 
+//Importamos los componentes
+import BotonLinea from "../../components/BotonLinea/BotonLinea";
+
 //Importamos la informacion
 import {
   tituloBeneficio,
   textoBeneficio,
 } from "../../constants/infoBeneficios";
+
 //Importamos los contextos
 import { useIdioma } from "../../contexts/IdiomaContext";
 
@@ -55,6 +59,13 @@ const Beneficios = () => {
               <p>{beneficio.informacion}</p>
             </div>
           ))}
+        </div>
+        <div className="boton-container-linea-negra">
+          <BotonLinea
+            idioma={idioma}
+            id="Beneficios"
+            className="boton-linea-negra"
+          />
         </div>
       </div>
     </section>

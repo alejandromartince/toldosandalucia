@@ -22,6 +22,15 @@ export const informacionBoton = (idioma, id) => {
         es: "Saber más",
         en: "Learn more",
       },
+      url: "/Products", // Asegúrate de que la URL sea correcta
+    },
+    {
+      id: "Beneficios", // Nuevo botón agregado
+      texto: {
+        es: "Mira nuestros trabajos", // Texto en español
+        en: "See our works", // Texto en inglés
+      },
+      url: "/Products", // URL de la nueva sección
     },
   ];
   // Encuentra el botón con el ID dado
