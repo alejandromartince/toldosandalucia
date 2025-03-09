@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Suspense} from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
+
+//Importamos los componentes
 import ModelHome from "../objects/ModelHome";
-import { Suspense } from "react";
 import CanvasLoader from "./CanvasLoader";
 
 // Importa los controles de Leva

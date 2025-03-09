@@ -2,6 +2,7 @@
 .section-beneficios {
   height: 100vh;
   text-align: center;
+  cursor: default;
 }
 
 /* Estilo para el título */

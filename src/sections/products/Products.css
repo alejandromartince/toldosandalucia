@@ -1,4 +1,5 @@
-.products-container{
-  height: 100vh;
+.products-container {
   background-image: url(/assets/Logo/fondo-historia.png);
+  width: 100%;
+  height: 100vh;
 }

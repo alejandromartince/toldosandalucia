@@ -33,10 +33,10 @@
 .info-historia p {
   font-size: 1.3rem;
   opacity: 0.9;
+  text-align: justify;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
   line-height: 1.4;
-  text-align: left;
   width: 100%;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
