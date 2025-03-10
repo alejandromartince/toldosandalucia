@@ -8,8 +8,7 @@ import { informacionBoton } from "../../constants/infoBotones";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos componentes
-import BotonLinea from "../../components/BotonLinea/BotonLinea";
-
+import BotonLinea from "../../components/Botones/BotonLinea";
 //Importamos estilos
 import "./Historia.css";
 

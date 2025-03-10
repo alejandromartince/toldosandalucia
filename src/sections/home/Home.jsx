@@ -5,7 +5,7 @@ import { useIdioma } from "../../contexts/IdiomaContext";
 import { textoHome } from "../../constants/infoHome";
 
 //Importamos los componentes
-import BotonLinea from "../../components/BotonLinea/BotonLinea";
+import BotonLinea from "../../components/Botones/BotonLinea";
 import CasaHome from "../../components/CasaHome";
 
 //Importamos las funciones

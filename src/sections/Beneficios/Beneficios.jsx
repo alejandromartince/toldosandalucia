@@ -1,7 +1,7 @@
 import React from "react";
 
 //Importamos los componentes
-import BotonLinea from "../../components/BotonLinea/BotonLinea";
+import BotonLinea from "../../components/Botones/BotonLinea";
 
 //Importamos la informacion
 import {

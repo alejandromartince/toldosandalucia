@@ -1,7 +1,7 @@
 import React from "react";
 import { informacionBoton } from "../../constants/infoBotones";  // Asegúrate de importar la función
 
-import "../BotonLinea/BotonLinea.css";
+import "./BotonLinea.css";
 
 const BotonLinea = ({ idioma, className, id }) => {
   const boton = informacionBoton(idioma, id);

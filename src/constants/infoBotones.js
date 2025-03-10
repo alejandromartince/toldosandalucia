@@ -32,6 +32,20 @@ export const informacionBoton = (idioma, id) => {
       },
       url: "/Products", // URL de la nueva sección
     },
+    {
+      id: "Siguiente",
+      texto: {
+        es: "Siguiente",
+        en: "Next",
+      },
+    },
+    {
+      id: "Anterior",
+      texto: {
+        es: "Anterior",
+        en: "Previous",
+      },
+    },
   ];
   // Encuentra el botón con el ID dado
   const boton = botones.find((boton) => boton.id === id);

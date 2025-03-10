@@ -4,14 +4,15 @@ import React, { useState } from "react";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Importamos la informacion
-import { Productos } from "../../constants/infoProductos";  // Aquí importamos ambos correctamente
+import { Productos } from "../../constants/infoProductos"; // Aquí importamos ambos correctamente
 
 // Importamos los componentes
 import ToldosProductos from "../../components/ToldosProductos";
-import BotonLinea from "../../components/BotonLinea/BotonLinea";
+import BotonLinea from "../../components/Botones/BotonLinea";
 
 // Importamos los estilos
 import "./Products.css";
+import BotonAnimado from "../../components/Botones/BotonAnimado";
 
 const Products = () => {
   const { idioma } = useIdioma();
@@ -31,9 +32,8 @@ const Products = () => {
 
   const tituloProducto = {
     es: "Nuestros productos",
-    en: "Our products"
+    en: "Our products",
   };
-  
 
   return (
     <section className="products-container" id="products">
@@ -51,13 +51,14 @@ const Products = () => {
         </div>
         <div className="right-section">
           <h1>{tituloProducto[idioma]}</h1>
-          <h2>{producto.titulo[idioma]}</h2>
+          <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
           {/* Botones para navegar entre los productos */}
           <div className="product-navigation">
-            <button onClick={prevProduct}>Anterior</button>
-            <button onClick={nextProduct}>Siguiente</button>
+            <BotonAnimado idioma={idioma} id="Anterior" className="reverse" onClick={prevProduct} />
+
+            <BotonAnimado idioma={idioma} id="Siguiente" className="boton-animado" onClick={nextProduct}/>
           </div>
         </div>
       </div>
