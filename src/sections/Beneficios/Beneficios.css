@@ -9,7 +9,8 @@
 .section-beneficios h1 {
   padding: 5rem 0 2rem 0;
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: var(--negro-muy-claro);  
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
@@ -52,7 +53,7 @@
 .div-fabricacion-beneficios:hover,
 .div-instalacion-beneficios:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
   background-color: var(--blanco-muy-claro);
 }
 

@@ -17,10 +17,10 @@ export const informacionBoton = (idioma, id) => {
       url: "/Contact",
     },
     {
-      id: "Products",
+      id: "Productos",
       texto: {
-        es: "Saber más",
-        en: "Learn more",
+        es: "Personalizar toldo",
+        en: "Customize awning",
       },
       url: "/Products", // Asegúrate de que la URL sea correcta
     },

@@ -1,11 +1,12 @@
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-:root{
-
+:root {
   /* COLORES */
   --negro: #131313;
   --negro-claro: #272727;
@@ -13,15 +14,20 @@ html, body, #root {
 
   --gris: #808080;
 
-  --blanco-claro: #f4f4f4; /* Fondo gris claro */
-  --blanco-muy-claro: #e0e0e0;
-  
+  --blanco-claro: #f1f1f1; /* Fondo gris claro */
+  --blanco-muy-claro: #dddddd;
+
   --verde: #1b4332;
   --verde-logo: #00945b;
   --verde-claro: #00ff95;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: 'Oswald', sans-serif; /* Reemplaza "Poppins" por cualquier fuente que elijas */
+  font-family: "Oswald", sans-serif; /* Reemplaza "Poppins" por cualquier fuente que elijas */
   box-sizing: border-box;
 }
