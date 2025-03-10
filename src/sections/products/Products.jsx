@@ -54,10 +54,8 @@ const Products = () => {
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
-          {/* Botones para navegar entre los productos */}
           <div className="product-navigation">
             <BotonAnimado idioma={idioma} id="Anterior" className="reverse" onClick={prevProduct} />
-
             <BotonAnimado idioma={idioma} id="Siguiente" className="boton-animado" onClick={nextProduct}/>
           </div>
         </div>

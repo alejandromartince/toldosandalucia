@@ -1,7 +1,6 @@
-
 /* ==============================================
 BOTON LINEA
-==============================================*/
+============================================== */
 .boton-container {
   margin-top: 5rem;
   margin-right: 1rem;
@@ -15,6 +14,7 @@ BOTON LINEA
   text-align: center;
   text-transform: uppercase;
   transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
+  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
   z-index: 1;
   font-family: inherit;
   color: white;
@@ -25,19 +25,18 @@ BOTON LINEA
   position: absolute;
   top: 0;
   left: 50%; /* Empieza en el centro */
-  width: 0%; /* Empieza con 0% de ancho */
+  width: 100%; /* Fijamos el ancho desde el inicio */
   height: 100%; /* Altura del botón */
   background-color: white;
   border-radius: 2rem;
-  transform: translateX(-50%) scaleX(0); /* Empieza desde el centro con scaleX(0) */
-  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), width 0.4s ease,
-    box-shadow 0.7s ease, color 0.3s ease; /* Duración igual para ambas transiciones */
+  transform: translateX(-50%) scale(0,1); /* En Safari, scale(0,1) es más estable */
+  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
   z-index: -1;
 }
 
 .boton-linea:hover::before {
-  transform: translateX(-50%) scaleX(1); /* Expande completamente el color al hacer hover */
-  width: 100%; /* El ancho del color llega al 100% */
+  transform: translateX(-50%) scale(1,1); /* Expande completamente el color al hacer hover */
   box-shadow: 0 0px 10px rgb(255, 255, 255);
 }
 
@@ -48,9 +47,10 @@ BOTON LINEA
 }
 
 .boton-linea:active {
-  scale: 1;
+  transform: scale(0.98);
 }
 
+/* ✅ Mejora para Safari en móviles */
 @media (max-width: 769px) {
   .boton-container {
     display: flex;
@@ -72,9 +72,13 @@ BOTON LINEA
 
 /* ==============================================
  BOTON LINEA NEGRA
-==============================================*/
+============================================== */
 .boton-container-linea-negra {
-  margin-top: 5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 8rem;
 }
 
 .boton-linea-negra {
@@ -84,7 +88,8 @@ BOTON LINEA
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
+  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
+  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
   z-index: 1;
   font-family: inherit;
   color: var(--negro-claro);
@@ -94,36 +99,36 @@ BOTON LINEA
   content: "";
   position: absolute;
   top: 0;
-  left: 50%; /* Empieza en el centro */
-  width: 0%; /* Empieza con 0% de ancho */
-  height: 100%; /* Altura del botón */
+  left: 50%;
+  width: 100%;
+  height: 100%;
   background-color: var(--verde-logo);
   border-radius: 2rem;
-  transform: translateX(-50%) scaleX(0); /* Empieza desde el centro con scaleX(0) */
-  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), width 0.4s ease,
-    box-shadow 0.7s ease, color 0.3s ease; /* Duración igual para ambas transiciones */
+  transform: translateX(-50%) scale(0,1);
+  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
   z-index: -1;
 }
 
 .boton-linea-negra:hover::before {
-  transform: translateX(-50%) scaleX(1); /* Expande completamente el color al hacer hover */
-  width: 100%; /* El ancho del color llega al 100% */
-  box-shadow: 0 0px 10px rgb(255, 255, 255);
+  transform: translateX(-50%) scale(1,1);
+  box-shadow: 0 0px 10px var(--verde-logo);
 }
 
 .boton-linea-negra:hover {
-  color: white; /* Cambia el color del texto */
+  color: white;
   text-shadow: none;
   border-bottom: 1px solid transparent;
 }
 
 .boton-linea-negra:active {
-  scale: 1;
+  transform: scale(0.98);
 }
 
+/* ✅ Ajustes responsivos */
 @media (max-width: 1600px) and (min-width: 1200px) {
   .boton-container-linea-negra {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 

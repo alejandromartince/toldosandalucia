@@ -2,13 +2,12 @@ import React from "react";
 
 //Importamos informacion
 import { infoHistoria } from "../../constants/infoHistoria";
-import { informacionBoton } from "../../constants/infoBotones";
 
 //Importamos el contexto
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos componentes
-import BotonLinea from "../../components/Botones/BotonLinea";
+import LinkLinea from "../../components/Botones/BotonLinea";
 //Importamos estilos
 import "./Historia.css";
 
@@ -22,7 +21,7 @@ const Historia = () => {
             <h1>{infoHistoria[idioma].titulo}</h1>
             <p>{infoHistoria[idioma].contenido}</p>
           </div>
-          <BotonLinea idioma={idioma} id="Historia" className={"boton-linea"} />
+          <LinkLinea idioma={idioma} id="Historia" className={"boton-linea"} />
         </div>
         <div className="historia-logo">
           <img src="/assets/Logo/1999_blanco.png" alt="logo1999" />

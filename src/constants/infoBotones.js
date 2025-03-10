@@ -14,7 +14,7 @@ export const informacionBoton = (idioma, id) => {
         es: "Contáctanos",
         en: "Contact us",
       },
-      url: "/Contact",
+      url: "Contact",
     },
     {
       id: "Productos",
@@ -22,7 +22,7 @@ export const informacionBoton = (idioma, id) => {
         es: "Personalizar toldo",
         en: "Customize awning",
       },
-      url: "/Products", // Asegúrate de que la URL sea correcta
+      url: "PersonalizarToldos", // Asegúrate de que la URL sea correcta
     },
     {
       id: "Beneficios", // Nuevo botón agregado
@@ -30,7 +30,7 @@ export const informacionBoton = (idioma, id) => {
         es: "Mira nuestros trabajos", // Texto en español
         en: "See our works", // Texto en inglés
       },
-      url: "/Products", // URL de la nueva sección
+      url: "works", // URL de la nueva sección
     },
     {
       id: "Siguiente",

@@ -1,7 +1,7 @@
 import React from "react";
 
 //Importamos los componentes
-import BotonLinea from "../../components/Botones/BotonLinea";
+import LinkLinea from "../../components/Botones/LinkLinea";
 
 //Importamos la informacion
 import {
@@ -61,11 +61,7 @@ const Beneficios = () => {
           ))}
         </div>
         <div className="boton-container-linea-negra">
-          <BotonLinea
-            idioma={idioma}
-            id="Beneficios"
-            className="boton-linea-negra"
-          />
+          <LinkLinea idioma={idioma} id="Beneficios" className="boton-linea-negra" />
         </div>
       </div>
     </section>
