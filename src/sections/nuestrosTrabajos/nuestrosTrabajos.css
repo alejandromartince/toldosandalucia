@@ -1,0 +1,10 @@
+.nuestrosTrabajos-section{
+    height: 100vh;
+    background-image: url(/assets/Logo/fondo-historia.png);
+    background-size: contain;
+    color: white;
+}
+
+.nuestrosTrabajos-container{
+    padding: 6rem 2rem;
+}
