@@ -2,14 +2,10 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
-//Importamos la informacion
-import  infoProductos  from "../constants/infoProductos";
-
-//Importamos los componentes
+// Importamos los componentes
 import CanvasLoader from "../components/CanvasLoader";
-import Terraza from "../objects/Toldos/Terraza";
 
-const ToldosProductos = () => {
+const ToldosProductos = ({ producto }) => {
   return (
     <div className="model-proyecto-container">
       <Canvas className="model-productos" shadows>
@@ -22,10 +18,14 @@ const ToldosProductos = () => {
           castShadow
         />
         <Suspense fallback={<CanvasLoader />}>
-        
-          {infoProductos(1).producto}
+          {producto}
         </Suspense>
-        <OrbitControls enablePan={false} autoRotate rotateSpeed={0.5} enableZoom={false} />
+        <OrbitControls
+          enablePan={false}
+          // autoRotate
+          rotateSpeed={0.5}
+          enableZoom={false}
+        />
       </Canvas>
     </div>
   );
