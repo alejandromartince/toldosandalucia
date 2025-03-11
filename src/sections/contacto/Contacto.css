@@ -1,0 +1,23 @@
+.contacto-section {
+    min-height: 100vh;
+    background-image: url(https://toldosandalucia.com/wp-content/uploads/2017/05/formulario.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    color: white;
+}
+
+
+.contacto-grid-container{
+    padding: 6rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ==============================
+GRID IZQUIERDA
+============================== */
+.contacto-grid-izquierda{
+    background-color: red;
+}

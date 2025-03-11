@@ -1,0 +1,17 @@
+.footer {
+  background-image: url(/assets/Logo/fondo-historia.png);
+  color: white; /* Color de texto */
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
