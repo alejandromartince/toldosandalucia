@@ -26,7 +26,7 @@ const App = () => {
   return (
     <IdiomaProvider>
       {cargando && <PantallaCarga />}
-      <Navbar />
+      {!cargando && <Navbar />}
       <Home />
       <Historia />
       <Beneficios />
