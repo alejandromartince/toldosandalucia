@@ -1,10 +1,58 @@
-.nuestrosTrabajos-section{
-    height: 100vh;
-    background-image: url(/assets/Logo/fondo-historia.png);
-    background-size: contain;
-    color: white;
+.nuestrosTrabajos-section {
+  height: 100vh;
+  background-image: url(/assets/Logo/fondo-historia.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nuestrosTrabajos-container{
-    padding: 6rem 2rem;
+.swiper-container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+
+.swiper-3d {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 450px; /* Tamaño fijo */
+  height: 500px; /* Mantiene proporción 16:10 */
+  overflow: hidden;
+}
+
+/* Imagen normal */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Imagen central más grande */
+.swiper-slide-active img {
+  transform: scale(1.15); /* Aumenta un 15% */
+}
+
+/* Ajustes de los botones */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  transform: scale(1.3);
+}
+
+.swiper-pagination-bullet {
+  background: white;
 }

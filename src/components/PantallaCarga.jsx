@@ -1,13 +1,26 @@
-// components/PantallaCarga.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
-import "./PantallaCarga.css"; // Asegúrate de crear este archivo para estilos
+import "./PantallaCarga.css";
 
 const PantallaCarga = () => {
   const { progress } = useProgress();
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    if (progress >= 100) {
+      setTimeout(() => setIsVisible(false), 500); // Espera para transición
+    }
+  }, [progress]);
+
+  if (!isVisible) return null; // Ocultar pantalla al terminar
+
   return (
-    <div className="pantalla-carga">
-      <p>Cargando... {Math.round(progress)}%</p>
+    <div className={`pantalla-carga ${progress >= 100 ? "fade-out" : ""}`}>
+      <div className="carga-contenedor">
+        <img src="/assets/Logo/Logo.png" alt="Logo" className="carga-logo" />
+        <div className="spinner"></div>
+        <p>Cargando... {Math.round(progress)}%</p>
+      </div>
     </div>
   );
 };
