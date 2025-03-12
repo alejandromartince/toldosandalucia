@@ -35,9 +35,10 @@ const Home = () => {
                 />
               </div>
             </div>
+            {!isMobile && (
             <div className="home-right-container">
               <CasaHome />
-            </div>
+            </div>)}
       </div>
     </section>
   );
