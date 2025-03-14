@@ -11,11 +11,11 @@ import Beneficios from "./sections/Beneficios/Beneficios";
 import SliderInterseccion from "./sections/SliderInterseccion/SliderInterseccion";
 import NuestrosTrabajos from "./sections/nuestrosTrabajos/nuestrosTrabajos";
 import Contacto from "./sections/contacto/Contacto";
+import Footer from "./sections/footer/Footer";
 
 //Importamos los contextos
 import { IdiomaProvider } from "./contexts/IdiomaContext";
 import { useProgress } from "@react-three/drei";
-import Footer from "./sections/footer/Footer";
 
 const App = () => {
   const [cargando, setCargando] = useState(true);

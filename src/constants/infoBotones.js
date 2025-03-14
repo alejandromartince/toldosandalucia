@@ -14,7 +14,7 @@ export const informacionBoton = (idioma, id) => {
         es: "Contáctanos",
         en: "Contact us",
       },
-      url: "Contact",
+      url: "contacto",
     },
     {
       id: "Productos",
