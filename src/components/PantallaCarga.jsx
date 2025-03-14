@@ -20,9 +20,18 @@ const PantallaCarga = () => {
         <img src="/assets/Logo/Logo.png" alt="Logo" className="carga-logo" />
         <div className="spinner"></div>
         <p>Cargando... {Math.round(progress)}%</p>
+        
       </div>
+        {/* Barra de progreso */}
+        <div className="barra-progreso">
+          <div
+            className="barra-progreso-inner"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
     </div>
   );
+  
 };
 
 export default PantallaCarga;

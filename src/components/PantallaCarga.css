@@ -39,7 +39,34 @@
   margin: 10px auto;
 }
 
+/* Barra de progreso - contenedor */
+.barra-progreso {
+  width: 20%; /* Ajusta el ancho de la barra */
+  height: 15px; /* Alto de la barra */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Fondo gris claro/transparente */
+  overflow: hidden; /* Ocultar excedentes */
+  border: 2px solid white;
+  margin: 10px auto 0 auto; /* Centrada, con margen superior */
+}
+
+/* Barra de progreso - relleno */
+.barra-progreso-inner {
+  height: 100%;
+  background-color: white; /* Color del relleno */
+  width: 0%; /* Se controla dinámicamente con inline style */
+  transition: width 0.3s ease; /* Transición suave del ancho */
+}
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
