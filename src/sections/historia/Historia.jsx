@@ -21,6 +21,19 @@ const Historia = () => {
           <div>
             <h1>{infoHistoria[idioma].titulo}</h1>
             <p>{infoHistoria[idioma].contenido}</p>
+
+            <h1>TRABAJAMOS EN..</h1>
+            <p>
+              Málaga / Torremolinos / Benalmádena / Arroyo de la Miel /
+              Fuengirola / Mijas / Marbella / San Pedro / Estepona / Alhaurin de
+              La Torre / Churriana / Rincon de La victoria / El Palo / Málaga
+              Este.
+            </p>
+
+            <p>
+              Fabricamos e instalamos toldos para comunidades, viviendas
+              particulares, hostelería, bares, restaurantes, hoteles, etc
+            </p>
           </div>
           <LinkLinea idioma={idioma} id="Historia" className="boton-linea" />
         </div>

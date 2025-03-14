@@ -1,24 +1,34 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+
+//Importamos los estilos obligatorios para que el swiper funcione
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+//Importamos la informacion
+import {
+  infoNuestrosTrabajos,
+  imagesNuestrosTrabajos,
+} from "../../constants/infoNuestrosTrabajos";
+
+//Importamos los contextos
+import { useIdioma } from "../../contexts/IdiomaContext";
+
+//Importamos los estilos
 import "./NuestrosTrabajos.css"; // Archivo de estilos
 
-const images = [
-  "/assets/SliderTrabajos/Cortina-1.jpeg",
-  "/assets/SliderTrabajos/Pergola-1.jpg",
-  "/assets/SliderTrabajos/Cortina-2.jpeg",
-  "/assets/SliderTrabajos/Vela-1.jpeg",
-  "/assets/SliderTrabajos/Terraza-1.jpg",
-];
-
 const NuestrosTrabajos = () => {
+  const informacion = infoNuestrosTrabajos;
+  const { idioma } = useIdioma();
+
   return (
     <section className="nuestrosTrabajos-section" id="works">
       <div className="swiper-container">
+        <h1>{informacion[idioma].titulo}</h1>
+
         <Swiper
           effect="coverflow"
           grabCursor={true}
@@ -38,7 +48,7 @@ const NuestrosTrabajos = () => {
           modules={[EffectCoverflow, Navigation, Pagination]}
           className="swiper-3d"
         >
-          {images.map((img, index) => (
+          {imagesNuestrosTrabajos.map((img, index) => (
             <SwiperSlide key={index} className="swiper-slide">
               <img src={img} alt={`Imagen ${index + 1}`} />
             </SwiperSlide>

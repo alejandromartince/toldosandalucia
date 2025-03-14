@@ -1,6 +1,7 @@
 /* Contenedor principal de la sección */
 .section-beneficios {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   text-align: center;
   cursor: default;
 }
@@ -10,7 +11,7 @@
   padding: 5rem 0 2rem 0;
   font-family: "Oswald", sans-serif;
   font-size: 3rem;
-  color: var(--negro-muy-claro);  
+  color: var(--negro-muy-claro);
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
@@ -102,9 +103,8 @@
     width: 90%;
   }
 
-
-  .beneficios-container h1{
-    padding: 4rem 0 0;
+  .beneficios-container h1 {
+    padding: 3rem 0 0;
   }
 
   .div-medicion-beneficios,
@@ -125,7 +125,7 @@
   .beneficios-informacion {
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 80%;
   }
 
   .section-beneficios h1 {
@@ -137,8 +137,9 @@
   .div-diseno-beneficios,
   .div-fabricacion-beneficios,
   .div-instalacion-beneficios {
-    width: 80%;
-    margin-bottom: 2rem;
+    width: auto;
+    margin: 0;
+    padding: 2rem 1rem;
   }
 
   .div-medicion-beneficios:hover,
@@ -148,5 +149,9 @@
     transform: none;
     box-shadow: none;
     background-color: var(--blanco-muy-claro);
+  }
+
+  .boton-container-linea-negra {
+    margin: 3rem 0 0;
   }
 }

@@ -12,7 +12,6 @@ OPCIONES GENERALES
   display: flex;
   justify-content: center;
   z-index: 1; /* Asegura que el contenido esté por encima del sombreado */
-
 }
 
 .contacto-section::before {
@@ -42,6 +41,7 @@ OPCIONES GENERALES
 
 .contacto-grid-izquierda h1 {
   font-size: 4rem;
+  text-transform: uppercase;
   font-weight: 400;
   font-family: "Oswald", sans-serif;
 }
@@ -67,25 +67,25 @@ OPCIONES GENERALES
   width: 100%;
 }
 
-.contacto-grid-izquierda-info div h4{
+.contacto-grid-izquierda-info div h4 {
   text-transform: uppercase;
 }
 
-.contacto-grid-izquierda-info > div > div{
+.contacto-grid-izquierda-info > div > div {
   display: flex;
   font-size: 1.1rem;
-  gap: .5rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
 /* =====================================
  OPCIONES GRID DERECHA
  ================================= */
-.contacto-grid-derecha{
+.contacto-grid-derecha {
   display: flex;
 }
 
- ::selection {
+::selection {
   background-color: gray;
 }
 
@@ -112,7 +112,7 @@ OPCIONES GENERALES
   font-size: 2rem;
 }
 
-.input-container-usuario-telefono{
+.input-container-usuario-telefono {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -135,11 +135,11 @@ OPCIONES GENERALES
   border-radius: 0.5rem;
 }
 
-.input.email{
+.input.email {
   width: 77%;
 }
 
-.input.area{
+.input.area {
   width: 77%;
 }
 
@@ -153,12 +153,27 @@ OPCIONES GENERALES
   font-size: 1.2rem;
   transition: all 400ms;
   cursor: pointer;
-  box-shadow:
-    0 0 10px var(--verde-logo),
-    0 0 10px var(--verde-logo);
-    color: white;
+  box-shadow: 0 0 10px var(--verde-logo), 0 0 10px var(--verde-logo);
+  color: white;
 }
 .btn:hover {
   background-color: var(--verde);
   box-shadow: none;
+}
+
+/*==================================
+MEDIA QUERIES
+==================================*/
+@media (max-width: 1600px) and (min-width: 769px) {
+  .contacto-grid-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .contacto-grid-container h1 {
+    font-size: 2.5rem;
+  }
 }
