@@ -53,25 +53,6 @@ BOTON LINEA
   transform: scale(0.98);
 }
 
-/* ✅ Mejora para Safari en móviles */
-@media (max-width: 769px) {
-  .boton-container {
-    display: flex;
-    justify-content: end;
-  }
-
-  .boton-linea::before {
-    background-color: transparent;
-  }
-
-  .boton-linea:hover::before {
-    box-shadow: none;
-  }
-  .boton-linea:hover {
-    color: white;
-    border-bottom: 1px solid white;
-  }
-}
 
 /* ==============================================
  BOTON LINEA NEGRA
@@ -80,8 +61,6 @@ BOTON LINEA
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  margin-bottom: 8rem;
 }
 
 .boton-linea-negra {
@@ -131,21 +110,3 @@ BOTON LINEA
   transform: scale(0.98);
 }
 
-/* ✅ Ajustes responsivos */
-@media (max-width: 1600px) and (min-width: 1200px) {
-  .boton-container-linea-negra {
-    margin: 3rem 0 2rem;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 769px) {
-  .boton-container-linea-negra {
-    margin: 2rem 0 2rem;
-  }
-}
-
-@media (max-width: 769px) {
-  .boton-container-linea-negra {
-    margin-top: 1rem;
-  }
-}

@@ -91,6 +91,10 @@
   text-align: justify;
 }
 
+.boton-container-linea-negra {
+  margin: 8rem 0 0rem;
+}
+
 /* ==============================================
     MEDIA QUERIES
 ============================================= */
@@ -114,6 +118,18 @@
     width: auto; /* Hacemos los divs un poco más pequeños */
   }
 }
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .boton-container-linea-negra {
+    margin: 3rem 0 2rem;
+  }
+}
+
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .boton-container-linea-negra {
+    margin: 2rem 0 2rem;
+  }
+}
 
 @media (max-width: 768px) {
   .section-beneficios {
@@ -127,12 +143,12 @@
     align-items: center;
     width: 80%;
   }
-
+  
   .section-beneficios h1 {
     font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
     padding-bottom: 0;
   }
-
+  
   .div-medicion-beneficios,
   .div-diseno-beneficios,
   .div-fabricacion-beneficios,
@@ -141,7 +157,7 @@
     margin: 0;
     padding: 2rem 1rem;
   }
-
+  
   .div-medicion-beneficios:hover,
   .div-diseno-beneficios:hover,
   .div-fabricacion-beneficios:hover,
@@ -150,8 +166,27 @@
     box-shadow: none;
     background-color: var(--blanco-muy-claro);
   }
-
+  
   .boton-container-linea-negra {
     margin: 3rem 0 0;
+  }
+  .boton-container {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .boton-linea::before {
+    background-color: transparent;
+  }
+  
+  .boton-linea:hover::before {
+    box-shadow: none;
+  }
+  .boton-linea:hover {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  .boton-container-linea-negra {
+    margin-top: 1rem;
   }
 }

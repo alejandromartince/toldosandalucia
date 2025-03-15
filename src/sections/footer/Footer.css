@@ -2,13 +2,13 @@
   background-image: url(/assets/Logo/fondo-historia.png);
   color: white; /* Color de texto */
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
   position: relative;
   width: 100%;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -83,7 +83,9 @@ OPCIONES DE REDES
 LOGO DEL GRID
 ==================================*/
 .logo-footer img {
+  margin: 0 auto;
   height: 10rem;
+  width: fit-content;
 }
 
 /*=================================
