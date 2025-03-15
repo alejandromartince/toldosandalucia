@@ -88,7 +88,7 @@ RESPONSIVE PARA PANTALLAS MENOR A 1200px
     display: grid;
     grid-template-columns: 1fr; /* Una sola columna */
     grid-template-rows: auto auto; /* Dos filas automáticas */
-    padding: 4rem 2rem;
+    padding: 8rem 2rem 2rem 0;
   }
   
   .home-left-container {
@@ -113,9 +113,15 @@ RESPONSIVE PARA PANTALLAS MENOR A 768px (móviles)
     padding: 0;
   }
 
+  .home-right-container-mobile img{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+
   .home-left-container {
     padding: 0 1rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .home-right-container {

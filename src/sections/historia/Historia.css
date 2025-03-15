@@ -78,6 +78,7 @@ MEDIA QUERIES PANTALLA MOVIL
 @media (max-width: 768px) {
   .historia {
     height: 100vh;
+    padding-top: 4rem;
   }
   .historia-container {
     display: flex;

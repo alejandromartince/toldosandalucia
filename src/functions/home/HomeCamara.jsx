@@ -31,15 +31,15 @@ const HomeCamara = ({ children, sensitivity = 2 }) => {
   return (
     <group
       ref={groupRef}
-      scale={1}
+      scale={isTablet ? 0.7 : isPantallaPequena ? 0.7 : 0.9}
       position={
         isMobile
           ? [0, 0, 0]
           : isTablet
-          ? [0, 0, 0]
+          ? [0, 1, 0]
           : isPantallaPequena
-          ? [2.5, 0, 0]
-          : [3, 0, 0]
+          ? [2.2, 0, 0]
+          : [2.6, 0, 0]
       }
       rotateX={2}
     >

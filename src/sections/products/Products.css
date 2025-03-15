@@ -60,7 +60,13 @@
 .right-section h3{
   font-size: 2rem;
   margin-top: 2rem;
+  padding: 0 4rem;
   text-transform: uppercase;
   font-weight: 400;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
+}
+
+.right-section p{
+  padding: 0 4rem;
+  text-align: justify;
 }
