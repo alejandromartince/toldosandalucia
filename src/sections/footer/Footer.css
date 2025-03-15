@@ -59,16 +59,24 @@ OPCIONES DE REDES
   gap: 1rem;
 }
 
+.footer-info > div > a {
+  display: inline-flex; /* Permite que el <a> se ajuste al contenido */
+  border-radius: 50%; /* Para mantener la forma circular */
+  width: 36px; /* Ajustar al tamaño del icono más el padding */
+  height: 36px; /* Igual que el ancho para que sea un círculo */
+  align-items: center;
+  justify-content: center;
+}
+
 .icon-redondo {
-  background-color: white; /* Fondo blanco */
-  color: var(--negro-claro); /* Color del ícono (puedes cambiarlo) */
-  border-radius: 50%; /* Para que sea redondo */
-  padding: 8px; /* Espacio interno para que el ícono no pegue al borde */
-  margin: 0 5px; /* Separación entre íconos */
-  display: inline-flex; /* Para centrarlo */
-  align-items: center; /* Centrar vertical */
-  justify-content: center; /* Centrar horizontal */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  background-color: white;
+  color: var(--negro-claro);
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /*=================================

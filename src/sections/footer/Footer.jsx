@@ -59,9 +59,29 @@ const Footer = () => {
             </div>
             <div className="footer-info">
               <div>
-                <FaFacebookF size={20} className="icon-redondo" />
-                <FaTiktok size={20} className="icon-redondo" />
-                <FaInstagram size={20} className="icon-redondo" />
+                <a
+                  href="https://www.facebook.com/profile.php?id=100069359261072&mibextid=wwXIfr&rdid=TFKKyCeTM9mYAP5T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BV9Xfr3Y1%2F%3Fmibextid%3DwwXIfr#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookF size={20} className="icon-redondo" />
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@toldos.andalucia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTiktok size={20} className="icon-redondo" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/toldosandalucia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram size={20} className="icon-redondo" />
+                </a>
               </div>
             </div>
           </div>
