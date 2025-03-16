@@ -34,7 +34,7 @@ const App = () => {
       <Home />
       <Historia />
       <Beneficios />
-      <SliderInterseccion />
+      {/* <SliderInterseccion /> */}
       <Products />
       <NuestrosTrabajos />
       <Contacto />

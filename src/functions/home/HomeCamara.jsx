@@ -38,7 +38,7 @@ const HomeCamara = ({ children, sensitivity = 2 }) => {
           : isTablet
           ? [0, 1, 0]
           : isPantallaPequena
-          ? [2.2, 0, 0]
+          ? [2.4, 0, 0]
           : [2.6, 0, 0]
       }
       rotateX={2}

@@ -8,6 +8,7 @@ import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos componentes
 import LinkLinea from "../../components/Botones/LinkLinea";
+import parse from 'html-react-parser';
 
 //Importamos estilos
 import "./Historia.css";
@@ -20,21 +21,19 @@ const Historia = () => {
         <div className="info-historia">
           <div>
             <h1>{infoHistoria[idioma].titulo}</h1>
-            <p>{infoHistoria[idioma].contenido}</p>
+            <p>{parse(infoHistoria[idioma].contenido)}</p> <br />
 
-            <h1>TRABAJAMOS EN..</h1>
+            <p>{infoHistoria[idioma].subcontenido}</p>
             <p>
+              {parse(infoHistoria[idioma].titulosubcontenido)}
               Málaga / Torremolinos / Benalmádena / Arroyo de la Miel /
               Fuengirola / Mijas / Marbella / San Pedro / Estepona / Alhaurin de
-              La Torre / Churriana / Rincon de La victoria / El Palo / Málaga
+              La Torre / Churriana / Rincon de La Victoria / El Palo / Málaga
               Este.
             </p>
 
-            <p>
-              Fabricamos e instalamos toldos para comunidades, viviendas
-              particulares, hostelería, bares, restaurantes, hoteles, etc
-            </p>
           </div>
+          <br />
           <LinkLinea idioma={idioma} id="Historia" className="boton-linea" />
         </div>
         <div className="historia-logo">

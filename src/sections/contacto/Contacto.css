@@ -56,7 +56,6 @@ OPCIONES GENERALES
 }
 
 .hr-vertical {
-  margin-left: 2rem;
   width: 10px;
   background-color: var(--verde-logo);
   border: none;

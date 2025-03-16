@@ -1,6 +1,6 @@
 /* Contenedor principal de la sección */
 .section-beneficios {
-  min-height: 100vh;
+  height: 100vh;
   height: auto;
   text-align: center;
   cursor: default;
@@ -43,9 +43,7 @@
 .div-instalacion-beneficios {
   background-color: var(--blanco-claro);
   border-radius: 8px;
-  padding: 2rem;
-  width: 22%;
-  min-width: 250px;
+  padding: 1rem 2rem;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -99,12 +97,9 @@
     MEDIA QUERIES
 ============================================= */
 @media (max-width: 1600px) and (min-width: 769px) {
-  .beneficios-informacion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: repeat(2, 1fr); /* 2 filas */
-    gap: 1rem;
-    width: 90%;
+  
+  .beneficios-informacion{
+    padding: 0 2rem;
   }
 
   .beneficios-container h1 {
@@ -115,7 +110,7 @@
   .div-diseno-beneficios,
   .div-fabricacion-beneficios,
   .div-instalacion-beneficios {
-    width: auto; /* Hacemos los divs un poco más pequeños */
+    width: 22%; /* Hacemos los divs un poco más pequeños */
   }
 }
 @media (max-width: 1600px) and (min-width: 1200px) {

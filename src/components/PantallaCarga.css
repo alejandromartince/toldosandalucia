@@ -42,7 +42,7 @@
 /* Barra de progreso - contenedor */
 .barra-progreso {
   width: 20%; /* Ajusta el ancho de la barra */
-  height: 15px; /* Alto de la barra */
+  height: 2px; /* Alto de la barra */
   background-color: rgba(
     255,
     255,
