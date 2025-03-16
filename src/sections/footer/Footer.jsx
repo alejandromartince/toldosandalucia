@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="logo-footer">
-            <img src="/assets/Logo/Logo.png" alt="logo-footer" />
+            <img src="/assets/Logo/Logo_Transparent.png" alt="logo-footer" />
           </div>
         </div>
         <p className="footer-text">

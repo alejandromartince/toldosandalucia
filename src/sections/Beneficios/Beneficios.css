@@ -10,7 +10,7 @@
 .section-beneficios h1 {
   padding: 5rem 0 2rem 0;
   font-family: "Oswald", sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: var(--negro-muy-claro);
   font-weight: 500;
   text-transform: uppercase;
@@ -62,7 +62,6 @@
 .div-diseno-beneficios div,
 .div-fabricacion-beneficios div,
 .div-instalacion-beneficios div {
-  font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--verde-logo);
 }

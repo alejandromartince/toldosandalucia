@@ -82,10 +82,10 @@ OPCIONES DE REDES
 /*=================================
 LOGO DEL GRID
 ==================================*/
+
 .logo-footer img {
-  margin: 0 auto;
-  height: 10rem;
-  width: fit-content;
+  margin: 3rem auto;
+  width: 12rem;
 }
 
 /*=================================

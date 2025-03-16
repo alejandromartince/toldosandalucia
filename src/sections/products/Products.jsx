@@ -10,9 +10,12 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 import ToldosProductos from "../../components/ToldosProductos";
 import BotonLinea from "../../components/Botones/BotonLinea";
 
+//Importamos los iconos
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
+
 // Importamos los estilos
 import "./Products.css";
-import BotonAnimado from "../../components/Botones/BotonAnimado";
 
 const Products = () => {
   const { idioma } = useIdioma();
@@ -47,9 +50,13 @@ const Products = () => {
     <section className="products-container" id="products">
       <div className="grid-productos-container">
         <div className="left-section">
-          {/* Instanciamos el producto y pasamos su posición */}
           <ToldosProductos
-            producto={<producto.producto scale={producto.escala} position={producto.position} />}
+            producto={
+              <producto.producto
+                scale={producto.escala}
+                position={producto.position}
+              />
+            }
           />
           <div className="boton-container-productos">
             <BotonLinea
@@ -61,22 +68,13 @@ const Products = () => {
         </div>
         <div className="right-section">
           <h1>{tituloProducto[idioma]}</h1>
+          <hr />
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
           <div className="product-navigation">
-            <BotonAnimado
-              idioma={idioma}
-              id="Anterior"
-              className="reverse"
-              onClick={prevProduct}
-            />
-            <BotonAnimado
-              idioma={idioma}
-              id="Siguiente"
-              className="boton-animado"
-              onClick={nextProduct}
-            />
+            <IoIosArrowBack size={30} onClick={prevProduct} style={{cursor:"pointer"}}/>
+            <IoIosArrowForward size={30} onClick={nextProduct} style={{cursor:"pointer"}}/>
           </div>
         </div>
       </div>

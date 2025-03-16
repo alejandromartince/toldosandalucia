@@ -32,23 +32,12 @@ export const informacionBoton = (idioma, id) => {
       },
       url: "works", // URL de la nueva sección
     },
-    {
-      id: "Siguiente",
-      texto: {
-        es: "Siguiente",
-        en: "Next",
-      },
-    },
-    {
-      id: "Anterior",
-      texto: {
-        es: "Anterior",
-        en: "Previous",
-      },
-    },
+    
+    
   ];
   // Encuentra el botón con el ID dado
   const boton = botones.find((boton) => boton.id === id);
+
   // Si el botón existe, devuelve el texto en el idioma seleccionado
   return boton
     ? {
