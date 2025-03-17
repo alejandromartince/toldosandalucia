@@ -34,6 +34,7 @@ const Historia = () => {
 
           </div>
           <br />
+          <br />
           <LinkLinea idioma={idioma} id="Historia" className="boton-linea" />
         </div>
         <div className="historia-logo">

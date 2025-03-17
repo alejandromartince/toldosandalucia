@@ -9,12 +9,7 @@
 /* Estilo para el título */
 .section-beneficios h1 {
   padding: 5rem 0 2rem 0;
-  font-family: "Oswald", sans-serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  text-transform: uppercase;
   margin: 0;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 /* Contenedor de los beneficios */
@@ -138,7 +133,6 @@
   }
   
   .section-beneficios h1 {
-    font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
     padding-bottom: 0;
   }
   

@@ -1,6 +1,6 @@
 export const infoHistoria = {
   es: {
-    titulo: "Descubre más sobre nosotros",
+    titulo: "Más sobre nosotros",
     contenido:
       "Fundada en 1999 en Benalmádena, nuestra empresa lleva <strong>más de 25 años</strong> ofreciendo soluciones personalizadas en la instalación de toldos en toda la ciudad de Málaga y alrededores, con el objetivo de mejorar la comodidad y el bienestar de nuestros clientes. Contamos con <strong>fábrica propia</strong> en la localidad, lo que nos permite diseñar e instalar miles de toldos a medida, consolidándonos como líderes en el sector por la calidad, durabilidad y estética de nuestros productos.",
     titulosubcontenido:
@@ -9,7 +9,7 @@ export const infoHistoria = {
       "Fabricamos e instalamos toldos para todo tipo de espacios: comunidades de vecinos, viviendas particulares, negocios de hostelería, bares, restaurantes y hoteles, adaptándonos a las necesidades específicas de cada cliente.",
   },
   en: {
-    titulo: "Discover more about us",
+    titulo: "More about us",
     contenido:
       "Founded in 1999 in Benalmádena, our company has been providing awning installation solutions for <strong>over 25 years</strong> in the city of Malaga, aiming to enhance the comfort and well-being of our clients. With our <strong>own factory</strong> in the area, we have installed thousands of custom-made awnings, establishing ourselves as leaders in the industry.",
     titulosubcontenido:

@@ -1,5 +1,5 @@
 .historia {
-  height: auto;
+  height: 65vh;
   background-image: url(/assets/Fondo/fondo-resto.png);
   background-size: contain;
   padding: 4rem 0;
@@ -14,19 +14,9 @@
 
 .info-historia {
   width: 60%;
-  height: 55%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.info-historia h1 {
-  font-size: 2.2rem;
-  font-weight: 400;
-  font-family: "Oswald", sans-serif;
-  text-shadow: 1px 1px 5px rgb(0, 0, 0);
-  text-transform: uppercase;
-  margin: 0;
 }
 
 .info-historia p {
@@ -59,10 +49,6 @@ MEDIA QUERIES
   .info-historia {
     height: 50%;
     width: 50%;
-  }
-
-  .info-historia h1 {
-    font-size: 2rem;
   }
 
   .info-historia p {

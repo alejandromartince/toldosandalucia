@@ -6,14 +6,6 @@ OPCIONES GENERALES
   background-size: cover;
 }
 
-.home h1 {
-  font-size: 2.2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
 .home p {
   font-size: 1.3rem;
   line-height: 2rem;
@@ -125,10 +117,6 @@ RESPONSIVE PARA PANTALLAS MENOR A 768px (móviles)
   .home-right-container {
     width: 100%;
     height: 50%;
-  }
-
-  .home h1 {
-    font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
   }
 
   .home p {

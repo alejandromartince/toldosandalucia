@@ -5,30 +5,22 @@ ESTILOS PARA LA SECCION DE NUESTROS TRABAJOS
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
+  background-image: url(/assets/Fondo/fondo-resto.png);
 }
-.nuestrosTrabajos-section h1 {
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-size: 2rem; /* Ajusta según necesites */
-}
-
 
 /* =====================================
 ESTILOS PARA EL CARRUSEL DE TRABAJOS
 ==================================== */
 
 .carrusel-container {
-  height: 90%;
+  height: 85%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .carrusel-trabajos {

@@ -38,13 +38,6 @@ OPCIONES GENERALES
   font-family: "Open Sans", sans-serif;
 }
 
-.contacto-grid-izquierda h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-family: "Oswald", sans-serif;
-}
-
 .contacto-grid-izquierda span {
   color: var(--verde-logo);
 }
@@ -168,9 +161,5 @@ MEDIA QUERIES
     width: 90%;
     align-items: center;
     padding: 0;
-  }
-
-  .contacto-grid-container h1 {
-    font-size: 2.2rem;
   }
 }
