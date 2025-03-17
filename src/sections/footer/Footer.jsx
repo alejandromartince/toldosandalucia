@@ -24,12 +24,12 @@ const Footer = () => {
         <div className="footer-container-info">
           <div className="privacidad-footer">
             <div className="footer-titulo">
-              <h1>
+              <h2>
                 {informacion[idioma].titulos.politica}
                 <span>
                   <hr />
                 </span>
-              </h1>
+              </h2>
             </div>
             <div className="footer-info">
               <p>{informacion[idioma].politica.privacidad}</p>
@@ -39,23 +39,23 @@ const Footer = () => {
           </div>
           <div className="ayuda-footer">
             <div className="footer-titulo">
-              <h1>
+              <h2>
                 {informacion[idioma].titulos.ayuda}
                 <span>
                   <hr />
                 </span>
-              </h1>
+              </h2>
             </div>
             <div className="footer-info">{informacion[idioma].ayuda}</div>
           </div>
           <div className="redes-footer">
             <div className="footer-titulo">
-              <h1>
+              <h2>
                 {informacion[idioma].titulos.redes}
                 <span>
                   <hr />
                 </span>
-              </h1>
+              </h2>
             </div>
             <div className="footer-info">
               <div>

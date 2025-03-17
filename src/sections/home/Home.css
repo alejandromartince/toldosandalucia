@@ -2,7 +2,7 @@
 OPCIONES GENERALES
 ============================*/
 .home {
-  background-image: url(/assets/Logo/fondo-home.png);
+  background-image: url(/assets/Fondo/fondo-home.png);
   background-size: cover;
   color: white;
 }

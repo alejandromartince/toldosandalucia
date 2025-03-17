@@ -1,5 +1,5 @@
 .footer {
-  background-image: url(/assets/Logo/fondo-historia.png);
+  background-image: url(/assets/Fondo/fondo-resto.png);
   color: white; /* Color de texto */
   text-align: center;
   padding: 3rem 0;
@@ -31,7 +31,7 @@ OPCIONES GENERALES DEL GRID
 /*=================================
 OPCIONES DE PRIVACIDAD
 ==================================*/
-.footer-titulo h1 {
+.footer-titulo h2 {
   display: inline-block;
   padding-bottom: 4px;
   font-weight: 400;
