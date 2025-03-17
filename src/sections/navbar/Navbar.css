@@ -10,7 +10,6 @@ header {
 }
 
 .nav-container.fondo-transparente {
-  color: white;
   display: flex;
   justify-content: space-between; /* Alinea los elementos a los extremos */
   align-items: center; /* Centra los elementos verticalmente */
@@ -25,7 +24,6 @@ header {
 
 .nav-container.fondo-no-transparente {
   background-color: var(--negro-claro);
-  color: white;
   display: flex;
   justify-content: space-between; /* Alinea los elementos a los extremos */
   align-items: center; /* Centra los elementos verticalmente */
@@ -89,9 +87,6 @@ header {
   transition: color 0.3s ease, opacity 0.3s ease; /* Asegúrate de que opacity también esté en la transición */
 }
 
-.menu-central-navbar ul a:hover:not(.active_link) {
-  color: white;
-}
 
 
 .nav_link:not(.active_link) {

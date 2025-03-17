@@ -4,7 +4,6 @@ OPCIONES GENERALES
 .home {
   background-image: url(/assets/Fondo/fondo-home.png);
   background-size: cover;
-  color: white;
 }
 
 .home h1 {

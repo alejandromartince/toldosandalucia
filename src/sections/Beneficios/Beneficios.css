@@ -1,9 +1,9 @@
 /* Contenedor principal de la sección */
 .section-beneficios {
   height: 100vh;
-  height: auto;
   text-align: center;
   cursor: default;
+  color: var(--negro-muy-claro);
 }
 
 /* Estilo para el título */
@@ -11,7 +11,6 @@
   padding: 5rem 0 2rem 0;
   font-family: "Oswald", sans-serif;
   font-size: 2.2rem;
-  color: var(--negro-muy-claro);
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
@@ -177,7 +176,6 @@
     box-shadow: none;
   }
   .boton-linea:hover {
-    color: white;
     border-bottom: 1px solid white;
   }
   .boton-container-linea-negra {

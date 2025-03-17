@@ -33,10 +33,9 @@ const App = () => {
       {!cargando && <Navbar />}
       <Home />
       <Historia />
-      <Beneficios />
-      {/* <SliderInterseccion /> */}
-      <Products />
       <NuestrosTrabajos />
+      <Beneficios />
+      <Products />
       <Contacto />
       <Footer />
     </IdiomaProvider>

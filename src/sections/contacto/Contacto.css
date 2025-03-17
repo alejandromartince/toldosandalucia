@@ -8,7 +8,6 @@ OPCIONES GENERALES
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: white;
   display: flex;
   justify-content: center;
   z-index: 1; /* Asegura que el contenido esté por encima del sombreado */
@@ -106,7 +105,6 @@ OPCIONES GENERALES
 }
 
 .title {
-  color: white;
   margin: 3rem 0 2rem 0;
   font-size: 2rem;
 }
