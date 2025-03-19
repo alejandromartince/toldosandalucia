@@ -19,13 +19,14 @@ const CarruselTrabajos = () => {
   return (
     <div className="carrusel-container">
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]} 
         navigation
         loop={true}
+        autoplay={{ delay: 4000, disableOnInteraction: false }} // Asegurar que siga funcionando tras interacción
         pagination={false}
-        direction="horizontal" // Carrusel en vertical
-        slidesPerView={4} // Siempre 4 imágenes visibles
-        slidesPerGroup={1} // Se mueve de una en una
+        direction="horizontal"
+        slidesPerView={4}
+        slidesPerGroup={1}
         className="carrusel-trabajos"
       >
         {trabajos.map((img, index) => (
