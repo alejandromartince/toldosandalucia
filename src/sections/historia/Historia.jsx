@@ -23,12 +23,11 @@ const Historia = () => {
             <h1>{infoHistoria[idioma].titulo}</h1>
             <p>{parse(infoHistoria[idioma].contenido)}</p> <br />
 
-            <p>{infoHistoria[idioma].subcontenido}</p>
             <p>
               {parse(infoHistoria[idioma].titulosubcontenido)}
               Málaga / Torremolinos / Benalmádena / Arroyo de la Miel /
-              Fuengirola / Mijas / Marbella / San Pedro / Estepona / Alhaurin de
-              La Torre / Churriana / Rincon de La Victoria / El Palo / Málaga
+              Fuengirola / Mijas / Marbella / San Pedro / Estepona / Alhaurín de
+              La Torre / Churriana / Rincón de La Victoria / El Palo / Málaga
               Este.
             </p>
 
