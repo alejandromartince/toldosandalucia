@@ -27,6 +27,7 @@ OPCIONES GENERALES DEL GRID
   display: flex;
   flex-direction: column;
 }
+
 /*=================================
 OPCIONES DE PRIVACIDAD
 ==================================*/
@@ -49,6 +50,14 @@ OPCIONES DE PRIVACIDAD
   gap: 1rem;
 }
 
+/* =========================
+OPCIONES DE CONTACTO
+========================*/
+.footer-info a {
+  color: white;
+  width: fit-content;
+  text-decoration: none;
+}
 /*=============================
 OPCIONES DE REDES
 =============================*/

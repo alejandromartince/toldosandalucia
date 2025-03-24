@@ -46,7 +46,15 @@ const Footer = () => {
                 </span>
               </h2>
             </div>
-            <div className="footer-info">{informacion[idioma].ayuda}</div>
+            <div className="footer-info">
+              <a
+                href="https://web.whatsapp.com/send?phone=34679847618&text="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {informacion[idioma].ayuda}
+              </a>
+            </div>
           </div>
           <div className="redes-footer">
             <div className="footer-titulo">

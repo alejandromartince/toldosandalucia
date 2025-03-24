@@ -1,6 +1,6 @@
 export const infoFooter = {
   es: {
-    copy: "Todos los derechos reservados",
+    copy: "Todos los Derechos Reservados",
     titulos: {
       politica: "Politicas",
       ayuda: "¿Necesitas ayuda?",
@@ -15,7 +15,7 @@ export const infoFooter = {
   },
 
   en: {
-    copy: "All rights reserved",
+    copy: "All Rights Reserved",
     titulos: {
       politica: "Policies",
       ayuda: "Need help?",
