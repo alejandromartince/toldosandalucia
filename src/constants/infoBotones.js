@@ -15,6 +15,7 @@ export const informacionBoton = (idioma, id) => {
         en: "Contact us",
       },
       url: "contacto",
+      offset: -35,
     },
     {
       id: "Productos",
@@ -44,6 +45,7 @@ export const informacionBoton = (idioma, id) => {
         id: boton.id,
         texto: boton.texto[idioma] || boton.texto.es,
         url: boton.url,
+        offset: boton.offset || 0,
       }
     : null;
 };

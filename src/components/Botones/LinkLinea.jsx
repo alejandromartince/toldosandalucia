@@ -14,6 +14,7 @@ const LinkLinea = ({ idioma, className, id }) => {
       tabIndex="0"
       smooth={true}
       to={boton ? boton.url : "#"}
+      offset={boton ? boton.offset : 0}
       style={{ textDecoration: "none", cursor: "pointer" }}
     >
       {boton ? boton.texto : "Texto no disponible"}
