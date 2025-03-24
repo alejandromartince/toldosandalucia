@@ -2,7 +2,7 @@
 ESTILOS PARA LA SECCION DE NUESTROS TRABAJOS
 ====================================== */
 .nuestrosTrabajos-section {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -16,7 +16,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 ==================================== */
 
 .carrusel-container {
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;

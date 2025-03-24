@@ -19,7 +19,7 @@ const PantallaCarga = () => {
       <div className="carga-contenedor">
         <img src="/assets/Logo/Logo.png" alt="Logo" className="carga-logo" />
         <div className="spinner"></div>
-        <p>Cargando... {Math.round(progress)}%</p>
+        <p>Cargando...</p>
         
       </div>
         {/* Barra de progreso */}

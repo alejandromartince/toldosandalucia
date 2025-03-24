@@ -32,6 +32,8 @@ body,
 body {
   font-family: "Oswald", sans-serif; /* Reemplaza "Poppins" por cualquier fuente que elijas */
   box-sizing: border-box;
+  background-image: url(/assets/Fondo/fondo-resto.png);
+  background-size: cover;
 }
 
 h1 {

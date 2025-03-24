@@ -13,7 +13,6 @@ import BotonLinea from "../../components/Botones/BotonLinea";
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-
 // Importamos los estilos
 import "./Products.css";
 
@@ -68,13 +67,23 @@ const Products = () => {
         </div>
         <div className="right-section">
           <h1>{tituloProducto[idioma]}</h1>
-          <hr />
+          <br />
+          <hr className="hr-productos" />
+          <br />
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
           <div className="product-navigation">
-            <IoIosArrowBack size={30} onClick={prevProduct} style={{cursor:"pointer"}}/>
-            <IoIosArrowForward size={30} onClick={nextProduct} style={{cursor:"pointer"}}/>
+            <IoIosArrowBack
+              size={30}
+              onClick={prevProduct}
+              style={{ cursor: "pointer" }}
+            />
+            <IoIosArrowForward
+              size={30}
+              onClick={nextProduct}
+              style={{ cursor: "pointer" }}
+            />
           </div>
         </div>
       </div>

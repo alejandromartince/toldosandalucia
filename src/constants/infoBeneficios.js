@@ -1,18 +1,17 @@
-export const tituloBeneficio = {
-  es: "Lo que nos diferencia",
-  en: "What sets us apart",
-};
-
 import { TfiRulerPencil } from "react-icons/tfi";
 import { GiFactoryArm } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
 import { TbRulerMeasure } from "react-icons/tb";
 
+export const tituloBeneficio = {
+  es: "Lo que nos diferencia",
+  en: "What sets us apart",
+};
 
 export const textoBeneficio = {
   es: {
     medicion: {
-      icono: <TfiRulerPencil size={60} />,
+      icono: <TbRulerMeasure size={60} />,
       titulo: "Medición del espacio",
       informacion:
         "Tomamos medidas precisas del espacio donde se instalará el toldo, asegurando un ajuste perfecto y una instalación sin inconvenientes.",

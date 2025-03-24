@@ -28,7 +28,6 @@ const NuestrosTrabajos = () => {
 
   return (
     <section className="nuestrosTrabajos-section" id="works">
-      {/* <h1>{informacion[idioma].titulo}</h1> */}
         <CarruselTrabajos />
     </section>
   );

@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     if (progress === 100) {
-      setTimeout(() => setCargando(false), 500); // Retraso opcional para suavidad
+      setTimeout(() => setCargando(false), 1000); // Retraso opcional para suavidad
     }
   }, [progress]);
 
@@ -33,8 +33,8 @@ const App = () => {
       <Home />
       <Historia />
       <NuestrosTrabajos />
-      {/* <Beneficios /> */}
       <Products />
+      <Beneficios />
       <Contacto />
       <Footer />
     </IdiomaProvider>
