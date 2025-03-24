@@ -21,7 +21,6 @@ body,
   --verde: #1b4332;
   --verde-logo: #138559;
   --verde-claro: #00ff95;
-
 }
 
 * {
@@ -44,10 +43,16 @@ h1 {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
 
+@media (max-width: 768px) {
   h1 {
     font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
   }
-
 }

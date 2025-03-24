@@ -1,0 +1,28 @@
+.section-beneficios {
+  height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.beneficios-container{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hr-beneficios{
+  width: 10%;
+  margin: 0 auto;
+}
+
+/* ==========================
+GRID
+======================*/
+.grid-beneficios{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-beneficios div{
+  grid-column: span 1;
+  text-align: center;
+}

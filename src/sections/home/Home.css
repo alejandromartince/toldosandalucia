@@ -6,14 +6,6 @@ OPCIONES GENERALES
   background-size: cover;
 }
 
-.home p {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-}
-
 .home-container {
   height: 100vh;
   align-items: center;
