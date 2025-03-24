@@ -8,7 +8,6 @@ import Home from "./sections/home/Home";
 import Products from "./sections/products/Products";
 import Historia from "./sections/historia/Historia";
 import Beneficios from "./sections/Beneficios/Beneficios";
-import SliderInterseccion from "./sections/SliderInterseccion/SliderInterseccion";
 import NuestrosTrabajos from "./sections/nuestrosTrabajos/nuestrosTrabajos";
 import Contacto from "./sections/contacto/Contacto";
 import Footer from "./sections/footer/Footer";
