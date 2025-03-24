@@ -19,7 +19,7 @@ const CarruselTrabajos = () => {
   return (
     <div className="carrusel-container">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]} 
+        modules={[Navigation, Pagination, Autoplay]}
         navigation
         loop={true}
         autoplay={{ delay: 4000, disableOnInteraction: false }} // Asegurar que siga funcionando tras interacción
@@ -29,13 +29,20 @@ const CarruselTrabajos = () => {
         slidesPerGroup={1}
         className="carrusel-trabajos"
       >
-        {trabajos.map((img, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={img}
-              alt={`Trabajo ${index + 1}`}
-              className="slide-image"
-            />
+        {trabajos.map((trabajo, index) => (
+          <SwiperSlide key={index} className="swiper-slide">
+            <div className="slide-container">
+              <h3 className="image-title">{trabajo.titulo}</h3> {/* Titulo del trabajo */}
+              <div className="watermark-container">
+                <span className="watermark-text">Toldos Andalucía</span>
+              </div>
+              <img
+                src={trabajo.imagen} // Ruta de la imagen
+                alt={`Trabajo ${index + 1}`}
+                className="slide-image"
+              />
+              <div className="overlay"></div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

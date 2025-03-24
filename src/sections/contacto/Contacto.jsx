@@ -29,9 +29,12 @@ const Contacto = () => {
             <hr className="hr-vertical" />
             <div>
               <br />
+              <p className="footer-indicacion">{informacion[idioma].direccion}</p>
               <p>c/ Santo Tomás nº 19. Pol. ind. La Leala</p>
               <p>Arroyo de la Miel, Benalmadena, 29631</p>
               <br />
+
+              <p className="footer-indicacion">{informacion[idioma].contacto}</p>
               <div className="telefono-contacto">
                 <FaPhone />
                 <p>952 562 668</p>

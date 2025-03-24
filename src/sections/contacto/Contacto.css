@@ -47,6 +47,10 @@ OPCIONES GENERALES
   width: 100%;
 }
 
+.footer-indicacion{
+  color: var(--gris);
+}
+
 .hr-vertical {
   width: 10px;
   background-color: var(--verde-logo);
@@ -62,9 +66,12 @@ OPCIONES GENERALES
   text-transform: uppercase;
 }
 
+.contacto-grid-izquierda-info > div{
+  font-size: 1rem;
+}
+
 .contacto-grid-izquierda-info > div > div {
   display: flex;
-  font-size: 1.1rem;
   gap: 0.5rem;
   align-items: center;
 }

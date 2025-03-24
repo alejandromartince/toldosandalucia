@@ -11,11 +11,11 @@ export const informacionBoton = (idioma, id) => {
     {
       id: "Historia",
       texto: {
-        es: "Contáctanos",
-        en: "Contact us",
+        es: "Ver Productos",
+        en: "See Porducts",
       },
-      url: "contacto",
-      offset: -35,
+      url: "products",
+      offset: -20,
     },
     {
       id: "Productos",
