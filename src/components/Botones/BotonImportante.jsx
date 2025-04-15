@@ -11,7 +11,7 @@ const BotonImportante = ({ idioma, className, id }) => {
       <span className="circulo" aria-hidden="true">
         <span className="icono arrow"></span>
       </span>
-      <span className="button-text">Learn More</span>
+      <span className="button-text">{boton ? boton.texto : "Texto no disponible"}</span>
     </a>
   );
 };
