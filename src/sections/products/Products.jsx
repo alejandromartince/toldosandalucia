@@ -15,6 +15,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 // Importamos los estilos
 import "./Products.css";
+import BotonImportante from "../../components/Botones/BotonImportante";
 
 const Products = () => {
   const { idioma } = useIdioma();
@@ -63,13 +64,17 @@ const Products = () => {
               id="Productos"
               className={"boton-linea"}
             />
+            <BotonImportante
+              idioma={idioma}
+              id="Productos"
+              className={"saber-mas"}
+            ></BotonImportante>
           </div>
         </div>
         <div className="right-section">
           <h1>{tituloProducto[idioma]}</h1>
           <br />
           <hr className="hr-productos" />
-          <br />
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 

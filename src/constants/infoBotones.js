@@ -20,7 +20,7 @@ export const informacionBoton = (idioma, id) => {
     {
       id: "Productos",
       texto: {
-        es: "Personalizar toldo",
+        es: "Saber más",
         en: "Customize awning",
       },
       url: "PersonalizarToldos", // Asegúrate de que la URL sea correcta
