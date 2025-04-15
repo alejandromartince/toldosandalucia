@@ -67,7 +67,6 @@ const Products = () => {
             <BotonImportante
               idioma={idioma}
               id="Productos"
-              className={"saber-mas"}
             ></BotonImportante>
           </div>
         </div>
