@@ -58,18 +58,8 @@ const Products = () => {
               />
             }
           />
-          <div className="boton-container-productos">
-            {/* <BotonLinea
-              idioma={idioma}
-              id="Productos"
-              className={"boton-linea"}
-            /> */}
-            <BotonImportante
-              idioma={idioma}
-              id="Productos"
-            ></BotonImportante>
-          </div>
         </div>
+
         <div className="right-section">
           <h1>{tituloProducto[idioma]}</h1>
           <br />
@@ -90,6 +80,9 @@ const Products = () => {
             />
           </div>
         </div>
+      <div className="boton-container-productos">
+        <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
+      </div>
       </div>
     </section>
   );
