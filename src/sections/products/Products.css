@@ -4,7 +4,6 @@
 .products-container {
   width: 100%;
   height: 100vh;
-  color: white;
   overflow: hidden;
 }
 
@@ -36,6 +35,7 @@
 .boton-container-productos {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /*==============================================

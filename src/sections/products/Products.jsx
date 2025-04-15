@@ -59,11 +59,11 @@ const Products = () => {
             }
           />
           <div className="boton-container-productos">
-            <BotonLinea
+            {/* <BotonLinea
               idioma={idioma}
               id="Productos"
               className={"boton-linea"}
-            />
+            /> */}
             <BotonImportante
               idioma={idioma}
               id="Productos"
