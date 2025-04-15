@@ -7,7 +7,7 @@ const BotonImportante = ({ idioma, className, id }) => {
   const boton = informacionBoton(idioma, id);
 
   return (
-    <a className="saber-mas" href={boton ? boton.url : "#"}>
+    <a className="saber-mas" href={boton ? boton.url : "#"} target="_blank">
       <span className="circulo" aria-hidden="true">
         <span className="icono arrow"></span>
       </span>

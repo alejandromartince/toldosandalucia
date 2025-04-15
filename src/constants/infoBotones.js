@@ -23,7 +23,7 @@ export const informacionBoton = (idioma, id) => {
         es: "Ver Todos los Productos",
         en: "See All Products",
       },
-      url: "PersonalizarToldos", // Asegúrate de que la URL sea correcta
+      url: "/PersonalizarToldos", // Asegúrate de que la URL sea correcta
     },
     {
       id: "Beneficios", // Nuevo botón agregado
