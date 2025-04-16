@@ -15,7 +15,7 @@ import "./NuestrosTrabajos.css"; // Archivo de estilos
 const NuestrosTrabajos = () => {
  
   return (
-    <section className="nuestrosTrabajos-section" id="works">
+    <section className="nuestrosTrabajos-section" id="trabajos">
         <CarruselTrabajos />
     </section>
   );
