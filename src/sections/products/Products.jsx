@@ -47,8 +47,8 @@ const Products = () => {
 
   return (
     <section className="products-container" id="products">
-      <div className="grid-productos-container">
-        <div className="left-section">
+      <div className="main-container">
+        <div className="left-container">
           <ToldosProductos
             producto={
               <producto.producto
@@ -59,7 +59,7 @@ const Products = () => {
           />
         </div>
 
-        <div className="right-section">
+        <div className="right-container">
           <h1>{tituloProducto[idioma]}</h1>
           <br />
           <hr className="hr-productos" />
@@ -78,11 +78,12 @@ const Products = () => {
               style={{ cursor: "pointer" }}
             />
           </div>
+        </div>
       </div>
-        <div className="boton-container-productos">
-          <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
-        </div>
-        </div>
+
+      <div className="boton-container-productos">
+        <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
+      </div>
     </section>
   );
 };

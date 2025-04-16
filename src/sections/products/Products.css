@@ -7,20 +7,21 @@
   overflow: hidden;
 }
 
-.grid-productos-container {
-  height: 100%;
+.main-container {
   display: flex;
+  padding: 3rem 0;
+  height: 65%;
 }
 /*==============================================
    ESTILOS LEFT SECTION
 ============================================== */
-.left-section {
+.left-container {
   height: 100%;
   width: 55%;
 }
 
 .model-proyecto-container {
-  height: 80%;
+  height: 90%;
   cursor: grab;
 }
 
@@ -41,14 +42,14 @@
 /*==============================================
    ESTILOS RIGHT SECTION
 ============================================== */
-.right-section {
-  width: 45%;
+.right-container {
+  width: 50%;
   display: flex;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   flex-direction: column;
 }
 
-.right-section h1 {
+.right-container h1 {
   font-size: 2.2rem;
   text-align: center;
   text-transform: uppercase;
@@ -61,7 +62,7 @@
   margin: 0 auto;
 }
 
-.right-section h3 {
+.right-container h3 {
   font-size: 1.6rem;
   margin-top: 2rem;
   padding: 0 4rem;
@@ -70,7 +71,7 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
 }
 
-.right-section p {
+.right-container p {
   padding: 0 4rem;
   text-align: justify;
   font-weight: lighter;
