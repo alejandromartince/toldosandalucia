@@ -29,8 +29,6 @@ const Beneficios = () => {
 
       <br />
 
-      
-
       <div className="grid-beneficios">
         <div><CartaBeneficio /></div>
         <div>adios</div>
