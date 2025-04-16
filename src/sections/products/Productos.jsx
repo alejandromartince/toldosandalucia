@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 // Importamos los contextos
 import { useIdioma } from "../../contexts/IdiomaContext";
@@ -13,10 +13,10 @@ import ToldosProductos from "../../components/ToldosProductos";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 // Importamos los estilos
-import "./Products.css";
+import "./Productos.css";
 import BotonImportante from "../../components/Botones/BotonImportante";
 
-const Products = () => {
+const Productos = () => {
   const { idioma } = useIdioma();
   const [currentProductIndex, setCurrentProductIndex] = useState(0); // Estado para almacenar el índice del producto actual
 
@@ -47,44 +47,11 @@ const Products = () => {
 
   return (
     <section className="products-container" id="products">
-      <div className="grid-productos-container">
-        <div className="left-section">
-          <ToldosProductos
-            producto={
-              <producto.producto
-                scale={producto.escala}
-                position={producto.position}
-              />
-            }
-          />
-        </div>
-
-        <div className="right-section">
-          <h1>{tituloProducto[idioma]}</h1>
-          <br />
-          <hr className="hr-productos" />
-          <h3>{producto.titulo[idioma]}</h3>
-          <p>{producto.descripcion[idioma]}</p>
-
-          <div className="product-navigation">
-            <IoIosArrowBack
-              size={30}
-              onClick={prevProduct}
-              style={{ cursor: "pointer" }}
-            />
-            <IoIosArrowForward
-              size={30}
-              onClick={nextProduct}
-              style={{ cursor: "pointer" }}
-            />
-          </div>
+      <div className="boton-container-productos">
+        <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
       </div>
-        <div className="boton-container-productos">
-          <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
-        </div>
-        </div>
     </section>
   );
 };
 
-export default Products;
+export default Productos;
