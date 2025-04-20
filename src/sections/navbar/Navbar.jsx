@@ -46,7 +46,7 @@ const Navbar = () => {
         }`}
       >
         <div className="logo-nav-container">
-          <Link to="home" spy={true} smooth={true} duration={500}>
+          <Link to="home" spy={true} smooth={true} duration={1000}>
             <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
           </Link>
         </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
                   spy={true}
                   smooth={true}
                   offset={offset}
-                  duration={500}
+                  duration={1000}
                   className={`nav_link ${
                     activeSection === id ? "active_link" : ""
                   }`}

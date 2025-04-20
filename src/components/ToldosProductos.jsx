@@ -22,7 +22,7 @@ const ToldosProductos = ({ producto }) => {
         </Suspense>
         <OrbitControls
           enablePan={false}
-          // autoRotate
+          autoRotate
           rotateSpeed={0.5}
           enableZoom={false}
         />

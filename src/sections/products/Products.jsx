@@ -8,27 +8,37 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 
 // Importamos los componentes
 import ToldosProductos from "../../components/ToldosProductos";
-import BotonLinea from "../../components/Botones/BotonLinea";
+
+//Importamos los iconos
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 // Importamos los estilos
 import "./Products.css";
-import BotonAnimado from "../../components/Botones/BotonAnimado";
+import BotonImportante from "../../components/Botones/BotonImportante";
 
 const Products = () => {
   const { idioma } = useIdioma();
-  const [currentProductId, setCurrentProductId] = useState(1); // Estado para almacenar el id del producto actual
+  const [currentProductIndex, setCurrentProductIndex] = useState(0); // Estado para almacenar el índice del producto actual
 
-  // Función para cambiar el producto
+  // Array de productos importado desde el archivo
+  const productos = Productos;
+
+  // Función para cambiar al siguiente producto
   const nextProduct = () => {
-    setCurrentProductId((prevId) => (prevId === 2 ? 1 : prevId + 1)); // Si llegas al final, vuelve al primero
+    setCurrentProductIndex((prevIndex) =>
+      prevIndex === productos.length - 1 ? 0 : prevIndex + 1
+    ); // Si llegas al final, vuelve al primero
   };
 
+  // Función para cambiar al producto anterior
   const prevProduct = () => {
-    setCurrentProductId((prevId) => (prevId === 1 ? 2 : prevId - 1)); // Si llegas al primero, vuelve al último
+    setCurrentProductIndex((prevIndex) =>
+      prevIndex === 0 ? productos.length - 1 : prevIndex - 1
+    ); // Si llegas al primero, vuelve al último
   };
 
   // Obtener el producto actual
-  const producto = Productos()[currentProductId];
+  const producto = productos[currentProductIndex];
 
   const tituloProducto = {
     es: "Nuestros productos",
@@ -37,28 +47,42 @@ const Products = () => {
 
   return (
     <section className="products-container" id="products">
-      <div className="grid-productos-container">
-        <div className="left-section">
-          {/* Pasamos el producto actual al componente ToldosProductos */}
-          <ToldosProductos producto={producto.producto} />
-          <div className="boton-container-productos">
-            <BotonLinea
-              idioma={idioma}
-              id="Productos"
-              className={"boton-linea"}
-            />
-          </div>
+      <div className="main-container">
+        <div className="left-container">
+          <ToldosProductos
+            producto={
+              <producto.producto
+                scale={producto.escala}
+                position={producto.position}
+              />
+            }
+          />
         </div>
-        <div className="right-section">
+
+        <div className="right-container">
           <h1>{tituloProducto[idioma]}</h1>
+          <br />
+          <hr className="hr-productos" />
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
           <div className="product-navigation">
-            <BotonAnimado idioma={idioma} id="Anterior" className="reverse" onClick={prevProduct} />
-            <BotonAnimado idioma={idioma} id="Siguiente" className="boton-animado" onClick={nextProduct}/>
+            <IoIosArrowBack
+              size={30}
+              onClick={prevProduct}
+              style={{ cursor: "pointer" }}
+            />
+            <IoIosArrowForward
+              size={30}
+              onClick={nextProduct}
+              style={{ cursor: "pointer" }}
+            />
           </div>
         </div>
+      </div>
+
+      <div className="boton-container-productos">
+        <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
       </div>
     </section>
   );

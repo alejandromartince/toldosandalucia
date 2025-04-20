@@ -1,8 +1,6 @@
 .historia {
-  height: 60vh;
-  background-image: url(/assets/Logo/fondo-historia.png);
-  background-size: contain;
-  color: white;
+  height: 65vh;
+  padding: 4rem 0;
 }
 
 .historia-container {
@@ -14,29 +12,18 @@
 
 .info-historia {
   width: 60%;
-  height: 55%;
-  padding-left: 2rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.info-historia h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  font-family: "Oswald", sans-serif;
-  text-shadow: 1px 1px 5px rgb(0, 0, 0);
-  text-transform: uppercase;
-  margin: 0;
-}
-
 .info-historia p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   opacity: 0.9;
   text-align: justify;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4;
+  line-height: 1.8;
   width: 100%;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
@@ -45,6 +32,9 @@
   width: fit-content;
 }
 
+.historia-logo img {
+  height: 15rem;
+}
 /* ==============================
 MEDIA QUERIES
 =============================== */
@@ -59,17 +49,10 @@ MEDIA QUERIES
     width: 50%;
   }
 
-  .info-historia h1 {
-    font-size: 2rem;
-  }
-
   .info-historia p {
     font-size: 1rem;
   }
 
-  .historia-logo img {
-    height: 20rem;
-  }
 }
 
 /* ===============================
@@ -78,6 +61,7 @@ MEDIA QUERIES PANTALLA MOVIL
 @media (max-width: 768px) {
   .historia {
     height: 100vh;
+    padding-top: 4rem;
   }
   .historia-container {
     display: flex;
@@ -91,9 +75,5 @@ MEDIA QUERIES PANTALLA MOVIL
     width: 80%;
     height: auto;
     padding: 0;
-  }
-
-  .info-historia p {
-    text-align: justify;
   }
 }

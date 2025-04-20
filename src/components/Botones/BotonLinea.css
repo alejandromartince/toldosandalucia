@@ -14,7 +14,8 @@ BOTON LINEA
   text-align: center;
   text-transform: uppercase;
   transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
-  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
+  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease,
+    border-bottom 0.5s ease;
   z-index: 1;
   font-family: inherit;
   color: white;
@@ -29,14 +30,16 @@ BOTON LINEA
   height: 100%; /* Altura del botón */
   background-color: white;
   border-radius: 2rem;
-  transform: translateX(-50%) scale(0,1); /* En Safari, scale(0,1) es más estable */
-  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
-  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
+  transform: translateX(-50%) scale(0, 1); /* En Safari, scale(0,1) es más estable */
+  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease,
+    color 0.3s ease;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1),
+    box-shadow 0.7s ease, color 0.3s ease;
   z-index: -1;
 }
 
 .boton-linea:hover::before {
-  transform: translateX(-50%) scale(1,1); /* Expande completamente el color al hacer hover */
+  transform: translateX(-50%) scale(1, 1); /* Expande completamente el color al hacer hover */
   box-shadow: 0 0px 10px rgb(255, 255, 255);
 }
 
@@ -50,25 +53,6 @@ BOTON LINEA
   transform: scale(0.98);
 }
 
-/* ✅ Mejora para Safari en móviles */
-@media (max-width: 769px) {
-  .boton-container {
-    display: flex;
-    justify-content: end;
-  }
-
-  .boton-linea::before {
-    background-color: transparent;
-  }
-
-  .boton-linea:hover::before {
-    box-shadow: none;
-  }
-  .boton-linea:hover {
-    color: white;
-    border-bottom: 1px solid white;
-  }
-}
 
 /* ==============================================
  BOTON LINEA NEGRA
@@ -77,8 +61,6 @@ BOTON LINEA
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  margin-bottom: 8rem;
 }
 
 .boton-linea-negra {
@@ -89,7 +71,8 @@ BOTON LINEA
   text-align: center;
   text-transform: uppercase;
   transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
-  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
+  -webkit-transition: color 0.5s ease, text-shadow 0.3s ease,
+    border-bottom 0.5s ease;
   z-index: 1;
   font-family: inherit;
   color: var(--negro-claro);
@@ -104,14 +87,16 @@ BOTON LINEA
   height: 100%;
   background-color: var(--verde-logo);
   border-radius: 2rem;
-  transform: translateX(-50%) scale(0,1);
-  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
-  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease, color 0.3s ease;
+  transform: translateX(-50%) scale(0, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease,
+    color 0.3s ease;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1),
+    box-shadow 0.7s ease, color 0.3s ease;
   z-index: -1;
 }
 
 .boton-linea-negra:hover::before {
-  transform: translateX(-50%) scale(1,1);
+  transform: translateX(-50%) scale(1, 1);
   box-shadow: 0 0px 10px var(--verde-logo);
 }
 
@@ -125,21 +110,3 @@ BOTON LINEA
   transform: scale(0.98);
 }
 
-/* ✅ Ajustes responsivos */
-@media (max-width: 1600px) and (min-width: 1200px) {
-  .boton-container-linea-negra {
-    margin-top: 5rem;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 769px) {
-  .boton-container-linea-negra {
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 769px) {
-  .boton-container-linea-negra {
-    margin-top: 1rem;
-  }
-}

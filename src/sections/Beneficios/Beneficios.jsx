@@ -1,68 +1,39 @@
 import React from "react";
 
 //Importamos los componentes
-import LinkLinea from "../../components/Botones/LinkLinea";
 
-//Importamos la informacion
+// Importamos la información
 import {
   tituloBeneficio,
-  textoBeneficio,
+  subtituloBeneficio,
 } from "../../constants/infoBeneficios";
 
-//Importamos los contextos
+// Importamos los contextos
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 import "./Beneficios.css";
+import CartaBeneficio from "../../components/CartaBeneficio";
 
 const Beneficios = () => {
   const { idioma } = useIdioma();
-
-  const beneficios = [
-    {
-      key: "medicion",
-      icono: textoBeneficio[idioma].medicion.icono,
-      titulo: textoBeneficio[idioma].medicion.titulo,
-      informacion: textoBeneficio[idioma].medicion.informacion,
-    },
-    {
-      key: "diseno",
-      icono: textoBeneficio[idioma].diseno.icono,
-      titulo: textoBeneficio[idioma].diseno.titulo,
-      informacion: textoBeneficio[idioma].diseno.informacion,
-    },
-    {
-      key: "fabricacion",
-      icono: textoBeneficio[idioma].fabricacion.icono,
-      titulo: textoBeneficio[idioma].fabricacion.titulo,
-      informacion: textoBeneficio[idioma].fabricacion.informacion,
-    },
-    {
-      key: "instalacion",
-      icono: textoBeneficio[idioma].instalacion.icono,
-      titulo: textoBeneficio[idioma].instalacion.titulo,
-      informacion: textoBeneficio[idioma].instalacion.informacion,
-    },
-  ];
 
   return (
     <section className="section-beneficios" id="beneficios">
       <div className="beneficios-container">
         <h1>{tituloBeneficio[idioma]}</h1>
-        <div className="beneficios-informacion">
-          {beneficios.map((beneficio) => (
-            <div
-              key={beneficio.key}
-              className={`div-${beneficio.key}-beneficios`}
-            >
-              <div>{beneficio.icono}</div>
-              <h3>{beneficio.titulo}</h3>
-              <p>{beneficio.informacion}</p>
-            </div>
-          ))}
-        </div>
-        <div className="boton-container-linea-negra">
-          <LinkLinea idioma={idioma} id="Beneficios" className="boton-linea-negra" />
-        </div>
+        <br />
+        <hr className="hr-beneficios" />
+        <br />
+        <p>{subtituloBeneficio[idioma]}</p>
+      </div>
+
+      <br />
+
+      <div className="grid-beneficios">
+        <div><CartaBeneficio /></div>
+        <div>adios</div>
+        <div>hola</div>
+        <div>adios</div>
       </div>
     </section>
   );

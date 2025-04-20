@@ -11,18 +11,19 @@ export const informacionBoton = (idioma, id) => {
     {
       id: "Historia",
       texto: {
-        es: "Contáctanos",
-        en: "Contact us",
+        es: "Ver Productos",
+        en: "See Porducts",
       },
-      url: "Contact",
+      url: "products",
+      offset: -20,
     },
     {
       id: "Productos",
       texto: {
-        es: "Personalizar toldo",
-        en: "Customize awning",
+        es: "Ver Todos los Productos",
+        en: "See All Products",
       },
-      url: "PersonalizarToldos", // Asegúrate de que la URL sea correcta
+      url: "/PersonalizarToldos", // Asegúrate de que la URL sea correcta
     },
     {
       id: "Beneficios", // Nuevo botón agregado
@@ -32,29 +33,19 @@ export const informacionBoton = (idioma, id) => {
       },
       url: "works", // URL de la nueva sección
     },
-    {
-      id: "Siguiente",
-      texto: {
-        es: "Siguiente",
-        en: "Next",
-      },
-    },
-    {
-      id: "Anterior",
-      texto: {
-        es: "Anterior",
-        en: "Previous",
-      },
-    },
+    
+    
   ];
   // Encuentra el botón con el ID dado
   const boton = botones.find((boton) => boton.id === id);
+
   // Si el botón existe, devuelve el texto en el idioma seleccionado
   return boton
     ? {
         id: boton.id,
         texto: boton.texto[idioma] || boton.texto.es,
         url: boton.url,
+        offset: boton.offset || 0,
       }
     : null;
 };

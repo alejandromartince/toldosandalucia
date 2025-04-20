@@ -1,152 +1,28 @@
-/* Contenedor principal de la sección */
 .section-beneficios {
-  height: 100vh;
+  height: 90vh;
+  padding: 4rem 2rem;
+}
+
+.beneficios-container{
   text-align: center;
-  cursor: default;
-}
-
-/* Estilo para el título */
-.section-beneficios h1 {
-  padding: 5rem 0 2rem 0;
-  font-family: "Oswald", sans-serif;
-  font-size: 3rem;
-  color: var(--negro-muy-claro);  
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 0;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
-}
-
-/* Contenedor de los beneficios */
-.beneficios-container {
-  max-width: 1400px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 50%;
   margin: 0 auto;
 }
 
-/* Contenedor de la información de los beneficios */
-.beneficios-informacion {
-  display: flex;
-  margin-top: 3rem;
-  justify-content: space-around;
-  gap: 2rem;
+.hr-beneficios{
+  width: 10%;
+  margin: 0 auto;
 }
 
-/* Estilo para cada beneficio */
-.div-medicion-beneficios,
-.div-diseno-beneficios,
-.div-fabricacion-beneficios,
-.div-instalacion-beneficios {
-  background-color: var(--blanco-claro);
-  border-radius: 8px;
-  padding: 2rem;
-  width: 22%;
-  min-width: 250px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* ==========================
+GRID
+======================*/
+.grid-beneficios{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.div-medicion-beneficios:hover,
-.div-diseno-beneficios:hover,
-.div-fabricacion-beneficios:hover,
-.div-instalacion-beneficios:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-  background-color: var(--blanco-muy-claro);
-}
-
-/* Icono de cada beneficio */
-.div-medicion-beneficios div,
-.div-diseno-beneficios div,
-.div-fabricacion-beneficios div,
-.div-instalacion-beneficios div {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--verde-logo);
-}
-
-/* Título de cada beneficio */
-.div-medicion-beneficios h3,
-.div-diseno-beneficios h3,
-.div-fabricacion-beneficios h3,
-.div-instalacion-beneficios h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-/* Descripción de cada beneficio */
-.div-medicion-beneficios p,
-.div-diseno-beneficios p,
-.div-fabricacion-beneficios p,
-.div-instalacion-beneficios p {
-  font-size: 1rem;
-  opacity: 0.8;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* ==============================================
-    MEDIA QUERIES
-============================================= */
-@media (max-width: 1600px) and (min-width: 769px) {
-  .beneficios-informacion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: repeat(2, 1fr); /* 2 filas */
-    gap: 1rem;
-    width: 90%;
-  }
-
-
-  .beneficios-container h1{
-    padding: 4rem 0 0;
-  }
-
-  .div-medicion-beneficios,
-  .div-diseno-beneficios,
-  .div-fabricacion-beneficios,
-  .div-instalacion-beneficios {
-    width: auto; /* Hacemos los divs un poco más pequeños */
-  }
-}
-
-@media (max-width: 768px) {
-  .section-beneficios {
-    height: auto; /* Permite que la altura de la sección se ajuste al contenido */
-    min-height: 100vh; /* Asegura que la altura mínima sea la altura de la pantalla */
-    overflow-y: hidden; /* Añade desplazamiento si es necesario */
-  }
-
-  .beneficios-informacion {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-  }
-
-  .section-beneficios h1 {
-    font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
-    padding-bottom: 0;
-  }
-
-  .div-medicion-beneficios,
-  .div-diseno-beneficios,
-  .div-fabricacion-beneficios,
-  .div-instalacion-beneficios {
-    width: 80%;
-    margin-bottom: 2rem;
-  }
-
-  .div-medicion-beneficios:hover,
-  .div-diseno-beneficios:hover,
-  .div-fabricacion-beneficios:hover,
-  .div-instalacion-beneficios:hover {
-    transform: none;
-    box-shadow: none;
-    background-color: var(--blanco-muy-claro);
-  }
+.grid-beneficios div{
+  grid-column: span 1;
+  text-align: center;
 }

@@ -43,10 +43,10 @@ const CasaHome = () => {
           shadow-mapSize-height={1024}
         />
 
-        <Suspense fallback={<CanvasLoader />}>
+        <Suspense fallback={null}>
           {/* Solo renderiza HomeCamara si la pantalla es mayor a 1600px */}
           <HomeCamara>
-            <group scale={isMobile ? .6 : isTablet ? 0.8 : isPantallaPequena ? 0.6 : 0.6}>
+            <group scale={isMobile ? .6 : isTablet ? 0.8 : isPantallaPequena ? 0.8 : 0.6}>
               <ModelHome
                 castShadow
                 receiveShadow

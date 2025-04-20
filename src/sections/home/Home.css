@@ -1,27 +1,9 @@
 /*===========================
 OPCIONES GENERALES
 ============================*/
-
 .home {
-  background-image: url(/assets/Logo/fondo-home.png);
+  background-image: url(/assets/Fondo/fondo-home.png);
   background-size: cover;
-  color: white;
-}
-
-.home h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.home p {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
 }
 
 .home-container {
@@ -88,7 +70,7 @@ RESPONSIVE PARA PANTALLAS MENOR A 1200px
     display: grid;
     grid-template-columns: 1fr; /* Una sola columna */
     grid-template-rows: auto auto; /* Dos filas automáticas */
-    padding: 4rem 2rem;
+    padding: 8rem 2rem 2rem 0;
   }
   
   .home-left-container {
@@ -113,18 +95,20 @@ RESPONSIVE PARA PANTALLAS MENOR A 768px (móviles)
     padding: 0;
   }
 
+  .home-right-container-mobile img{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+
   .home-left-container {
     padding: 0 1rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .home-right-container {
     width: 100%;
     height: 50%;
-  }
-
-  .home h1 {
-    font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
   }
 
   .home p {
