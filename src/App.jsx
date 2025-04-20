@@ -35,9 +35,7 @@ const App = () => {
       <Router>
         {cargando && <PantallaCarga />}
         {!cargando && <Navbar />}
-
         <Routes>
-          {/* Ruta principal */}
           <Route
             path="/"
             element={
@@ -52,7 +50,6 @@ const App = () => {
               </>
             }
           />
-
           <Route path="/PersonalizarToldos" element={<PersonalizarToldo />} />
         </Routes>
       </Router>
