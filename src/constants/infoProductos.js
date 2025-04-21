@@ -16,7 +16,7 @@ export const Productos = [
       en: "Terrace awnings are the perfect solution for sun protection, creating a comfortable and stylish outdoor space.",
     },
     position: [0, 0, 0], // Aquí agregamos la posición para este producto
-    escala: 1.5, //Lo mismo con la escala
+    escala: 1.3, //Lo mismo con la escala
   },
   {
     producto: Veranda,

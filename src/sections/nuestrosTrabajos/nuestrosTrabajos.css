@@ -57,7 +57,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 /* Contenedor para la marca de agua */
 .watermark-container {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 10px;
   z-index: 2;
 }
@@ -112,4 +112,5 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   justify-content: center;
   align-items: center;
   z-index: 3;
+  padding: 0 1rem;
 }

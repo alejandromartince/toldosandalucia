@@ -57,6 +57,20 @@ const Products = () => {
               />
             }
           />
+          <div className="product-navigation-container">
+            <div className="product-navigation">
+              <IoIosArrowBack
+                size={30}
+                onClick={prevProduct}
+                style={{ cursor: "pointer" }}
+              />
+              <IoIosArrowForward
+                size={30}
+                onClick={nextProduct}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="right-container">
@@ -66,18 +80,6 @@ const Products = () => {
           <h3>{producto.titulo[idioma]}</h3>
           <p>{producto.descripcion[idioma]}</p>
 
-          <div className="product-navigation">
-            <IoIosArrowBack
-              size={30}
-              onClick={prevProduct}
-              style={{ cursor: "pointer" }}
-            />
-            <IoIosArrowForward
-              size={30}
-              onClick={nextProduct}
-              style={{ cursor: "pointer" }}
-            />
-          </div>
         </div>
       </div>
 

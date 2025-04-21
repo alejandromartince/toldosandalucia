@@ -9,7 +9,6 @@
 
 .main-container {
   display: flex;
-  padding: 3rem 0;
   height: 65%;
 }
 /*==============================================
@@ -21,7 +20,7 @@
 }
 
 .model-proyecto-container {
-  height: 90%;
+  height: 100%;
   cursor: grab;
 }
 
@@ -31,23 +30,37 @@
 
 .model-productos {
   height: 100%;
-}
+}  
 
 .boton-container-productos {
   display: flex;
   justify-content: center;
   align-items: center;
+}  
+
+.product-navigation-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.product-navigation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
 }
 
 /*==============================================
    ESTILOS RIGHT SECTION
-============================================== */
+============================================== */   
 .right-container {
   width: 50%;
   display: flex;
-  padding: 2rem 2rem;
+  padding: 5rem 2rem;
   flex-direction: column;
-}
+}  
 
 .right-container h1 {
   font-size: 2.2rem;
@@ -55,12 +68,12 @@
   text-transform: uppercase;
   font-weight: 400;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
-}
+}  
 
 .hr-productos { 
   width: 80%;
   margin: 0 auto;
-}
+}  
 
 .right-container h3 {
   font-size: 1.6rem;
@@ -69,17 +82,11 @@
   text-transform: uppercase;
   font-weight: 200;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
-}
+}  
 
 .right-container p {
   padding: 0 4rem;
   text-align: justify;
   font-weight: lighter;
-}
-
-.product-navigation{
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 4rem;
-}
+}  
 
