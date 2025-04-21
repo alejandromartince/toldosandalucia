@@ -103,3 +103,13 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 .swiper-slide:hover .slide-image {
   transform: scale(1.05); /* Un pequeño zoom para la imagen */
 }
+
+/* FLECHAS DE NAVEGACION */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
