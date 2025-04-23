@@ -8,13 +8,13 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 
 // Importamos los componentes
 import ToldosProductos from "../../components/ToldosProductos";
+import BotonImportante from "../../components/Botones/BotonImportante";
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 // Importamos los estilos
 import "./Products.css";
-import BotonImportante from "../../components/Botones/BotonImportante";
 
 const Products = () => {
   const { idioma } = useIdioma();

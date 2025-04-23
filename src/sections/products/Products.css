@@ -66,12 +66,13 @@ ESTILOS RIGHT SECTION
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
 }
 
-.hr-productos {
+.right-container h3, .right-container p, .hr-productos{
   width: 80%;
   margin: 0 auto;
 }
 
 .right-container h3 {
+
   font-size: 1.6rem;
   margin-top: 2rem;
   padding: 0 4rem;
@@ -81,10 +82,11 @@ ESTILOS RIGHT SECTION
 }
 
 .right-container p {
-  padding: 0 4rem;
+ 
   text-align: justify;
   font-weight: lighter;
 }
+
 
 /*==============================================
    ESTILOS BOTONES

@@ -3,6 +3,7 @@ import Terraza from "../objects/Toldos/Terraza";
 import Veranda from "../objects/Toldos/Veranda";
 import Capota from "../objects/Toldos/Capota";
 import Cofre from "../objects/Toldos/Cofre";
+import Pergola from "../objects/Toldos/Pergola";
 
 // Exportar los productos como objetos
 export const Productos = [
@@ -29,7 +30,7 @@ export const Productos = [
       es: "Los toldos veranda son la solución perfecta para cubrir techos acristalados y buhardillas, ofreciendo una protección solar eficiente y reduciendo la acumulación de calor en el interior. Este tipo de toldo permite aprovechar la luz natural sin renunciar al confort térmico, mejorando tanto la eficiencia energética como el bienestar dentro del hogar o espacio cubierto.",
       en: "Veranda awnings are the perfect solution for covering glass roofs and attic spaces, providing efficient sun protection and significantly reducing heat buildup inside. This type of awning allows you to enjoy natural light without sacrificing thermal comfort, enhancing both energy efficiency and the overall comfort of your home or covered area.",
     },
-    position: [-2, -1, 0.9],
+    position: [-2, -1.2, 0.9],
     escala: .8
   },
   {
@@ -40,9 +41,9 @@ export const Productos = [
     },
     descripcion: {
       es: "Los toldos capota son estructuras abatibles con forma semicircular o de cuarto de esfera que se fijan encima de ventanas o puertas; aportan un toque clásico, protegen del sol y la lluvia y pueden personalizarse en tamaño y tejido.",
-      en: "Capota awnings are fold‑out, semi‑circular (quarter‑sphere) frames mounted above windows or doors; they add a classic look, shield against sun and rain, and can be customized in size and fabric.",
+      en: "Capota awnings are fold out, semicircular (quarter sphere) frames mounted above windows or doors; they add a classic look, shield against sun and rain, and can be customized in size and fabric.",
     },
-    position: [0, -4.5, 0],
+    position: [0, -5, 0],
     escala: 2.5,
   },
   {
@@ -57,7 +58,19 @@ export const Productos = [
     },
     position: [0, -5, 0],
     escala: 9,
-  }
+  },
+  {
+    producto: Pergola,
+    titulo: {
+      es: "Pérgola",
+      en: "Pergola",
+    },
+    descripcion: {
+      es: "Las pérgolas son estructuras arquitectónicas que proporcionan sombra y protección en espacios exteriores. Su diseño abierto permite disfrutar de la luz natural mientras se protege del sol y la lluvia. Son ideales para jardines, patios y terrazas, creando un ambiente acogedor y elegante.",
+      en: "Pergolas are architectural structures that provide shade and protection in outdoor spaces. Their open design allows for natural light while shielding against sun and rain. They are perfect for gardens, patios, and terraces, creating a cozy and elegant atmosphere.",
+    },
+    position: [0, -1, 0],
+    escala: .013,
+  },
   // Agregamos mas productos aquí si es necesario
-  
 ];
