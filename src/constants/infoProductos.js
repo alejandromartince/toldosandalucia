@@ -4,7 +4,6 @@ import Veranda from "../objects/Toldos/Veranda";
 import Capota from "../objects/Toldos/Capota";
 import Cofre from "../objects/Toldos/Cofre";
 import Pergola from "../objects/Toldos/Pergola";
-
 // Exportar los productos como objetos
 export const Productos = [
   {
@@ -69,8 +68,8 @@ export const Productos = [
       es: "Las pérgolas son estructuras arquitectónicas que proporcionan sombra y protección en espacios exteriores. Su diseño abierto permite disfrutar de la luz natural mientras se protege del sol y la lluvia. Son ideales para jardines, patios y terrazas, creando un ambiente acogedor y elegante.",
       en: "Pergolas are architectural structures that provide shade and protection in outdoor spaces. Their open design allows for natural light while shielding against sun and rain. They are perfect for gardens, patios, and terraces, creating a cozy and elegant atmosphere.",
     },
-    position: [0, -1, 0],
-    escala: .013,
+    position: [0, -1.3, 0],
+    escala: .7,
   },
   // Agregamos mas productos aquí si es necesario
 ];
