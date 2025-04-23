@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const Terraza = (props) => {
-  const { nodes, materials } = useGLTF('/models/tterraza.glb')
+  const { nodes, materials } = useGLTF('/models/terraza.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -25,5 +25,5 @@ const Terraza = (props) => {
   )
 }
 
-useGLTF.preload('/models/tterraza.glb')
+useGLTF.preload('/models/terraza.glb')
 export default Terraza

@@ -19,7 +19,7 @@ const PantallaCarga = () => {
       <div className="carga-contenedor">
         <img src="/assets/Logo/Logo.png" alt="Logo" className="carga-logo" />
         <div className="spinner"></div>
-        <p>{}</p>
+        <p>Cargando...</p>
         
       </div>
         <div className="barra-progreso">

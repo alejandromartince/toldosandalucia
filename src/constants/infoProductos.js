@@ -1,7 +1,8 @@
 // infoProductos.js
-import React from "react";
 import Terraza from "../objects/Toldos/Terraza";
 import Veranda from "../objects/Toldos/Veranda";
+import Capota from "../objects/Toldos/Capota";
+import Cofre from "../objects/Toldos/Cofre";
 
 // Exportar los productos como objetos
 export const Productos = [
@@ -28,8 +29,35 @@ export const Productos = [
       es: "Los toldos veranda son la solución perfecta para cubrir techos acristalados y buhardillas, ofreciendo una protección solar eficiente y reduciendo la acumulación de calor en el interior. Este tipo de toldo permite aprovechar la luz natural sin renunciar al confort térmico, mejorando tanto la eficiencia energética como el bienestar dentro del hogar o espacio cubierto.",
       en: "Veranda awnings are the perfect solution for covering glass roofs and attic spaces, providing efficient sun protection and significantly reducing heat buildup inside. This type of awning allows you to enjoy natural light without sacrificing thermal comfort, enhancing both energy efficiency and the overall comfort of your home or covered area.",
     },
-    position: [-2, -1.2, 0.9],
+    position: [-2, -1, 0.9],
     escala: .8
   },
-  // Puedes agregar más productos aquí si lo deseas
+  {
+    producto: Capota,
+    titulo: {
+      es: "Capota",
+      en: "Capota",
+    },
+    descripcion: {
+      es: "Los toldos capota son estructuras abatibles con forma semicircular o de cuarto de esfera que se fijan encima de ventanas o puertas; aportan un toque clásico, protegen del sol y la lluvia y pueden personalizarse en tamaño y tejido.",
+      en: "Capota awnings are fold‑out, semi‑circular (quarter‑sphere) frames mounted above windows or doors; they add a classic look, shield against sun and rain, and can be customized in size and fabric.",
+    },
+    position: [0, -4.5, 0],
+    escala: 2.5,
+  },
+  {
+    producto: Cofre,
+    titulo: {
+      es: "Cofre",
+      en: "Cofre",
+    },
+    descripcion: {
+      es: "Los toldos cofre son una opción elegante y funcional para proteger espacios exteriores del sol y la lluvia. Su diseño compacto y retráctil permite un fácil almacenamiento cuando no están en uso, manteniendo la estética del lugar. Además, ofrecen una excelente resistencia a las inclemencias del tiempo, garantizando durabilidad y protección a largo plazo.",
+      en: "Cofre awnings are an elegant and functional option for protecting outdoor spaces from sun and rain. Their compact and retractable design allows for easy storage when not in use, maintaining the aesthetics of the area. Additionally, they offer excellent resistance to weather conditions, ensuring long-lasting durability and protection.",
+    },
+    position: [0, -5, 0],
+    escala: 9,
+  }
+  // Agregamos mas productos aquí si es necesario
+  
 ];
