@@ -1,113 +1,20 @@
-.footer {
-  text-align: center;
-  padding: 3rem 0;
-  position: relative;
-  width: 100%;
+/* ===================================
+OPCIONES GENERALES
+====================================*/
+footer{
+    height: 55vh;
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
-.footer-container {
-  max-width: 1300px;
-  margin: 0 auto;
+.info-container{
+    display: flex;
+    justify-content: space-around;
 }
 
-/*===============================
-OPCIONES GENERALES DEL GRID
-===============================*/
-.footer-container-info {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: justify; /* Para alinear todo a la izquierda */
-}
-
-.privacidad-footer,
-.ayuda-footer,
-.redes-footer,
-.logo-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-/*=================================
-OPCIONES DE PRIVACIDAD
-==================================*/
-.footer-titulo h2 {
-  display: inline-block;
-  padding-bottom: 4px;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  font-size: 1.5rem; /* Ajusta tamaño si hace falta */
-}
-.footer-titulo hr {
-  margin-top: 0.5rem;
-  width: 60%;
-}
-.footer-info {
-  display: flex;
-  flex-direction: column;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  gap: 1rem;
-}
-
-/* =========================
-OPCIONES DE CONTACTO
-========================*/
-.footer-info a {
-  color: white;
-  width: fit-content;
-  text-decoration: none;
-}
-/*=============================
-OPCIONES DE REDES
-=============================*/
-.footer-info > div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer-info > div > a {
-  display: inline-flex; /* Permite que el <a> se ajuste al contenido */
-  border-radius: 50%; /* Para mantener la forma circular */
-  width: 36px; /* Ajustar al tamaño del icono más el padding */
-  height: 36px; /* Igual que el ancho para que sea un círculo */
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-redondo {
-  background-color: white;
-  color: var(--negro-claro);
-  border-radius: 50%;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/*=================================
-LOGO DEL GRID
-==================================*/
-
-.logo-footer img {
-  margin: 3rem auto;
-  width: 12rem;
-}
-
-/*=================================
-OPCIONES COPYRIGHT
-================================*/
-.footer-text {
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-/*================================
-MEDIA QUERIES
-==============================*/
-@media (max-width: 1600px) and (min-width: 769px) {
-  .footer-container {
-    max-width: 1100px;
-  }
+/* ====================================
+COPYRIGHT
+=====================================*/
+.copyright{
+    text-align: center;
 }
