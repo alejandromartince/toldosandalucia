@@ -2,7 +2,7 @@ export const infoFooter = {
   es: {
     copy: "Todos los Derechos Reservados",
     titulos: {
-      politica: "Politicas",
+      politica: "Políticas",
       ayuda: "¿Necesitas ayuda?",
       redes: "Redes Sociales",
     },
