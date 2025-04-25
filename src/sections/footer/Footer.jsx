@@ -54,6 +54,7 @@ const Footer = () => {
               >
                 {informacion[idioma].ayuda}
               </a>
+              <p>Tlf. 952 56 26 68</p>
             </div>
           </div>
           <div className="redes-footer">
