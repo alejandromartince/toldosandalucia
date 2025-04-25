@@ -4,13 +4,12 @@ import React from "react";
 import { infoFooter } from "../../constants/infoFooter";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext"
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos los estilos
 import "./Footer.css";
 
 const Footer = () => {
-
   const { idioma } = useIdioma();
   const informacion = infoFooter;
 
@@ -18,16 +17,32 @@ const Footer = () => {
     <footer>
       <div className="info-container">
         <div className="info-politicas">
-          <h2>{informacion[idioma].titulos.politica}</h2>
+          <div className="info-politicas-titulo">
+            <h2>{informacion[idioma].titulos.politica}</h2>
+            <span>
+              <hr />
+            </span>
+          </div>
+
+          <p>{informacion[idioma].politica.privacidad}</p>
         </div>
         <div className="info-ayuda">
           <p>ayuda</p>
+          <span>
+            <hr />
+          </span>
         </div>
         <div className="info-redes">
           <p>redes</p>
+          <span>
+            <hr />
+          </span>
         </div>
         <div className="logo">
-          <p>logo</p>
+          <img
+            src="/assets/Logo/Logo_Transparent.png"
+            alt="Logo de la empresa"
+          />
         </div>
       </div>
 
