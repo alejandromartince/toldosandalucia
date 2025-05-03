@@ -23,14 +23,16 @@ const Footer = () => {
               <hr />
             </span>
           </div>
-
           <p>{informacion[idioma].politica.privacidad}</p>
         </div>
         <div className="info-ayuda">
-          <p>ayuda</p>
-          <span>
-            <hr />
-          </span>
+          <div className="info-ayuda-titulo">
+            <h2>{informacion[idioma].titulos.ayuda}</h2>
+            <span>
+              <hr />
+            </span>
+          </div>
+          <p>{informacion[idioma].ayuda}</p>
         </div>
         <div className="info-redes">
           <p>redes</p>

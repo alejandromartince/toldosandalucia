@@ -11,21 +11,28 @@ footer{
     display: flex;
     justify-content: space-around;
     height: 80%;
-}
 
+}
 
 .info-container h2 {
     font-weight: 400;
+}
+
+.info-politicas, .info-ayuda, .info-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 /*=============================
 INFO POLITICAS
 =============================*/
 
 .info-politicas-titulo{
-    width: max-content;
+    width: fit-content;
 }
 
-.info-politicas-titulo hr{
+.info-container hr{
     width: 60%;
     margin-top: .5rem;
     margin-bottom: 2rem;
