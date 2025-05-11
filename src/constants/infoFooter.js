@@ -11,7 +11,8 @@ export const infoFooter = {
       cookies: "Política de Cookies",
       avisos: "Avisos Legales",
     },
-    ayuda: "Contacto",
+    ayuda: "Escríbenos",
+    telefono: "Tlf. 952 56 26 68"
   },
 
   en: {
@@ -26,6 +27,7 @@ export const infoFooter = {
       cookies: "Cookies Policy",
       avisos: "Legal Notice",
     },
-    ayuda: "Contact",
+    ayuda: "Write to Us",
+    telefono: "Tel. 952 56 26 68"
   },
 };

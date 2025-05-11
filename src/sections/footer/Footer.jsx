@@ -10,6 +10,7 @@ import { useIdioma } from "../../contexts/IdiomaContext";
 import { FaTiktok } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 //Importamos los estilos
 import "./Footer.css";
@@ -28,7 +29,11 @@ const Footer = () => {
               <hr />
             </span>
           </div>
-          <p>{informacion[idioma].politica.privacidad}</p>
+          <div className="info-politicas-opciones">
+            <p>{informacion[idioma].politica.privacidad}</p>
+            <p>{informacion[idioma].politica.cookies}</p>
+            <p>{informacion[idioma].politica.avisos}</p>
+          </div>
         </div>
         <div className="info-ayuda">
           <div className="info-ayuda-titulo">
@@ -37,7 +42,20 @@ const Footer = () => {
               <hr />
             </span>
           </div>
-          <p>{informacion[idioma].ayuda}</p>
+          <div className="info-ayuda-parrafos">
+            <div>
+            <a
+              href="https://web.whatsapp.com/send?phone=34679847618&text="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>{informacion[idioma].ayuda} </p>
+              <FaWhatsapp size={25} />
+              </a>
+            </div>
+            <p>{informacion[idioma].telefono}</p>
+            <div className="espaciador"></div>
+          </div>
         </div>
         <div className="info-redes">
           <div className="info-redes-titulo">
@@ -46,13 +64,13 @@ const Footer = () => {
               <hr />
             </span>
           </div>
-          <div>
+          <div className="iconos-redes">
             <a
               href="https://www.facebook.com/profile.php?id=100069359261072&mibextid=wwXIfr&rdid=TFKKyCeTM9mYAP5T&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BV9Xfr3Y1%2F%3Fmibextid%3DwwXIfr#"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size={20} className="icon-redondo" color="white"/>
+              <FaFacebookF size={25} className="icon-redondo" color="white" />
             </a>
 
             <a
@@ -60,7 +78,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTiktok size={20} className="icon-redondo" color="white"/>
+              <FaTiktok size={25} className="icon-redondo" color="white" />
             </a>
 
             <a
@@ -68,7 +86,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size={20} className="icon-redondo" color="white"/>
+              <FaInstagram size={25} className="icon-redondo" color="white" />
             </a>
           </div>
         </div>
