@@ -33,7 +33,7 @@ const Footer = () => {
             </span>
           </div>
           <div className="info-politicas-opciones">
-            <p>{informacion[idioma].politica.privacidad}</p>
+            <a href="/Privacidad" target="_blank">{informacion[idioma].politica.privacidad}</a>
             <p>{informacion[idioma].politica.cookies}</p>
             <p>{informacion[idioma].politica.avisos}</p>
           </div>
@@ -73,7 +73,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size={25} className="icon-redondo" color="white" />
+              <FaFacebookF size={25} className="icon-redondo" color="white"  />
             </a>
 
             <a

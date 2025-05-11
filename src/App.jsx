@@ -15,6 +15,7 @@ import Footer from "./sections/footer/Footer";
 
 // Página nueva
 import PersonalizarToldo from "./sections/PaginaPersonalizarToldos/PersonalizarToldo";
+import Privacidad from "./sections/PaginaPrivacidad/Privacidad";
 
 // Contexto
 import { IdiomaProvider } from "./contexts/IdiomaContext";
@@ -52,10 +53,7 @@ const App = () => {
     <IdiomaProvider>
       <Router>
         <Routes>
-          <Route
-            path="/home"
-            element={<RutaPrincipal cargando={cargando} />}
-          />
+          <Route path="/home" element={<RutaPrincipal cargando={cargando} />} />
           <Route
             path="/PersonalizarToldos"
             element={
@@ -65,6 +63,16 @@ const App = () => {
               </>
             }
           />
+          <Route
+            path="/Privacidad"
+            element={
+              <>
+                <Navbar />
+                <Privacidad />
+                <Footer />
+              </>
+            }
+          ></Route>
         </Routes>
       </Router>
     </IdiomaProvider>
