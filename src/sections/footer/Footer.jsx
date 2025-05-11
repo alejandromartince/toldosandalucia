@@ -1,5 +1,8 @@
 import React from "react";
 
+//Importamos los hooks
+import { Link } from "react-scroll";
+
 //Importamos la informacion
 import { infoFooter } from "../../constants/infoFooter";
 
@@ -44,13 +47,13 @@ const Footer = () => {
           </div>
           <div className="info-ayuda-parrafos">
             <div>
-            <a
-              href="https://web.whatsapp.com/send?phone=34679847618&text="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p>{informacion[idioma].ayuda} </p>
-              <FaWhatsapp size={25} />
+              <a
+                href="https://web.whatsapp.com/send?phone=34679847618&text="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>{informacion[idioma].ayuda} </p>
+                <FaWhatsapp size={25} />
               </a>
             </div>
             <p>{informacion[idioma].telefono}</p>
@@ -91,10 +94,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="logo">
-          <img
-            src="/assets/Logo/Logo_Transparent.png"
-            alt="Logo de la empresa"
-          />
+          <Link to="home" smooth="true">
+            <img
+              src="/assets/Logo/Logo_Transparent.png"
+              alt="Logo de la empresa"
+              style={{cursor:"Pointer"}}
+            />
+          </Link>
         </div>
       </div>
 

@@ -20,13 +20,31 @@ import PersonalizarToldo from "./sections/PaginaPersonalizarToldos/PersonalizarT
 import { IdiomaProvider } from "./contexts/IdiomaContext";
 import { useProgress } from "@react-three/drei";
 
+// Componente que gestiona la ruta principal con lógica de carga
+const RutaPrincipal = ({ cargando }) => {
+  if (cargando) return <PantallaCarga />;
+
+  return (
+    <>
+      <Navbar />
+      <Home />
+      <Historia />
+      <NuestrosTrabajos />
+      <Products />
+      <Beneficios />
+      <Contacto />
+      <Footer />
+    </>
+  );
+};
+
 const App = () => {
   const [cargando, setCargando] = useState(true);
   const { progress } = useProgress();
 
   useEffect(() => {
     if (progress === 100) {
-      setTimeout(() => setCargando(false), 1000);
+      setTimeout(() => setCargando(false), 0);
     }
   }, [progress]);
 
@@ -35,20 +53,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route
-            path="/"
-            element={
-              <>
-              {cargando && <PantallaCarga />}
-              <Navbar />
-                <Home />
-                <Historia />
-                <NuestrosTrabajos />
-                <Products />
-                <Beneficios />
-                <Contacto />
-                <Footer />
-              </>
-            }
+            path="/home"
+            element={<RutaPrincipal cargando={cargando} />}
           />
           <Route
             path="/PersonalizarToldos"
