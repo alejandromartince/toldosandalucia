@@ -33,13 +33,13 @@ const App = () => {
   return (
     <IdiomaProvider>
       <Router>
-        {cargando && <PantallaCarga />}
-        {!cargando && <Navbar />}
         <Routes>
           <Route
             path="/"
             element={
               <>
+              {cargando && <PantallaCarga />}
+              <Navbar />
                 <Home />
                 <Historia />
                 <NuestrosTrabajos />
@@ -50,7 +50,15 @@ const App = () => {
               </>
             }
           />
-          <Route path="/PersonalizarToldos" element={<PersonalizarToldo />} />
+          <Route
+            path="/PersonalizarToldos"
+            element={
+              <>
+                <Navbar />
+                <PersonalizarToldo />
+              </>
+            }
+          />
         </Routes>
       </Router>
     </IdiomaProvider>
