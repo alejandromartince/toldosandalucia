@@ -34,6 +34,8 @@ header {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
   box-shadow: 0 4px 10px var(--negro);
+  backdrop-filter: blur(10px);          /* Aplica el blur */
+  -webkit-backdrop-filter: blur(10px);  /* Soporte para Safari */
 }
 
 

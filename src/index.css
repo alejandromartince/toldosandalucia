@@ -31,7 +31,6 @@ body,
 body {
   font-family: "Oswald", sans-serif; /* Reemplaza "Poppins" por cualquier fuente que elijas */
   box-sizing: border-box;
-  background-image: url(/assets/Fondo/fondo-resto.png);
   background-size: cover;
 }
 
@@ -65,4 +64,12 @@ footer a {
   h1 {
     font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
   }
+}
+
+
+/* ==============================
+OPCIONES DE LA PAGINA PRINCIPAL
+==============================*/
+.pagina-principal{
+  background-image: url(/assets/Fondo/fondo-resto.png);
 }

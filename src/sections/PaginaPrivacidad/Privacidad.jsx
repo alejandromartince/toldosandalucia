@@ -1,4 +1,3 @@
-import React from "react";
 import "./Privacidad.css";
 
 const Privacidad = () => {
@@ -19,7 +18,7 @@ const Privacidad = () => {
         nuestra entidad o en los supuestos en que lo autorice una norma con
         rango de ley. En cumplimiento de la RGPD puede ejercitar sus derechos
         ARCO ante Toldos Andalucía, con dirección en C/Santo Tomás nº 19. Pol.
-        ind. La Leala, 29631 – ARROYO DE LA MIEL, adjuntando fotocopia de su
+        ind. La Leala, 29631, ARROYO DE LA MIEL, adjuntando fotocopia de su
         DNI.
       </p>
 

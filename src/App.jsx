@@ -26,7 +26,7 @@ const RutaPrincipal = ({ cargando }) => {
   if (cargando) return <PantallaCarga />;
 
   return (
-    <>
+    <div className="pagina-principal">
       <Navbar />
       <Home />
       <Historia />
@@ -35,7 +35,7 @@ const RutaPrincipal = ({ cargando }) => {
       <Beneficios />
       <Contacto />
       <Footer />
-    </>
+    </div>
   );
 };
 
@@ -53,13 +53,14 @@ const App = () => {
     <IdiomaProvider>
       <Router>
         <Routes>
-          <Route path="/home" element={<RutaPrincipal cargando={cargando} />} />
+          <Route path="/" element={<RutaPrincipal cargando={cargando} />} />
           <Route
             path="/PersonalizarToldos"
             element={
               <>
                 <Navbar />
                 <PersonalizarToldo />
+                <Footer />
               </>
             }
           />
