@@ -163,3 +163,48 @@ INFORMACION CARTAS
   display: flex;
   justify-content: center;
 }
+
+/* ============================
+MEDIA QUERIES MOVIL
+============================ */
+@media (max-width: 768px) {
+  .beneficios {
+    height: 100vh;
+  }
+
+  .encabezado-beneficios h1 {
+    font-size: 1.5rem;
+  }
+
+  .encabezado-beneficios p {
+    max-width: 90%;
+  }
+
+  .titulos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .imagenes-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imagen-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .info-carta {
+    width: calc(100% - 2rem);
+    right: 1rem;
+    top: auto;
+    bottom: -50px; /* Ajusta según sea necesario */
+    transform: none;
+  }
+}
