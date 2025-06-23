@@ -12,6 +12,8 @@ import BotonProductos from "../../components/Botones/BotonProductos";
 import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
 import PersonalizarToldos from "../PersonalizarToldos/PersonalizarToldos";
 
+
+
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -27,20 +29,21 @@ const Products = () => {
   const [mostrarPopup, setMostrarPopup] = useState(false); // Nuevo estado para mostrar el popup
   const dispositivo = useTipoDispositivo(); //Hook para saber si es movil o pc
 
-  const productos = infoProductos; //Cogemos la informacion de los productos
-  const productoActual = productos[currentProductIndex]; //Asignamos el valor del producto actual
+
+  const informacionProductos = infoProductos; //Cogemos la informacion de los productos
+  const productoActual = informacionProductos[currentProductIndex]; //Asignamos el valor del producto actual
 
   //Funcion para elegir el siguiente objeto
   const nextProduct = () => {
     setCurrentProductIndex((prevIndex) =>
-      prevIndex === productos.length - 1 ? 0 : prevIndex + 1
+      prevIndex === infoProductos.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   //Funciona para elegir el anterior objeto
   const prevProduct = () => {
     setCurrentProductIndex((prevIndex) =>
-      prevIndex === 0 ? productos.length - 1 : prevIndex - 1
+      prevIndex === 0 ? infoProductos.length - 1 : prevIndex - 1
     );
   };
 
@@ -50,7 +53,6 @@ const Products = () => {
     en: "Our products",
   };
 
-  
 
   return (
     <section className="seccion-productos" id="products">
@@ -58,15 +60,11 @@ const Products = () => {
       <div className="contenedor-superior-productos">
         {/* IZQUIERDA: OBJETO 3D + NAVEGACIÓN */}
         <div className="contenedor-izquierda">
+
           <ToldosProductos
-            producto={
-              <productoActual.producto
-                scale={productoActual.escala}
-                position={productoActual.position}
-                rotation={productoActual.rotation || [0, 0, 0]}
-              />
-            }
+            productoActual={productoActual}
           />
+
           <div className="contenedor-navegacion-productos">
             <IoIosArrowBack
               onClick={prevProduct}

@@ -2,11 +2,16 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
-// Importamos los componentes
-import CanvasLoader from "../components/Objetos 3D/CanvasLoader";
+//Importamos los hooks
+import { lazyModelbyName } from "../Hooks/Productos/lazyLoader";
 
-const ToldosProductos = ({ producto }) => {
+//Importamos la pantalla de carga para cuando se cargan los productos
+import PantallaCargaProductos from "../components/General/PantallaCargaProductos";
 
+
+const ToldosProductos = ({ productoActual }) => {
+  const { nombre, escala, position, rotation } = productoActual;
+  const Modelo = lazyModelbyName(nombre);
 
   return (
     <div className="model-proyecto-container">
@@ -19,8 +24,12 @@ const ToldosProductos = ({ producto }) => {
           shadow-mapSize={[2048, 2048]}
           castShadow
         />
-        <Suspense fallback={<CanvasLoader />}>
-          {producto}
+        <Suspense fallback={<PantallaCargaProductos />}>
+          <Modelo
+            scale={escala}
+            position={position}
+            rotation={rotation || [0, 0, 0]}
+          />
         </Suspense>
         <OrbitControls
           enablePan={false}

@@ -20,7 +20,6 @@ ENCABEZADO
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top;
 }
 
 
@@ -165,12 +164,29 @@ INFORMACION CARTAS
 }
 
 /* ============================
+MEDIA QUERIES TABLET
+============================ */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .encabezado-beneficios p{
+    line-height: 1.6rem;
+  }
+}
+
+/* ============================
 MEDIA QUERIES MOVIL
 ============================ */
 @media (max-width: 768px) {
   .beneficios {
-    height: 100vh;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
+
+  .encabezado-beneficios {
+    height: 20%;
+  }
+
 
   .encabezado-beneficios h1 {
     font-size: 1.5rem;

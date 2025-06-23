@@ -7,6 +7,7 @@ import Toldo from "../components/Objetos 3D/Toldos/Toldo";
 export const infoProductos = [
   {
     producto: Toldo,
+    nombre: "Toldo",
     titulo: {
       es: "Toldo Articulado",
       en: "Articulated Awning",
@@ -28,6 +29,7 @@ export const infoProductos = [
   },
   {
     producto: Cofre,
+    nombre: "Cofre",
     titulo: {
       es: "Toldo Cofre",
       en: "Chest Awning",
@@ -48,6 +50,7 @@ export const infoProductos = [
   },
   {
     producto: Veranda,
+    nombre: "Veranda",
     titulo: {
       es: "Veranda",
       en: "Veranda",
@@ -63,11 +66,12 @@ export const infoProductos = [
       }
     },
     position: [-2, -1.2, 0.9],
-    escala: .8,
+    escala: .75,
     copy: "Veranda (https://skfb.ly/ooKO7) by omerfurkanerasmus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
   {
     producto: Capota,
+    nombre: "Capota",
     titulo: {
       es: "Capota",
       en: "Hoods",
@@ -88,6 +92,7 @@ export const infoProductos = [
   },
   {
     producto: Pergola,
+    nombre: "Pergola",
     titulo: {
       es: "Pérgola",
       en: "Pergola",

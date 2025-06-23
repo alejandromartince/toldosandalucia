@@ -12,31 +12,31 @@ export const infoHistoria = {
       ),
       mobile: (
         <>
-          Fundada en 1999 en Benalmádena, nuestra empresa lleva <strong><i>más de 25 años</i></strong> ofreciendo toldos a medida desde nuestra fábrica en Benalmádena para hogares, negocios y comunidades en Málaga.
+          Fundada en 1999 en Benalmádena, nuestra empresa lleva <strong class="extra-bold">más de 25 años</strong> ofreciendo toldos a medida desde nuestra fábrica en Benalmádena para hogares, negocios y comunidades en Málaga.
         </>
       )
     },
     en: {
       pc: (
         <>
-          Founded in 1999 in Benalmádena, our company has been providing awning installation solutions for <strong><i>over 25 years</i></strong> in the city of Malaga, aiming to enhance the comfort and well-being of our clients. With our <strong><i>own factory</i></strong> in the area, which allows us to design and install thousands of tailor-made awnings for all types of spaces: residential communities, private homes, hospitality businesses, restaurants, and hotels. We adapt to the specific needs of each client, establishing ourselves as industry leaders thanks to the quality, durability, and aesthetics of our products.
+          Founded in 1999 in Benalmádena, our company has been providing awning installation solutions for <strong ><i>over 25 years</i></strong> in the city of Malaga, aiming to enhance the comfort and well-being of our clients. With our <strong><i>own factory</i></strong> in the area, which allows us to design and install thousands of tailor-made awnings for all types of spaces: residential communities, private homes, hospitality businesses, restaurants, and hotels. We adapt to the specific needs of each client, establishing ourselves as industry leaders thanks to the quality, durability, and aesthetics of our products.
         </>
       ),
       mobile: (
         <>
-          Founded in 1999 in Benalmádena, our company has been providing custom awnings for <strong><i>over 25 years</i></strong> from our own local factory, serving homes, businesses, and communities throughout Malaga.        </>
+          Founded in 1999 in Benalmádena, our company has been providing custom awnings for <strong class="extra-bold">over 25 years</strong> from our own local factory, serving homes, businesses, and communities throughout Malaga.        </>
       )
     }
   },
   subcontenido: {
     es: (
       <>
-        Actualmente, trabajamos en un amplio radio que abarca las siguientes <strong><i>áreas:</i></strong>
+        Actualmente, <strong class="extra-bold"> trabajamos en un amplio radio que abarca las  siguientes áreas:</strong>
       </>
     ),
     en: (
       <>
-        Currently, we operate within a wide area that covers the following <strong><i>locations:</i></strong>
+        Currently, <strong class="extra-bold"> we operate within a wide area that covers the following locations:</strong>
       </>
     )
   }

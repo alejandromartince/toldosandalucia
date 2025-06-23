@@ -27,7 +27,7 @@ const Historia = () => {
           <p>{dispositivo === 'movil' ? informacion.contenido[idioma].mobile : informacion.contenido[idioma].pc}</p><br />
 
           <p>
-            {informacion.subcontenido[idioma]}<br/>
+            {informacion.subcontenido[idioma]} &nbsp;
             <span>
               Málaga / Torremolinos / Benalmádena / Arroyo de la Miel / Fuengirola / Mijas / Marbella / San Pedro / Estepona / Alhaurín de La Torre / Churriana / Rincón de La Victoria / El Palo / Málaga Este.
             </span>

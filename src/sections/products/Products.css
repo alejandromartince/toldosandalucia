@@ -204,7 +204,7 @@ MEDIA QUERIES
     padding: 1rem;
   }
 
-  .contenedor-derecha{
+  .contenedor-derecha {
     order: 1;
     width: 100%;
     max-width: none;
@@ -217,7 +217,7 @@ MEDIA QUERIES
     text-align: left;
   }
 
-  
+
 
   /* ============================
   OPCIONES IZQUIERDA (3D)
@@ -240,7 +240,7 @@ MEDIA QUERIES
     padding: 0;
   }
 
-  .boton-centro-prueba{
+  .boton-centro-prueba {
     padding-top: 2rem;
   }
 
@@ -288,8 +288,8 @@ MEDIA QUERIES
     width: 100%;
     box-sizing: border-box;
   }
-  
-  .contenedor-derecha{
+
+  .contenedor-derecha {
     order: 1;
     width: 100%;
     justify-content: start;
@@ -298,7 +298,7 @@ MEDIA QUERIES
     padding: 1rem 2rem 0;
   }
 
-  .contenedor-izquierda{
+  .contenedor-izquierda {
     order: 2;
     width: 100%;
     max-width: none;
@@ -318,10 +318,13 @@ MEDIA QUERIES
   }
 
   .contenedor-derecha p {
-    font-size: 1rem;
     line-height: 1.7rem;
-    hyphens: manual;
     text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    letter-spacing: 0.05em;
+    max-width: 100%;
   }
 
   .contenedor-botones-prueba {
