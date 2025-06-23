@@ -1,11 +1,11 @@
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext"
+import { useIdioma } from "../../contexts/IdiomaContext.jsx"
 
 //Importamos la informacion
-import { encabezadoBeneficios } from '../../constants/infoBeneficios'
+import { encabezadoBeneficios } from '../../constants/infoBeneficios.js'
 
 //Importamos los componentes
-import Galeria from "../../components/Beneficios/Galeria";
+import Galeria from "../../components/Beneficios/Galeria.jsx";
 
 //Importamos los estilos
 import './Beneficios.css'

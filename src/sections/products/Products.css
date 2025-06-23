@@ -102,7 +102,6 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
 
 .contenedor-derecha p {
   text-align: justify;
-  hyphens: auto;
 }
 
 .text-productos {
@@ -202,15 +201,22 @@ MEDIA QUERIES
   }
 
   /* ============================
-OPCIONES DERECHA (TEXTO)
-============================ */
-  .contenedor-derecha {
+  OPCIONES DERECHA (TEXTO)
+  ============================ */
+  .contenedor-izquierda {
+    order: 2;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .contenedor-derecha{
     order: 1;
-    width: 90%;
+    width: 100%;
     max-width: none;
     text-align: center;
-    padding: 4rem 2rem 0rem;
-
+    padding: 2rem 1rem 0rem;
   }
 
   .contenedor-derecha h1,
@@ -221,13 +227,7 @@ OPCIONES DERECHA (TEXTO)
   /* ============================
   OPCIONES IZQUIERDA (3D)
   ============================ */
-  .contenedor-izquierda {
-    order: 2;
-    width: 100%;
-    max-width: none;
-    align-items: center;
-    padding: 1rem;
-  }
+
 
   .contenedor-botones-prueba {
     order: 3;
@@ -255,26 +255,38 @@ OPCIONES DERECHA (TEXTO)
   .model-proyecto-container {
     width: 100%;
     height: 350px;
-    /* o lo que necesites para que se vea bien en móvil */
+    margin-bottom: 2rem;
   }
 
 }
 
-
 @media (max-width: 768px) {
-  .seccion-productos{
-    height: 950px;
-    padding-bottom: 0;
+  .seccion-productos {
+    height: 800px;
+    padding: 2rem 0;
   }
+
   .contenedor-superior-productos {
     flex-direction: column;
-    height: 800px;
+    height: 700px;
   }
 
   .model-proyecto-container {
     height: 300px;
-    width: 250px;
+    width: 300px;
   }
+
+  .model-productos {
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(3px);
+    /* Difumina el fondo detrás del elemento */
+    -webkit-backdrop-filter: blur(10px);
+    /* Soporte para Safari */
+    width: 100%;
+    border-radius: 10px;
+    /* Opcional, mejora el efecto visual */
+  }
+
 
   .contenedor-izquierda,
   .contenedor-derecha {
@@ -284,16 +296,26 @@ OPCIONES DERECHA (TEXTO)
     width: 100%;
     box-sizing: border-box;
   }
+  
+  .contenedor-derecha{
+    order: 1;
+    width: 100%;
+    justify-content: start;
+    max-width: none;
+    text-align: center;
+    padding: 1rem 2rem 0;
+  }
 
   .contenedor-izquierda{
-    padding: 0 0 1rem 0;
+    order: 2;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    padding: 0;
   }
 
-  .contenedor-derecha{
-    padding-top: 2rem;
-  }
-  .text-contenedor-productos{
-    height: 350px;
+  .text-contenedor-productos {
+    height: 200px;
   }
 
   .contenedor-derecha h1 {
@@ -304,8 +326,8 @@ OPCIONES DERECHA (TEXTO)
   .contenedor-derecha p {
     font-size: 1rem;
     line-height: 1.7rem;
+    hyphens: manual;
     text-align: justify;
-    hyphens: auto;
   }
 
   .contenedor-botones-prueba {
@@ -314,7 +336,8 @@ OPCIONES DERECHA (TEXTO)
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    padding: 1rem 0;
+    padding: 0;
+
   }
 
   .boton-centro-prueba {
@@ -322,7 +345,13 @@ OPCIONES DERECHA (TEXTO)
     /* hago los botones más grandes en móvil */
     text-align: center;
   }
-  .boton-derecha-prueba{
+
+  .contenedor-botones-prueba,
+  .boton-derecha-prueba {
+    padding: 0;
+  }
+
+  .boton-derecha-prueba {
     width: 100%;
   }
 }

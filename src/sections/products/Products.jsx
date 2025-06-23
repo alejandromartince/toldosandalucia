@@ -3,6 +3,9 @@ import { useState } from "react";
 // Importamos la informacion
 import { infoProductos } from "../../constants/infoProductos";
 
+//Importamos los hooks
+import useTipoDispositivo from "../../Hooks/useTipoDispositivo";
+
 // Importamos los componentes
 import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
 import BotonProductos from "../../components/Botones/BotonProductos";
@@ -22,7 +25,7 @@ const Products = () => {
   const { idioma } = useIdioma();
   const [currentProductIndex, setCurrentProductIndex] = useState(0); //Asignamos el valor del producto
   const [mostrarPopup, setMostrarPopup] = useState(false); // Nuevo estado para mostrar el popup
-
+  const dispositivo = useTipoDispositivo(); //Hook para saber si es movil o pc
 
   const productos = infoProductos; //Cogemos la informacion de los productos
   const productoActual = productos[currentProductIndex]; //Asignamos el valor del producto actual
@@ -46,6 +49,8 @@ const Products = () => {
     es: "Nuestros productos",
     en: "Our products",
   };
+
+  
 
   return (
     <section className="seccion-productos" id="products">
@@ -77,11 +82,11 @@ const Products = () => {
         {/* DERECHA: TEXTO Y BOTÓN DE INFO */}
         <div className="contenedor-derecha">
           <div className="text-contenedor-productos">
-            <h1>{tituloProducto[idioma]}</h1>
+            <h1>{dispositivo === 'movil' ? productoActual.titulo[idioma] : tituloProducto[idioma]}</h1>
             <hr className="hr-productos" />
             <div className="text-productos">
-              <h3>{productoActual.titulo[idioma]}</h3>
-              <p>{productoActual.descripcion[idioma]}</p>
+              <h3>{dispositivo !== 'movil' ? productoActual.titulo[idioma] : ''}</h3>
+              <p>{dispositivo === 'movil' ? productoActual.descripcion.movil[idioma] : productoActual.descripcion.pc[idioma]}</p>
             </div>
           </div>
           <div className="boton-derecha-prueba">

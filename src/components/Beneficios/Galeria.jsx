@@ -2,14 +2,14 @@
 import { useState } from 'react';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext';
+import { useIdioma } from '../../contexts/IdiomaContext.jsx';
 
 //Importamos la informacion
-import { textoBeneficios } from '../../constants/infoBeneficios';
-import useInformacionBoton from '../../constants/infoBotones';
+import { textoBeneficios } from '../../constants/infoBeneficios.js';
+import useInformacionBoton from '../../constants/infoBotones.js';
 
 //Importamos los componentes
-import BotonCuadrado from '../Botones/BotonCuadrado';
+import BotonCuadrado from '../Botones/BotonCuadrado.jsx';
 
 // Importamos estilos
 import "../../sections/Beneficios/Beneficios.css"
