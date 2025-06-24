@@ -53,7 +53,7 @@ TITULOS GALERIA
 .titulos-container {
   display: flex;
   justify-content: space-around;
-  
+
 }
 
 .titulo {
@@ -62,7 +62,8 @@ TITULOS GALERIA
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  width: 400px; /* o el ancho que necesites */
+  width: 400px;
+  /* o el ancho que necesites */
   text-align: center;
 }
 
@@ -82,12 +83,12 @@ IMAGENES
   gap: 1rem;
   height: 90%;
   overflow: hidden;
-  flex-grow: 1;  /* <--- opcional para mayor control */
+  flex-grow: 1;
 }
 
 
 .imagen-item {
-  height: 100%; 
+  height: 100%;
   flex: 1;
   position: relative;
   transition: all 0.5s ease;
@@ -125,7 +126,7 @@ INFORMACION CARTAS
   transform: translateY(-50%);
   background-color: aliceblue;
   padding: 2rem;
-  height: 50%;
+  height: 45%;
   width: 350px;
   box-sizing: border-box;
   cursor: auto;
@@ -153,12 +154,12 @@ INFORMACION CARTAS
 .info-carta p {
   text-shadow: none;
   font-size: .85rem;
-  text-wrap: balance;
+  text-align: justify;
   line-height: 1.5;
   padding-top: .5rem;
 }
 
-.divBotonCartasBeneficios{
+.divBotonCartasBeneficios {
   display: flex;
   justify-content: center;
 }
@@ -167,7 +168,7 @@ INFORMACION CARTAS
 MEDIA QUERIES TABLET
 ============================ */
 @media (max-width: 1024px) and (min-width: 769px) {
-  .encabezado-beneficios p{
+  .encabezado-beneficios p {
     line-height: 1.6rem;
   }
 }
@@ -177,16 +178,11 @@ MEDIA QUERIES MOVIL
 ============================ */
 @media (max-width: 768px) {
   .beneficios {
-    height: 120vh;
+    height: 850px;
     display: flex;
     align-items: center;
     text-align: center;
   }
-
-  .encabezado-beneficios {
-    height: 20%;
-  }
-
 
   .encabezado-beneficios h1 {
     font-size: 1.5rem;
@@ -194,33 +190,5 @@ MEDIA QUERIES MOVIL
 
   .encabezado-beneficios p {
     max-width: 90%;
-  }
-
-  .titulos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .titulo {
-    width: auto;
-    margin-bottom: 1rem;
-  }
-
-  .imagenes-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .imagen-item {
-    width: 100%;
-    height: auto;
-  }
-
-  .info-carta {
-    width: calc(100% - 2rem);
-    right: 1rem;
-    top: auto;
-    bottom: -50px; /* Ajusta según sea necesario */
-    transform: none;
   }
 }

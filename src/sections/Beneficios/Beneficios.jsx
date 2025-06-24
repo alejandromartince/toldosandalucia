@@ -8,7 +8,8 @@ import { encabezadoBeneficios } from '../../constants/infoBeneficios.js'
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
 
 //Importamos los componentes
-import Galeria from "../../components/Beneficios/Galeria.jsx";
+import Ventajas from "../../components/Beneficios/Ventajas.jsx";
+import VentajasMobile from "../../components/Beneficios/VentajasMobile.jsx";
 
 //Importamos los estilos
 import './Beneficios.css'
@@ -25,7 +26,7 @@ const Beneficios = () => {
         <p>{dispositivo !== 'movil' ? encabezadoBeneficios.descripcion.pc[idioma] : encabezadoBeneficios.descripcion.movil[idioma]}</p>
       </div>
 
-      <Galeria />
+      {dispositivo !== 'movil' ? <Ventajas /> : <VentajasMobile />}
 
     </section >
   )

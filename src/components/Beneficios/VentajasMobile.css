@@ -1,0 +1,95 @@
+/* ============================
+AJUSTES GENERRALES
+============================ */
+.ventajas-mobile-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: visible;
+    /* para que las slides se puedan salir */
+    /* espacio para el texto fuera del slider */
+    position: relative;
+}
+
+.ventajas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.ventajas-titulo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 1rem;
+    flex: 1;
+    text-align: center;
+}
+
+.ventajas-texto-externo {
+    margin: 1rem auto 0 auto;
+    padding: 1.5rem 1.5rem;
+    background-color: rgba(156, 156, 156, 0.267);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    min-height: 260px;
+}
+
+.ventajas-titulo{
+    font-size: 1.2rem;
+}
+
+.ventajas-texto-externo p{
+    text-shadow: none;
+    text-align: left;
+    font-size: .9rem;
+    line-height: 1.6rem;
+}
+
+.contenedor-ventajas-mobile-superior {
+    margin: 0 0 1rem 0;
+}
+
+.ventajas-boton-container-mobile{
+    max-width: 15rem;
+    display: flex;
+    align-items: start;
+}
+
+/* ============================
+OPCIONES DE SWIPER
+============================ */
+.swiper-ventajas {
+    overflow: visible !important;
+    padding-left: 1rem;
+    /* un poco de margen para que la primera imagen no quede pegada */
+    padding-right: 1rem;
+    /* igual para la última */
+}
+
+.ventajas-slide {
+    position: relative;
+    height: 20rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}

@@ -12,7 +12,7 @@ export const infoHistoria = {
       ),
       mobile: (
         <>
-          Fundada en 1999 en Benalmádena, nuestra empresa lleva <strong class="extra-bold">más de 25 años</strong> ofreciendo toldos a medida desde nuestra fábrica en Benalmádena para hogares, negocios y comunidades en Málaga.
+          Fundada en 1999 en Benalmádena, nuestra empresa lleva <strong className="extra-bold">más de 25 años</strong> ofreciendo toldos a medida desde nuestra fábrica en Benalmádena para hogares, negocios y comunidades en Málaga.
         </>
       )
     },
@@ -24,19 +24,19 @@ export const infoHistoria = {
       ),
       mobile: (
         <>
-          Founded in 1999 in Benalmádena, our company has been providing custom awnings for <strong class="extra-bold">over 25 years</strong> from our own local factory, serving homes, businesses, and communities throughout Malaga.        </>
+          Founded in 1999 in Benalmádena, our company has been providing custom awnings for <strong className="extra-bold">over 25 years</strong> from our own local factory, serving homes, businesses, and communities throughout Malaga.        </>
       )
     }
   },
   subcontenido: {
     es: (
       <>
-        Actualmente, <strong class="extra-bold"> trabajamos en un amplio radio que abarca las  siguientes áreas:</strong>
+        Actualmente, <strong className="extra-bold"> trabajamos en un amplio radio que abarca las  siguientes áreas:</strong>
       </>
     ),
     en: (
       <>
-        Currently, <strong class="extra-bold"> we operate within a wide area that covers the following locations:</strong>
+        Currently, <strong className="extra-bold"> we operate within a wide area that covers the following locations:</strong>
       </>
     )
   }

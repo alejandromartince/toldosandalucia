@@ -26,7 +26,7 @@ const Galeria = () => {
     const datos = Object.values(textoBeneficios).map(item => ({
         titulo: item.titulo[idioma],
         imagen: item.imagen,
-        informacion: item.informacion[idioma]
+        informacion: item.informacion.pc[idioma]
     }));
 
 
