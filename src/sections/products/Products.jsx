@@ -12,8 +12,6 @@ import BotonProductos from "../../components/Botones/BotonProductos";
 import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
 import PersonalizarToldos from "../PersonalizarToldos/PersonalizarToldos";
 
-
-
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -56,13 +54,14 @@ const Products = () => {
 
   return (
     <section className="seccion-productos" id="products">
+
       {/* CONTENEDOR SUPERIOR - Ocupa toda la pantalla */}
       <div className="contenedor-superior-productos">
+
         {/* IZQUIERDA: OBJETO 3D + NAVEGACIÓN */}
         <div className="contenedor-izquierda">
-
           <ToldosProductos
-            productoActual={productoActual}
+            id={productoActual.id}
           />
 
           <div className="contenedor-navegacion-productos">
@@ -76,6 +75,7 @@ const Products = () => {
             />
           </div>
         </div>
+
 
         {/* DERECHA: TEXTO Y BOTÓN DE INFO */}
         <div className="contenedor-derecha">
@@ -93,12 +93,15 @@ const Products = () => {
         </div>
       </div>
 
+
+
       {/* BOTÓN FIJO EN LA PARTE INFERIOR (30% de altura visible) */}
       <div className="contenedor-botones-prueba">
         <div className="boton-centro-prueba">
           <BotonProductos onAbrir={() => setMostrarPopup(true)} />
         </div>
       </div>
+
 
       {/* POPUP DE PERSONALIZACIÓN */}
       {mostrarPopup && (

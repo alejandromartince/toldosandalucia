@@ -1,12 +1,14 @@
-import Veranda from "../components/Objetos 3D/Toldos/Veranda";
-import Capota from "../components/Objetos 3D/Toldos/Capota";
-import Cofre from "../components/Objetos 3D/Toldos/Cofre";
-import Pergola from "../components/Objetos 3D/Toldos/Pergola";
-import Toldo from "../components/Objetos 3D/Toldos/Toldo";
+
+import Toldo from "../components/Objetos 3D/Toldos/Toldo.jsx";
+import Veranda from "../components/Objetos 3D/Toldos/Veranda.jsx";
+import Capota from "../components/Objetos 3D/Toldos/Capota.jsx";
+import Cofre from "../components/Objetos 3D/Toldos/Cofre.jsx";
+import Pergola from "../components/Objetos 3D/Toldos/Pergola.jsx";
 
 export const infoProductos = [
   {
-    producto: Toldo,
+    id: 1,
+    modelo: Toldo,
     nombre: "Toldo",
     titulo: {
       es: "Toldo Articulado",
@@ -28,7 +30,8 @@ export const infoProductos = [
     copy: "Awning (https://skfb.ly/osVXs) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/)."
   },
   {
-    producto: Cofre,
+    id: 2,
+    modelo: Cofre,
     nombre: "Cofre",
     titulo: {
       es: "Toldo Cofre",
@@ -49,7 +52,8 @@ export const infoProductos = [
     copy: "SKYSHADES™ - SkyLine - Night view (https://skfb.ly/putHY) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
-    producto: Veranda,
+    id: 3,
+    modelo: Veranda,
     nombre: "Veranda",
     titulo: {
       es: "Veranda",
@@ -70,7 +74,8 @@ export const infoProductos = [
     copy: "Veranda (https://skfb.ly/ooKO7) by omerfurkanerasmus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
   {
-    producto: Capota,
+    id: 4,
+    modelo: Capota,
     nombre: "Capota",
     titulo: {
       es: "Capota",
@@ -91,7 +96,8 @@ export const infoProductos = [
     copy: "Awning (https://skfb.ly/67RCA) by Mirandanimator is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
-    producto: Pergola,
+    id: 5,
+    modelo: Pergola,
     nombre: "Pergola",
     titulo: {
       es: "Pérgola",
