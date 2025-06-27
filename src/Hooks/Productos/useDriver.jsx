@@ -14,7 +14,6 @@ import { DriverProductos } from './Driver';
 export const useDriverProductos = () => {
   const [activeSection, setActiveSection] = useState('home');
     const { idioma } = useIdioma();
-    console.log(idioma)
 
   useScrollEffect(secciones, setActiveSection);
 

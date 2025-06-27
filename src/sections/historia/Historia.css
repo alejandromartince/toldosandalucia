@@ -74,7 +74,6 @@ MEDIA QUERIES
   .historia {
     height: 90vh;
     padding: 0 2rem;
-    background-image: url(/assets/Fondo/Fondo_resto.png);
   }
 
   .historia-izquierda {
@@ -102,5 +101,4 @@ MEDIA QUERIES
   .extra-bold{
     font-weight: 700;
   }
-
 }

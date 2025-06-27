@@ -38,6 +38,7 @@ AJUSTES GENERRALES
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
     box-sizing: border-box;
     transition: all 0.3s ease;
@@ -50,7 +51,8 @@ AJUSTES GENERRALES
 
 .ventajas-texto-externo p {
     text-shadow: none;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
     font-size: .9rem;
     line-height: 1.6rem;
 }
