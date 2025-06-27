@@ -25,8 +25,10 @@ export const infoProductos = [
       }
     },
     position: [0, -.5, 0],
+    positionMovil: [0, -.5, 0],
     rotation: [0.2, 0, 0],
     escala: 2.1,
+    escalaMovil: 2,
     copy: "Awning (https://skfb.ly/osVXs) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/)."
   },
   {
@@ -48,7 +50,9 @@ export const infoProductos = [
       }
     },
     position: [0, -5, 0],
+    positionMovil: [0, -4.5, 0],
     escala: 9,
+    escalaMovil: 8,
     copy: "SKYSHADES™ - SkyLine - Night view (https://skfb.ly/putHY) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
@@ -70,7 +74,9 @@ export const infoProductos = [
       }
     },
     position: [-2, -1.2, 0.9],
+    positionMovil: [-1.8, -1, 1],
     escala: .75,
+    escalaMovil: .7,
     copy: "Veranda (https://skfb.ly/ooKO7) by omerfurkanerasmus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
   {
@@ -92,7 +98,9 @@ export const infoProductos = [
       }
     },
     position: [0, -5, 0],
+    positionMovil: [0, -4.5, 0],
     escala: 2.5,
+    escalaMovil: 2.3,
     copy: "Awning (https://skfb.ly/67RCA) by Mirandanimator is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
@@ -114,7 +122,9 @@ export const infoProductos = [
       }
     },
     position: [0, -1.3, 0],
+    positionMovil: [0, -1.3, 0],
     escala: .7,
+    escalaMovil: .7,
     copy: "SKYSHADES™ - Sky X - Night view (https://skfb.ly/putHR) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
 

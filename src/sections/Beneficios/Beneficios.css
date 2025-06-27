@@ -65,6 +65,9 @@ TITULOS GALERIA
   width: 400px;
   /* o el ancho que necesites */
   text-align: center;
+  user-select: none;
+  /* Evita selección */
+
 }
 
 .titulo.invisible {

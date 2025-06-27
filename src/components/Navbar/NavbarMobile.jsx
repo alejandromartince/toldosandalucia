@@ -21,9 +21,11 @@ const NavbarMobile = () => {
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
+  
   const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
-
+  //Efecto para quitar o activar el scroll cuando el menu desplegable del navbar_mobile esta abierto o cerrado
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
@@ -43,8 +45,6 @@ const NavbarMobile = () => {
   }, [menuOpen]);
 
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
@@ -95,7 +95,7 @@ const NavbarMobile = () => {
                     duration={800}
                     offset={offset}
                     className={`nav_link ${activeSection === id ? "active_link" : ""}`}
-                    onClick={closeMenu}
+                    onClick={toggleMenu}
                   >
                     {texto[idioma]}
                   </Link>

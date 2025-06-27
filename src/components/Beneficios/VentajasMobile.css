@@ -32,7 +32,8 @@ AJUSTES GENERRALES
 .ventajas-texto-externo {
     margin: 1rem auto 0 auto;
     padding: 1.5rem 1.5rem;
-    background-color: rgba(156, 156, 156, 0.267);
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 1px solid #00000096;
 
     display: flex;
     flex-direction: column;
@@ -43,11 +44,11 @@ AJUSTES GENERRALES
     min-height: 260px;
 }
 
-.ventajas-titulo{
+.ventajas-titulo {
     font-size: 1.2rem;
 }
 
-.ventajas-texto-externo p{
+.ventajas-texto-externo p {
     text-shadow: none;
     text-align: left;
     font-size: .9rem;
@@ -58,7 +59,7 @@ AJUSTES GENERRALES
     margin: 0 0 1rem 0;
 }
 
-.ventajas-boton-container-mobile{
+.ventajas-boton-container-mobile {
     max-width: 15rem;
     display: flex;
     align-items: start;
@@ -81,6 +82,9 @@ OPCIONES DE SWIPER
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15), 0 8px 15px rgba(0,0,0,0.1);
+
+
 }
 
 .nav-button {
@@ -89,7 +93,6 @@ OPCIONES DE SWIPER
     display: flex;
     align-items: center;
     font-size: 2rem;
-    cursor: pointer;
     color: #333;
     transition: color 0.2s ease;
 }

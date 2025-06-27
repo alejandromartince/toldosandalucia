@@ -1,19 +1,22 @@
 import { useState } from "react";
 
-// Importamos la informacion
-import { infoProductos } from "../../constants/infoProductos";
-
 //Importamos los hooks
-import useTipoDispositivo from "../../Hooks/useTipoDispositivo";
+import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
+
+// Importamos la informacion
+import { infoProductos } from "../../constants/infoProductos.jsx";
+
+import { useDriverProductos } from "../../Hooks/Productos/useDriver.jsx";
 
 // Importamos los componentes
-import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
-import BotonProductos from "../../components/Botones/BotonProductos";
-import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
-import PersonalizarToldos from "../PersonalizarToldos/PersonalizarToldos";
+import ToldosProductos from "../../EscenasObjetos/ToldosProductos.jsx";
+import BotonProductos from "../../components/Botones/BotonProductos.jsx";
+import BotonInterrogacion from "../../components/Botones/BotonInterrogacion.jsx";
+import PersonalizarToldos from "../PersonalizarToldos/PersonalizarToldos.jsx";
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
 
 // Importamos los contextos
 import { useIdioma } from "../../contexts/IdiomaContext";
@@ -26,7 +29,6 @@ const Products = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0); //Asignamos el valor del producto
   const [mostrarPopup, setMostrarPopup] = useState(false); // Nuevo estado para mostrar el popup
   const dispositivo = useTipoDispositivo(); //Hook para saber si es movil o pc
-
 
   const informacionProductos = infoProductos; //Cogemos la informacion de los productos
   const productoActual = informacionProductos[currentProductIndex]; //Asignamos el valor del producto actual
@@ -51,6 +53,8 @@ const Products = () => {
     en: "Our products",
   };
 
+  
+  useDriverProductos(); //Llamamos al driver de productos
 
   return (
     <section className="seccion-productos" id="products">
@@ -59,7 +63,7 @@ const Products = () => {
       <div className="contenedor-superior-productos">
 
         {/* IZQUIERDA: OBJETO 3D + NAVEGACIÓN */}
-        <div className="contenedor-izquierda">
+        <div className="contenedor-izquierda" id="driver-productos3d">
           <ToldosProductos
             id={productoActual.id}
           />

@@ -9,6 +9,7 @@ OPCIONES GENERALES
   background-size: cover;
   background-position: center;
   overflow: hidden;
+
 }
 
 
@@ -57,7 +58,7 @@ OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
 }
 
 .contenedor-navegacion-productos {
-  width: 100%;
+  width: 20%;
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -82,6 +83,8 @@ OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
   fill: white;
 }
 
+
+
 /*=============================
 OPCIONES SUPERIOR DERECHA (TEXTO)
 =============================*/
@@ -100,6 +103,10 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
   box-sizing: border-box;
 }
 
+.text-contenedor-productos h1 {
+  user-select: none;
+}
+
 .contenedor-derecha p {
   text-align: justify;
 }
@@ -108,6 +115,7 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
   padding-top: 2rem;
   font-weight: 300;
   font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 
@@ -254,7 +262,7 @@ MEDIA QUERIES
 
 @media (max-width: 768px) {
   .seccion-productos {
-    height: 800px;
+    height: 750px;
     padding: 2rem 0;
   }
 
@@ -264,8 +272,9 @@ MEDIA QUERIES
   }
 
   .model-proyecto-container {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 3rem;
   }
 
   .model-productos {
@@ -306,6 +315,10 @@ MEDIA QUERIES
     padding: 0;
   }
 
+  .contenedor-navegacion-productos {
+    width: 100%;
+  }
+
   .text-contenedor-productos {
     height: 200px;
   }
@@ -333,7 +346,6 @@ MEDIA QUERIES
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    padding: 0;
 
   }
 
@@ -350,5 +362,9 @@ MEDIA QUERIES
 
   .boton-derecha-prueba {
     width: 100%;
+  }
+
+  .boton-centro-prueba {
+    padding: 0;
   }
 }

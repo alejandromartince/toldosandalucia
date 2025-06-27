@@ -5,16 +5,19 @@ import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 //Importamos los hooks/componentes de carga para cuando se cargan los productos
 import PantallaCargaProductos from "../components/General/PantallaCargaProductos";
 
+//Importamos el hook de dispositivo
+import useTipoDispositivo from "../Hooks/useTipoDispositivo.js";
+
 //Importamos la informacion de los productos
 import { infoProductos } from "../constants/infoProductos.jsx";
 
 const ToldosProductos = ({ id }) => {
 
+  const dispositivo = useTipoDispositivo(); // Obtenemos el tipo de dispositivo
+
   // Usamos useMemo para evitar recomputaciones innecesarias si el ID no cambia
   const producto = useMemo(() => infoProductos.find((item) => item.id === id), [id]);
 
- 
-  
   // Si no se encuentra el producto, mostramos un mensaje
   if (!producto) return <div>Producto no encontrado</div>;
 
@@ -24,8 +27,11 @@ const ToldosProductos = ({ id }) => {
     modelo: Modelo,
     position = [0, 0, 0],
     rotation = [0, 0, 0],
-    escala = 1
+    escala = 1,
+    escalaMovil = 1,
+    positionMovil = [0, 0, 0],
   } = producto;
+
 
 
   return (
@@ -41,7 +47,7 @@ const ToldosProductos = ({ id }) => {
         />
 
         <Suspense fallback={<PantallaCargaProductos />}>
-          <Modelo position={position} rotation={rotation} scale={escala} />
+          <Modelo position={dispositivo !== 'movil' ? position : positionMovil} rotation={rotation} scale={dispositivo !== 'movil' ? escala : escalaMovil}/>
         </Suspense>
 
         <OrbitControls
