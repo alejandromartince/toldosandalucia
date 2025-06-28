@@ -15,7 +15,7 @@ const GoogleReview = () => {
       autor: "ANA Ma DOBLAS",
       descripcion:
         idioma === 'es'
-          ? "Todo perfecto, contentísima con Sergio y su equipo de montaje. Puntuales, rápidos y de gran calidad. Recomendables 100%"
+          ? "Todo perfecto, contentísima con Sergio y su equipo de montaje. Puntuales, rápidos y de gran calidad. Recomendables 100%."
           : "Everything was perfect, I'm extremely happy with Sergio and his installation team. Punctual, fast, and of great quality. 100% recommended.",
       fecha: idioma === 'es' ? "Julio de 2024" : "July 2024",
       estrellas: "5",
@@ -37,8 +37,8 @@ const GoogleReview = () => {
       autor: "Rubén Fez",
       descripcion:
         idioma === 'es'
-          ? "La atención de Sergio, su comercial, fué de 10. Paciente, rápido en la comunicación y muy buen asesor. El montaje fué igual de bueno; puntuales, resolutivos y con muy buena predisposición. Relación calidad/precio excelente. Altamente recomendable."
-          : "Sergio's service, as the sales representative, was outstanding. Patient, quick to communicate, and a great advisor. The installation was just as good—punctual, efficient, and with a great attitude. Excellent value for money. Highly recommended.",
+          ? "La atención de Sergio, su comercial, fué de 10. Paciente, rápido en la comunicación [...] Relación calidad/precio excelente. Altamente recomendable."
+          : "The attention from Sergio, their sales rep, was top-notch. Patient, quick in communication [...] Excellent quality/price ratio. Highly recommended.",
       fecha: idioma === 'es' ? "Noviembre de 2023" : "November 2023",
       estrellas: "5",
       enlace: "https://maps.app.goo.gl/gDLwaEfX5SQvchiq5",
@@ -48,8 +48,8 @@ const GoogleReview = () => {
       autor: "Natalia Pino Domínguez",
       descripcion:
         idioma === 'es'
-          ? "Profesionales de los pocos que quedan, Sergio y su equipo me instalaron varios toldos en casa, tanto horizontales como verticales y ha sido una maravilla, son puntuales, limpios, precisos. Tenia dudas de si colocarlo en una de las fachadas, pero visto su trabajo lo voy a encargar para lateral ya. Muchísimas gracias equipo."
-          : "True professionals, the kind you rarely find anymore. Sergio and his team installed several awnings at my home, both horizontal and vertical, and it was wonderful — they were punctual, tidy, and precise. I had doubts about installing one on a particular façade, but after seeing their work, I'm already planning to order one for the side as well. Many thanks to the whole team!",
+          ? "Profesionales de los pocos que quedan, Sergio y su equipo instalaron varios toldos en casa [...] Muy puntuales, limpios y precisos. Gracias equipo."
+          : "True professionals, Sergio and his team installed several awnings at home [...] Very punctual, clean, and precise. Many thanks, team.",
       fecha: idioma === 'es' ? "Febrero de 2023" : "February 2023",
       estrellas: "5",
       enlace: "https://maps.app.goo.gl/TmRhhbb59C1p5PKx9",
@@ -70,7 +70,6 @@ const GoogleReview = () => {
   return (
     <div className="googleReviews-container">
       <div className="googleCards-container">
-
         {GoogleOpiniones.map((opinion) => (
           <div key={opinion.id} className="cardReview">
             <div className="fotoAutor-GoogleReview">
@@ -93,7 +92,7 @@ const GoogleReview = () => {
 
       </div>
       <div className="puntuarEmpresa">
-        <BotonLinea id="GoogleReview" idioma={idioma} className="boton-linea-negra" />
+        <BotonLinea id="GoogleReview" idioma={idioma} className="boton-linea" />
       </div>
     </div>
   );

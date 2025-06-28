@@ -27,8 +27,10 @@ const RutaPrincipal = ({ cargando }) => {
       <Navbar pagina={pagina} />
       <Home />
       <div className="pagina-principal">
+        <div className="Historia-GoogleReview">
         <Historia />
         <GoogleReview />
+        </div>
         <NuestrosTrabajos />
         <Products />
         <Beneficios />

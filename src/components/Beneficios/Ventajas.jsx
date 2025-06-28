@@ -63,7 +63,7 @@ const Galeria = () => {
                             className={`imagen-item ${mostrar ? 'visible' : 'oculto'} ${esActivo ? 'expandida' : ''}`}
                         >
                             {dispositivo === 'movil' && <h3>{item.titulo}</h3>}
-                            <img src={item.imagen} alt={item.titulo} />
+                            <img src={item.imagen} alt={item.titulo} draggable="false" />
                             <div
                                 className={`info-carta ${esActivo ? 'visible' : ''}`}
                                 onClick={(e) => e.stopPropagation()}

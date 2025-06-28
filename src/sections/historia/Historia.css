@@ -7,11 +7,6 @@ OPCIONES GENERALES
   display: flex;
 
   padding: 4rem 0;
-
-  background-image: url(/assets/Fondo/fondo_historia.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* ============================
@@ -62,6 +57,7 @@ MEDIA QUERIES
   .historia {
     justify-content: center;
     height: 80vh;
+    padding: 4rem 0;
   }
 
   .historia-izquierda {
