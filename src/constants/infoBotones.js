@@ -47,17 +47,27 @@ const useInformacionBoton = (idioma, id) => {
           ? "https://web.whatsapp.com/send?phone=34679847618&text="
           : "https://wa.me/34679847618",
     },
+    {
+      id: "GoogleReview",
+      texto: {
+        es: "¡Puntúanos!",
+        en: "Rate us!"
+      },
+      url: dispositivo !== 'movil'
+        ? "https://search.google.com/local/writereview?placeid=ChIJZbTMBpr8cg0R-sIe7716UhQ"
+        : "geo:0,0?q=Toldos Andalucía, Benalmádena"
+    }
   ];
 
   const boton = botones.find((b) => b.id === id);
 
   return boton
     ? {
-        id: boton.id,
-        texto: boton.texto[idioma] || boton.texto.es,
-        url: boton.url,
-        offset: boton.offset || 0,
-      }
+      id: boton.id,
+      texto: boton.texto[idioma] || boton.texto.es,
+      url: boton.url,
+      offset: boton.offset || 0,
+    }
     : null;
 };
 

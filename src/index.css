@@ -7,20 +7,22 @@ body,
   overflow-x: hidden;
   color: white;
 }
+
 :root {
   /* COLORES */
   --negro: #131313;
   --negro-claro: #272727;
   --negro-muy-claro: #3b3b3b;
-  
+
   --gris: #808080;
   --gris-invisible: #50505080;
 
-  --blanco:#fff;
-  --blanco-claro: #f1f1f1; /* Fondo gris claro */
+  --blanco: #fff;
+  --blanco-claro: #f1f1f1;
+  /* Fondo gris claro */
   --blanco-muy-claro: #dddddd;
-  --blanco-texto-navbar:#ddddddb6;
-  --blanco-footer:#ffffff77;
+  --blanco-texto-navbar: #ddddddb6;
+  --blanco-footer: #ffffff77;
 
   --verde: #1b4332;
   --verde-logo: #138559;
@@ -33,7 +35,8 @@ body,
 }
 
 body {
-  font-family: "Poppins", sans-serif; /* Reemplaza "Poppins" por cualquier fuente que elijas */
+  font-family: "Poppins", sans-serif;
+  /* Reemplaza "Poppins" por cualquier fuente que elijas */
   box-sizing: border-box;
   background-size: cover;
 }
@@ -49,12 +52,13 @@ h1 {
 p {
   font-size: 1.1rem;
   line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  /* Sombra con desplazamiento y difusa */
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 
-footer a { 
+footer a {
   font-size: 1.1rem;
   line-height: 2rem;
   font-family: "Poppins", sans-serif;
@@ -62,4 +66,14 @@ footer a {
   color: white;
   text-shadow: none;
   text-decoration: none;
+}
+
+/* ============================
+OPCIONES PARA LAS ESTRELLAS DE GOOGLE REVIEW
+============================ */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1;   /* 1 para relleno, 0 para contorno */
+  color: #ffbb29;  /* amarillo */
+  font-size: 16px;
 }
