@@ -50,8 +50,8 @@ const useInformacionBoton = (idioma, id) => {
     {
       id: "GoogleReview",
       texto: {
-        es: "¡Puntúanos!",
-        en: "Rate us!"
+        es: "¡Puntúanos en Google!",
+        en: "Rate us on Google!"
       },
       url: dispositivo !== 'movil'
         ? "https://search.google.com/local/writereview?placeid=ChIJZbTMBpr8cg0R-sIe7716UhQ"

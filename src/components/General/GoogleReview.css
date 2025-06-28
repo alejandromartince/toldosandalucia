@@ -15,8 +15,10 @@ ESTRUCTURA GENERAL
 .googleCards-container {
   display: flex;
   gap: 2rem;
-  overflow: hidden; /* Oculta el scroll */
-  width: 100%; /* O un ancho fijo */
+  overflow: hidden;
+  /* Oculta el scroll */
+  width: 100%;
+  /* O un ancho fijo */
 }
 
 .googleCards-container p {
@@ -61,17 +63,18 @@ FOTO Y NOMBRE DEL AUTOR
   font-weight: 400;
 }
 
-.iconoEnlaceGoogleReview{
+.iconoEnlaceGoogleReview {
   opacity: 1;
 }
 
-.iconoEnlaceGoogleReviewTrue{
+.iconoEnlaceGoogleReviewTrue {
   opacity: 0;
 }
 
 .iconoEnlaceGoogleReview,
 .iconoEnlaceGoogleReviewTrue {
-  transition: opacity 0.3s ease; /* Transición suave de opacidad */
+  transition: opacity 0.3s ease;
+  /* Transición suave de opacidad */
 }
 
 /* ============================
@@ -112,8 +115,8 @@ OPCIONES INIFINTE LOOP
   animation: scrollLeft 45s linear infinite;
 }
 
-.googleCards-track:hover{
-    animation-play-state: paused;
+.googleCards-track:hover {
+  animation-play-state: paused;
 
 }
 
@@ -121,7 +124,23 @@ OPCIONES INIFINTE LOOP
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-50%); /* Desplaza la mitad del ancho */
+    transform: translateX(-50%);
+    /* Desplaza la mitad del ancho */
+  }
+}
+
+/* ============================
+MEDIA QUERIES MOVIL
+============================ */
+@media (max-width: 769px) {
+  .googleReviews-container {
+    justify-content: space-around;
+  }
+
+  .googleCards-track:hover {
+    animation-play-state: running;
+
   }
 }
