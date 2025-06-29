@@ -65,7 +65,7 @@ OPCIONES DEL LOGO
   display: flex;
   gap: .5rem;
   align-items: center;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .navbar__atrasEnlace {

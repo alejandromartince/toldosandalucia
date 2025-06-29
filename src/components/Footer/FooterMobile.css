@@ -79,6 +79,8 @@ COPYRIGHT
 ============================ */
 .fm-copyright p{
  text-align: center;
+  text-shadow: none;
+
 }
 
 /* ============================

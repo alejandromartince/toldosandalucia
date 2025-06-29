@@ -49,7 +49,7 @@ const NavbarDefault = ({ pagina }) => {
           {pagina !== 'principal' && (
             <a href="/" className="navbar__atrasEnlace">
               <div className="navbar__atras">
-                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras"/>
+                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras" />
                 <p>{idioma === 'es' ? 'Volver' : 'Go back'}</p>
               </div>
             </a>
@@ -82,7 +82,10 @@ const NavbarDefault = ({ pagina }) => {
         <div className="navbar_selector">
           <SelectorIdioma />
         </div>
-        <div className="navbar__progress-bar" style={{ width: `${scrollYProgress}%` }}></div>
+        
+        {pagina === 'principal' && (
+          <div className="navbar__progress-bar" style={{ width: `${scrollYProgress}%` }}></div>
+        )}
 
       </header>
     </>
