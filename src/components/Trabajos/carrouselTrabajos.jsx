@@ -57,6 +57,7 @@ const CarruselTrabajos = () => {
                   src={trabajo.imagen} // Ruta de la imagen
                   alt={`Trabajo ${index + 1}`}
                   className="slide-image"
+                  draggable="false"
                 />
                 <div className="overlay"></div>
               </div>

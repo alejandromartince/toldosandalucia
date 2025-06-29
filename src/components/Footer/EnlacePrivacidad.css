@@ -1,0 +1,13 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.enlacePrivacidad-section{
+    height: 100vh;
+    padding: 6rem 2rem;
+    color: black;
+}
+
+.enlacePrivacidad-section p{
+    text-shadow: none;
+}
+

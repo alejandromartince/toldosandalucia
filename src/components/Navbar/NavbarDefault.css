@@ -28,7 +28,7 @@ header {
   background-color: #283935;
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: -1; 
+  z-index: -1;
 }
 
 
@@ -44,13 +44,13 @@ header {
 /* ===============================
 OPCIONES DEL LOGO
 =============================== */
-.navbar__logo{
+.navbar__logo {
   display: flex;
   justify-content: center;
   height: 100%;
 }
 
-.navbar__logo a{
+.navbar__logo a {
   display: flex;
   justify-content: center;
 }
@@ -60,6 +60,31 @@ OPCIONES DEL LOGO
   margin-left: 1rem;
   cursor: pointer;
 }
+
+.navbar__atras {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.navbar__atrasEnlace {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__atras p {
+  text-shadow: none;
+}
+
+.iconNavbar_Atras {
+  transition: transform 0.3s ease;
+}
+
+.navbar__atrasEnlace:hover .iconNavbar_Atras {
+  transform: translateX(-5px);
+}
+
 /* ===============================
 OPCIONES DEL MENU CENTRAL 
 =============================== */
@@ -91,7 +116,8 @@ OPCIONES DE LA BARRA DE PROGRESO
   top: 3.9rem;
   left: 0;
   height: 3px;
-  background-color: var(--blanco); /* o el color que prefieras */
+  background-color: var(--blanco);
+  /* o el color que prefieras */
   z-index: 20;
   transition: width 0.2s ease-out;
 }

@@ -1,8 +1,8 @@
 import { useGLTF } from '@react-three/drei'
 
+
 const Capota = (props) => {
   const { nodes, materials } = useGLTF('/models/capota.glb')
-
 
   return (
     <group {...props} dispose={null}>
@@ -14,12 +14,12 @@ const Capota = (props) => {
             geometry={nodes.Group_001_1_Mat_0.geometry}
             material={materials.material}
             position={[0, 322.796, 0]}
-          />
+            />
         </group>
       </group>
     </group>
   )
 }
 
-export default Capota
 useGLTF.preload('/models/capota.glb')
+export default Capota

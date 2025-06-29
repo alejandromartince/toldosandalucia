@@ -19,8 +19,8 @@ export const DriverProductos = (idioma) => {
                 popover: {
                     title: idioma === 'es' ? 'Ver el modelo 3D' : 'View the 3D Model',
                     description: idioma === 'es'
-                        ? 'Interactúa con el modelo 3D para explorarlo desde diferentes ángulos.'
-                        : 'Interact with the 3D model to explore it from different angles.',
+                        ? 'Arrastra element modelo 3D con el ratón para explorarlo desde diferentes ángulos.'
+                        : 'Drag the 3D model with your cursor to explore it from different angles.',
                     side: "left",
                     align: 'start'
                 }

@@ -5,6 +5,7 @@ import "./App.css";
 // Importamos las paginas
 import RutaPrincipal from "./paginas/Principal/RutaPrincipal";
 import RutaGaleria from "./paginas/galeria/RutaGaleria";
+import RutaPrivacidad from "./paginas/Privacidad/RutaPrivacidad";
 
 // Contexto
 import { IdiomaProvider } from "./contexts/IdiomaContext";
@@ -27,6 +28,7 @@ const App = () => {
       <Router>
           <Routes>
             <Route path="/" element={<RutaPrincipal cargando={cargando} />} />
+            <Route path="/Privacidad" element={<RutaPrivacidad />} />
             <Route path="/Galeria" element={<RutaGaleria />} />
           </Routes>
       </Router>

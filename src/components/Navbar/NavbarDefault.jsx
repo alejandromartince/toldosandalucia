@@ -15,6 +15,10 @@ import useScrollPositionY from '../../Hooks/useScrollPositionY';
 //Importamos la info
 import { secciones } from '../../constants/infoNavbar';
 
+//Importamos los iconos
+import { HiOutlineArrowLongLeft } from "react-icons/hi2";
+
+
 //Importamos el estilo
 import './NavbarDefault.css'
 
@@ -34,11 +38,22 @@ const NavbarDefault = ({ pagina }) => {
 
   return (
     <>
-      <header className={`navbar ${(scrollY > 100) || (pagina === "galeria") ? 'navbar__scrolled' : ''}`}>
+      <header className={`navbar ${(scrollY > 100) || (pagina !== 'principal') ? 'navbar__scrolled' : ''}`}>
         <div className="navbar__logo">
-          <a href="/">
-            <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
-          </a>
+          {pagina === 'principal' && (
+            <Link to="home" smooth={true} duration={800}>
+              <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
+            </Link>
+          )}
+
+          {pagina !== 'principal' && (
+            <a href="/" className="navbar__atrasEnlace">
+              <div className="navbar__atras">
+                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras"/>
+                <p>{idioma === 'es' ? 'Volver' : 'Go back'}</p>
+              </div>
+            </a>
+          )}
         </div>
 
         <nav className="navbar__nav">
@@ -59,7 +74,7 @@ const NavbarDefault = ({ pagina }) => {
                   </Link>
                 );
               } else {
-                return null; // o lo que quieras mostrar si no es ni principal ni galeria
+                return null;
               }
             })}
         </nav>

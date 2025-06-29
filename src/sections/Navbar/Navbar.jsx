@@ -15,7 +15,7 @@ const Navbar = ({pagina}) => {
 
   return (
     <>
-      {dispositivo === 'movil' ? <NavbarMobile /> : <NavbarDefault pagina={pagina}/>}
+      {dispositivo === 'movil' ? <NavbarMobile pagina={pagina}/> : <NavbarDefault pagina={pagina}/>}
     </>
   );
 };

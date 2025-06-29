@@ -11,12 +11,16 @@ import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
 //Importamos la info
 import { secciones } from '../../constants/infoNavbar';
 
+//Importamos los iconos
+import { HiOutlineArrowLongLeft } from "react-icons/hi2";
+
+
 //Importamos el contexto del idioma
 import { useIdioma } from '../../contexts/IdiomaContext';
 
 import './NavbarMobile.css'
 
-const NavbarMobile = () => {
+const NavbarMobile = ({pagina}) => {
 
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
@@ -51,9 +55,20 @@ const NavbarMobile = () => {
       <header className='navbar navbar__scrolled'>
         {/* Logo */}
         <div className="navbar__logo">
-          <Link to="home" spy={true} smooth={true} duration={1000}>
-            <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
-          </Link>
+          {pagina === 'principal' && (
+            <Link to="home" smooth={true} duration={800}>
+              <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
+            </Link>
+          )}
+
+          {pagina !== 'principal' && (
+            <a href="/" className="navbar__atrasEnlace">
+              <div className="navbar__atras">
+                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras"/>
+                <p>{idioma === 'es' ? 'Volver' : 'Go back'}</p>
+              </div>
+            </a>
+          )}
         </div>
 
         {/* Selector de idioma + Botón hamburguesa (solo visible si el menú está cerrado) */}

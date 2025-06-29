@@ -8,10 +8,9 @@ import '../../sections/galeria/Galeria.css'
 
 const RutaGaleria = () => {
 
-  const pagina = "galeria";
   return (
     <>
-      <Navbar pagina={pagina} />
+      <Navbar />
       <Galeria />
       <div className='footerGaleria'>
         <Footer />

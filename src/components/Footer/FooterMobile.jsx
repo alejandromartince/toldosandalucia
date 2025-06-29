@@ -8,9 +8,7 @@ import { infoFooter } from "../../constants/infoFooter";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos los iconos
-import { FaTiktok, FaWhatsapp, FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaWhatsapp} from "react-icons/fa";
 
 //Importamos los estilos
 import './FooterMobile.css'
@@ -19,7 +17,7 @@ import RedesSociales from "./RedesSociales";
 const FooterMobile = () => {
 
   const { idioma } = useIdioma();
-  const informacion = infoFooter;
+  const i = infoFooter[idioma];
 
   const [openSection, setOpenSection] = useState(null);
 
@@ -34,20 +32,20 @@ const FooterMobile = () => {
         {/* POLÍTICAS */}
         <div className="fm-info-politicas">
           <div className="fm-info-politicas-titulo fm-desplegable-titulo" onClick={() => toggleSection("politicas")}>
-            <h2>{informacion[idioma].titulos.politica}</h2>
+            <h2>{i.titulos.politica}</h2>
           </div>
           <span><hr /></span>
           <div className="fm-info-politicas-opciones">
-            <a href="/Privacidad" target="_blank">{informacion[idioma].politica.privacidad}</a>
-            <p>{informacion[idioma].politica.cookies}</p>
-            <p>{informacion[idioma].politica.avisos}</p>
+            <a href="/Privacidad">{i.politica.privacidad}</a>
+            <p>{i.politica.cookies}</p>
+            <p>{i.politica.avisos}</p>
           </div>
         </div>
 
         {/* AYUDA */}
         <div className="fm-info-ayuda">
           <div className="fm-info-ayuda-titulo fm-desplegable-titulo" onClick={() => toggleSection("ayuda")}>
-            <h2>{informacion[idioma].titulos.ayuda}</h2>
+            <h2>{i.titulos.ayuda}</h2>
           </div>
           <span><hr /></span>
           <div className="fm-info-ayuda-parrafos">
@@ -58,18 +56,18 @@ const FooterMobile = () => {
                 rel="noopener noreferrer"
                 className="fmenlace-footer-whatsapp"
               >
-                <p style={{ textShadow: "none" }}>{informacion[idioma].ayuda}</p>
+                <p style={{ textShadow: "none" }}>{i.ayuda}</p>
                 <FaWhatsapp size={25} />
               </a>
             </div>
-            <p style={{ textShadow: "none" }}>{informacion[idioma].telefono}</p>
+            <p style={{ textShadow: "none" }}>{i.telefono}</p>
           </div>
         </div>
 
         {/* REDES */}
         <div className="fm-info-redes">
           <div className="fm-info-redes-titulo">
-            <h2>{informacion[idioma].titulos.redes}</h2>
+            <h2>{i.titulos.redes}</h2>
           </div>
           <span><hr /></span>
           <div className="fm-iconos-redes">
@@ -80,7 +78,7 @@ const FooterMobile = () => {
 
       <div className="fm-copyright">
         <p>
-          © {new Date().getFullYear()} Toldos Andalucía - {informacion[idioma].copy}
+          © {new Date().getFullYear()} Toldos Andalucía - {i.copy}
         </p>
       </div>
     </div>

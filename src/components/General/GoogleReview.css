@@ -31,12 +31,13 @@ ESTILO DE CADA REVIEW
 ============================ */
 .cardReview {
   background-color: aliceblue;
-  border: 1px solid black;
   border-radius: 10px;
   padding: 1rem 1rem;
   width: 350px;
+  height: 200px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 
 /* ============================
 FOTO Y NOMBRE DEL AUTOR
@@ -112,7 +113,9 @@ OPCIONES INIFINTE LOOP
   gap: 2rem;
   /* Ajusta el ancho para que quepan todas las cartas en línea */
   width: max-content;
+  align-items: center;
   animation: scrollLeft 45s linear infinite;
+  height: 250px;
 }
 
 .googleCards-track:hover {

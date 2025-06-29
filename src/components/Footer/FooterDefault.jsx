@@ -17,26 +17,27 @@ import './FooterDefault.css'
 const FooterDefault = () => {
 
     const { idioma } = useIdioma();
-    const informacion = infoFooter;
+    const i = infoFooter[idioma];
+
     return (
         <div className="footer-seccion">
             <div className="info-container">
                 <div className="info-politicas">
                     <div className="info-politicas-titulo">
-                        <h2>{informacion[idioma].titulos.politica}</h2>
+                        <h2>{i.titulos.politica}</h2>
                         <span>
                             <hr />
                         </span>
                     </div>
                     <div className="info-politicas-opciones">
-                        <a href="/Privacidad" target="_blank">{informacion[idioma].politica.privacidad}</a>
-                        <p>{informacion[idioma].politica.cookies}</p>
-                        <p>{informacion[idioma].politica.avisos}</p>
+                        <a href="/Privacidad">{i.politica.privacidad}</a>
+                        <p>{i.politica.cookies}</p>
+                        <p>{i.politica.avisos}</p>
                     </div>
                 </div>
                 <div className="info-ayuda">
                     <div className="info-ayuda-titulo">
-                        <h2>{informacion[idioma].titulos.ayuda}</h2>
+                        <h2>{i.titulos.ayuda}</h2>
                         <span>
                             <hr />
                         </span>
@@ -48,17 +49,17 @@ const FooterDefault = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <p style={{ textShadow: "none" }}>{informacion[idioma].ayuda} </p>
+                                <p style={{ textShadow: "none" }}>{i.ayuda} </p>
                                 <FaWhatsapp size={25} />
                             </a>
                         </div>
-                        <p style={{ textShadow: "none" }}>{informacion[idioma].telefono}</p>
+                        <p style={{ textShadow: "none" }}>{i.telefono}</p>
                         <div className="espaciador"></div>
                     </div>
                 </div>
                 <div className="info-redes">
                     <div className="info-redes-titulo">
-                        <h2>{informacion[idioma].titulos.redes}</h2>
+                        <h2>{i.titulos.redes}</h2>
                         <span>
                             <hr />
                         </span>
@@ -103,7 +104,7 @@ const FooterDefault = () => {
             <div className="copyright">
                 <p>
                     © {new Date().getFullYear()} Toldos Andalucía -&nbsp;
-                    {informacion[idioma].copy}
+                    {i.copy}
                 </p>
             </div>
         </div>

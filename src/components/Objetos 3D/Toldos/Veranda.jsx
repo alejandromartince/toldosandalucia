@@ -1,8 +1,11 @@
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
+
 const Veranda = (props) => {
+
   const { nodes, materials } = useGLTF('/models/veranda.glb')
+
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.001}>
@@ -125,5 +128,5 @@ const Veranda = (props) => {
   )
 }
 
-useGLTF.preload('/models/veranda.glb')
+useGLTF.preload('/models/veranda.glb');
 export default Veranda
