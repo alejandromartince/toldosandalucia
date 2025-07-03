@@ -1,0 +1,128 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.menu-parteDerecha {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* ============================
+MENU DESPLEGABLE
+============================ */
+.menu-desplegable-navbar {
+  position: fixed;
+  top: 0;
+  left: -120vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--negro-claro);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-desplegable-navbar.open {
+  left: 0;
+}
+
+.contenedorNavMobile{
+  padding: 2rem;
+}
+
+.navbar__navColumna {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navbar__navColumna > *:first-child {
+  padding-top: 0;
+}
+
+/* ============================
+BOTON HAMBURGUESA
+============================ */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animación cuando el botón está en estado "open" (hamburguesa => X) */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Por defecto el botón es visible */
+.hamburger-btn {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility .2s ease;
+}
+
+/* Cuando el menú está abierto: se desvanece */
+.hamburger-btn.fade-out {
+  visibility: hidden;
+}
+
+/* Aparece con opacidad suave al cerrar el menú */
+.hamburger-btn.fade-in {
+  visibility: visible;
+}
+
+
+/* ============================
+no-scroll 
+============================ */
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+/* ============================
+CONTENEDOR BOTON REALIZAR PRESUPUESTO
+============================ */
+.contenedor-boton-menu-desplegado{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  padding-bottom: 8rem;
+  padding-left: 2rem;
+}
+
+.contenedor-boton-menu-desplegado a{
+  height: 2rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}

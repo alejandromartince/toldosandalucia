@@ -1,0 +1,13 @@
+/* ==============================
+OPCIONES DE LA PAGINA PRINCIPAL
+==============================*/
+.pagina-principal{
+  background-image: url('/assets/Fondo/fondo_resto.png');
+}
+
+.Historia-GoogleReview{
+  background-image: url(/assets/Fondo/fondo_historia.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

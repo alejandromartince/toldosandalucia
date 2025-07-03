@@ -1,0 +1,104 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.fm-footer-seccion {
+    height: 85vh;
+    padding: 2rem 2rem;
+}
+
+.fm-footer-seccion h2{
+    font-weight: 400;
+}
+
+.fm-info-container {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ============================
+OPCIONES GENERALES PARA LOS BLOQUES DE POLITICAS Y AYUDAS
+============================ */
+.fm-info-politicas-titulo.fm-desplegable-titulo,
+.fm-info-ayuda-titulo.fm-desplegable-titulo, .fm-info-redes-titulo {
+    padding-bottom: .5rem;
+}
+
+/* HR PARA LAS LINEA DE LOS TITULOS */
+.fm-info-container span hr {
+    width: 50px;
+}
+
+/* ============================
+POLITICAS
+============================ */
+.fm-info-politicas-opciones {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    padding-top: 1rem;
+}
+
+/* ============================
+NECESITAS AYUDA?
+============================ */
+.fm-info-ayuda-parrafos{
+    padding-top: 1rem;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.fmenlace-footer-whatsapp{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+/* ============================
+REDES SOCIALES
+============================ */
+.fm-info-redes-titulo{
+    padding-bottom: .5rem;
+}
+
+.fm-iconos-redes{
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* ============================
+LOGO 
+============================ */
+.fm-logo img {
+    height: 50px;
+}
+
+/* ============================
+COPYRIGHT
+============================ */
+.fm-copyright p{
+ text-align: center;
+  text-shadow: none;
+
+}
+
+/* ============================
+QUERIES PARA TABLET 
+============================ */
+@media (min-width: 769px){
+    .fm-footer-seccion{
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .fm-info-container{
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+    }
+}

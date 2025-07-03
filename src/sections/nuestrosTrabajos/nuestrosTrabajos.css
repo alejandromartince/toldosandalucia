@@ -1,0 +1,140 @@
+/* ======================================
+ESTILOS PARA LA SECCION DE NUESTROS TRABAJOS
+====================================== */
+.nuestrosTrabajos-section {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* =====================================
+ESTILOS PARA EL CARRUSEL DE TRABAJOS
+==================================== */
+
+.carrusel-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  cursor: pointer;
+}
+
+.carrusel-trabajos {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+/* Contenedor de la imagen con el título y la marca de agua */
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Título de la imagen (encima de la imagen) */
+.image-title {
+  position: absolute;
+  text-transform: uppercase;
+  top: 40px;
+  left: 30px;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 2;
+  margin: 0;
+  font-family: "Bebas", sans-serif;
+}
+
+/* Contenedor para la marca de agua */
+.watermark-container {
+  position: absolute;
+  top: 60%;
+  left: 10px;
+  z-index: 2;
+}
+
+.watermark-text {
+  writing-mode: vertical-lr;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(160, 160, 160);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+  z-index: 2;
+}
+
+/* Estilos para la imagen */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Capa negra (aparece encima de la imagen) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.558);
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Efecto de hover (eliminar capa negra) */
+.swiper-slide:hover .overlay {
+  opacity: 0.3;
+}
+
+/* Efecto de hover para la imagen */
+.swiper-slide:hover .slide-image {
+  transform: scale(1.05);
+  /* Un pequeño zoom para la imagen */
+}
+
+/* FLECHAS DE NAVEGACION */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  padding: 0 1rem;
+}
+
+/* ============================
+MEDIA QUERIES
+============================ */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.7);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.225);
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  .swiper-slide:hover .slide-image {
+    transform: scale(1);
+    /* Un pequeño zoom para la imagen */
+  }
+}

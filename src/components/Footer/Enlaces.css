@@ -1,0 +1,96 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.enlacePrivacidadSection {
+    min-height: 100vh;
+    height: fit-content;
+    color: black;
+    padding: 4rem 0;
+}
+
+.enlacePrivacidadSection p,
+.enlacePrivacidadSection h1 {
+    text-shadow: none;
+}
+
+/* ============================
+ENCABEZADO POLITICAS
+============================ */
+.encabezadoPoliticas {
+    height: 200px;
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+}
+
+.encabezadoPoliticas h3 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.encabezadoPoliticas p {
+    color: var(--gris);
+}
+
+
+/* ============================
+HR
+============================ */
+.hrEnlacePoliticas {
+    border: none;
+    height: 1px;
+    background-color: rgba(29, 29, 29, 0.26);
+}
+
+/* ============================
+CONTENIDO PRINCIPAL
+============================ */
+.contenidoPrincipal {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+}
+
+/* ============================
+CONTENIDO TEXTO
+============================ */
+.textoEnlacePrivacidad {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contenidoPrincipal h4{
+    font-size: 18px;
+}
+
+.contenidoPrincipal p{
+    font-size: 15px;
+}
+
+.negritaEnlacePrivacidad{
+    font-weight: 600;
+}
+
+.listaTitularidad{
+    margin-left:  2rem
+}
+
+/* ============================
+SVG
+============================ */
+.contenedorImagenEnlacePrivacidad {
+    padding: 6rem 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.svgPrivacidad {
+  width: 100%;       /* que ocupe todo el ancho del contenedor */
+  height: auto;      /* altura automática para mantener la proporción */
+  max-height: 500px; /* altura máxima */
+  max-width: 500px;  /* opcional, para limitar el ancho máximo */
+}

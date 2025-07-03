@@ -1,0 +1,120 @@
+/* ============================
+OPCIONES GENERAL DEL BOTON 
+============================ */
+.boton-producto {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.boton-producto:hover {
+  background-color: #283935;
+  box-shadow: 0px 15px 15px #1e2b28;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.boton-producto:active {
+  transform: translateY(-1px);
+}
+
+/* ============================
+PERSONALIZACION MENU PERSONALIZAR TOLDOS
+============================ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+
+.popup-overlay.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================================
+   CONTENIDO DEL POPUP
+================================ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 9999; /* Muy alto para estar sobre todo */
+}
+
+.popup-overlay.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-contenido {
+  background-color: #fff;
+  width: 90vw;
+  height: 90vh;
+  padding: 2rem;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  animation: popup-entrada 0.4s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes popup-entrada {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cerrar-boton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.cerrar-boton:hover {
+  color: red;
+}

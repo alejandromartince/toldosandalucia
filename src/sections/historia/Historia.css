@@ -1,0 +1,100 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.historia {
+  height: 65vh;
+
+  display: flex;
+
+  padding: 4rem 0;
+}
+
+/* ============================
+OPCIONES PARTE IZQUIERDA
+============================ */
+.historia-izquierda {
+  width: 70%;
+  height: 100%;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.historia-texto {
+  width: 100%;
+}
+
+.historia-texto p {
+  text-align: justify;
+}
+
+.contenedor-botonHistoria {
+  margin-top: 4rem;
+}
+
+
+/* ============================
+OPCIONES IMAGENES
+============================ */
+.historia-logo {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.historia-logo img {
+  height: 15rem;
+}
+
+/* ============================
+MEDIA QUERIES
+============================ */
+@media (max-width: 1024px) {
+  .historia {
+    justify-content: center;
+    height: 80vh;
+    padding: 4rem 0;
+  }
+
+  .historia-izquierda {
+    padding: 0;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .historia {
+    height: 90vh;
+    padding: 0 2rem;
+  }
+
+  .historia-izquierda {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .historia-texto h1 {
+    font-size: 1.6rem;
+  }
+
+  .historia-texto p {
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.7rem;
+  }
+
+  .contenedor-botonHistoria {
+    margin: 0;
+  }
+
+  .extra-bold{
+    font-weight: 700;
+  }
+}

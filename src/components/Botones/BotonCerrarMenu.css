@@ -1,0 +1,21 @@
+.botonCerrarMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 140px;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  box-shadow: none;
+}
+
+
+.botonCerrarMenu:hover {
+  box-shadow: 1px 1px 10px #d1d1d18a, -1px -1px 10px #d1d1d18a;
+  transform: translateY(-2px);
+}

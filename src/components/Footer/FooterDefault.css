@@ -1,0 +1,142 @@
+/* ===================================
+OPCIONES GENERALES
+====================================*/
+.footer-seccion {
+  height: 45vh;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.info-container h2 {
+  font-weight: 400;
+}
+
+.info-politicas,
+.info-ayuda,
+.info-redes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+/* ============================
+OPCIONES DE HOVER
+============================ */
+.info-politicas-opciones a, .info-ayuda-parrafos a,
+.info-politicas-opciones p {
+  transition: color .2s ease-in-out;
+  text-shadow: none;
+}
+
+.icono-footer{
+  transition: fill .2s ease-in-out;
+}
+
+.info-politicas-opciones a:hover, 
+.info-politicas-opciones p:hover, .info-ayuda-parrafos a:hover {
+  color: var(--blanco-footer);
+}
+
+.icono-footer:hover{
+  fill: var(--blanco-footer);
+}
+
+/*=============================
+INFO POLITICAS
+=============================*/
+
+.info-politicas-titulo {
+  width: fit-content;
+}
+
+.info-container hr {
+  width: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-politicas-opciones {
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+/* =============================
+INFO AYUDA
+===============================*/
+.info-ayuda-parrafos {
+  display: flex;
+  flex-direction: column;
+  min-height: 8rem;
+  justify-content: space-around;
+}
+
+.info-ayuda-parrafos a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+/*=============================
+ICONO REDES
+=============================*/
+.iconos-redes {
+  display: flex;
+  gap: 1.5rem;
+  /* Espacio entre iconos */
+  margin-top: 0.2rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.icon-redondo {
+  pointer-events: none;
+  /* Para que el icono no bloquee el clic */
+}
+
+/*=============================
+LOGO
+=============================*/
+.logo {
+  margin-top: 8rem;
+}
+
+.logo img {
+  width: 12rem;
+}
+
+/* ====================================
+COPYRIGHT
+=====================================*/
+.copyright {
+  text-align: center;
+
+}
+
+.copyright p{
+  text-shadow: none;
+
+}
+
+.espaciador {
+  visibility: hidden;
+  height: 2rem;
+}

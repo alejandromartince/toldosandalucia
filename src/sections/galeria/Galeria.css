@@ -1,0 +1,104 @@
+/* ============================
+OPCIONES PARA GALERIA
+============================ */
+.galeria-section {
+  height: 100vh;
+  padding-top: 3.5rem;
+}
+
+.backgroundTopGaleria {
+  position: relative;
+  height: 250px;
+  background-image: url(/assets/Fondo/fondoDerechaPersonalizarToldos.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.backgroundTopGaleria::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.contenidoGaleria {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.contenidoGaleria h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  font-weight: 400;
+}
+
+.contenidoGaleria p {
+  text-align: center;
+}
+
+.contenidoGaleria a {
+  text-decoration: none;
+  color: white;
+  text-shadow: none;
+}
+
+
+/* ============================
+OPCIONES CARRUSEL
+============================ */
+.carrusel-galeria-container{
+  height: 400px;
+}
+
+.swiper-galeria{
+  height: 100%;
+}
+
+.galeria-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.galeria-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.slide-activo {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.slide-activo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* semitransparente */
+  pointer-events: none; /* para no interferir con clics */
+  border-radius: inherit; /* opcional, si usas bordes redondos */
+}
+
+/* ============================
+OPCIONES FOOTER GALERIA
+============================ */
+.footerGaleria {
+  background-image: url('/assets/Fondo/fondo_resto.png');
+}

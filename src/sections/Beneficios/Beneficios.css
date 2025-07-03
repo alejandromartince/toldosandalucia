@@ -1,0 +1,197 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.beneficios {
+  height: 110vh;
+  background-color: aliceblue;
+  color: var(--negro-claro);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ============================
+ENCABEZADO
+============================ */
+.encabezado-beneficios {
+  height: 20%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.encabezado-beneficios h1 {
+  text-shadow: none;
+}
+
+.encabezado-beneficios p {
+  text-shadow: none;
+  text-align: center;
+  max-width: 70%;
+}
+
+/* ============================
+GALERIA DE FOTOS
+============================ */
+.galeria-contenedor {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+
+/* ============================
+TITULOS GALERIA
+============================ */
+.contenedorTitulosFotosBeneficios {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.contenedorTitulosFotosBeneficios .tituloContainer{
+  width: 300px;
+  text-align: center;
+  user-select: none;
+}
+
+.contenedorTitulosFotosBeneficios .titulo {
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.titulo.invisible {
+  color: var(--gris-invisible);
+}
+
+.titulo.invisible:hover {
+  color: var(--negro-claro);
+}
+
+/* ============================
+IMAGENES
+============================ */
+.imagenes-container {
+  display: flex;
+  gap: 1rem;
+  height: 90%;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+
+.imagen-item {
+  height: 100%;
+  flex: 1;
+  position: relative;
+  transition: all 0.5s ease;
+  opacity: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.imagen-item.oculto {
+  flex: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.imagen-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.imagen-item.expandida {
+  flex: 5;
+}
+
+/* ============================
+INFORMACION CARTAS
+============================ */
+.info-carta {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: aliceblue;
+  padding: 2rem;
+  height: 45%;
+  width: 350px;
+  box-sizing: border-box;
+  cursor: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 1s ease;
+}
+
+.imagen-item.expandida .info-carta {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-carta.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.info-carta p {
+  text-shadow: none;
+  font-size: .85rem;
+  text-align: justify;
+  line-height: 1.5;
+  padding-top: .5rem;
+}
+
+.divBotonCartasBeneficios {
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================
+MEDIA QUERIES TABLET
+============================ */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .encabezado-beneficios p {
+    line-height: 1.6rem;
+  }
+}
+
+/* ============================
+MEDIA QUERIES MOVIL
+============================ */
+@media (max-width: 768px) {
+  .beneficios {
+    height: 850px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .encabezado-beneficios h1 {
+    font-size: 1.5rem;
+  }
+
+  .encabezado-beneficios p {
+    max-width: 90%;
+  }
+}

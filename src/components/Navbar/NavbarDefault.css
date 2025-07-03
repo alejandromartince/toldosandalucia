@@ -1,0 +1,123 @@
+/* ===============================
+OPCIONES GENERALES
+=============================== */
+header {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: transparent;
+}
+
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--verde-navbar);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+
+.navbar__scrolled::before {
+  opacity: .9;
+}
+
+.navbar__scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ===============================
+OPCIONES DEL LOGO
+=============================== */
+.navbar__logo {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.navbar__logo a {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__logo img {
+  width: 6.25rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.navbar__atras {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.navbar__atrasEnlace {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__atras p {
+  text-shadow: none;
+}
+
+.iconNavbar_Atras {
+  transition: transform 0.3s ease;
+}
+
+.navbar__atrasEnlace:hover .iconNavbar_Atras {
+  transform: translateX(-5px);
+}
+
+/* ===============================
+OPCIONES DEL MENU CENTRAL 
+=============================== */
+.navbar__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav_link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--blanco-texto-navbar);
+}
+
+.nav_link:hover {
+  color: var(--blanco);
+  opacity: 1;
+}
+
+.nav_link.active_link {
+  color: var(--blanco);
+}
+
+/* ===============================
+OPCIONES DE LA BARRA DE PROGRESO
+================================*/
+.navbar__progress-bar {
+  position: fixed;
+  top: 3.9rem;
+  left: 0;
+  height: 3px;
+  background-color: var(--blanco);
+  /* o el color que prefieras */
+  z-index: 20;
+  transition: width 0.2s ease-out;
+}

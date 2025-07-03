@@ -1,0 +1,65 @@
+/* ===============================
+OPCIONES DEL SELECTOR DE IDIOMA
+=============================== */
+.selector-idioma-dropdown {
+  position: relative;
+  z-index: 21;
+}
+
+.boton-idioma-actual {
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.menu-idiomas {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--blanco);
+  border-radius: 6px;
+  margin-top: 5px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  opacity: 0;
+  transform: scaleY(0.95);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.menu-idiomas.visible {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+.idioma-opcion {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.idioma-opcion:hover {
+  background-color: #f0f0f0;
+}
+
+.idioma-opcion.activo {
+  font-weight: bold;
+  background-color: #e0e0e0;
+}
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![Toldos Andalucía Logo](https://github.com/alejandromartince/toldosandalucia/blob/main/public/assets/Logo/Logo_Transparent.png)
 
 Welcome to the **Toldos Andalucía** repository, a website designed to showcase the products and services of **Toldos Andalucía**, a company specializing in the manufacture and installation of awnings and pergolas. The project has been developed using a combination of modern technologies to ensure an interactive and visually appealing experience.

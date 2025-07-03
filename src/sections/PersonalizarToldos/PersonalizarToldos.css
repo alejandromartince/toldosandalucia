@@ -1,0 +1,187 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.menu-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 10000;
+    animation: fondo-entrada 0.4s ease forwards;
+}
+
+.menu-main.salida {
+    animation: fondo-salida 0.4s ease forwards;
+}
+
+/* ============================
+OPCIONES DEL CONTENIDO GENERAL
+============================ */
+.popup-contenido-prueba {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+
+    display: flex;
+
+    box-shadow: 0 0 10px black;
+    animation: popup-entrada 0.4s ease forwards;
+}
+
+.popup-contenido-prueba.salida {
+    animation: popup-salida 0.4s ease forwards;
+}
+
+/* ============================
+CONTENEDOR IZQUIERDA
+============================ */
+.contenido-PersonalizarToldos-izquierda {
+    position: relative;
+    flex: 0 0 20%;/* Ocupa el 20% */
+    background-image: url('/assets/Fondo/fondoIzquierdaPersonalizarToldos.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    overflow: hidden;
+}
+
+.contenido-PersonalizarToldos-izquierda::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* gris con opacidad */
+    z-index: 0;
+    /* detrás del contenido */
+}
+
+/* Asegúrate de que el contenido esté por encima del ::after */
+.contenido-PersonalizarToldos-izquierda>* {
+    position: relative;
+    z-index: 1;
+}
+
+.contenido-PersonalizarToldos-izquierda h2 {
+    padding: 2rem;
+    font-weight: 400;
+    font-size: xx-large;
+    text-wrap: balance;
+}
+
+.contenido-PersonalizarToldos-izquierda p {
+    padding: 0 2rem;
+    text-wrap: balance;
+}
+
+/* ============================
+OPCIONES DEL CONTENEDOR DERECHA
+============================ */
+.contenido-PersonalizarToldos-derecha {
+    position: relative;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url('/assets/Fondo/fondoDerechaPersonalizarToldos.jpg');
+    background-size: cover;
+    padding: 2rem;
+}
+
+.contenido-PersonalizarToldos-derecha::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* gris con opacidad */
+    z-index: 0;
+    /* detrás del contenido */
+}
+
+.contenido-PersonalizarToldos-derecha>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================
+OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
+============================ */
+.contenido-PersonalizarToldos-derecha .contenedor-Boton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contenido-PersonalizarToldos-derecha .contenido-bloqueado {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contenido-PersonalizarToldos-derecha .contenido-bloqueado p {
+    margin: auto;/* centra tanto horizontal como vertical */
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ============================
+ANIMACIONES DE OPACIDAD Y ENTRADA Y SALIDA DEL MENU
+============================ */
+@keyframes popup-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup-salida {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+
+
+@keyframes fondo-entrada {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fondo-salida {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
