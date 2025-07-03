@@ -60,6 +60,7 @@ const Home = () => {
         }}
       />
 
+
       {/* Fondo en transición */}
       {fondoNuevo && (
         <div
@@ -69,7 +70,7 @@ const Home = () => {
               dispositivo !== 'ordenador'
                 ? `url(${fondoNuevo})`
                 : `linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${fondoNuevo})`,
-            backgroundColor: dispositivo !== 'ordenador' ? 'rgba(0, 0, 0, 0.7)' : 'transparent',
+            backgroundColor: dispositivo !== 'ordenador' ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
             backgroundBlendMode: dispositivo !== 'ordenador' ? 'overlay' : 'normal'
           }}
         />
@@ -78,8 +79,15 @@ const Home = () => {
       {/* Contenido principal */}
       <div className="contenedor-home">
         <div className="contenido-home">
-          <h1>{textoHome.titulo[idioma]}</h1>
-          <p>{textoHome.parrafo[idioma]}</p>
+          {dispositivo !== 'movil' ? (
+            <>
+              <h1>{textoHome.titulo[idioma]}</h1>
+              <p>{textoHome.parrafo[idioma]}</p>
+            </>
+          ) : (<>
+            <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1>
+            <p>{textoHome.subtituloMovil[idioma]}</p>
+          </>)}
         </div>
 
         <div className="boton-container">

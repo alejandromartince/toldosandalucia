@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 
 //Importamos el hook personalizado para manejar el scroll
 import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'
+import useScrollPositionY from '../../Hooks/useScrollPositionY';
 
 //Importamos los compoententes
 import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
@@ -13,7 +14,6 @@ import { secciones } from '../../constants/infoNavbar';
 
 //Importamos los iconos
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
-
 
 //Importamos el contexto del idioma
 import { useIdioma } from '../../contexts/IdiomaContext';
@@ -28,6 +28,9 @@ const NavbarMobile = ({pagina}) => {
   
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
+
+  const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
+  
 
   //Efecto para quitar o activar el scroll cuando el menu desplegable del navbar_mobile esta abierto o cerrado
   useEffect(() => {
@@ -52,7 +55,8 @@ const NavbarMobile = ({pagina}) => {
 
   return (
     <>
-      <header className='navbar navbar__scrolled'>
+      {/* <header className='navbar navbar__scrolled'> */}
+      <header className={`navbar ${(scrollY > 100) || (pagina !== 'principal') ? 'navbar__scrolled' : ''}`}>
         {/* Logo */}
         <div className="navbar__logo">
           {pagina === 'principal' && (

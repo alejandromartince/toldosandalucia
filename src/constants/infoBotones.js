@@ -53,9 +53,7 @@ const useInformacionBoton = (idioma, id) => {
         es: "¡Puntúanos en Google!",
         en: "Rate us on Google!"
       },
-      url: dispositivo !== 'movil'
-        ? "https://search.google.com/local/writereview?placeid=ChIJZbTMBpr8cg0R-sIe7716UhQ"
-        : "geo:0,0?q=Toldos Andalucía, Benalmádena"
+      url: "https://search.google.com/local/writereview?placeid=ChIJZbTMBpr8cg0R-sIe7716UhQ"
     }
   ];
 
