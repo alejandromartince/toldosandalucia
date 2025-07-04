@@ -85,8 +85,8 @@ const Home = () => {
               <p>{textoHome.parrafo[idioma]}</p>
             </>
           ) : (<>
-            <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1>
-            <p>{textoHome.subtituloMovil[idioma]}</p>
+            {/* <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1> */}
+            {/* <p>{textoHome.subtituloMovil[idioma]}</p> */}
           </>)}
         </div>
 
@@ -99,3 +99,4 @@ const Home = () => {
 }
 
 export default Home;
+
