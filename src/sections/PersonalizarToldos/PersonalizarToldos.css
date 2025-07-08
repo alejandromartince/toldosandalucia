@@ -47,7 +47,6 @@ CONTENEDOR IZQUIERDA
     background-image: url('/assets/Fondo/fondoIzquierdaPersonalizarToldos.jpg');
     background-size: cover;
     background-position: bottom center;
-    overflow: hidden;
 }
 
 .contenido-PersonalizarToldos-izquierda::after {
@@ -79,8 +78,9 @@ CONTENEDOR IZQUIERDA
 
 .contenido-PersonalizarToldos-izquierda p {
     padding: 0 1rem;
-    margin-bottom: 2rem;
 }
+
+
 
 .iconoFlechaSelect{
     position: absolute;
@@ -118,6 +118,10 @@ OPCIONES DEL CONTENEDOR DERECHA
 .contenido-PersonalizarToldos-derecha>* {
     position: relative;
     z-index: 1;
+}
+
+.contenedorPSelect p{
+    margin: 0;
 }
 
 .contenedorFlechaSelect{

@@ -29,7 +29,8 @@ const SelectPersonalizarToldos = ({ opcionesSelect, onSelectMenuChange }) => {
           container: (base) => ({
             ...base,
             width: '90%',
-            maxWidth: '400px',
+            maxWidth: '400px',  
+            
           }),
           control: (baseStyle, state) => ({
             ...baseStyle,
@@ -44,6 +45,7 @@ const SelectPersonalizarToldos = ({ opcionesSelect, onSelectMenuChange }) => {
             ...base,
             maxHeight: '150px',
             overflowY: 'auto',
+
           }),
           input: (base) => ({
             ...base,
@@ -57,6 +59,7 @@ const SelectPersonalizarToldos = ({ opcionesSelect, onSelectMenuChange }) => {
           }),
         }}
       />
+      
     </div>
   );
 };

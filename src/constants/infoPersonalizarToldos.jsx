@@ -23,4 +23,16 @@ export const infoPersonalizarToldos = {
             </>
         )
     },
+    tipoToldo:{
+        es: "Tipo de toldo",
+        en: "Type of awning"
+    },
+    tipoTela:{
+        es: "Tipo de tela",
+        en: "Type of fabric"
+    },
+    Sistema:{
+        es: "Sistema",
+        en: "System"
+    }
 }

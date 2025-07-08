@@ -18,6 +18,7 @@ body,
   --negro-muy-claro: #3b3b3b;
 
   --gris: #808080;
+  --gris-pocoVisible: #c7c7c734;
   --gris-claro: #ffffff94;
   --gris-invisible: #50505080;
 
@@ -88,6 +89,10 @@ footer a {
   color: white;
   text-shadow: none;
   text-decoration: none;
+}
+
+.react-select__menu {
+  z-index: 9999 !important;
 }
 
 /* ============================
