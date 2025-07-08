@@ -18,14 +18,20 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 //Importamos el estilo de la pagina
 import './PersonalizarToldos.css';
 
+
+
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
   const [cerrando, setCerrando] = useState(false);
   const [selectMenuActivo, setSelectMenuActivo] = useState(false);
 
   //OPCIONES PARA LOS SELECTS
+  const [tipoToldoSeleccionado, setTipoToldoSeleccionado] = useState('');
+  const [tipoTelaSeleccionado, setTipoTelaSeleccionado] = useState('');
+
   const opcionesTipoToldos = useOpcionesTipoToldos(idioma);
   const opcionesTipoTela = useOpcionesTipoTela(idioma);
+
   const contenido = infoPersonalizarToldos;
 
 
@@ -70,15 +76,28 @@ const PersonalizarToldos = ({ onCerrar }) => {
           <div className='contenedorPSelect'>
             <p>{contenido.tipoToldo[idioma]}</p>
             <Suspense fallback={<p>Cargando...</p>}>
-              <SelectPersonalizarToldos opcionesSelect={opcionesTipoToldos} onSelectMenuChange={setSelectMenuActivo} />
+              <SelectPersonalizarToldos
+                opcionesSelect={opcionesTipoToldos}
+                palabra={idioma === 'es' ? 'toldo' : 'awning'}
+                valorSeleccionado={tipoToldoSeleccionado}
+                onChange={(valor) => setTipoToldoSeleccionado(valor)}
+                onSelectMenuChange={setSelectMenuActivo}
+              />
             </Suspense>
           </div>
+
           <div className='contenedorPSelect'>
             <p>{contenido.tipoTela[idioma]}</p>
             <Suspense fallback={<p>Cargando...</p>}>
-              <SelectPersonalizarToldos opcionesSelect={opcionesTipoTela} />
+              <SelectPersonalizarToldos
+                opcionesSelect={opcionesTipoTela}
+                palabra={idioma === 'es' ? 'tela' : 'fabric'}
+                valorSeleccionado={tipoTelaSeleccionado}
+                onChange={(valor) => setTipoTelaSeleccionado(valor)}
+                deshabilitado={!tipoToldoSeleccionado} // No se puede seleccionar si no hay toldo
+                opcionesDeshabilitadas={tipoToldoSeleccionado === 'Cofre' ? ['PVC (Impermeable)'] : []}
+              />
             </Suspense>
-
           </div>
 
         </div>

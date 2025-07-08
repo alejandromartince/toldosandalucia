@@ -1,65 +1,45 @@
-//Importamos los hooks de react
-import Select from "react-select";
-import { useState } from "react";
-
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../contexts/IdiomaContext';
 
-const SelectPersonalizarToldos = ({ opcionesSelect, onSelectMenuChange }) => {
+//Importamos el estilo
+import './SelectPersonalizarToldos.css';
 
-  // eslint-disable-next-line no-unused-vars
-  const [selectActivo, setSelectActivo] = useState(false);
-
-  const toggleSelectActivo = (estado) => {
-    setSelectActivo(estado);
-    if (onSelectMenuChange) {
-      onSelectMenuChange(estado); // Avisamos al padre
-    }
-  };
-
-  const { idioma } = useIdioma();
-
+const SelectPersonalizarToldos = ({
+  palabra,
+  opcionesSelect = [],
+  valorSeleccionado = '',
+  onChange = () => { },
+  deshabilitado = false,
+  opcionesDeshabilitadas = [],
+  onSelectMenuChange = () => { }
+}) => {
+  const handleFocus = () => onSelectMenuChange(true);
+  const handleBlur = () => onSelectMenuChange(false);
+  const { idioma } =  useIdioma();
+  
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <Select
-        placeholder={idioma === 'es' ? "Selecciona tu toldo..." : "Select your awning..."}
-        options={opcionesSelect}
-        onMenuOpen={() => toggleSelectActivo(true)}
-        styles={{
-          container: (base) => ({
-            ...base,
-            width: '90%',
-            maxWidth: '400px',  
-            
-          }),
-          control: (baseStyle, state) => ({
-            ...baseStyle,
-            backgroundColor: state.isFocused ? 'whitesmoke' : 'white',
-            cursor: 'pointer',
-          }),
-          singleValue: (base) => ({
-            ...base,
-            color: 'black',
-          }),
-          menuList: (base) => ({
-            ...base,
-            maxHeight: '150px',
-            overflowY: 'auto',
-
-          }),
-          input: (base) => ({
-            ...base,
-            color: 'black',
-          }),
-          option: (base, state) => ({
-            ...base,
-            color: 'black',
-            backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
-            cursor: 'pointer',
-          }),
-        }}
-      />
-      
+    <div className='contenedorSelectPT'>
+      <select
+        value={valorSeleccionado}
+        onChange={(e) => onChange(e.target.value)}
+        disabled={deshabilitado}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        className="select-personalizado"
+      >
+        <option value="" disabled>
+        {idioma === 'es' ? `Selecciona tu ${palabra}` : `Select your ${palabra}` }
+        </option>
+        {opcionesSelect.map(({ value, label }) => (
+          <option
+            key={value}
+            value={value}
+            disabled={opcionesDeshabilitadas.includes(value)}
+          >
+            {label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };
