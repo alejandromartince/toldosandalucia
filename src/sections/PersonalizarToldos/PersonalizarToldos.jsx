@@ -1,55 +1,40 @@
 //Importamos los hooks de react
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 //Importamos el contexto del idioma
 import { useIdioma } from '../../contexts/IdiomaContext';
 
 //Importamos los compoenntes
 import BotonCerrarMenu from '../../components/Botones/BotonCerrarMenu';
+import SelectPersonalizarToldos from "../../components/PersonalizarToldos/SelectPersonalizarToldos"
 
 //Importamos la informacion
 import { infoPersonalizarToldos } from '../../constants/infoPersonalizarToldos';
+import { useOpcionesTipoToldos } from '../../components/PersonalizarToldos/OpcionesSelect';
 
-import SelectPersonalizarToldos from "../../components/PersonalizarToldos/SelectPersonalizarToldos"
+//Importamos los hooks personalizados
+import useBloquearScroll from '../../Hooks/PersonalizarToldos/BloquearScroll';
+
+//Importamos los iconos
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 //Importamos el estilo de la pagina
 import './PersonalizarToldos.css';
+import useAnimacionSalida from '../../Hooks/PersonalizarToldos/useAnimacionSalida';
 
-const PersonalizarToldos = ({ onCerrar }) => {
+const PersonalizarToldos = () => {
   const { idioma } = useIdioma();
   const [cerrando, setCerrando] = useState(false);
+  const [selectMenuActivo, setSelectMenuActivo] = useState(false);
 
   const informacion = infoPersonalizarToldos;
 
+  const opcionesTipoToldos = useOpcionesTipoToldos(idioma);
+
   // Cuando termine la animación de salida, desmonta el componente
-  useEffect(() => {
-    if (cerrando) {
-      const timer = setTimeout(() => {
-        onCerrar(); // Esto desmonta el popup desde el padre
-      }, 400); // Tiempo igual al de la animación de salida
-      return () => clearTimeout(timer);
-    }
-  }, [cerrando, onCerrar]);
-
-
-  // Bloquear scroll de fondo
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-
-    // Evitar scroll externo desde dentro del popup
-    const popup = document.querySelector('.contenido-PersonalizarToldos-derecha');
-    const handleWheel = (e) => {
-      e.preventDefault(); // Bloquea el scroll fuera del popup
-    };
-
-    popup?.addEventListener('wheel', handleWheel, { passive: false });
-
-    return () => {
-      // Restaurar scroll de fondo
-      document.body.style.overflow = 'auto';
-      popup?.removeEventListener('wheel', handleWheel);
-    };
-  }, []);
+  useAnimacionSalida();
+  //Bloqueamos el scroll cuando hay un popup
+  useBloquearScroll();
 
 
   return (
@@ -58,8 +43,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
         <div className='contenido-PersonalizarToldos-izquierda'>
           <h2>{informacion.titulo[idioma]}</h2>
           <p>{informacion.subtitulo[idioma]}</p>
-
-          <SelectPersonalizarToldos />
+          <SelectPersonalizarToldos opcionesSelect={opcionesTipoToldos} onSelectMenuChange={setSelectMenuActivo} />
         </div>
 
         {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
@@ -68,6 +52,13 @@ const PersonalizarToldos = ({ onCerrar }) => {
             <div className='contenedor-Boton'>
               <BotonCerrarMenu onClick={() => setCerrando(true)} />
             </div>
+
+            {!selectMenuActivo && (
+              <div className='contenedorFlechaSelect flecha-animada'>
+                <FaArrowLeftLong size={30} />
+              </div>
+            )}
+
             <p>{informacion.descripcion[idioma]}</p>
           </div>
         </div>

@@ -17,9 +17,14 @@ import "./GoogleReview.css";
 const GoogleReview = () => {
 
   const { idioma } = useIdioma();
-  const [enlaceHover, setEnlaceHover] = useState(false)
-  const toggleEnlace = () => {
-    setEnlaceHover((prev) => !prev)
+  const [hoverIndex, setHoverIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
   };
 
   const GoogleOpiniones = [
@@ -120,16 +125,33 @@ const GoogleReview = () => {
         <div className="googleCards-track">
 
           {[...GoogleOpiniones, ...GoogleOpiniones].map((opinion, index) => (
-            <div key={index} className="cardReview" onMouseEnter={toggleEnlace} onMouseLeave={toggleEnlace}>
+            <div
+              key={index}
+              className="cardReview"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
               <div className="fotoAutor-GoogleReview">
                 <div>
                   <a href={opinion.enlace} target="_blank">
                     <img src={`assets/GoogleReviews/review-${opinion.id}.png`} alt="foto" />
                     <p>{opinion.autor}</p>
-                    <FaExternalLinkAlt size={15} color="var(--gris)" className={enlaceHover ? 'iconoEnlaceGoogleReview' : 'iconoEnlaceGoogleReviewTrue'} />
+                    <FaExternalLinkAlt
+                      size={15}
+                      color="var(--gris)"
+                      className={
+                        hoverIndex === index
+                          ? 'iconoEnlaceGoogleReview'
+                          : 'iconoEnlaceGoogleReviewTrue'
+                      }
+                    />
                   </a>
                 </div>
-                <img src="assets/GoogleReviews/googleFavicon.png" alt="iconoGoogle" style={{ height: "25px" }} />
+                <img
+                  src="assets/GoogleReviews/googleFavicon.png"
+                  alt="iconoGoogle"
+                  style={{ height: "25px" }}
+                />
               </div>
               <div className="puntuacionFecha-GoogleReview">
                 <p className="contenedorEstrellas">

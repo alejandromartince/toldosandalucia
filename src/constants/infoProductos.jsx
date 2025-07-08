@@ -9,7 +9,10 @@ export const infoProductos = [
   {
     id: 1,
     modelo: Toldo,
-    nombre: "Toldo",
+    nombre: {
+      es: "Toldo",
+      en: "Awning",
+    },
     titulo: {
       es: "Toldo Articulado",
       en: "Articulated Awning",
@@ -34,7 +37,10 @@ export const infoProductos = [
   {
     id: 2,
     modelo: Cofre,
-    nombre: "Cofre",
+    nombre: {
+      es: "Cofre",
+      en: "Chest Awning"
+    },
     titulo: {
       es: "Toldo Cofre",
       en: "Chest Awning",
@@ -58,7 +64,10 @@ export const infoProductos = [
   {
     id: 3,
     modelo: Veranda,
-    nombre: "Veranda",
+    nombre: {
+      es: "Veranda",
+      en: "Veranda"
+    },
     titulo: {
       es: "Veranda",
       en: "Veranda",
@@ -82,7 +91,10 @@ export const infoProductos = [
   {
     id: 4,
     modelo: Capota,
-    nombre: "Capota",
+    nombre: {
+      es: "Capota",
+      en: "Hoods"
+    },
     titulo: {
       es: "Capota",
       en: "Hoods",
@@ -106,7 +118,10 @@ export const infoProductos = [
   {
     id: 5,
     modelo: Pergola,
-    nombre: "Pergola",
+    nombre: {
+      es: "Pérgola",
+      en: "Pergola"
+    },
     titulo: {
       es: "Pérgola",
       en: "Pergola",

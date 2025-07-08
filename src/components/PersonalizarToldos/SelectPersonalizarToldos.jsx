@@ -1,55 +1,63 @@
+//Importamos los hooks de react
 import Select from "react-select";
+import { useState } from "react";
 
-const opcionesSelect1 = [
-  { value: 'organge', label: 'organge' },
-  { value: 'verde', label: 'verde' },
-  { value: 'verde2', label: 'verde' },
-  { value: 'verde3', label: 'verde' },
-  { value: 'verde4', label: 'verde' },
-  { value: 'verde5', label: 'verde' },
-  { value: 'verde6', label: 'verde' },
-  { value: 'verde7', label: 'verde' },
-  { value: 'verde8', label: 'verde' },
-  { value: 'verde9', label: 'verde' },
-  { value: 'verde0', label: 'verde' },
-  { value: 'rojo', label: 'rojo' },
-];
+//Importamos el contexto del idioma
+import { useIdioma } from "../../contexts/IdiomaContext";
 
-const SelectPersonalizarToldos = () => {
+const SelectPersonalizarToldos = ({ opcionesSelect, onSelectMenuChange }) => {
+
+  // eslint-disable-next-line no-unused-vars
+  const [selectActivo, setSelectActivo] = useState(false);
+
+  const toggleSelectActivo = (estado) => {
+    setSelectActivo(estado);
+    if (onSelectMenuChange) {
+      onSelectMenuChange(estado); // Avisamos al padre
+    }
+  };
+
+  const { idioma } = useIdioma();
+
   return (
-    <Select
-      options={opcionesSelect1}
-      styles={{
-        control: (baseStyle, state) => ({ //La base principal (lo que se ve sin desplegar)
-          ...baseStyle,
-          borderColor: state.isFocused ? 'grey' : 'red',
-          backgroundColor: state.isFocused ? 'grey' : 'white',
-          cursor: 'pointer',
-        }),
-        singleValue: (base) => ({ //Opcion elegida  o por defecto
-          ...base,
-          color: 'black',
-
-        }),
-        menuList: (base) => ({ //Menu donde ver las opciones
-          ...base,
-          maxHeight: '150px', 
-          overflowY: 'auto',
-        }),
-
-        input: (base) => ({ //Cursor
-          ...base,
-          color: 'black',
-        }),
-        option: (base, state) => ({ //Opciones del select
-          ...base,
-          color: 'black',
-          backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
-          cursor: 'pointer',
-
-        }),
-      }}
-    />
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Select
+        placeholder={idioma === 'es' ? "Selecciona tu toldo..." : "Select your awning..."}
+        options={opcionesSelect}
+        onMenuOpen={() => toggleSelectActivo(true)}
+        styles={{
+          container: (base) => ({
+            ...base,
+            width: '90%',
+            maxWidth: '400px',
+          }),
+          control: (baseStyle, state) => ({
+            ...baseStyle,
+            backgroundColor: state.isFocused ? 'whitesmoke' : 'white',
+            cursor: 'pointer',
+          }),
+          singleValue: (base) => ({
+            ...base,
+            color: 'black',
+          }),
+          menuList: (base) => ({
+            ...base,
+            maxHeight: '150px',
+            overflowY: 'auto',
+          }),
+          input: (base) => ({
+            ...base,
+            color: 'black',
+          }),
+          option: (base, state) => ({
+            ...base,
+            color: 'black',
+            backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
+            cursor: 'pointer',
+          }),
+        }}
+      />
+    </div>
   );
 };
 

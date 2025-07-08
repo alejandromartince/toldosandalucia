@@ -70,15 +70,21 @@ CONTENEDOR IZQUIERDA
 }
 
 .contenido-PersonalizarToldos-izquierda h2 {
-    padding: 2rem;
+    padding: 2rem 1rem;
+    padding-bottom: 1rem;
     font-weight: 400;
     font-size: xx-large;
     text-wrap: balance;
 }
 
 .contenido-PersonalizarToldos-izquierda p {
-    padding: 0 2rem;
-    text-wrap: balance;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.iconoFlechaSelect{
+    position: absolute;
+    right: 0;
 }
 
 /* ============================
@@ -112,6 +118,12 @@ OPCIONES DEL CONTENEDOR DERECHA
 .contenido-PersonalizarToldos-derecha>* {
     position: relative;
     z-index: 1;
+}
+
+.contenedorFlechaSelect{
+    position: absolute;
+    left: 0;
+    top: 15rem;
 }
 
 /* ============================
@@ -184,4 +196,21 @@ ANIMACIONES DE OPACIDAD Y ENTRADA Y SALIDA DEL MENU
     to {
         opacity: 0;
     }
+}
+
+/* ============================
+ANIMACION FLECHA DEL MENU SELECT
+============================ */
+/* PersonalizarToldos.css o el CSS correspondiente */
+.flecha-animada {
+  animation: moverIzquierda .5s infinite alternate;
+}
+
+@keyframes moverIzquierda {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }

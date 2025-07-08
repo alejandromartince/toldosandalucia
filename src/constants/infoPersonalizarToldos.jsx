@@ -22,6 +22,5 @@ export const infoPersonalizarToldos = {
                 To get started, select your preferences.
             </>
         )
-    }
-
+    },
 }

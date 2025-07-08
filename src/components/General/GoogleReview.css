@@ -54,15 +54,25 @@ FOTO Y NOMBRE DEL AUTOR
   align-items: center;
   text-decoration: none;
   color: black;
-  gap: 1rem;
+  gap: 0.5rem; /* Antes era 1rem */
+  height: 30px; /* Añadido para limitar la altura */
+  cursor:auto;
 }
 
-.fotoAutor-GoogleReview div a:hover {
+.fotoAutor-GoogleReview div a img{
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.fotoAutor-GoogleReview div a p:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .fotoAutor-GoogleReview div p {
   font-weight: 400;
+  margin: 0; /* Asegura que no hay margen vertical */
+  line-height: 1; /* Reduce la altura del texto */
 }
 
 .iconoEnlaceGoogleReview {
