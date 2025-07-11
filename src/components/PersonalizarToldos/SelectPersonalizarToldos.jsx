@@ -1,24 +1,24 @@
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext';
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos el estilo
-import './SelectPersonalizarToldos.css';
+import "./SelectPersonalizarToldos.css";
 
 const SelectPersonalizarToldos = ({
   palabra,
   opcionesSelect = [],
-  valorSeleccionado = '',
-  onChange = () => { },
+  valorSeleccionado = "",
+  onChange = () => {},
   deshabilitado = false,
   opcionesDeshabilitadas = [],
-  onSelectMenuChange = () => { }
+  onSelectMenuChange = () => {},
 }) => {
   const handleFocus = () => onSelectMenuChange(true);
   const handleBlur = () => onSelectMenuChange(false);
-  const { idioma } =  useIdioma();
-  
+  const { idioma } = useIdioma();
+
   return (
-    <div className='contenedorSelectPT'>
+    <div className="contenedorSelectPT">
       <select
         value={valorSeleccionado}
         onChange={(e) => onChange(e.target.value)}
@@ -28,7 +28,9 @@ const SelectPersonalizarToldos = ({
         className="select-personalizado"
       >
         <option value="" disabled>
-        {idioma === 'es' ? `Selecciona tu ${palabra}` : `Select your ${palabra}` }
+          {idioma === "es"
+            ? `Selecciona tu ${palabra}`
+            : `Select your ${palabra}`}
         </option>
         {opcionesSelect.map(({ value, label }) => (
           <option

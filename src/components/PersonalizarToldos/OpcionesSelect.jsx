@@ -3,8 +3,8 @@ import { infoProductos } from "../../constants/infoProductos";
 
 export const useOpcionesTipoToldos = (idioma) => {
   return infoProductos.map(producto => ({
-    value: producto.nombre.es || producto.nombre,       // valor en español fijo (asumiendo estructura)
-    label: producto.nombre[idioma] || producto.nombre.es || producto.nombre // etiqueta en idioma con fallback
+    value: producto.nombre.es,
+    label: producto.nombre[idioma] 
   }));
 };
 
@@ -22,8 +22,8 @@ const tipoTela = {
 };
 
 export const useOpcionesTipoTela = (idioma) => {
-  const opcionesEs = tipoTela['es'];      // valores en español
-  const opcionesIdioma = tipoTela[idioma] || tipoTela['es']; // etiquetas según idioma o español si no existe
+  const opcionesEs = tipoTela['es'];
+  const opcionesIdioma = tipoTela[idioma] 
 
   return Object.entries(opcionesEs).map(([key, valorEs]) => ({
     value: valorEs,                      // valor en español fijo
