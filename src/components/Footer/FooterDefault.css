@@ -140,3 +140,13 @@ COPYRIGHT
   visibility: hidden;
   height: 2rem;
 }
+
+/*=============================
+MEDIA QUERIES PARA PANTALLAS PEQUEÑAS
+=============================*/
+@media (max-width: 1500px) and (min-width:1024px){
+
+  .footer-seccion{
+    height: 55vh;
+  }
+}

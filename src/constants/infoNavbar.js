@@ -9,5 +9,5 @@ export const secciones = [
   { id: "trabajos", texto: { es: "Trabajos", en: "Gallery" }, offset: -50 },
   { id: "products", texto: { es: "Productos", en: "Products" }, offset:-50 },
   { id: "beneficios", texto: { es: "Beneficios", en: "Benefits" }, offset: 0 },
-  { id: "contacto", texto: { es: "Contacto", en: "Contact" }, offset: 0},
+  { id: "contacto", texto: { es: "Contacto", en: "Contact" }, offset: -25},
 ];

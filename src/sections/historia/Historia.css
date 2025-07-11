@@ -50,6 +50,16 @@ OPCIONES IMAGENES
   height: 15rem;
 }
 
+/*=============================
+MEDIA QUERIES PARA PANTALLAS PEQUEÑAS
+=============================*/
+@media (max-width: 1350px) and (min-width: 1024px){
+  .historia{
+    height: 600px;
+  }
+
+} 
+
 /* ============================
 MEDIA QUERIES
 ============================ */

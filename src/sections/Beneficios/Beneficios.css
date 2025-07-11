@@ -10,7 +10,6 @@ OPCIONES GENERALES
   flex-direction: column;
 }
 
-
 /* ============================
 ENCABEZADO
 ============================ */
@@ -21,7 +20,6 @@ ENCABEZADO
   flex-direction: column;
   align-items: center;
 }
-
 
 .encabezado-beneficios h1 {
   text-shadow: none;
@@ -46,17 +44,15 @@ GALERIA DE FOTOS
   box-sizing: border-box;
 }
 
-
 /* ============================
 TITULOS GALERIA
 ============================ */
 .contenedorTitulosFotosBeneficios {
   display: flex;
   justify-content: space-around;
-
 }
 
-.contenedorTitulosFotosBeneficios .tituloContainer{
+.contenedorTitulosFotosBeneficios .tituloContainer {
   width: 300px;
   text-align: center;
   user-select: none;
@@ -89,7 +85,6 @@ IMAGENES
   flex-grow: 1;
 }
 
-
 .imagen-item {
   height: 100%;
   flex: 1;
@@ -99,7 +94,6 @@ IMAGENES
   overflow: hidden;
   cursor: pointer;
 }
-
 
 .imagen-item.oculto {
   flex: 0;
@@ -113,7 +107,6 @@ IMAGENES
   object-fit: cover;
   display: block;
 }
-
 
 .imagen-item.expandida {
   flex: 5;
@@ -129,7 +122,7 @@ INFORMACION CARTAS
   transform: translateY(-50%);
   background-color: aliceblue;
   padding: 2rem;
-  height: 45%;
+  min-height: 45%;
   width: 350px;
   box-sizing: border-box;
   cursor: auto;
@@ -153,13 +146,12 @@ INFORMACION CARTAS
   visibility: visible;
 }
 
-
 .info-carta p {
   text-shadow: none;
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-align: justify;
   line-height: 1.5;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .divBotonCartasBeneficios {
@@ -171,19 +163,24 @@ INFORMACION CARTAS
 MEDIA QUERIES PARA PANTALLAS MENOS A 1300PX
 =============================*/
 @media (max-width: 1300px) and (min-width: 769px) {
-.galeria-contenedor{
-  margin-top: 1.5rem;
-}
+  .galeria-contenedor {
+    margin-top: 1.5rem;
+  }
+  .info-carta{
+    min-height: 350px;
+  }
+
+  .imagenes-container{
+    height: 500px;
+  }
 }
 /* ============================
 MEDIA QUERIES TABLET
 ============================ */
 @media (max-width: 1024px) and (min-width: 769px) {
-  
   .encabezado-beneficios p {
     line-height: 1.6rem;
   }
-  
 }
 
 /* ============================
