@@ -202,7 +202,6 @@ ANIMACIONES DE OPACIDAD Y ENTRADA Y SALIDA DEL MENU
 /* ============================
 ANIMACION FLECHA DEL MENU SELECT
 ============================ */
-/* PersonalizarToldos.css o el CSS correspondiente */
 .flecha-animada {
   animation: moverIzquierda .5s infinite alternate;
 }

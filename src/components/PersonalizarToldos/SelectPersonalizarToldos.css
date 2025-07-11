@@ -1,40 +1,48 @@
 .contenedorSelectPT {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.select-personalizado {
-    width: 90%;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #333;
-    font-size: 1rem;
-    font-family: 'Jost', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    appearance: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    position: relative;
+.select-wrapper {
+  position: relative;
+  width: 90%;
 }
 
-/* Añadir una flecha personalizada */
-.select-personalizado {
-    background-image: url("data:image/svg+xml,%3Csvg fill='%23333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1rem;
+.select-personalizado-tutorial {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  padding-right: 2.5rem; /* espacio para el icono */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  appearance: none;
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Al hacer focus */
-.select-personalizado:focus {
-    border-color: #999;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-    outline: none;
+.select-personalizado-tutorial:focus {
+  border-color: #999;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
-/* Opción deshabilitada */
-.select-personalizado option:disabled {
-    color: #aaa;
+.select-personalizado-tutorial option:hover {
+  background-color: #333;
+}
+
+.select-personalizado-tutorial option:disabled {
+  display: none;
+}
+
+.icono-select {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  pointer-events: none;
+  transform: translateY(-50%);
+  font-size: 1rem;
 }

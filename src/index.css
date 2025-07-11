@@ -26,6 +26,7 @@ body,
   --blanco-claro: #f1f1f1;
   /* Fondo gris claro */
   --blanco-muy-claro: #dddddd;
+  --blanco-transparente: #dddddde2;
   --blanco-texto-navbar: #ddddddb6;
   --blanco-footer: #ffffff77;
 

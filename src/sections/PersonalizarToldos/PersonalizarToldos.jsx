@@ -14,6 +14,9 @@ import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos";
 //Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext";
 
+//Importamos los iconos
+import { BsArrowLeft } from "react-icons/bs";
+
 //Importamos el estilo de la pagina
 import "./PersonalizarToldos.css";
 
@@ -82,21 +85,21 @@ const PersonalizarToldos = ({ onCerrar }) => {
           />
         </div>
 
-        {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
+        {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
         {!selectMenuActivo && (
           <div className="contenedorFlechaTutorial">
-            <p
+            <BsArrowLeft className="flecha-animada "
+              size={30}
               style={{
                 position: "absolute",
-                top: top + 32,
-                left: "20rem",
-                color: "red",
+                top: top + 33,
+                left: "16rem",
                 transform: "translateX(0)",
                 zIndex: 1000,
               }}
             >
               hola
-            </p>
+            </BsArrowLeft>
           </div>
         )}
         <div className="contenido-PersonalizarToldos-derecha">

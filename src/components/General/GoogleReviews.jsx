@@ -139,6 +139,7 @@ const GoogleReview = () => {
                     <FaExternalLinkAlt
                       size={15}
                       color="var(--gris)"
+                      cursor={"pointer"}
                       className={
                         hoverIndex === index
                           ? 'iconoEnlaceGoogleReview'

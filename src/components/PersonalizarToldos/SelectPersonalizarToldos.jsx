@@ -4,6 +4,9 @@ import { useIdioma } from "../../contexts/IdiomaContext";
 //Importamos el estilo
 import "./SelectPersonalizarToldos.css";
 
+//Importamos el icono
+import { FaChevronDown } from "react-icons/fa";
+
 const SelectPersonalizarToldos = ({
   palabra,
   opcionesSelect = [],
@@ -19,29 +22,33 @@ const SelectPersonalizarToldos = ({
 
   return (
     <div className="contenedorSelectPT">
-      <select
-        value={valorSeleccionado}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={deshabilitado}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        className="select-personalizado"
-      >
-        <option value="" disabled>
-          {idioma === "es"
-            ? `Selecciona tu ${palabra}`
-            : `Select your ${palabra}`}
-        </option>
-        {opcionesSelect.map(({ value, label }) => (
-          <option
-            key={value}
-            value={value}
-            disabled={opcionesDeshabilitadas.includes(value)}
-          >
-            {label}
+      <div className="select-wrapper">
+        <select
+          value={valorSeleccionado}
+          onChange={(e) => onChange(e.target.value)}
+          disabled={deshabilitado}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          className="select-personalizado-tutorial"
+        >
+          <option value="" disabled>
+            {idioma === "es"
+              ? `Selecciona tu ${palabra}`
+              : `Select your ${palabra}`}
           </option>
-        ))}
-      </select>
+          {opcionesSelect.map(({ value, label }) => (
+            <option
+              key={value}
+              value={value}
+              className="optionSelectPersonalizado"
+              disabled={opcionesDeshabilitadas.includes(value)}
+            >
+              {label}
+            </option>
+          ))}
+        </select>
+        <FaChevronDown className="icono-select" color="#27272797" />
+      </div>
     </div>
   );
 };
