@@ -80,11 +80,8 @@ CONTENEDOR IZQUIERDA
     padding: 0 1rem;
 }
 
-
-
-.iconoFlechaSelect{
-    position: absolute;
-    right: 0;
+.contenedorFlechaTutorial{
+    padding-top: 2rem;
 }
 
 /* ============================

@@ -1,33 +1,32 @@
 //Importamos los hooks de react
-import React, { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, useRef } from "react";
 
-//Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+//Importamos los hooks personalizados
+import usePosicionTop from "../../Hooks/usePosicionTop";
 
 //Importamos los compoenntes
 import BotonCerrarMenu from "../../components/Botones/BotonCerrarMenu";
-const SelectPersonalizarToldos = React.lazy(() =>
-  import("../../components/PersonalizarToldos/SelectPersonalizarToldos")
-);
-
 import ComponenteSelects from "../../components/PersonalizarToldos/ComponenteSelects";
 
 //Importamos la informacion
 import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos";
-import {
-  useOpcionesTipoTela,
-  useOpcionesTipoToldos,
-} from "../../components/PersonalizarToldos/OpcionesSelect";
+
+//Importamos el contexto del idioma
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos el estilo de la pagina
 import "./PersonalizarToldos.css";
 
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
-  const [cerrando, setCerrando] = useState(false);
-
   const contenido = infoPersonalizarToldos;
 
+  const [selectMenuActivo, setSelectMenuActivo] = useState(false);
+  const refContenedorPadre = useRef(null);
+  const [refSelects, top] = usePosicionTop(refContenedorPadre);
+
+  //Script para bloquear el scroll cuando se abre el pop-up de Personalziar Toldos
+  const [cerrando, setCerrando] = useState(false);
   useEffect(() => {
     const popup = document.querySelector(
       ".contenido-PersonalizarToldos-derecha"
@@ -59,7 +58,11 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
   return (
     <div className={`menu-main ${cerrando ? "salida" : ""}`}>
-      <div className={`popup-contenido-prueba ${cerrando ? "salida" : ""}`}>
+      <div
+        className={`popup-contenido-prueba ${cerrando ? "salida" : ""}`}
+        ref={refContenedorPadre} // Aquí asignamos la referencia al padre
+        style={{ position: "relative" }} // Muy importante para posicionar hijos absolute/fixed
+      >
         <div className="contenido-PersonalizarToldos-izquierda">
           <h2>{contenido.titulo[idioma]}</h2>
           <p>{contenido.subtitulo[idioma]}</p>
@@ -71,10 +74,31 @@ const PersonalizarToldos = ({ onCerrar }) => {
             <hr style={{ width: "90%", margin: "0 auto" }} />
           </div>
 
-          <ComponenteSelects />
+          {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
+          <ComponenteSelects
+            ref={refSelects}
+            selectMenuActivo={selectMenuActivo}
+            setSelectMenuActivo={setSelectMenuActivo}
+          />
         </div>
 
         {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
+        {!selectMenuActivo && (
+          <div className="contenedorFlechaTutorial">
+            <p
+              style={{
+                position: "absolute",
+                top: top + 32,
+                left: "20rem",
+                color: "red",
+                transform: "translateX(0)",
+                zIndex: 1000,
+              }}
+            >
+              hola
+            </p>
+          </div>
+        )}
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
             <div className="contenedor-Boton">
