@@ -167,13 +167,23 @@ INFORMACION CARTAS
   justify-content: center;
 }
 
+/*=============================
+MEDIA QUERIES PARA PANTALLAS MENOS A 1300PX
+=============================*/
+@media (max-width: 1300px) and (min-width: 769px) {
+.galeria-contenedor{
+  margin-top: 1.5rem;
+}
+}
 /* ============================
 MEDIA QUERIES TABLET
 ============================ */
 @media (max-width: 1024px) and (min-width: 769px) {
+  
   .encabezado-beneficios p {
     line-height: 1.6rem;
   }
+  
 }
 
 /* ============================

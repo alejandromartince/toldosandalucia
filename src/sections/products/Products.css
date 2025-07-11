@@ -189,6 +189,7 @@ MEDIA QUERIES
 
 @media (max-width: 1024px) {
   .seccion-productos {
+    height: 130vh;
     padding: 2rem 0;
   }
 
@@ -214,6 +215,7 @@ MEDIA QUERIES
 
   .contenedor-derecha {
     order: 1;
+    min-height: 250px;
     width: 100%;
     max-width: none;
     text-align: center;
@@ -223,6 +225,10 @@ MEDIA QUERIES
   .contenedor-derecha h1,
   .contenedor-derecha h3 {
     text-align: left;
+  }
+
+  .text-productos{
+    min-height: 250px;
   }
 
 
@@ -260,7 +266,6 @@ MEDIA QUERIES
   .model-proyecto-container {
     width: 100%;
     height: 350px;
-    margin-bottom: 2rem;
   }
 
 }
