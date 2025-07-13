@@ -17,7 +17,7 @@ import {
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 const ComponenteSelects = forwardRef(
-  ({ selectMenuActivo, setSelectMenuActivo }, ref) => {
+  ({ setSelectMenuActivo }, ref) => {
     const contenido = infoPersonalizarToldos;
     const { idioma } = useIdioma();
 

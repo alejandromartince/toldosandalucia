@@ -2,20 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  width: 3em;
   height: 3em;
-  width: 140px;
-  background: #fff;
-  border: none;
-  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.815);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
-  letter-spacing: 1px;
-  font-weight: 500;
-  transition: all 0.2s linear;
-  box-shadow: none;
 }
 
-
 .botonCerrarMenu:hover {
-  box-shadow: 1px 1px 10px #d1d1d18a, -1px -1px 10px #d1d1d18a;
-  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
 }

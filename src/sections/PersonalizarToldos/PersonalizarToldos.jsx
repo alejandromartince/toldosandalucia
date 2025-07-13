@@ -74,6 +74,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
             className="contenedorHRPT"
             style={{ padding: "1.5rem 0", marginTop: "4rem" }}
           >
+            <p>{contenido.ajustes[idioma]}</p>
             <hr style={{ width: "90%", margin: "0 auto" }} />
           </div>
 

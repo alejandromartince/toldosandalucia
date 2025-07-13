@@ -52,7 +52,7 @@
 .botonCuadrado .top-key,
 .botonCuadrado .bottom-key-1,
 .botonCuadrado .bottom-key-2 {
-  height: 2px;
+  height: 3px;
   position: absolute;
   background-color: aliceblue;
   transition: width 0.5s ease-out, right 0.3s ease-out, left 0.3s ease-out;

@@ -23,6 +23,10 @@ export const infoPersonalizarToldos = {
             </>
         )
     },
+    ajustes: {
+        es:"Ajustes de Personalización",
+        en: "Personalization settings"
+    },
     tipoToldo:{
         es: "Tipo de toldo",
         en: "Type of awning"

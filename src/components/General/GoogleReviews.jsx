@@ -125,9 +125,13 @@ const GoogleReview = () => {
         <div className="googleCards-track">
 
           {[...GoogleOpiniones, ...GoogleOpiniones].map((opinion, index) => (
-            <a href={opinion.enlace} target="_blank" className="enlaceCartaGoogle">
+            <a
+              key={`${opinion.id}-${index}`} // ✅ Clave única combinando id e índice
+              href={opinion.enlace}
+              target="_blank"
+              className="enlaceCartaGoogle"
+            >
               <div
-                key={index}
                 className="cardReview"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -138,7 +142,7 @@ const GoogleReview = () => {
                     <p>{opinion.autor}</p>
                     <FaExternalLinkAlt
                       size={15}
-                      style={{paddingBottom:".2rem"}}
+                      style={{ paddingBottom: ".2rem" }}
                       color="var(--gris)"
                       cursor={"pointer"}
                       className={
