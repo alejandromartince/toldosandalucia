@@ -125,19 +125,20 @@ const GoogleReview = () => {
         <div className="googleCards-track">
 
           {[...GoogleOpiniones, ...GoogleOpiniones].map((opinion, index) => (
-            <div
-              key={index}
-              className="cardReview"
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="fotoAutor-GoogleReview">
-                <div>
-                  <a href={opinion.enlace} target="_blank">
+            <a href={opinion.enlace} target="_blank" className="enlaceCartaGoogle">
+              <div
+                key={index}
+                className="cardReview"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="fotoAutor-GoogleReview">
+                  <div>
                     <img src={`assets/GoogleReviews/review-${opinion.id}.png`} alt="foto" />
                     <p>{opinion.autor}</p>
                     <FaExternalLinkAlt
                       size={15}
+                      style={{paddingBottom:".2rem"}}
                       color="var(--gris)"
                       cursor={"pointer"}
                       className={
@@ -146,26 +147,26 @@ const GoogleReview = () => {
                           : 'iconoEnlaceGoogleReviewTrue'
                       }
                     />
-                  </a>
+                  </div>
+                  <img
+                    src="assets/GoogleReviews/googleFavicon.png"
+                    alt="iconoGoogle"
+                    style={{ height: "25px" }}
+                  />
                 </div>
-                <img
-                  src="assets/GoogleReviews/googleFavicon.png"
-                  alt="iconoGoogle"
-                  style={{ height: "25px" }}
-                />
+                <div className="puntuacionFecha-GoogleReview">
+                  <p className="contenedorEstrellas">
+                    {[...Array(+opinion.estrellas)].map((_, i) => (
+                      <span key={i} className="material-symbols-outlined">
+                        star
+                      </span>
+                    ))}
+                  </p>
+                  <p>{opinion.fecha}</p>
+                </div>
+                <p className="descripcionGoogleReview">{opinion.descripcion}</p>
               </div>
-              <div className="puntuacionFecha-GoogleReview">
-                <p className="contenedorEstrellas">
-                  {[...Array(+opinion.estrellas)].map((_, i) => (
-                    <span key={i} className="material-symbols-outlined">
-                      star
-                    </span>
-                  ))}
-                </p>
-                <p>{opinion.fecha}</p>
-              </div>
-              <p className="descripcionGoogleReview">{opinion.descripcion}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

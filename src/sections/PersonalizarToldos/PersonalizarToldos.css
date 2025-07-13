@@ -80,9 +80,7 @@ CONTENEDOR IZQUIERDA
     padding: 0 1rem;
 }
 
-.contenedorFlechaTutorial{
-    padding-top: 2rem;
-}
+
 
 /* ============================
 OPCIONES DEL CONTENEDOR DERECHA
@@ -121,12 +119,6 @@ OPCIONES DEL CONTENEDOR DERECHA
     margin: 0;
 }
 
-.contenedorFlechaSelect{
-    position: absolute;
-    left: 0;
-    top: 15rem;
-}
-
 /* ============================
 OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
 ============================ */
@@ -139,6 +131,7 @@ OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
 .contenido-PersonalizarToldos-derecha .contenido-bloqueado {
     flex: 1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     position: relative;
 }
@@ -147,6 +140,11 @@ OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
     margin: auto;/* centra tanto horizontal como vertical */
     width: 100%;
     text-align: center;
+}
+
+.descripcionBloqueoPT{
+    width: 100%;
+    
 }
 
 

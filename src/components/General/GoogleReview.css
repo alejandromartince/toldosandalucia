@@ -34,6 +34,7 @@ ESTILO DE CADA REVIEW
   background-color: aliceblue;
   border-radius: 10px;
   padding: 1rem 1rem;
+  cursor: pointer;
   width: 350px;
   height: 200px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
@@ -49,7 +50,7 @@ FOTO Y NOMBRE DEL AUTOR
   align-items: center;
 }
 
-.fotoAutor-GoogleReview div a {
+.enlaceCartaGoogle {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -59,20 +60,25 @@ FOTO Y NOMBRE DEL AUTOR
   cursor:auto;
 }
 
-.fotoAutor-GoogleReview div a img{
+.enlaceCartaGoogle img{
   cursor: pointer;
   border-radius: 2rem;
 }
 
-.fotoAutor-GoogleReview div a p:hover {
-  text-decoration: underline;
-  cursor: pointer;
+
+.fotoAutor-GoogleReview div{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .fotoAutor-GoogleReview div p {
   font-weight: 400;
   margin: 0; /* Asegura que no hay margen vertical */
-  line-height: 1; /* Reduce la altura del texto */
+}
+
+.descripcionGoogleReview{
+  line-height: 1.8;
 }
 
 .iconoEnlaceGoogleReview {

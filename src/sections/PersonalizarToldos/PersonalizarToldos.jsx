@@ -85,30 +85,32 @@ const PersonalizarToldos = ({ onCerrar }) => {
           />
         </div>
 
-        {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
-        {!selectMenuActivo && (
-          <div className="contenedorFlechaTutorial">
-            <BsArrowLeft className="flecha-animada "
-              size={30}
-              style={{
-                position: "absolute",
-                top: top + 33,
-                left: "16rem",
-                transform: "translateX(0)",
-                zIndex: 1000,
-              }}
-            >
-              hola
-            </BsArrowLeft>
-          </div>
-        )}
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
             <div className="contenedor-Boton">
               <BotonCerrarMenu onClick={() => setCerrando(true)} />
             </div>
 
-            <p>{contenido.descripcion[idioma]}</p>
+            {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
+            {!selectMenuActivo && (
+              <div className="contenedorFlechaTutorial">
+                <BsArrowLeft className="flecha-animada "
+                  size={30}
+                  style={{
+                    position: "absolute",
+                    top: top,
+                    left: "0",
+                    transform: "translateX(0)",
+                    zIndex: 1000,
+                  }}
+                >
+                </BsArrowLeft>
+              </div>
+            )}
+            
+            <div className="descripcionBloqueoPT">
+              <p>{contenido.descripcion[idioma]}</p>
+            </div>
           </div>
         </div>
       </div>
