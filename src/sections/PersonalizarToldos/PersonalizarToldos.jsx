@@ -67,23 +67,24 @@ const PersonalizarToldos = ({ onCerrar }) => {
         style={{ position: "relative" }} // Muy importante para posicionar hijos absolute/fixed
       >
         <div className="contenido-PersonalizarToldos-izquierda">
-          <h2>{contenido.titulo[idioma]}</h2>
-          <p>{contenido.subtitulo[idioma]}</p>
-
-          <div
-            className="contenedorHRPT"
-            style={{ padding: "1.5rem 0", marginTop: "4rem" }}
-          >
-            <p>{contenido.ajustes[idioma]}</p>
-            <hr style={{ width: "90%", margin: "0 auto" }} />
+          <div className="text-descriptivoTutorialSelect">
+            <h2>{contenido.titulo[idioma]}</h2>
+            <p>{contenido.subtitulo[idioma]}</p>
           </div>
 
-          {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
-          <ComponenteSelects
-            ref={refSelects}
-            selectMenuActivo={selectMenuActivo}
-            setSelectMenuActivo={setSelectMenuActivo}
-          />
+          <div>
+            <div className="contenedorHRPT" style={{ padding: "1.5rem 0" }}>
+              <p>{contenido.ajustes[idioma]}</p>
+              <hr style={{ width: "90%", margin: "0 auto" }} />
+            </div>
+
+            {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
+            <ComponenteSelects
+              ref={refSelects}
+              selectMenuActivo={selectMenuActivo}
+              setSelectMenuActivo={setSelectMenuActivo}
+            />
+          </div>
         </div>
 
         <div className="contenido-PersonalizarToldos-derecha">
@@ -95,7 +96,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
             {!selectMenuActivo && (
               <div className="contenedorFlechaTutorial">
-                <BsArrowLeft className="flecha-animada "
+                <BsArrowLeft
+                  className="flecha-animada "
                   size={30}
                   style={{
                     position: "absolute",
@@ -104,11 +106,10 @@ const PersonalizarToldos = ({ onCerrar }) => {
                     transform: "translateX(0)",
                     zIndex: 1000,
                   }}
-                >
-                </BsArrowLeft>
+                ></BsArrowLeft>
               </div>
             )}
-            
+
             <div className="descripcionBloqueoPT">
               <p>{contenido.descripcion[idioma]}</p>
             </div>

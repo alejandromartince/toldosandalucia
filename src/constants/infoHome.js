@@ -1,13 +1,12 @@
-
 export const textoHome = {
-  fondo:{
-    1:"/assets/Fondo/fondo_inicio.jpeg",
+  fondo: {
+    1: "/assets/Fondo/fondo_inicio.jpeg",
     // 2: "/assets/Fondo/fondo_inicio2.jpg",
-    3: "/assets/Fondo/Fondo_inicio3.jpg"
+    3: "/assets/Fondo/Fondo_inicio3.jpg",
   },
   titulo: {
-    es: "¿Quiénes somos?", // Definir el texto en español
-    en: "Who are we?", // Usar el mismo texto para inglés
+    es: "¿Quiénes somos?",
+    en: "Who are we?", 
   },
   parrafo: {
     es: "Somos especialistas en la instalación de toldos en Málaga, ofreciendo soluciones efectivas para proteger tu hogar del sol y la lluvia. Diseñamos e instalamos toldos a medida que no solo garantizan una protección duradera, sino que también aportan estilo y funcionalidad a tu espacio. Nuestra misión es brindarte el mejor servicio con productos de alta calidad, adaptados a tus necesidades y con un diseño único.",
@@ -15,10 +14,10 @@ export const textoHome = {
   },
   tituloMovil: {
     es: "Disfruta tu espacio",
-    en: "Enjoy your space."
+    en: "Enjoy your space.",
   },
   subtituloMovil: {
     es: "Haz tuyo cada rincón.",
-    en: "Make every corner yours."
-  }
+    en: "Make every corner yours.",
+  },
 };
