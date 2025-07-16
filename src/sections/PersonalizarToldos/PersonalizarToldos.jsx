@@ -31,9 +31,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
   //Script para bloquear el scroll cuando se abre el pop-up de Personalziar Toldos
   const [cerrando, setCerrando] = useState(false);
   useEffect(() => {
-    const popup = document.querySelector(
-      ".contenido-PersonalizarToldos-derecha"
-    );
+    const popup = document.querySelector(".popup-contenido-prueba ");
     const handleWheel = (e) => e.preventDefault();
 
     if (!cerrando) {
@@ -69,21 +67,22 @@ const PersonalizarToldos = ({ onCerrar }) => {
         <div className="contenido-PersonalizarToldos-izquierda">
           <div className="text-descriptivoTutorialSelect">
             <h2>{contenido.titulo[idioma]}</h2>
-            <p>{contenido.subtitulo[idioma]}</p>
           </div>
 
-          <div>
-            <div className="contenedorHRPT" style={{ padding: "1.5rem 0" }}>
-              <p>{contenido.ajustes[idioma]}</p>
-              <hr style={{ width: "90%", margin: "0 auto" }} />
-            </div>
+          <div className="contenedorCentrado">
+            <div className="contenedorOpcionesPT">
+              <div className="contenedorHRPT" style={{ padding: "1.5rem 0" }}>
+                <p>{contenido.ajustes[idioma]}</p>
+                <hr style={{ width: "100%", margin: "0 auto" }} />
+              </div>
 
-            {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
-            <ComponenteSelects
-              ref={refSelects}
-              selectMenuActivo={selectMenuActivo}
-              setSelectMenuActivo={setSelectMenuActivo}
-            />
+              {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
+              <ComponenteSelects
+                ref={refSelects}
+                selectMenuActivo={selectMenuActivo}
+                setSelectMenuActivo={setSelectMenuActivo}
+              />
+            </div>
           </div>
         </div>
 

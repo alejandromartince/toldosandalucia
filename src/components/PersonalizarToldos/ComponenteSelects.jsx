@@ -34,7 +34,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
   const ubicaciones = useUbicacion(idioma);
 
   return (
-    <div>
+    <div className="contenedorPadreSelectPT">
       <div className="contenedorPSelect" ref={ref}>
         <p>{contenido.tipoToldo[idioma]}</p>
         <Suspense
