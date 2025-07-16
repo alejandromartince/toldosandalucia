@@ -43,7 +43,9 @@ body,
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   box-sizing: border-box;
   background-size: cover;
 
@@ -51,7 +53,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
 
   /* Para inputs y textarea con autocompletado */
   input:-webkit-autofill,
@@ -67,7 +68,8 @@ body {
 h1 {
   font-size: 2.2rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -77,15 +79,16 @@ p {
   line-height: 2rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   /* Sombra con desplazamiento y difusa */
-  font-family: "Poppins", sans-serif;
-
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 300;
 }
 
 footer a {
   font-size: 1.1rem;
   line-height: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 300;
   color: white;
   text-shadow: none;
@@ -100,8 +103,7 @@ footer a {
 OPCIONES PARA LAS ESTRELLAS DE GOOGLE REVIEW
 ============================ */
 .material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 1;
+  font-variation-settings: "FILL" 1;
   /* 1 para relleno, 0 para contorno */
   color: #ffbb29;
   /* amarillo */

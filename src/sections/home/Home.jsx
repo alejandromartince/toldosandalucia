@@ -26,7 +26,8 @@ const Home = () => {
 
   useEffect(() => {
     const intervalo = setInterval(() => {
-      const siguienteFondo = fondos[(fondos.indexOf(fondoActual) + 1) % fondos.length];
+      const siguienteFondo =
+        fondos[(fondos.indexOf(fondoActual) + 1) % fondos.length];
       setFondoNuevo(siguienteFondo);
 
       // Esperamos un poco antes de activar la clase .mostrar
@@ -45,33 +46,24 @@ const Home = () => {
     return () => clearInterval(intervalo);
   }, [fondoActual, fondos]);
 
-
   return (
     <section className="home" id="home">
-
       {/* Fondo actual */}
       <div
         className="fondo-img"
         style={{
-          backgroundImage:
-            dispositivo !== 'ordenador'
-              ? `url(${fondoActual})`
-              : `linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${fondoActual})`
+          backgroundImage: `url(${fondoActual})`,
         }}
       />
-
 
       {/* Fondo en transición */}
       {fondoNuevo && (
         <div
           className={`fondo-img-fade ${mostrarNuevo ? "mostrar" : ""}`}
           style={{
-            backgroundImage:
-              dispositivo !== 'ordenador'
-                ? `url(${fondoNuevo})`
-                : `linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${fondoNuevo})`,
-            backgroundColor: dispositivo !== 'ordenador' ? 'rgba(0, 0, 0, 0.3)' : 'transparent',
-            backgroundBlendMode: dispositivo !== 'ordenador' ? 'overlay' : 'normal'
+            backgroundImage: `url(${fondoNuevo})`,
+            backgroundColor: "transparent",
+            backgroundBlendMode: "normal",
           }}
         />
       )}
@@ -79,15 +71,17 @@ const Home = () => {
       {/* Contenido principal */}
       <div className="contenedor-home">
         <div className="contenido-home">
-          {dispositivo !== 'movil' ? (
+          {dispositivo !== "movil" ? (
             <>
               <h1>{textoHome.titulo[idioma]}</h1>
               <p>{textoHome.parrafo[idioma]}</p>
             </>
-          ) : (<>
-            {/* <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1> */}
-            {/* <p>{textoHome.subtituloMovil[idioma]}</p> */}
-          </>)}
+          ) : (
+            <>
+              {/* <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1> */}
+              {/* <p>{textoHome.subtituloMovil[idioma]}</p> */}
+            </>
+          )}
         </div>
 
         <div className="boton-container">
@@ -96,7 +90,6 @@ const Home = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Home;
-
