@@ -5,7 +5,7 @@ OPCIONES GENERALES
   height: 110vh;
   background-color: aliceblue;
   color: var(--negro-claro);
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -122,7 +122,7 @@ INFORMACION CARTAS
   transform: translateY(-50%);
   background-color: aliceblue;
   padding: 2rem;
-  min-height: 45%;
+  min-height: 350px;
   width: 350px;
   box-sizing: border-box;
   cursor: auto;

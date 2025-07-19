@@ -8,11 +8,14 @@ const usePosicionTop = (refPadre) => {
     if (!ref.current || !refPadre?.current) return;
 
     const calcularTop = () => {
-      const rectElemento = ref.current.getBoundingClientRect();
-      const rectPadre = refPadre.current.getBoundingClientRect();
+      let topRelativo = 0;
+      let elemento = ref.current;
 
-      // La diferencia es la posición relativa dentro del contenedor padre
-      const topRelativo = rectElemento.top - rectPadre.top;
+      // Sumamos offsetTop hacia arriba hasta llegar al padre
+      while (elemento && elemento !== refPadre.current) {
+        topRelativo += elemento.offsetTop;
+        elemento = elemento.offsetParent;
+      }
 
       setTop(topRelativo);
     };

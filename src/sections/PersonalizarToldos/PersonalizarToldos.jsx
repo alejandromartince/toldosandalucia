@@ -100,7 +100,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
                   size={30}
                   style={{
                     position: "absolute",
-                    top: top,
+                    top: top - 25,
                     left: "0",
                     transform: "translateX(0)",
                     zIndex: 1000,
