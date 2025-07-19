@@ -64,7 +64,7 @@ OPCIONES DE CONTENIDO
 .contenedor-home {
 
   height: 100%;
-  max-width: 40rem;
+  max-width: 32rem;
 
   display: flex;
   flex-direction: column;
@@ -76,10 +76,21 @@ OPCIONES DE CONTENIDO
 }
 
 .contenedor-home p {
-  text-wrap: balance;
   text-align: justify;
-  max-width: 90%;
+  text-justify: inter-word;
+  hyphens: none;        /* Desactiva guiones */
+  
+  font-weight: 300;
+  font-size: 18px;
+  max-width: 100%;       /* Puede ser menos restrictivo o quitar para que tome todo el ancho del contenedor padre */
+  line-height: 2rem;
+  
+  word-spacing: normal; /* Deja que el navegador maneje el espacio */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
+
+
 
 /* ============================
 MEDIA QUERIES

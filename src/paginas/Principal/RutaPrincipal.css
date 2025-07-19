@@ -2,11 +2,11 @@
 OPCIONES DE LA PAGINA PRINCIPAL
 ==============================*/
 .pagina-principal{
-  background-image: url('/assets/Fondo/fondo_resto.png');
+  background-image: url('/assets/Fondo/fondo_resto.webp');
 }
 
 .Historia-GoogleReview{
-  background-image: url(/assets/Fondo/fondo_historia.png);
+  background-image: url(/assets/Fondo/fondo_historia.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

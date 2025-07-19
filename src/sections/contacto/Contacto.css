@@ -4,7 +4,7 @@ OPCIONES GENERALES
 .contacto-section {
   position: relative;
   height: 100vh;
-  background-image: url(/assets/Fondo/fondo_contacto.jpg);
+  background-image: url(/assets/Fondo/fondo_contacto.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

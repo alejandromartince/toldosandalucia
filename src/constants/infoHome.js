@@ -1,8 +1,8 @@
 export const textoHome = {
   fondo: {
-    1: "/assets/Fondo/fondo_inicio.jpg",
-    2: "/assets/Fondo/fondo_inicio2.jpg",
-    3: "/assets/Fondo/fondo_inicio3.jpg",
+    1: "/assets/Fondo/fondo_inicio.webp",
+    2: "/assets/Fondo/fondo_inicio2.webp",
+    3: "/assets/Fondo/fondo_inicio3.webp",
   },
   titulo: {
     es: "¿Quiénes somos?",
