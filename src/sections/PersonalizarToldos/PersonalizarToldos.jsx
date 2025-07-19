@@ -88,9 +88,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
-            <div className="contenedor-Boton">
-              <BotonCerrarMenu onClick={() => setCerrando(true)} />
-            </div>
+            <BotonCerrarMenu onClick={() => setCerrando(true)} />
 
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
             {!selectMenuActivo && (
@@ -100,7 +98,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
                   size={30}
                   style={{
                     position: "absolute",
-                    top: top - 25,
+                    top: top,
                     left: "0",
                     transform: "translateX(0)",
                     zIndex: 1000,
@@ -113,6 +111,19 @@ const PersonalizarToldos = ({ onCerrar }) => {
               <p>{contenido.descripcion[idioma]}</p>
             </div>
           </div>
+
+          
+          {/* <div style={{display:"flex", gap:"1rem"}}>
+              <img src="/assets/Lonas/Arizona.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/AzulX.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/BeigeX.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Beige.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Castor.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Marfil.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Natural.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Sand.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/VerdeX.webp" alt="beige" style={{width:"4rem"}} />
+            </div> */}
         </div>
       </div>
     </div>

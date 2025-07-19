@@ -6,8 +6,8 @@ export const encabezadoBeneficios = {
 
   descripcion: {
     pc: {
-      es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto de nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
-      en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, allowing us to position ourselves as leaders in the industry.",
+      es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto \nde nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
+      en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, \nallowing us to position ourselves as leaders in the industry.",
     },
     movil: {
       es: "Con años de experiencia, optimizamos cada detalle para ser líderes del sector.",

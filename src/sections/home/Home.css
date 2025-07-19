@@ -82,7 +82,6 @@ OPCIONES DE CONTENIDO
   
   font-weight: 300;
   font-size: 18px;
-  max-width: 100%;       /* Puede ser menos restrictivo o quitar para que tome todo el ancho del contenedor padre */
   line-height: 2rem;
   
   word-spacing: normal; /* Deja que el navegador maneje el espacio */
