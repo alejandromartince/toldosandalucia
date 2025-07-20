@@ -31,9 +31,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
   //Script para bloquear el scroll cuando se abre el pop-up de Personalziar Toldos
   const [cerrando, setCerrando] = useState(false);
   useEffect(() => {
-    const popup = document.querySelector(
-      ".contenido-PersonalizarToldos-derecha"
-    );
+    const popup = document.querySelector(".popup-contenido-prueba ");
     const handleWheel = (e) => e.preventDefault();
 
     if (!cerrando) {
@@ -67,35 +65,36 @@ const PersonalizarToldos = ({ onCerrar }) => {
         style={{ position: "relative" }} // Muy importante para posicionar hijos absolute/fixed
       >
         <div className="contenido-PersonalizarToldos-izquierda">
-          <h2>{contenido.titulo[idioma]}</h2>
-          <p>{contenido.subtitulo[idioma]}</p>
-
-          <div
-            className="contenedorHRPT"
-            style={{ padding: "1.5rem 0", marginTop: "4rem" }}
-          >
-            <p>{contenido.ajustes[idioma]}</p>
-            <hr style={{ width: "90%", margin: "0 auto" }} />
+          <div className="text-descriptivoTutorialSelect">
+            <h2>{contenido.titulo[idioma]}</h2>
           </div>
 
-          {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
-          <ComponenteSelects
-            ref={refSelects}
-            selectMenuActivo={selectMenuActivo}
-            setSelectMenuActivo={setSelectMenuActivo}
-          />
+          <div className="contenedorCentrado">
+            <div className="contenedorOpcionesPT">
+              <div className="contenedorHRPT" style={{ padding: "1.5rem 0" }}>
+                <p>{contenido.ajustes[idioma]}</p>
+                <hr style={{ width: "100%", margin: "0 auto" }} />
+              </div>
+
+              {/* COMPONENTE DONDE VAN TODOS LOS SELECTS */}
+              <ComponenteSelects
+                ref={refSelects}
+                selectMenuActivo={selectMenuActivo}
+                setSelectMenuActivo={setSelectMenuActivo}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
-            <div className="contenedor-Boton">
-              <BotonCerrarMenu onClick={() => setCerrando(true)} />
-            </div>
+            <BotonCerrarMenu onClick={() => setCerrando(true)} />
 
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
             {!selectMenuActivo && (
               <div className="contenedorFlechaTutorial">
-                <BsArrowLeft className="flecha-animada "
+                <BsArrowLeft
+                  className="flecha-animada "
                   size={30}
                   style={{
                     position: "absolute",
@@ -104,15 +103,27 @@ const PersonalizarToldos = ({ onCerrar }) => {
                     transform: "translateX(0)",
                     zIndex: 1000,
                   }}
-                >
-                </BsArrowLeft>
+                ></BsArrowLeft>
               </div>
             )}
-            
+
             <div className="descripcionBloqueoPT">
               <p>{contenido.descripcion[idioma]}</p>
             </div>
           </div>
+
+          
+          {/* <div style={{display:"flex", gap:"1rem"}}>
+              <img src="/assets/Lonas/Arizona.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/AzulX.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/BeigeX.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Beige.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Castor.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Marfil.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Natural.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/Sand.webp" alt="beige" style={{width:"4rem"}} />
+              <img src="/assets/Lonas/VerdeX.webp" alt="beige" style={{width:"4rem"}} />
+            </div> */}
         </div>
       </div>
     </div>

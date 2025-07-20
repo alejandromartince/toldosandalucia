@@ -6,7 +6,7 @@ export const infoNuestrosTrabajos = {
 //Toldo Articulado, Capotas, Pergolas, Cofre, Terraza, Veranda, Quitavientos, Cortinas
 export const imagesNuestrosTrabajos = [
   {
-    imagen: "/assets/SliderTrabajos/Articulados/Articulado-1.jpg",
+    imagen: "/assets/SliderTrabajos/Articulados/Articulado-1.webp",
     titulo: {
       es: "Toldo Articulado",
       en: "Articulated Awning",
@@ -17,7 +17,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Capotas/Capotas-1.jpg",
+    imagen: "/assets/SliderTrabajos/Capotas/Capotas-1.webp",
     titulo: {
       es: "Capota",
       en: "Hoods",
@@ -28,7 +28,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Pergolas/Pergola-1.jpg",
+    imagen: "/assets/SliderTrabajos/Pergolas/Pergola-1.webp",
     titulo: {
       es: "Pérgola",
       en: "Pergola",
@@ -39,7 +39,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Cofres/Cofre-1.jpg",
+    imagen: "/assets/SliderTrabajos/Cofres/Cofre-1.webp",
     titulo: {
       es: "Toldo Cofre",
       en: "Chest Awning",
@@ -50,7 +50,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Terrazas/Terraza-1.jpg",
+    imagen: "/assets/SliderTrabajos/Terrazas/Terraza-1.webp",
     titulo: {
       es: "Terraza",
       en: "Terrace",
@@ -61,7 +61,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.jpg",
+    imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.webp",
     titulo: {
       es: "Toldo Veranda",
       en: "Veranda Awning",
@@ -72,7 +72,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Stores/Store-1.jpeg",
+    imagen: "/assets/SliderTrabajos/Stores/Store-1.webp",
     titulo: {
       es: "Stores",
       en: "Stores",
@@ -83,7 +83,7 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Velas/Vela-1.jpg",
+    imagen: "/assets/SliderTrabajos/Velas/Vela-1.webp",
     titulo: {
       es: "Vela",
       en: "Sail",

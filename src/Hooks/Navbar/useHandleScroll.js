@@ -1,14 +1,17 @@
 export const useHandleScroll = (secciones, setActiveSection) => {
-    const scrollPosition = window.scrollY + 70;
-    secciones.forEach(({ id, offset }) => {
-      const section = document.getElementById(id);
-      if (section) {
-        if (
-          section.offsetTop <= scrollPosition &&
-          section.offsetTop + section.offsetHeight > scrollPosition
-        ) {
-          setActiveSection(id);
-        }
+  const scrollY = window.scrollY + 70;
+
+  secciones.forEach(({ id }) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
+      const bottom = top + rect.height;
+
+      if (scrollY >= top && scrollY < bottom) {
+        setActiveSection(id);
       }
-    });
-  };
+    }
+  });
+};

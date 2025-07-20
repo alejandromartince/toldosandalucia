@@ -9,7 +9,7 @@ OPCIONES PARA GALERIA
 .backgroundTopGaleria {
   position: relative;
   height: 250px;
-  background-image: url(/assets/Fondo/fondoDerechaPersonalizarToldos.jpg);
+  background-image: url(/assets/Fondo/fondoDerechaPersonalizarToldos.webp);
   background-position: center;
   background-size: cover;
   z-index: 0;
@@ -100,5 +100,5 @@ OPCIONES CARRUSEL
 OPCIONES FOOTER GALERIA
 ============================ */
 .footerGaleria {
-  background-image: url('/assets/Fondo/fondo_resto.png');
+  background-image: url('/assets/Fondo/fondo_resto.webp');
 }

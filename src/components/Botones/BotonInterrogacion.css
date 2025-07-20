@@ -11,7 +11,7 @@
 }
 
 .boton-interrogacion:hover {
-    background-color: #ffffffa1;
+    background-color: #ffffff62;
 }
 
 .tooltip-mensaje {
@@ -19,7 +19,7 @@
     bottom: 120%;
     left: 100%;
     transform: translateX(-100%);
-    background-color: #ffffffa1;
+    background-color: #ffffff3c;
     color: #333333;
     padding: 6px 10px;
     border-radius: 8px;

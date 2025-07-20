@@ -153,7 +153,7 @@ const GoogleReview = () => {
                     />
                   </div>
                   <img
-                    src="assets/GoogleReviews/googleFavicon.png"
+                    src="assets/GoogleReviews/googleFavicon.webp"
                     alt="iconoGoogle"
                     style={{ height: "25px" }}
                   />

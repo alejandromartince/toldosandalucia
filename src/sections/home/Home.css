@@ -32,7 +32,6 @@ OPCIONES GENERALES
   height: 100%;
   background-size: cover;
   background-position: center;
-  transform: scaleX(-1);
   transition: opacity 1s ease-in-out;
   z-index: -2;
 }
@@ -65,7 +64,7 @@ OPCIONES DE CONTENIDO
 .contenedor-home {
 
   height: 100%;
-  max-width: 40rem;
+  max-width: 32rem;
 
   display: flex;
   flex-direction: column;
@@ -77,10 +76,20 @@ OPCIONES DE CONTENIDO
 }
 
 .contenedor-home p {
-  text-wrap: balance;
   text-align: justify;
-  max-width: 90%;
+  text-justify: inter-word;
+  hyphens: none;        /* Desactiva guiones */
+  
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2rem;
+  
+  word-spacing: normal; /* Deja que el navegador maneje el espacio */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
+
+
 
 /* ============================
 MEDIA QUERIES

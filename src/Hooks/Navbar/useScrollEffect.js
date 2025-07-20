@@ -2,34 +2,43 @@ import { useEffect } from 'react';
 
 export const useScrollEffect = (secciones, setActiveSection) => {
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 70;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY + 70;
 
-      for (let i = 0; i < secciones.length; i++) {
-        const { id } = secciones[i];
-        const section = document.getElementById(id);
+          for (let i = 0; i < secciones.length; i++) {
+            const { id } = secciones[i];
+            const section = document.getElementById(id);
 
-        if (section) {
-          const top = section.offsetTop;
-          const bottom = top + section.offsetHeight;
+            if (section) {
+              const rect = section.getBoundingClientRect();
+              const top = rect.top + window.scrollY;
+              const bottom = top + rect.height;
 
-          // Ajustamos la lógica para manejar las secciones especiales
-          // 'historia' y 'beneficios' para que se comporten como 'home' y 'products'
-          if (scrollPosition >= top && scrollPosition < bottom) {
-            if (id === 'historia') {
-              setActiveSection('home');
-            } else if (id === 'beneficios') {
-              setActiveSection('products');
-            } else {
-              setActiveSection(id);
+              if (scrollY >= top && scrollY < bottom) {
+                if (id === 'historia') {
+                  setActiveSection('home');
+                } else if (id === 'beneficios') {
+                  setActiveSection('products');
+                } else {
+                  setActiveSection(id);
+                }
+                break;
+              }
             }
-            break;
           }
-        }
+
+          ticking = false;
+        });
+
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Ejecuta una vez al montar
 
     return () => {

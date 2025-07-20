@@ -6,8 +6,8 @@ export const encabezadoBeneficios = {
 
   descripcion: {
     pc: {
-      es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto de nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
-      en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, allowing us to position ourselves as leaders in the industry.",
+      es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto \nde nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
+      en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, \nallowing us to position ourselves as leaders in the industry.",
     },
     movil: {
       es: "Con años de experiencia, optimizamos cada detalle para ser líderes del sector.",
@@ -32,7 +32,7 @@ export const textoBeneficios = {
         en: "We meticulously create and install custom awnings, both manual and automated, carefully integrating the latest smart home technologies to provide comfort, convenience, and seamless operation tailored to each client's needs."
       }
     },
-    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.jpg",
+    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.webp",
   },
   fabricacion: {
     titulo: {
@@ -49,7 +49,7 @@ export const textoBeneficios = {
         en: "Our factory produces custom awnings using premium materials and cutting-edge technology, carefully integrating smart home solutions to offer the highest level of quality, durability, and seamless automation."
       }
     },
-    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-2.jpg",
+    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-2.webp",
   },
   instalacion: {
     titulo: {
@@ -66,7 +66,7 @@ export const textoBeneficios = {
         en: "Our highly skilled team expertly installs the awning, ensuring secure fixation and optimal operation, consistently delivering a professional and customized service tailored to the unique requirements of every project."
       }
     },
-    imagen: "/assets/SliderTrabajos/Pergolas/Pergola-2.jpg",
+    imagen: "/assets/SliderTrabajos/Pergolas/Pergola-2.webp",
   },
 }
 

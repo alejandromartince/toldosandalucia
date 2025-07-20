@@ -36,7 +36,11 @@ export const infoPersonalizarToldos = {
         en: "Type of fabric"
     },
     Sistema:{
-        es: "Sistema",
-        en: "System"
+        es: "Sistema de instalación",
+        en: "Installation System"
+    },
+    Ubicacion: {
+        es: "Ubicación",
+        en: "Ubication"
     }
 }
