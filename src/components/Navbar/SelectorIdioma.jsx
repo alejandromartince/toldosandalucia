@@ -38,11 +38,15 @@ const SelectorIdioma = () => {
     };
   }, []);
 
+  const labels = {
+    es: "Cambiar idioma",
+    en: "Switch language"
+  }
 
   return (
     <div className="selector-idioma-dropdown" ref={contenedorRef}>
 
-      <button className="boton-idioma-actual" onClick={toggleMenu}>
+      <button className="boton-idioma-actual" onClick={toggleMenu} aria-label={labels[idioma]}>
         <img src={idiomas[idioma]} alt={idioma} width={30} height={20} />
       <IoIosArrowDown size={20} style={{ transform: desplegado ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s', color:"white" }} />
       </button>

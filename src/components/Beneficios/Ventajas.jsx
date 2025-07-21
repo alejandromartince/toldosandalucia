@@ -77,6 +77,7 @@ const Galeria = () => {
                                 <div className="divBotonCartasBeneficios">
                                     <BotonCuadrado
                                         text={infoBoton.texto}
+                                        idioma={idioma}
                                         onClick={() => window.open(infoBoton.url, "_blank")}
                                     />
                                 </div>

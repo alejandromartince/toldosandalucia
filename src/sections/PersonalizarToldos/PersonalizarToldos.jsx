@@ -90,7 +90,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
-            <BotonCerrarMenu onClick={() => setCerrando(true)} />
+            <BotonCerrarMenu onClick={() => setCerrando(true)} idioma={idioma} />
 
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
             {!selectMenuActivo && (

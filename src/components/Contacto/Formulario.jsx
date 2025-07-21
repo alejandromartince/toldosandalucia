@@ -14,6 +14,10 @@ export default function Formulario({ onSubmissionChange }) {
   const { idioma } = useIdioma()
   const i = infoContacto[idioma]
 
+  const label = {
+    es: "Enviar petición",
+    en: "Send request"
+  }
 
   /* ============================
   API PARA EL REDIRECCIONAMIENTO DEL CORREO
@@ -182,6 +186,7 @@ export default function Formulario({ onSubmissionChange }) {
           type="submit"
           variant="contained"
           color="success"
+          aria-label={label[idioma]}
           sx={{
             backgroundColor: 'var(--verde-logo)', // mantienes el mismo color o cambias si quieres
             '&:hover': {

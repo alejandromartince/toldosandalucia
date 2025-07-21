@@ -11,8 +11,13 @@ const BotonProductos = ({ onAbrir }) => {
   const { idioma } = useIdioma();
   const titulo = useInformacionBoton(idioma, "Productos");
 
+  const label = {
+    es: "Personaliza tu toldo y envía la petición",
+    en: "Customize your awning and send your request"
+  }
+  
   return (
-    <button onClick={onAbrir} className="boton-producto">
+    <button onClick={onAbrir} className="boton-producto" aria-label={label[idioma]}>
       &gt;&gt;&nbsp;
       {titulo?.texto}
     </button>

@@ -35,6 +35,17 @@ const VentajasMobile = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  const labels = {
+    es: {
+      anterior: "Desplazar a la izquierda",
+      siguiente: "Desplazar a la derecha",
+    },
+    en: {
+      anterior: "Slide to the left",
+      siguiente: "Slide to the right",
+    },
+  };
+
   return (
     <div className='ventajas-mobile-container'>
       <div className='contenedor-ventajas-mobile-superior'>
@@ -42,6 +53,7 @@ const VentajasMobile = () => {
           <button
             ref={prevRef}
             className="nav-button"
+            aria-label={labels[idioma]?.anterior}
             disabled={isBeginning}
             style={{ opacity: isBeginning ? 0.3 : 1, cursor: isBeginning ? 'not-allowed' : 'pointer' }}
           >
@@ -51,6 +63,7 @@ const VentajasMobile = () => {
           <button
             ref={nextRef}
             className="nav-button"
+            aria-label={labels[idioma]?.siguiente}
             disabled={isEnd}
             style={{ opacity: isEnd ? 0.3 : 1, cursor: isEnd ? 'not-allowed' : 'pointer' }}
           >
@@ -103,11 +116,11 @@ const VentajasMobile = () => {
       <div className="ventajas-texto-externo">
         <p>{beneficiosArray[indiceActual].informacion.movil[idioma]}</p>
         <div className='ventajas-boton-container-mobile'>
-        <BotonCuadrado
-          text={infoBoton.texto}
-          onClick={() => window.open(infoBoton.url, "_blank")}
+          <BotonCuadrado
+            text={infoBoton.texto}
+            onClick={() => window.open(infoBoton.url, "_blank")}
           />
-          </div>
+        </div>
       </div>
     </div>
   );

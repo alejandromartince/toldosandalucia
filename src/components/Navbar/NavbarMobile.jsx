@@ -20,17 +20,17 @@ import { useIdioma } from '../../contexts/IdiomaContext';
 
 import './NavbarMobile.css'
 
-const NavbarMobile = ({pagina}) => {
+const NavbarMobile = ({ pagina }) => {
 
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
-  
+
 
   //Efecto para quitar o activar el scroll cuando el menu desplegable del navbar_mobile esta abierto o cerrado
   useEffect(() => {
@@ -51,7 +51,16 @@ const NavbarMobile = ({pagina}) => {
     };
   }, [menuOpen]);
 
-
+  const labels = {
+    es: {
+      abrir: "Abrir menú",
+      cerrar: "Cerrar menú"
+    },
+    en: {
+      abrir: "Open menu",
+      cerrar: "Close menu"
+    }
+  }
 
   return (
     <>
@@ -68,7 +77,7 @@ const NavbarMobile = ({pagina}) => {
           {pagina !== 'principal' && (
             <a href="/" className="navbar__atrasEnlace">
               <div className="navbar__atras">
-                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras"/>
+                <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras" />
                 <p>{idioma === 'es' ? 'Volver' : 'Go back'}</p>
               </div>
             </a>
@@ -84,6 +93,7 @@ const NavbarMobile = ({pagina}) => {
           <button
             className={`menu-toggle hamburger-btn ${menuOpen ? 'fade-out' : 'fade-in'}`}
             onClick={toggleMenu}
+            aria-label={labels[idioma].abrir}
           >
             <span></span><span></span><span></span>
           </button>
@@ -99,11 +109,10 @@ const NavbarMobile = ({pagina}) => {
             <nav className="navbar__navColumna">
 
               {/* BOTÓN "X" dentro del menú desplegable (solo si está abierto) */}
-              {menuOpen && (
-                <button className={`menu-toggle open close-btn`} onClick={toggleMenu}>
+                <button className={`menu-toggle open close-btn`} onClick={toggleMenu} aria-label={labels[idioma].cerrar}>
                   <span></span><span></span><span></span>
                 </button>
-              )}
+
               {secciones
                 .filter(({ id }) => id !== 'historia' && id !== 'beneficios')
                 .map(({ id, texto, offset }) => (

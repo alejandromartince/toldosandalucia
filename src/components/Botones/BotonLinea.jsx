@@ -9,6 +9,7 @@ const BotonLinea = ({ idioma, className, id }) => {
     <a
       className={className}
       role="button"
+      aria-label={boton.texto}
       tabIndex="0"
       target="_blank"
       href={boton ? boton.url : "#"}
