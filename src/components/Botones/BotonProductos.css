@@ -2,16 +2,16 @@
 OPCIONES GENERAL DEL BOTON 
 ============================ */
 .boton-producto {
-  padding: 1.3em 3em;
-  font-size: 12px;
+  padding: 1.3em 3em; /* ya está con em, perfecto */
+  font-size: 0.75rem; /* 12px */
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.15625rem; /* 2.5px */
   font-weight: 500;
   color: #000;
   background-color: #fff;
   border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 2.8125rem; /* 45px */
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.1); /* 0px 8px 15px */
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
@@ -19,13 +19,13 @@ OPCIONES GENERAL DEL BOTON
 
 .boton-producto:hover {
   background-color: #283935;
-  box-shadow: 0px 15px 15px #1e2b28;
+  box-shadow: 0 0.9375rem 0.9375rem #1e2b28; /* 0px 15px 15px */
   color: #fff;
-  transform: translateY(-7px);
+  transform: translateY(-0.4375rem); /* -7px */
 }
 
 .boton-producto:active {
-  transform: translateY(-1px);
+  transform: translateY(-0.0625rem); /* -1px */
 }
 
 /* ============================
@@ -47,7 +47,6 @@ PERSONALIZACION MENU PERSONALIZAR TOLDOS
   z-index: 9999;
 }
 
-
 .popup-overlay.mostrar {
   opacity: 1;
   pointer-events: auto;
@@ -56,35 +55,14 @@ PERSONALIZACION MENU PERSONALIZAR TOLDOS
 /* ================================
    CONTENIDO DEL POPUP
 ================================ */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  z-index: 9999; /* Muy alto para estar sobre todo */
-}
-
-.popup-overlay.mostrar {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .popup-contenido {
   background-color: #fff;
   width: 90vw;
   height: 90vh;
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 0.9375rem; /* 15px */
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.4); /* 15px */
   animation: popup-entrada 0.4s ease forwards;
   display: flex;
   flex-direction: column;
@@ -109,7 +87,7 @@ PERSONALIZACION MENU PERSONALIZAR TOLDOS
   right: 1rem;
   background: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   cursor: pointer;
   color: #333;
   transition: color 0.2s ease;

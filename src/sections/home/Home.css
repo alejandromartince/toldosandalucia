@@ -81,7 +81,7 @@ OPCIONES DE CONTENIDO
   hyphens: none;        /* Desactiva guiones */
   
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;    /* 18px / 16 = 1.125rem */
   line-height: 2rem;
   
   word-spacing: normal; /* Deja que el navegador maneje el espacio */
@@ -142,7 +142,7 @@ MEDIA QUERIES
   }
 
   .tituloMovilVacio {
-    font-size: 24px;
+    font-size: 1.5rem;    /* 24px / 16 = 1.5rem */
     color: rgba(255, 255, 255, 0.4);
     font-family: "Bebas", sans-serif;
     /* Blanco con opacidad */
@@ -158,7 +158,7 @@ MEDIA QUERIES
   }
 
   .contenedor-home p {
-    font-size: 16px;
+    font-size: 1rem;      /* 16px / 16 = 1rem */
     line-height: 1.7rem;
     text-align: justify;
     hyphens: auto;

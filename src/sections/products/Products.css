@@ -9,7 +9,6 @@ OPCIONES GENERALES
   background-size: cover;
   background-position: center;
   overflow: hidden;
-
 }
 
 
@@ -76,7 +75,7 @@ OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
   transition: fill 0.3s ease-in-out;
   cursor: pointer;
   color: var(--blanco-footer);
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px / 16 = 1.875rem */
 }
 
 .icono-productos:hover {
@@ -114,7 +113,7 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
 .text-productos h3 {
   padding-top: 2rem;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
@@ -163,9 +162,8 @@ MENSAJE INVISIBLE DE COPYRIGHT
   color: rgb(66, 66, 66);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px / 16 = 0.875rem */
   white-space: nowrap;
-
 
   opacity: 0;
   visibility: hidden;
@@ -334,9 +332,9 @@ MEDIA QUERIES
   }
 
   .contenedor-derecha h1 {
-    font-size: 26px;
+    font-size: 1.625rem; /* 26px / 16 = 1.625rem */
     font-weight: 300;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     text-align: center;
   }
 

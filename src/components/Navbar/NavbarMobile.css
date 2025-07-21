@@ -49,8 +49,8 @@ BOTON HAMBURGUESA
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 1.5rem;
+  height: 1.1rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -59,17 +59,17 @@ BOTON HAMBURGUESA
 }
 
 .menu-toggle span {
-  height: 3px;
+  height: 0.1875rem;    /* 3px ≈ 0.1875rem */
   width: 100%;
   background-color: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem; /* 4px ≈ 0.25rem */
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
 
 /* Animación cuando el botón está en estado "open" (hamburguesa => X) */
 .menu-toggle.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(0.4375rem) rotate(45deg); /* 7px ≈ 0.4375rem */
 }
 
 .menu-toggle.open span:nth-child(2) {
@@ -78,6 +78,11 @@ BOTON HAMBURGUESA
 
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu-toggle:focus-visible {
+  outline: 0.125rem solid #fff; /* 2px ≈ 0.125rem */
+  outline-offset: 0.125rem;
 }
 
 /* Por defecto el botón es visible */
@@ -120,9 +125,9 @@ CONTENEDOR BOTON REALIZAR PRESUPUESTO
   padding-left: 2rem;
 }
 
-.contenedor-boton-menu-desplegado a{
+.contenedor-boton-menu-desplegado a {
   height: 2rem;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px ≈ 1.125rem */
   color: white;
   text-decoration: none;
 }

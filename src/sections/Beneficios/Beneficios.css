@@ -53,14 +53,14 @@ TITULOS GALERIA
 }
 
 .contenedorTitulosFotosBeneficios .tituloContainer {
-  width: 300px;
+  width: 18.75rem; /* 300px */
   text-align: center;
   user-select: none;
 }
 
 .contenedorTitulosFotosBeneficios .titulo {
   transition: color 0.3s ease;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   display: inline-block;
   width: fit-content;
   cursor: pointer;
@@ -122,8 +122,8 @@ INFORMACION CARTAS
   transform: translateY(-50%);
   background-color: aliceblue;
   padding: 2rem;
-  min-height: 350px;
-  width: 350px;
+  min-height: 21.875rem; /* 350px */
+  width: 21.875rem;       /* 350px */
   box-sizing: border-box;
   cursor: auto;
 
@@ -148,7 +148,7 @@ INFORMACION CARTAS
 
 .info-carta p {
   text-shadow: none;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   text-align: justify;
   line-height: 1.5;
   padding-top: 0.5rem;
@@ -159,30 +159,32 @@ INFORMACION CARTAS
   justify-content: center;
 }
 
-/*=============================
-MEDIA QUERIES PARA PANTALLAS MENOS A 1300PX
-=============================*/
-@media (max-width: 1300px) and (min-width: 769px) {
+/* ============================
+MEDIA QUERIES PANTALLAS < 1300PX
+============================ */
+@media (max-width: 81.25rem) and (min-width: 48.0625rem) {
   .galeria-contenedor {
     margin-top: 1.5rem;
   }
 
-  .encabezado-beneficios p{
+  .encabezado-beneficios p {
     max-width: 65%;
     line-height: 1.5rem;
   }
-  .info-carta{
-    min-height: 350px;
+
+  .info-carta {
+    min-height: 21.875rem; /* 350px */
   }
 
-  .imagenes-container{
-    height: 500px;
+  .imagenes-container {
+    height: 31.25rem; /* 500px */
   }
 }
+
 /* ============================
 MEDIA QUERIES TABLET
 ============================ */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 64rem) and (min-width: 48.0625rem) {
   .encabezado-beneficios p {
     line-height: 1.6rem;
   }
@@ -191,16 +193,16 @@ MEDIA QUERIES TABLET
 /* ============================
 MEDIA QUERIES MOVIL
 ============================ */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .beneficios {
-    height: 850px;
+    height: 53.125rem; /* 850px */
     display: flex;
     align-items: center;
     text-align: center;
   }
 
   .encabezado-beneficios h1 {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
   }
 
   .encabezado-beneficios p {

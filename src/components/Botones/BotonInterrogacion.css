@@ -1,12 +1,12 @@
 .boton-interrogacion {
-    width: 32px;
-    height: 32px;
+    width: 2rem;          /* 32px / 16 = 2rem */
+    height: 2rem;         /* 32px / 16 = 2rem */
     border-radius: 50%;
     border: none;
     background-color: var(--gris-pocoVisible);
     color: #333;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;  /* 18px / 16 = 1.125rem */
     transition: background-color 0.3s;
 }
 
@@ -21,14 +21,14 @@
     transform: translateX(-100%);
     background-color: #ffffff3c;
     color: #333333;
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 0.375rem 0.625rem; /* 6px 10px */
+    border-radius: 0.5rem;       /* 8px */
     white-space: nowrap;
-    font-size: 13px;
+    font-size: 0.8125rem;        /* 13px */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2); /* 2px 8px */
 }
 
 /* Mostrar tooltip SOLO cuando haces hover en el botón */
@@ -37,13 +37,13 @@
 }
 
 .boton-interrogacion span {
-    font-size: 10px;
+    font-size: 0.625rem; /* 10px */
 }
 
 @media (max-width: 1024px) {
     .boton-interrogacion span {
-        max-width: 300px;
-        width: 300px;
+        max-width: 18.75rem; /* 300px */
+        width: 18.75rem;     /* 300px */
         white-space: normal;
     }
 }

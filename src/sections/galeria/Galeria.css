@@ -38,7 +38,7 @@ OPCIONES PARA GALERIA
 
 .contenidoGaleria h2 {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   font-weight: 400;
 }
@@ -57,11 +57,11 @@ OPCIONES PARA GALERIA
 /* ============================
 OPCIONES CARRUSEL
 ============================ */
-.carrusel-galeria-container{
+.carrusel-galeria-container {
   height: 400px;
 }
 
-.swiper-galeria{
+.swiper-galeria {
   height: 100%;
 }
 
@@ -91,9 +91,12 @@ OPCIONES CARRUSEL
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* semitransparente */
-  pointer-events: none; /* para no interferir con clics */
-  border-radius: inherit; /* opcional, si usas bordes redondos */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* semitransparente */
+  pointer-events: none;
+  /* para no interferir con clics */
+  border-radius: inherit;
+  /* opcional, si usas bordes redondos */
 }
 
 /* ============================

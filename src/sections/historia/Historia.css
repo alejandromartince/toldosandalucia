@@ -84,12 +84,12 @@ MEDIA QUERIES
 
   .historia-izquierda {
     width: 100%;
-    justify-content: space-evenly;
+    gap: 8rem;
     align-items: center;
   }
 
   .historia-texto h1 {
-    font-size: 20px;
+    font-size: 1.7rem;
   }
 
   .historia-texto p {
