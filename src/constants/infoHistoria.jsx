@@ -66,3 +66,8 @@ export const infoHistoria = {
     ),
   },
 };
+
+export const alts = {
+  es: "Logo alternativo de 1999",
+  en: "Alternative logo from 1999"
+}

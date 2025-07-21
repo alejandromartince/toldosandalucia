@@ -116,8 +116,18 @@ const GoogleReview = () => {
       estrellas: "5",
       enlace: "https://maps.app.goo.gl/sysmg6zUu55dMayA7",
     }
-
   ];
+
+  const alts = {
+    es: {
+      enlace: "Enlace a opinión en Google Maps",
+      foto: "Foto de la persona que hizo la review",
+    },
+    en: {
+      enlace: "Google Maps review link",
+      foto: "Picture of the person who left the review",
+    },
+  }
 
   return (
     <div className="googleReviews-container">
@@ -130,6 +140,7 @@ const GoogleReview = () => {
               href={opinion.enlace}
               target="_blank"
               className="enlaceCartaGoogle"
+              aria-label={alts[idioma].enlace}
             >
               <div
                 className="cardReview"
@@ -138,7 +149,7 @@ const GoogleReview = () => {
               >
                 <div className="fotoAutor-GoogleReview">
                   <div>
-                    <img src={`assets/GoogleReviews/review-${opinion.id}.png`} alt="foto" />
+                    <img src={`assets/GoogleReviews/review-${opinion.id}.png`} alt={alts[idioma].foto} />
                     <p>{opinion.autor}</p>
                     <FaExternalLinkAlt
                       size={15}
@@ -154,7 +165,7 @@ const GoogleReview = () => {
                   </div>
                   <img
                     src="assets/GoogleReviews/googleFavicon.webp"
-                    alt="iconoGoogle"
+                    alt=""
                     style={{ height: "25px" }}
                   />
                 </div>
@@ -180,5 +191,6 @@ const GoogleReview = () => {
     </div>
   );
 }
+
 
 export default GoogleReview;

@@ -7,8 +7,8 @@ const LinkLinea = ({ idioma, className, id, offset }) => {
   const boton = useInformacionBoton(idioma, id);
 
   const label = {
-    es: "Ir a",
-    en: "Go to"
+    es: "Ir a productos",
+    en: "Go to products"
   }
 
   return (
@@ -16,7 +16,7 @@ const LinkLinea = ({ idioma, className, id, offset }) => {
       className={className}
       role="button"
       tabIndex="0"
-      aria-label={label[idioma] + boton.url}
+      aria-label={label[idioma]}
       smooth={true}
       to={boton ? boton.url : "#"}
       offset={offset || 0}

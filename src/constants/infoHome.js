@@ -21,3 +21,8 @@ export const textoHome = {
     en: "Make every corner yours.",
   },
 };
+
+export const alts = {
+  es: "Realizar presupuesto",
+  en: "Make a quote"
+}

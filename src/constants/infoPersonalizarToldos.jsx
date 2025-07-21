@@ -44,3 +44,9 @@ export const infoPersonalizarToldos = {
         en: "Ubication"
     }
 }
+
+export const alts = {
+    es: {
+        
+    }
+}

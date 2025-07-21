@@ -1,5 +1,5 @@
 //Importamos informacion
-import { infoHistoria } from "../../constants/infoHistoria.jsx";
+import { infoHistoria, alts } from "../../constants/infoHistoria.jsx";
 
 //Importamos el contexto
 import { useIdioma } from "../../contexts/IdiomaContext";
@@ -18,6 +18,7 @@ const Historia = () => {
   const { idioma } = useIdioma();
   const informacion = infoHistoria;
   const dispositivo = useTipoDispositivo();
+  const alt = alts[idioma];
 
   return (
     <section className="historia" id="historia">
@@ -43,7 +44,7 @@ const Historia = () => {
 
       {dispositivo === 'ordenador' && (
         <div className="historia-logo">
-          <img src="/assets/Logo/1999_blanco.png" alt="logo1999" />
+          <img src="/assets/Logo/1999_blanco.png" alt={alt} />
         </div>
       )}
     </section>
