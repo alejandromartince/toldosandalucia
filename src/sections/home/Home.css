@@ -77,7 +77,6 @@ OPCIONES DE CONTENIDO
 
 .contenedor-home p {
   text-align: justify;
-  text-justify: inter-word;
   hyphens: none;        /* Desactiva guiones */
   
   font-weight: 300;

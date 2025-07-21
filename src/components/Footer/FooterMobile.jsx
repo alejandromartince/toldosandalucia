@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Importamos la informacion
-import { infoFooter } from "../../constants/infoFooter";
+import { alts, infoFooter } from "../../constants/infoFooter";
 
 //Importamos los componentes
 import RedesSociales from "./RedesSociales";
@@ -19,6 +19,7 @@ const FooterMobile = () => {
 
   const { idioma } = useIdioma();
   const i = infoFooter[idioma];
+  const alt = alts[idioma];
 
   const [openSection, setOpenSection] = useState(null);
 
@@ -37,9 +38,9 @@ const FooterMobile = () => {
           </div>
           <span><hr /></span>
           <div className="fm-info-politicas-opciones">
-            <a href="/Privacidad">{i.politica.privacidad}</a>
-            <a href="/Cookies">{i.politica.cookies}</a>
-            <a href="/AvisosLegales">{i.politica.avisos}</a>
+            <a href="/Privacidad" aria-label={alt.privacidad}>{i.politica.privacidad}</a>
+            <a href="/Cookies" aria-label={alt.cookies}>{i.politica.cookies}</a>
+            <a href="/AvisosLegales" aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
           </div>
         </div>
 
@@ -56,12 +57,13 @@ const FooterMobile = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fmenlace-footer-whatsapp"
+                aria-label="Whatsapp"
               >
                 <p style={{ textShadow: "none" }}>{i.ayuda}</p>
                 <FaWhatsapp size={25} />
               </a>
             </div>
-            <p style={{ textShadow: "none" }}>{i.telefono}</p>
+            <a href="tel:+34952562668" style={{ textShadow: "none" }} aria-label={alt.telefono}>{i.telefono}</a>
           </div>
         </div>
 

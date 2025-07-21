@@ -31,3 +31,20 @@ export const infoFooter = {
     telefono: "Tel. 952 56 26 68"
   },
 };
+
+export const alts = {
+  es: {
+    logo: "Inicio - Toldos Andalucía",
+    avisosLegales: "Ir a los avisos legales",
+    privacidad: "Ir a las políticas de privacidad",
+    cookies: "Ir a la política de cookies",
+    telefono: "Llamar al 952 56 26 68"
+  },
+  en: {
+    logo: "Home - Toldos Andalucía logo",
+    avisosLegales: "Go to legal notices",
+    privacidad: "Go to privacy policy",
+    cookies: "Go to cookie policy",
+    telefono: "Call 952 56 26 68"
+  }
+}

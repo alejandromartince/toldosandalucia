@@ -5,11 +5,14 @@ import { infoFooter } from '../../constants/infoFooter.js';
 // Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext.jsx";
 
+
 const EnlaceAvisoLegal = () => {
 
     const { idioma } = useIdioma();
     const infoormacionF = infoFooter[idioma];
     const i = avisoLegal[idioma];
+
+    
 
     return (
         <section className="enlacePrivacidadSection">
@@ -77,7 +80,7 @@ const EnlaceAvisoLegal = () => {
                 </div>
 
                 <div className='contenedorImagenEnlacePrivacidad'>
-                    <img src="/assets/SVGExtras/Legal.svg" alt="Aviso Legal SVG" className='svgPrivacidad' />
+                    <img src="/assets/SVGExtras/Legal.svg" alt="" aria-hidden="true" className='svgPrivacidad' />
                 </div>
             </div>
         </section>

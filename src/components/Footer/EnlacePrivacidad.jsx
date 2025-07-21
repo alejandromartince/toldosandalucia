@@ -44,7 +44,7 @@ const EnlacePrivacidad = () => {
                     </div>
                 </div>
                 <div className='contenedorImagenEnlacePrivacidad'>
-                    <img src="/assets/SVGExtras/Privacidad.svg" alt="Privacidad SVG" className='svgPrivacidad' />
+                    <img src="/assets/SVGExtras/Privacidad.svg" alt="" aria-hidden="true" className='svgPrivacidad' />
                 </div>
             </div>
 

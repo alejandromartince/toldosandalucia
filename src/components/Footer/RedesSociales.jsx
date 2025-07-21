@@ -16,9 +16,22 @@ function RedesSociales() {
 
   return (
     <>
-      <a href="https://www.facebook.com/..." target="_blank" rel="noopener noreferrer">
-        <FaFacebookF size={30} className="fm-icono-footer" color="white" />
+      <a
+        href="https://www.facebook.com/people/toldosandalucia/100069359261072/"
+        onClick={(e) =>
+          abrirEnlace(
+            e,
+            'fb://profile/100069359261072',
+            'https://www.facebook.com/people/toldosandalucia/100069359261072/'
+          )
+        }
+        className="fm-icono-footer"
+        rel="noopener noreferrer"
+        aria-label='Facebook'
+      >
+        <FaFacebookF size={30} color="white" />
       </a>
+
       <a
         href="https://www.tiktok.com/@toldos.andalucia"
         onClick={(e) =>
@@ -26,6 +39,7 @@ function RedesSociales() {
         }
         className="fm-icono-footer"
         rel="noopener noreferrer"
+        aria-label='Tik Tok'
       >
         <FaTiktok size={30} color="white" />
       </a>
@@ -37,6 +51,7 @@ function RedesSociales() {
         }
         className="fm-icono-footer"
         rel="noopener noreferrer"
+        aria-label='Instagram'
       >
         <FaInstagram size={30} color="white" />
       </a>

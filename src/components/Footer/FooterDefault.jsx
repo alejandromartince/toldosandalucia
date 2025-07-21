@@ -1,8 +1,5 @@
-//Importamos los hooks
-import { Link } from "react-scroll";
-
 //Importamos la informacion
-import { infoFooter } from "../../constants/infoFooter";
+import { infoFooter, alts } from "../../constants/infoFooter";
 
 //Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext";
@@ -18,6 +15,8 @@ const FooterDefault = () => {
 
     const { idioma } = useIdioma();
     const i = infoFooter[idioma];
+    const alt = alts[idioma];
+    
 
     return (
         <div className="footer-seccion">
@@ -30,9 +29,9 @@ const FooterDefault = () => {
                         </span>
                     </div>
                     <div className="info-politicas-opciones">
-                        <a href="/Privacidad">{i.politica.privacidad}</a>
-                        <a href="/Cookies">{i.politica.cookies}</a>
-                        <a href="/AvisosLegales">{i.politica.avisos}</a>
+                        <a href="/Privacidad" aria-label={alt.privacidad}>{i.politica.privacidad}</a>
+                        <a href="/Cookies" aria-label={alt.cookies}>{i.politica.cookies}</a>
+                        <a href="/AvisosLegales" aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
                     </div>
                 </div>
                 <div className="info-ayuda">
@@ -48,6 +47,7 @@ const FooterDefault = () => {
                                 href="https://web.whatsapp.com/send?phone=34679847618&text="
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Whatsapp"
                             >
                                 <p style={{ textShadow: "none" }}>{i.ayuda} </p>
                                 <FaWhatsapp size={25} />
@@ -69,6 +69,7 @@ const FooterDefault = () => {
                             href="https://m.facebook.com/profile.php?id=100069359261072"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Facebook"
                         >
                             <FaFacebookF size={25} className="icono-footer" color="white" />
                         </a>
@@ -77,6 +78,7 @@ const FooterDefault = () => {
                             href="https://www.tiktok.com/@toldos.andalucia"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Tik Tok"
                         >
                             <FaTiktok size={25} className="icono-footer" color="white" />
                         </a>
@@ -85,16 +87,17 @@ const FooterDefault = () => {
                             href="https://www.instagram.com/toldosandalucia/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Instagram"
                         >
                             <FaInstagram size={25} className="icono-footer" color="white" />
                         </a>
                     </div>
                 </div>
                 <div className="logo">
-                    <a href="/">
+                    <a href="/" aria-label={alt.logo}>
                         <img
                             src="/assets/Logo/Logo_Transparent.png"
-                            alt="Logo de la empresa"
+                            alt={alt.logo}
                             style={{ cursor: "Pointer" }}
                         />
                     </a>
@@ -103,8 +106,7 @@ const FooterDefault = () => {
 
             <div className="copyright">
                 <p>
-                    © {new Date().getFullYear()} Toldos Andalucía -&nbsp;
-                    {i.copy}
+                    © {new Date().getFullYear()} Toldos Andalucía -&nbsp;{i.copy}
                 </p>
             </div>
         </div>
