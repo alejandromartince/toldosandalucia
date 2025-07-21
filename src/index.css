@@ -43,16 +43,16 @@ body {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
 }
 
 footer a {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 2rem;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -72,5 +72,5 @@ OPCIONES PARA LAS ESTRELLAS DE GOOGLE REVIEW
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1;
   color: #ffbb29;
-  font-size: 16px;
+  font-size: 1rem;
 }

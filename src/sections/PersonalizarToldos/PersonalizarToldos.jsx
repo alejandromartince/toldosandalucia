@@ -58,7 +58,9 @@ const PersonalizarToldos = ({ onCerrar }) => {
   }, [cerrando, onCerrar]);
 
   return (
-    <div className={`menu-main ${cerrando ? "salida" : ""}`}>
+    <div
+      className={`menu-main ${cerrando ? "salida" : ""} `}
+    >
       <div
         className={`popup-contenido-prueba ${cerrando ? "salida" : ""}`}
         ref={refContenedorPadre} // Aquí asignamos la referencia al padre
@@ -112,7 +114,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
             </div>
           </div>
 
-          
+
           {/* <div style={{display:"flex", gap:"1rem"}}>
               <img src="/assets/Lonas/Arizona.webp" alt="beige" style={{width:"4rem"}} />
               <img src="/assets/Lonas/AzulX.webp" alt="beige" style={{width:"4rem"}} />

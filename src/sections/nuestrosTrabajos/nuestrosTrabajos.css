@@ -46,7 +46,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   text-transform: uppercase;
   top: 40px;
   left: 30px;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: white;
   z-index: 2;
   margin: 0;
@@ -63,7 +63,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 
 .watermark-text {
   writing-mode: vertical-lr;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   color: rgb(160, 160, 160);
   text-transform: uppercase;

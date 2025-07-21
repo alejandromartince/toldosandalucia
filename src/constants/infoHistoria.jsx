@@ -7,7 +7,7 @@ export const infoHistoria = {
     es: {
       pc: (
         <>
-          Fundada en 1999 en Benalmádena, nuestra empresa lleva
+          Fundada en 1999 en Benalmádena, nuestra empresa lleva{" "}
           <i>más de 25 años</i> ofreciendo soluciones personalizadas en la
           instalación de toldos en toda la ciudad de Málaga y alrededores, con
           el objetivo de mejorar la comodidad y el bienestar de nuestros

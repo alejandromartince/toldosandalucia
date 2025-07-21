@@ -21,7 +21,7 @@ AJUSTES GENERRALES
 }
 
 .ventajas-titulo {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0 1rem;
@@ -46,14 +46,14 @@ AJUSTES GENERRALES
 }
 
 .ventajas-titulo {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .ventajas-texto-externo p {
     text-shadow: none;
     text-align: justify;
     hyphens: auto;
-    font-size: .9rem;
+    font-size: 14px;
     line-height: 1.6rem;
 }
 
@@ -94,7 +94,7 @@ OPCIONES DE SWIPER
     border: none;
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 32px;
     color: #333;
     transition: color 0.2s ease;
 }
