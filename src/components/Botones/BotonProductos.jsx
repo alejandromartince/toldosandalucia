@@ -4,6 +4,9 @@ import { useIdioma } from '../../Hooks/General/useIdioma.js'
 //Importamos la informacion
 import useInformacionBoton from "../../constants/infoBotones.js";
 
+//Importamos los iconos
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
 //Importamos el estilo
 import "./BotonProductos.css";
 
@@ -18,8 +21,7 @@ const BotonProductos = ({ onAbrir }) => {
   
   return (
     <button onClick={onAbrir} className="boton-producto" aria-label={label[idioma]}>
-      &gt;&gt;&nbsp;
-      {titulo?.texto}
+      <MdOutlineKeyboardDoubleArrowRight size={20}/>&nbsp;{titulo?.texto}
     </button>
   );
 };

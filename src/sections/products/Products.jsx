@@ -103,6 +103,7 @@ const Products = () => {
       <div className="contenedor-botones-prueba">
         <div className="boton-centro-prueba">
           <BotonProductos onAbrir={() => setMostrarPopup(true)} />
+            <p>&gt;Solicita tu presupuesto sin compromiso</p>
         </div>
       </div>
 

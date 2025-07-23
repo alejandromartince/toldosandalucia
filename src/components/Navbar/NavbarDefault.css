@@ -47,6 +47,7 @@ OPCIONES DEL LOGO
 .navbar__logo {
   display: flex;
   justify-content: center;
+  margin-left: 1rem;
   height: 100%;
 }
 
@@ -106,6 +107,10 @@ OPCIONES DEL MENU CENTRAL
 
 .nav_link.active_link {
   color: var(--blanco);
+}
+
+.navbar_selector{
+  margin-right: 1rem;
 }
 
 /* ===============================

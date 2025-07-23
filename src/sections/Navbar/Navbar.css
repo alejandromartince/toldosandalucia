@@ -1,65 +1,86 @@
 /* ===============================
-OPCIONES DEL SELECTOR DE IDIOMA
+SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
 =============================== */
+
+/* Asegúrate de incluir esto globalmente en tu proyecto */
+* {
+  box-sizing: border-box;
+}
+
 .selector-idioma-dropdown {
   position: relative;
   z-index: 21;
+  overflow-anchor: none; /* evita movimientos por cambio dinámico */
 }
 
+/* Botón actual con idioma visible */
 .boton-idioma-actual {
   background-color: transparent;
-  padding: 5px 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  border-radius: 6px;
-  border: none;
+  border-radius: 8px;
+  border: 1px solid transparent; /* reserva espacio para el hover */
+  padding: 0.4rem 0.6rem;
+  transition: background-color 0.2s ease, border 0.2s ease;
+  min-width: 80px; /* Evita que el tamaño cambie por el contenido */
 }
 
+.boton-idioma-actual:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* mismo grosor que antes */
+}
+
+/* Menú desplegable */
 .menu-idiomas {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--blanco);
-  border-radius: 6px;
-  margin-top: 5px;
-  z-index: 10;
+  margin-top: 8px;
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  gap: 0.4rem;
 
   opacity: 0;
-  transform: scaleY(0.95);
+  transform: translateY(-10px) scale(0.95);
   transform-origin: top;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+
 }
 
+/* Mostrar el menú */
 .menu-idiomas.visible {
   opacity: 1;
-  transform: scaleY(1);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
+/* Botones del menú */
 .idioma-opcion {
   background-color: transparent;
   border: none;
-  padding: 5px;
   cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   transition: background-color 0.2s ease;
 }
 
 .idioma-opcion:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .idioma-opcion.activo {
+  background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
-  background-color: #e0e0e0;
 }
-
