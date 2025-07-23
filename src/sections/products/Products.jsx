@@ -19,7 +19,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 
 // Importamos los contextos
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 // Estilos
 import "./Products.css";

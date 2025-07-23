@@ -2,11 +2,11 @@
 import { useRef, useState } from 'react';
 
 //Importamos la informacion
-import { textoBeneficios } from '../../constants/infoBeneficios';
-import useInformacionBoton from '../../constants/infoBotones';
+import { textoBeneficios } from '../../constants/infoBeneficios.js';
+import useInformacionBoton from '../../constants/infoBotones.js';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext';
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";

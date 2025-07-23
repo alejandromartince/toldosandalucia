@@ -1,8 +1,8 @@
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos la informacion
-import useInformacionBoton from "../../constants/infoBotones";
+import useInformacionBoton from "../../constants/infoBotones.js";
 
 //Importamos el estilo
 import "./BotonProductos.css";

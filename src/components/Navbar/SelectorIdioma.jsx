@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
 //Importamos el hook del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 //Importamos los idiomas
-import { idiomas } from "../../constants/infoNavbar";
+import { idiomas } from "../../constants/infoNavbar.js";
 
 //Importamos los estilos
 import "../../sections/Navbar/Navbar.css";

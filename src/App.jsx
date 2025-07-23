@@ -12,7 +12,7 @@ const RutaAvisosLegales = lazy(() => import("./paginas/AvisosLegales/RutaAvisosL
 const Admin = lazy(() => import('./sections/Admin/Admin.jsx'))
 
 // Contexto
-import { IdiomaProvider } from "./contexts/IdiomaContext.jsx";
+import { IdiomaProvider } from "./contexts/IdiomaProvider.jsx";
 import PantallaCarga from "./components/General/PantallaCarga.jsx";
 
 

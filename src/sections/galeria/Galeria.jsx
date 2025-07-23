@@ -2,16 +2,16 @@
 import { useState } from 'react';
 
 //Importamos la información
-import { imagesNuestrosTrabajos } from '../../constants/infoNuestrosTrabajos'
+import { imagesNuestrosTrabajos } from '../../constants/infoNuestrosTrabajos.js'
 
 //Importamos los hooks personales
-import useTipoDipositivo from "../../Hooks/useTipoDispositivo"
+import useTipoDipositivo from "../../Hooks/useTipoDispositivo.js"
 
 //Importamos los componentes
-import CarruselGaleria from '../../components/Galeria/CarruselGaleria';
+import CarruselGaleria from '../../components/Galeria/CarruselGaleria.jsx';
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos el estilo
 import './Galeria.css'

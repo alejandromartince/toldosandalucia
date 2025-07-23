@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react';
 
 // Importamos los hooks para manejar el scroll y saber la sección activa
-import { secciones } from "../../constants/infoNavbar";
-import { useScrollEffect } from '../Navbar/useScrollEffect';
+import { secciones } from "../../constants/infoNavbar.js";
+import { useScrollEffect } from '../Navbar/useScrollEffect.js';
 
 // Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 // Importamos el driver.js
 import { DriverProductos } from './Driver';

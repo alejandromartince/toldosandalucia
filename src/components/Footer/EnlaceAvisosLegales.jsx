@@ -3,7 +3,7 @@ import { avisoLegal } from '../../constants/infoEnlacesFooter.jsx';
 import { infoFooter } from '../../constants/infoFooter.js';
 
 // Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext.jsx";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 
 const EnlaceAvisoLegal = () => {

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Box, TextField, Button } from '@mui/material';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext.jsx';
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos la informacion
 import { infoContacto } from '../../constants/infoContacto';

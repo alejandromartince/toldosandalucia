@@ -2,10 +2,10 @@
 import { infoHistoria, alts } from "../../constants/infoHistoria.jsx";
 
 //Importamos el contexto
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos componentes
-import LinkLinea from "../../components/Botones/LinkLinea";
+import LinkLinea from "../../components/Botones/LinkLinea.jsx";
 
 //Importamos los hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js"

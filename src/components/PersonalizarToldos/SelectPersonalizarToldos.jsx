@@ -1,5 +1,5 @@
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos el estilo
 import "./SelectPersonalizarToldos.css";

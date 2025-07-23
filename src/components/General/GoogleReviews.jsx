@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los componentes personalizados
-import BotonLinea from "../Botones/BotonLinea";
+import BotonLinea from "../Botones/BotonLinea.jsx";
 
 //Importamos los iconos
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -136,7 +136,7 @@ const GoogleReview = () => {
 
           {[...GoogleOpiniones, ...GoogleOpiniones].map((opinion, index) => (
             <a
-              key={`${opinion.id}-${index}`} // ✅ Clave única combinando id e índice
+              key={`${opinion.id}-${index}`}
               href={opinion.enlace}
               target="_blank"
               className="enlaceCartaGoogle"

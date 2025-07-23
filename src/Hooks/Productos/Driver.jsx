@@ -2,9 +2,6 @@ import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 export const DriverProductos = (idioma) => {
-  {
-    console.log(idioma);
-  }
 
   const driverObj = driver({
     showProgress: true,

@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 //Importamos la informacion
-import { alts, infoFooter } from "../../constants/infoFooter";
+import { alts, infoFooter } from "../../constants/infoFooter.js";
 
 //Importamos los componentes
-import RedesSociales from "./RedesSociales";
+import RedesSociales from "./RedesSociales.jsx";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
 import { FaWhatsapp } from "react-icons/fa";

@@ -3,20 +3,20 @@ import React, { forwardRef, Suspense, useState } from "react";
 
 //Impotamos los componentes
 const SelectPersonalizarToldos = React.lazy(() =>
-  import("../../components/PersonalizarToldos/SelectPersonalizarToldos")
+  import("../../components/PersonalizarToldos/SelectPersonalizarToldos.jsx")
 );
 
 //Importamos la informacion
-import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos";
+import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos.jsx";
 import {
   useOpcionesTipoTela,
   useOpcionesTipoToldos,
   useTipoSistemaToldo,
   useUbicacion,
-} from "../../components/PersonalizarToldos/OpcionesSelect";
+} from "../../components/PersonalizarToldos/OpcionesSelect.jsx";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
   const contenido = infoPersonalizarToldos;

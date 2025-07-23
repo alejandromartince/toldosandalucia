@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 //Importamos los componentes
-import Mapa from "../../components/Contacto/Mapa";
-import Formulario from "../../components/Contacto/Formulario";
+import Mapa from "../../components/Contacto/Mapa.jsx";
+import Formulario from "../../components/Contacto/Formulario.jsx";
 
 //Importamos los iconos
 import { FaPhone } from "react-icons/fa6";
@@ -12,10 +12,10 @@ import { MdEmail } from "react-icons/md";
 import useTipoDispositivo from '../../Hooks/useTipoDispositivo.js'
 
 //Importamos la informacion
-import { infoContacto } from "../../constants/infoContacto";
+import { infoContacto } from "../../constants/infoContacto.js";
 
 //Importamos los contextos
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los estilos
 import "./Contacto.css";

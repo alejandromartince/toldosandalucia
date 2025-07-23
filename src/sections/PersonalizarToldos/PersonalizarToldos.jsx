@@ -2,17 +2,17 @@
 import { useState, useEffect, useRef } from "react";
 
 //Importamos los hooks personalizados
-import usePosicionTop from "../../Hooks/usePosicionTop";
+import usePosicionTop from "../../Hooks/usePosicionTop.js";
 
 //Importamos los compoenntes
-import BotonCerrarMenu from "../../components/Botones/BotonCerrarMenu";
-import ComponenteSelects from "../../components/PersonalizarToldos/ComponenteSelects";
+import BotonCerrarMenu from "../../components/Botones/BotonCerrarMenu.jsx";
+import ComponenteSelects from "../../components/PersonalizarToldos/ComponenteSelects.jsx";
 
 //Importamos la informacion
-import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos";
+import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos.jsx";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
 import { BsArrowLeft } from "react-icons/bs";

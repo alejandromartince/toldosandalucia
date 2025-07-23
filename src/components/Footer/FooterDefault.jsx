@@ -1,8 +1,8 @@
 //Importamos la informacion
-import { infoFooter, alts } from "../../constants/infoFooter";
+import { infoFooter, alts } from "../../constants/infoFooter.js";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
 import { FaTiktok, FaWhatsapp, FaFacebookF } from "react-icons/fa";

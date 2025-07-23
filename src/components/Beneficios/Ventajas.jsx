@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext.jsx';
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los hooks
 import useTipoDispositivo from '../../Hooks/useTipoDispositivo.js';

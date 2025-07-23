@@ -3,20 +3,20 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 //Importamos el hook personalizado para manejar el scroll
-import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'
-import useScrollPositionY from '../../Hooks/useScrollPositionY';
+import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect.js'
+import useScrollPositionY from '../../Hooks/useScrollPositionY.js';
 
 //Importamos los compoententes
-import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
+import SelectorIdioma from '../../components/Navbar/SelectorIdioma.jsx';
 
 //Importamos la info
-import { secciones } from '../../constants/infoNavbar';
+import { secciones } from '../../constants/infoNavbar.js';
 
 //Importamos los iconos
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext';
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 import './NavbarMobile.css'
 

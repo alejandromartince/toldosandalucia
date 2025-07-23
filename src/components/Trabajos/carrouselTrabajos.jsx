@@ -6,10 +6,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 //Importamos las fotos
-import { imagesNuestrosTrabajos } from "../../constants/infoNuestrosTrabajos";
+import { imagesNuestrosTrabajos } from "../../constants/infoNuestrosTrabajos.js";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 const CarruselTrabajos = () => {
   const trabajos = imagesNuestrosTrabajos;

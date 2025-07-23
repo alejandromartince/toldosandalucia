@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 // Importamos las constantes
-import { textoHome } from "../../constants/infoHome";
+import { textoHome } from "../../constants/infoHome.js";
 
 // Importamos los componentes
-import BotonLinea from "../../components/Botones/BotonLinea";
+import BotonLinea from "../../components/Botones/BotonLinea.jsx";
 
 //Importamos los hooks
-import useTipoDispositivo from "../../Hooks/useTipoDispositivo";
+import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
 
 // Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 // Estilos
 import "./Home.css";

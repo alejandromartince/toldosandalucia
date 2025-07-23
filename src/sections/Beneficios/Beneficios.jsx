@@ -1,5 +1,5 @@
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext.jsx"
+import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos la informacion
 import { encabezadoBeneficios } from '../../constants/infoBeneficios.js'
