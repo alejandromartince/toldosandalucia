@@ -1,5 +1,6 @@
 // Importamos la información de los productos
 import { infoProductos } from "../../constants/infoProductos";
+import { traducciones } from "../../constants/infoPersonalizarToldos";
 
 export const useOpcionesTipoToldos = (idioma) => {
   return infoProductos.map((producto) => ({
@@ -22,12 +23,12 @@ const tipoTela = {
 };
 
 export const useOpcionesTipoTela = (idioma) => {
-  const opcionesEs = tipoTela["es"];
-  const opcionesIdioma = tipoTela[idioma];
+  const opcionesEs = traducciones.tipoTela["es"];
+  const opcionesIdioma = traducciones.tipoTela[idioma] || opcionesEs;
 
   return Object.entries(opcionesEs).map(([key, valorEs]) => ({
     value: key,
-    label: opcionesIdioma[key] || valorEs, // etiqueta según idioma, fallback a español
+    label: opcionesIdioma[key] || valorEs,
   }));
 };
 
@@ -45,53 +46,34 @@ const tipoSistemaToldo = {
 };
 
 export const useTipoSistemaToldo = (idioma) => {
-  const opcionesES = tipoSistemaToldo["es"];
-  const opciones = tipoSistemaToldo[idioma];
+  const opcionesEs = traducciones.tipoToldo["es"];
+  const opcionesIdioma = traducciones.tipoToldo[idioma] || opcionesEs;
 
-  return Object.entries(opcionesES).map(([key, valorEs]) => ({
+  return Object.entries(opcionesEs).map(([key, valorEs]) => ({
     value: key,
-    label: opciones[key] || valorEs,
+    label: opcionesIdioma[key] || valorEs,
   }));
 };
 
 const ubicaciones = {
-  es: {
-    malaga: "Málaga",
-    torremolinos: "Torremolinos",
-    benalmadena: "Benalmádena",
-    arroyo: "Arroyo de la Miel",
-    fuengirola: "Fuengirola",
-    mijas: "Mijas",
-    marbella: "Marbella",
-    sanpedro: "San Pedro",
-    estepona: "Estepona",
-    alhaurin: "Alhaurín de La Torre",
-    churriana: "Churriana",
-    ricon: "Rincón de La Victoria",
-    elpalo: "El Palo",
-    malagaeste: "Málaga Este",
-  },
-  en: {
-    malaga: "Malaga",
-    torremolinos: "Torremolinos",
-    benalmadena: "Benalmadena",
-    arroyo: "Arroyo de la Miel",
-    fuengirola: "Fuengirola",
-    mijas: "Mijas",
-    marbella: "Marbella",
-    sanpedro: "San Pedro",
-    estepona: "Estepona",
-    alhaurin: "Alhaurin de La Torre",
-    churriana: "Churriana",
-    ricon: "Rincon de La Victoria",
-    elpalo: "El Palo",
-    malagaeste: "Malaga Este",
-  },
+  malaga: "Málaga",
+  torremolinos: "Torremolinos",
+  benalmadena: "Benalmádena",
+  arroyo: "Arroyo de la Miel",
+  fuengirola: "Fuengirola",
+  mijas: "Mijas",
+  marbella: "Marbella",
+  sanpedro: "San Pedro",
+  estepona: "Estepona",
+  alhaurin: "Alhaurín de La Torre",
+  churriana: "Churriana",
+  ricon: "Rincón de La Victoria",
+  elpalo: "El Palo",
+  malagaeste: "Málaga Este",
 };
 
-
-export const useUbicacion = (idioma) => {
-  const opciones = Object.entries(ubicaciones[idioma] || {}).map(([value, label]) => ({
+export const useUbicacion = () => {
+  const opciones = Object.entries(ubicaciones).map(([value, label]) => ({
     value,
     label,
   }));

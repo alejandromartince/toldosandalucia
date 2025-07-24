@@ -1,11 +1,11 @@
 //Importamos el contexto del idioma
 import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
-//Importamos el estilo
-import "./SelectPersonalizarToldos.css";
-
 //Importamos el icono
 import { FaChevronDown } from "react-icons/fa";
+
+//Importamos el estilo
+import "./SelectPersonalizarToldos.css";
 
 const SelectPersonalizarToldos = ({
   palabra,

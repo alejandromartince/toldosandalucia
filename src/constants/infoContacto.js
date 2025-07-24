@@ -1,4 +1,3 @@
-
 export const infoContacto = {
   es: {
     titulo: "Contáctanos",
@@ -51,5 +50,31 @@ export const infoContacto = {
     enviado: "Senden...",
     exito: "Formular erfolgreich eingereicht!",
     contactarFuturo: "Wir werden uns so schnell wie möglich bei Ihnen melden."
+  },
+  ru: {
+    titulo: "Свяжитесь с нами",
+    tituloForm: "Форма обратной связи",
+    placeholderUsuario: "Введите ваше имя",
+    placeholderEmail: "Введите ваш email",
+    placeholderMensaje: "Введите ваше сообщение здесь",
+    direccion: "Адрес",
+    contacto: "Контакт",
+    boton: "Отправить",
+    enviado: "Отправка...",
+    exito: "Сообщение успешно отправлено!",
+    contactarFuturo: "Мы свяжемся с вами как можно скорее."
+  },
+  da: {
+    titulo: "Kontakt os",
+    tituloForm: "Kontaktformular",
+    placeholderUsuario: "Skriv dit navn",
+    placeholderEmail: "Skriv din e-mail",
+    placeholderMensaje: "Skriv din besked her",
+    direccion: "Adresse",
+    contacto: "Kontakt",
+    boton: "Send",
+    enviado: "Sender...",
+    exito: "Besked sendt succesfuldt!",
+    contactarFuturo: "Vi kontakter dig så hurtigt som muligt."
   }
 };

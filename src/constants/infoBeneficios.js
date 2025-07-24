@@ -56,8 +56,8 @@ export const textoBeneficios = {
         ru: "Мы выполняем точные и детальные замеры места установки навеса, обеспечивая идеальную подгонку под каждую деталь, а также профессиональный монтаж без проблем как сейчас, так и в будущем.",
         da: "Vi foretager nøjagtige og detaljerede målinger af det område, hvor markisen skal installeres, hvilket sikrer en perfekt pasform i alle hjørner og en professionel installation uden fremtidige problemer."
       },
-      imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.webp",
     },
+    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.webp",
   },
   fabricacion: {
     titulo: {

@@ -94,14 +94,14 @@ CONTENEDOR IZQUIERDA
   width: 85%;
 }
 
-.contenedorHRPT p{
-    font-size: 16px;
+.contenedorHRPT p {
+  font-size: 16px;
 }
 
-.contenedorHRPT hr{
-    background-color: rgb(255, 255, 255);
-    height: 1px;
-    border: 0px;
+.contenedorHRPT hr {
+  background-color: rgb(255, 255, 255);
+  height: 1px;
+  border: 0px;
 }
 
 /* ============================
@@ -114,12 +114,13 @@ OPCIONES DEL CONTENEDOR DERECHA
   display: flex;
   flex-direction: column;
 
-  background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp");
+  /* background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp"); */
+  background-image: url("/assets/PersonalizarToldos/Cofre/Cofre-1.jpg");
   background-size: cover;
   padding: 2rem;
 }
 
-.contenido-PersonalizarToldos-derecha::after {
+/* .contenido-PersonalizarToldos-derecha::after {
   content: "";
   position: absolute;
   top: 0;
@@ -127,10 +128,8 @@ OPCIONES DEL CONTENEDOR DERECHA
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* gris con opacidad */
   z-index: 0;
-  /* detrás del contenido */
-}
+} */
 
 .contenido-PersonalizarToldos-derecha > * {
   position: relative;

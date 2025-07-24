@@ -1,19 +1,30 @@
 export const infoNuestrosTrabajos = {
   es: { titulo: "Nuestros trabajos" },
   en: { titulo: "Our works" },
+  fr: { titulo: "Nos réalisations" },
+  de: { titulo: "Unsere Arbeiten" },
+  da: { titulo: "Vores arbejde" },
+  ru: { titulo: "Наши работы" },
 };
 
-//Toldo Articulado, Capotas, Pergolas, Cofre, Terraza, Veranda, Quitavientos, Cortinas
 export const imagesNuestrosTrabajos = [
   {
     imagen: "/assets/SliderTrabajos/Articulados/Articulado-1.webp",
     titulo: {
       es: "Toldo Articulado",
       en: "Articulated Awning",
+      fr: "Store articulé",
+      de: "Gelenkarmmarkise",
+      da: "Ledarm-markise",
+      ru: "Выдвижной навес",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -21,10 +32,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Capota",
       en: "Hoods",
+      fr: "Capotes",
+      de: "Hauben",
+      da: "Hætter",
+      ru: "Капюшоны",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -32,10 +51,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Pérgola",
       en: "Pergola",
+      fr: "Pergola",
+      de: "Pergola",
+      da: "Pergolaer",
+      ru: "Пергола",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -43,10 +70,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Toldo Cofre",
       en: "Chest Awning",
+      fr: "Store coffre",
+      de: "Kassettenmarkise",
+      da: "Kassette-markise",
+      ru: "Кассетный навес",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -54,10 +89,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Terraza",
       en: "Terrace",
+      fr: "Terrasse",
+      de: "Terrasse",
+      da: "Terrasse",
+      ru: "Терраса",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -65,10 +108,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Toldo Veranda",
       en: "Veranda Awning",
+      fr: "Store véranda",
+      de: "Veranda-Markise",
+      da: "Veranda-markise",
+      ru: "Навес для веранды",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -76,10 +127,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Stores",
       en: "Stores",
+      fr: "Stores",
+      de: "Stores",
+      da: "Stores",
+      ru: "Шторы",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
   {
@@ -87,10 +146,18 @@ export const imagesNuestrosTrabajos = [
     titulo: {
       es: "Vela",
       en: "Sail",
+      fr: "Voile d'ombrage",
+      de: "Segelmarkise",
+      da: "Sejlmarkise",
+      ru: "Парусный тент",
     },
     descripcion: {
       es: "Articulado Extremo",
-      en: "EXTREME"
+      en: "EXTREME",
+      fr: "EXTREME",
+      de: "EXTREME",
+      da: "EXTREME",
+      ru: "EXTREME",
     },
   },
 ];

@@ -7,7 +7,10 @@ const SelectPersonalizarToldos = React.lazy(() =>
 );
 
 //Importamos la informacion
-import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos.jsx";
+import {
+  infoPersonalizarToldos,
+  infoSelect,
+} from "../../constants/infoPersonalizarToldos.jsx";
 import {
   useOpcionesTipoTela,
   useOpcionesTipoToldos,
@@ -16,7 +19,7 @@ import {
 } from "../../components/PersonalizarToldos/OpcionesSelect.jsx";
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../Hooks/General/useIdioma.js'
+import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
 const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
   const contenido = infoPersonalizarToldos;
@@ -36,7 +39,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
   return (
     <div className="contenedorPadreSelectPT">
       <div className="contenedorPSelect" ref={ref}>
-        <p>{contenido.tipoToldo[idioma]}</p>
+        <p>{infoSelect.tipoToldo[idioma]}</p>
         <Suspense
           fallback={<p>{idioma === "es" ? "Cargando..." : "Loading..."}</p>}
         >
@@ -67,7 +70,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
       </div>
 
       <div className="contenedorPSelect">
-        <p>{contenido.tipoTela[idioma]}</p>
+        <p>{infoSelect.tipoTela[idioma]}</p>
         <Suspense
           fallback={<p>{idioma === "es" ? "Cargando..." : "Loading..."}</p>}
         >
@@ -83,9 +86,9 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
           />
         </Suspense>
       </div>
-      
+
       <div className="contenedorPSelect">
-        <p>{contenido.Sistema[idioma]}</p>
+        <p>{infoSelect.Sistema[idioma]}</p>
         <Suspense
           fallback={<p>{idioma === "es" ? "Cargando..." : "Loading..."}</p>}
         >
@@ -103,7 +106,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
       </div>
 
       <div className="contenedorPSelect">
-        <p>{contenido.Ubicacion[idioma]}</p>
+        <p>{infoSelect.Ubicacion[idioma]}</p>
         <Suspense
           fallback={<p>{idioma === "es" ? "Cargando..." : "Loading..."}</p>}
         >

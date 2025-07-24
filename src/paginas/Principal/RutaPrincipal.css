@@ -6,8 +6,7 @@ OPCIONES DE LA PAGINA PRINCIPAL
 }
 
 .Historia-GoogleReview{
-  /* background-image: url(/assets/Fondo/fondo_historia.webp); */
-  background-image: url('/assets/Fondo/holiwi.jpg');
+  background-image: url('/assets/Fondo/fondo_historia.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
