@@ -9,18 +9,6 @@ export const useOpcionesTipoToldos = (idioma) => {
   }));
 };
 
-const tipoTela = {
-  es: {
-    1: "PVC (Impermeable)",
-    2: "Acrílico",
-    3: "Microperforada",
-  },
-  en: {
-    1: "PVC (Waterproof)",
-    2: "Acrylic",
-    3: "Microperforated",
-  },
-};
 
 export const useOpcionesTipoTela = (idioma) => {
   const opcionesEs = traducciones.tipoTela["es"];
@@ -32,22 +20,69 @@ export const useOpcionesTipoTela = (idioma) => {
   }));
 };
 
-const tipoSistemaToldo = {
+export const usePalabras = {
   es: {
-    1: "Manual",
-    2: "Motorizado",
-    3: "Motorizado + Detector de viento",
+    toldo: "toldo",
+    tela: "tela",
+    sistema: "sistema",
+    ubicacion: "ubicación",
   },
   en: {
-    1: "Manual",
-    2: "Motorized",
-    3: "Motorized + Wind Sensor",
+    toldo: "awning",
+    tela: "fabric",
+    sistema: "system",
+    ubicacion: "location",
   },
+  fr: {
+    toldo: "auvent",
+    tela: "tissu",
+    sistema: "système",
+    ubicacion: "emplacement",
+  },
+  de: {
+    toldo: "Markise",
+    tela: "Stoff",
+    sistema: "System",
+    ubicacion: "Standort",
+  },
+  ru: {
+    toldo: "тент",
+    tela: "ткань",
+    sistema: "система",
+    ubicacion: "местоположение",
+  },
+  da: {
+    toldo: "markise",
+    tela: "stof",
+    sistema: "system",
+    ubicacion: "placering",
+  },
+}
+
+export const obtenerTextoSeleccion = (idioma, palabra) => {
+  switch (idioma) {
+    case "es":
+      return `Selecciona tu ${palabra}`;
+    case "en":
+      return `Select your ${palabra}`;
+    case "fr":
+      return `Sélectionnez votre ${palabra}`;
+    case "de":
+      return `Wählen Sie Ihr ${palabra} aus`;
+    case "ru":
+      return `Выберите ваш ${palabra}`;
+    case "dan":
+      return `Vælg din ${palabra}`;
+    default:
+      return `Select your ${palabra}`;
+  }
 };
 
+
+
 export const useTipoSistemaToldo = (idioma) => {
-  const opcionesEs = traducciones.tipoToldo["es"];
-  const opcionesIdioma = traducciones.tipoToldo[idioma] || opcionesEs;
+  const opcionesEs = traducciones.tipoSistemaToldo["es"];
+  const opcionesIdioma = traducciones.tipoSistemaToldo[idioma] || opcionesEs;
 
   return Object.entries(opcionesEs).map(([key, valorEs]) => ({
     value: key,

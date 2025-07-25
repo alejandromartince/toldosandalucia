@@ -1,6 +1,9 @@
 //Importamos el contexto del idioma
 import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
+//Importamos los hooks de opciones
+import { obtenerTextoSeleccion } from './OpcionesSelect.jsx';
+
 //Importamos el icono
 import { FaChevronDown } from "react-icons/fa";
 
@@ -19,6 +22,8 @@ const SelectPersonalizarToldos = ({
   const handleFocus = () => onSelectMenuChange(true);
   const handleBlur = () => onSelectMenuChange(false);
   const { idioma } = useIdioma();
+  const texto = obtenerTextoSeleccion(idioma, palabra);
+
 
   return (
     <div className="contenedorSelectPT">
@@ -32,10 +37,9 @@ const SelectPersonalizarToldos = ({
           className="select-personalizado-tutorial"
         >
           <option value="" disabled>
-            {idioma === "es"
-              ? `Selecciona tu ${palabra}`
-              : `Select your ${palabra}`}
+          {texto}
           </option>
+           
           {opcionesSelect.map(({ value, label }) => (
             <option
               key={value}

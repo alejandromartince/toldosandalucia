@@ -8,7 +8,6 @@ const SelectPersonalizarToldos = React.lazy(() =>
 
 //Importamos la informacion
 import {
-  infoPersonalizarToldos,
   infoSelect,
 } from "../../constants/infoPersonalizarToldos.jsx";
 import {
@@ -16,13 +15,13 @@ import {
   useOpcionesTipoToldos,
   useTipoSistemaToldo,
   useUbicacion,
+  usePalabras,
 } from "../../components/PersonalizarToldos/OpcionesSelect.jsx";
 
 //Importamos el contexto del idioma
 import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
 const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
-  const contenido = infoPersonalizarToldos;
   const { idioma } = useIdioma();
 
   //OPCIONES PARA LOS SELECTS
@@ -35,6 +34,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
   const opcionesTipoTela = useOpcionesTipoTela(idioma);
   const opcionesTipoSistemaToldo = useTipoSistemaToldo(idioma);
   const ubicaciones = useUbicacion(idioma);
+  const palabras = usePalabras[idioma];
 
   return (
     <div className="contenedorPadreSelectPT">
@@ -45,7 +45,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
         >
           <SelectPersonalizarToldos
             opcionesSelect={opcionesTipoToldos}
-            palabra={idioma === "es" ? "toldo" : "awning"}
+            palabra={palabras.toldo}
             valorSeleccionado={tipoToldoSeleccionado}
             onChange={(valor) => {
               setTipoToldoSeleccionado(valor);
@@ -76,7 +76,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
         >
           <SelectPersonalizarToldos
             opcionesSelect={opcionesTipoTela}
-            palabra={idioma === "es" ? "tela" : "fabric"}
+            palabra={palabras.tela}
             valorSeleccionado={tipoTelaSeleccionado}
             onChange={(valor) => setTipoTelaSeleccionado(valor)}
             deshabilitado={!tipoToldoSeleccionado} // No se puede seleccionar si no hay toldo
@@ -94,7 +94,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
         >
           <SelectPersonalizarToldos
             opcionesSelect={opcionesTipoSistemaToldo}
-            palabra={idioma === "es" ? "instalación" : "installation"}
+            palabra={palabras.sistema}
             valorSeleccionado={tipoSistemaToldo}
             onChange={(valor) => setTipoSistemaToldo(valor)}
             deshabilitado={!tipoToldoSeleccionado} // No se puede seleccionar si no hay toldo
@@ -112,7 +112,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
         >
           <SelectPersonalizarToldos
             opcionesSelect={ubicaciones}
-            palabra={idioma === "es" ? "ubicación" : "ubication"}
+            palabra={palabras.ubicacion}
             valorSeleccionado={lugarUbicacion}
             onChange={(valor) => setLugarUbicacion(valor)}
           />

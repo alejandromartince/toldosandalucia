@@ -2,11 +2,11 @@
 OPCIONES GENERALES
 ============================ */
 .historia {
-  height: 80vh;
+  height: 50vh;
 
   display: flex;
 
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 /* ============================
