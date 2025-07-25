@@ -23,5 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+deploy.ps1
+
+sitemap.xml
+robots.txt
+
 #env
 .env

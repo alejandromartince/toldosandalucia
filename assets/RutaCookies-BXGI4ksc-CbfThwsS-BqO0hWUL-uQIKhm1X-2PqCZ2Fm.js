@@ -1,0 +1,1 @@
+import{X as s}from"./index-DxbIQRU7.js";import{G as a,J as i}from"./RutaPrincipal-BNL2tyW5-CxY54UNU-AsulsZtJ-BaFA-Pm_-Cbf48kE4.js";const r=()=>s.jsx("div",{children:"EnlaceCookies"}),n=()=>s.jsxs(s.Fragment,{children:[s.jsx(a,{}),s.jsx(r,{}),s.jsx("div",{className:"pagina-principal",children:s.jsx(i,{})})]});export{n as default};
