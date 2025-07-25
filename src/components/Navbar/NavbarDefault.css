@@ -118,7 +118,7 @@ OPCIONES DE LA BARRA DE PROGRESO
 ================================*/
 .navbar__progress-bar {
   position: fixed;
-  top: 3.9rem;
+  top: 4rem;
   left: 0;
   height: 3px;
   background-color: var(--blanco);

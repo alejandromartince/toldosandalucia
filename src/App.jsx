@@ -30,6 +30,7 @@ const App = () => {
   return (
     <IdiomaProvider>
       <Router>
+        
         <Suspense fallback={<PantallaCarga />}>
           <Routes>
             <Route path="/" element={<RutaPrincipal cargando={cargando} />} />

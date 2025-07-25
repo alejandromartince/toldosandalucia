@@ -12,7 +12,6 @@ import Footer from "../../sections/footer/Footer"
 
 //Importamos los hooks
 import PantallaCarga from "../../components/General/PantallaCarga"
-import useTipoDispositivo from "../../Hooks/useTipoDispositivo"
 
 //Importamos los estilos
 import './RutaPrincipal.css'
@@ -20,13 +19,10 @@ import './RutaPrincipal.css'
 // Componente que gestiona la ruta principal con lógica de carga
 const RutaPrincipal = ({ cargando }) => {
 
-  const dispositivo = useTipoDispositivo();
-
   if (cargando) return <PantallaCarga />;
   const pagina = "principal";
 
   return (
-    dispositivo !== 'movil' ?
       <>
         <Navbar pagina={pagina} />
         <Home />
@@ -42,25 +38,6 @@ const RutaPrincipal = ({ cargando }) => {
           <Footer />
         </div>
       </>
-
-      :
-
-      <>
-        <Navbar pagina={pagina} />
-        <Home />
-        <div className="pagina-principal">
-          <NuestrosTrabajos />
-          <div className="Historia-GoogleReview">
-            <Historia />
-            <GoogleReview />
-          </div>
-          <Beneficios />
-          <Products />
-          <Contacto />
-          <Footer />
-        </div>
-      </>
-
   );
 };
 

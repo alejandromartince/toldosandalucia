@@ -101,10 +101,7 @@ const Products = () => {
 
       {/* BOTÓN FIJO EN LA PARTE INFERIOR (30% de altura visible) */}
       <div className="contenedor-botones-prueba">
-        <div className="boton-centro-prueba">
           <BotonProductos onAbrir={() => setMostrarPopup(true)} />
-            <p>&gt;Solicita tu presupuesto sin compromiso</p>
-        </div>
       </div>
 
 

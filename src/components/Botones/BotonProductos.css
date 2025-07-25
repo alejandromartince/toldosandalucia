@@ -1,13 +1,17 @@
 /* ============================
 OPCIONES GENERAL DEL BOTON 
 ============================ */
+.boton-centro-prueba {
+  position: relative; /* para posicionar texto detrás */
+  display: inline-block; /* mantener contenido ajustado */
+}
+
 .boton-producto {
   padding: 1em 3em; /* ya está con em, perfecto */
   font-size: 0.75rem; /* 12px */
   text-transform: uppercase;
   letter-spacing: 0.15rem; /* 2.5px */
   font-weight: 500;
-  color: #000;
   background-color: #fff;
   border: none;
   border-radius: 2.8125rem; /* 45px */
@@ -18,17 +22,42 @@ OPCIONES GENERAL DEL BOTON
   align-items: center;
   cursor: pointer;
   outline: none;
+  position: relative; /* para mantener z-index */
+  z-index: 1; /* encima del texto */
 }
 
 .boton-producto:hover {
   background-color: #283935;
   box-shadow: 0 0.9375rem 0.9375rem #1e2b28; /* 0px 15px 15px */
   color: #fff;
-  transform: translateY(-0.4375rem); /* -7px */
+  transform: translateY(-0.5rem); 
 }
 
 .boton-producto:active {
-  transform: translateY(-0.0625rem); /* -1px */
+  transform: translateY(-0.0625rem);
+}
+
+/* ============================
+TEXTO DETRÁS DEL BOTÓN Y ANIMACIÓN
+============================ */
+.texto-detras {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem; /* 12px */
+  opacity: 0;
+  z-index: 0; /* detrás del botón */
+  transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease;
+  pointer-events: none; /* para no interferir con clics */
+  color: #ffffff; /* color gris para texto detrás */
+  white-space: nowrap; /* para que no haga wrap */
+}
+
+.boton-centro-prueba:hover .texto-detras {
+  opacity: 1;
+  font-size: 1.1rem;
+  transform: translate(-50%, 100%); /* baja hacia abajo */
 }
 
 /* ============================
