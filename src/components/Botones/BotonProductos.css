@@ -1,36 +1,36 @@
 /* ============================
-OPCIONES GENERAL DEL BOTON 
+OPCIONES GENERALES DEL BOTÓN 
 ============================ */
 .boton-centro-prueba {
-  position: relative; /* para posicionar texto detrás */
-  display: inline-block; /* mantener contenido ajustado */
+  position: relative;
+  display: inline-block;
 }
 
 .boton-producto {
-  padding: 1em 3em; /* ya está con em, perfecto */
-  font-size: 0.75rem; /* 12px */
+  padding: 1em 3em;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.15rem; /* 2.5px */
+  letter-spacing: 0.15rem;
   font-weight: 500;
   background-color: #fff;
   border: none;
-  border-radius: 2.8125rem; /* 45px */
-  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.1); /* 0px 8px 15px */
+  border-radius: 2.8125rem;
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   outline: none;
-  position: relative; /* para mantener z-index */
-  z-index: 1; /* encima del texto */
+  position: relative;
+  z-index: 1;
 }
 
 .boton-producto:hover {
   background-color: #283935;
-  box-shadow: 0 0.9375rem 0.9375rem #1e2b28; /* 0px 15px 15px */
+  box-shadow: 0 0.9375rem 0.9375rem #1e2b28;
   color: #fff;
-  transform: translateY(-0.5rem); 
+  transform: translateY(-0.5rem);
 }
 
 .boton-producto:active {
@@ -38,30 +38,45 @@ OPCIONES GENERAL DEL BOTON
 }
 
 /* ============================
-TEXTO DETRÁS DEL BOTÓN Y ANIMACIÓN
+TEXTO DETRÁS DEL BOTÓN CON ANIMACIÓN DE DESPLAZAMIENTO Y ESCALA
 ============================ */
 .texto-detras {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.75rem; /* 12px */
+  transform: translate(-50%, -50%) translateY(0);
   opacity: 0;
-  z-index: 0; /* detrás del botón */
-  transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease;
-  pointer-events: none; /* para no interferir con clics */
-  color: #ffffff; /* color gris para texto detrás */
-  white-space: nowrap; /* para que no haga wrap */
+  z-index: 0;
+  pointer-events: none;
+  color: #ffffff;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  /* Safari fixes */
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) translateY(0) translateZ(0);
+}
+
+.texto-detras-inner {
+  font-size: 0.7rem;
+  transition: font-size 0.4s ease;
+  will-change: font-size;
 }
 
 .boton-centro-prueba:hover .texto-detras {
   opacity: 1;
-  font-size: 1.1rem;
-  transform: translate(-50%, 100%); /* baja hacia abajo */
+  transform: translate(-50%, -50%) translateY(2.5rem) translateZ(0);
+}
+
+.boton-centro-prueba:hover .texto-detras-inner {
+  font-size: 1rem;
 }
 
 /* ============================
-PERSONALIZACION MENU PERSONALIZAR TOLDOS
+PERSONALIZACIÓN MENU PERSONALIZAR TOLDOS
 ============================ */
 .popup-overlay {
   position: fixed;
@@ -92,9 +107,9 @@ PERSONALIZACION MENU PERSONALIZAR TOLDOS
   width: 90vw;
   height: 90vh;
   padding: 2rem;
-  border-radius: 0.9375rem; /* 15px */
+  border-radius: 0.9375rem;
   position: relative;
-  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.4); /* 15px */
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.4);
   animation: popup-entrada 0.4s ease forwards;
   display: flex;
   flex-direction: column;
@@ -111,20 +126,4 @@ PERSONALIZACION MENU PERSONALIZAR TOLDOS
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.cerrar-boton {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem; /* 24px */
-  cursor: pointer;
-  color: #333;
-  transition: color 0.2s ease;
-}
-
-.cerrar-boton:hover {
-  color: red;
 }

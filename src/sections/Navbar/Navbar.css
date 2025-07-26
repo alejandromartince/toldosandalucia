@@ -14,7 +14,7 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
 }
 
 .selector-idioma-dropdown img{
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 /* Botón actual con idioma visible */
@@ -61,7 +61,7 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
 
 }
 .menu-idiomas img {
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 /* Mostrar el menú */

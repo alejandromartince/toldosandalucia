@@ -45,8 +45,13 @@ const BotonProductos = ({ onAbrir }) => {
         <MdOutlineKeyboardDoubleArrowRight size={20} />
         &nbsp;{titulo?.texto}
       </button>
-      <p className="texto-detras" style={{ display: "flex", alignItems: "center" }}>
-        <MdOutlineKeyboardArrowRight/>{texto[idioma]}</p>
+      <p
+        className="texto-detras"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <MdOutlineKeyboardArrowRight />
+        <span className="texto-detras-inner">{texto[idioma]}</span>
+      </p>
     </div>
   );
 };
