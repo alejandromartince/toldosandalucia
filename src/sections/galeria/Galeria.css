@@ -8,7 +8,7 @@ OPCIONES PARA GALERIA
 
 .backgroundTopGaleria {
   position: relative;
-  height: 14rem;
+  height: 13rem;
   background-image: url(/assets/Fondo/fondoDerechaPersonalizarToldos.webp);
   background-position: center;
   background-size: cover;
@@ -39,7 +39,6 @@ OPCIONES PARA GALERIA
 .contenidoGaleria h2 {
   text-transform: uppercase;
   font-size: 1.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   font-weight: 400;
 }
 
@@ -58,7 +57,10 @@ OPCIONES PARA GALERIA
 OPCIONES CARRUSEL
 ============================ */
 .carrusel-galeria-container {
-  height: 400px;
+  height: 25rem;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-galeria {
