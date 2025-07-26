@@ -38,37 +38,49 @@ OPCIONES GENERALES DEL BOTÓN
 }
 
 /* ============================
-TEXTO DETRÁS DEL BOTÓN CON ANIMACIÓN DE DESPLAZAMIENTO Y ESCALA
+TEXTO DETRÁS DEL BOTÓN CON SAFARI FIX
 ============================ */
-.texto-detras {
+
+/* Wrapper solo para centrar */
+.texto-detras-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(0);
-  opacity: 0;
-  z-index: 0;
+  transform: translate(-50%, -50%);
   pointer-events: none;
-  color: #ffffff;
-  white-space: nowrap;
-  will-change: transform, opacity;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
-  /* Safari fixes */
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transform: translate(-50%, -50%) translateY(0) translateZ(0);
+  min-width: 200px; /* Evita saltos en Safari */
+  text-align: center;
 }
 
+/* Elemento animado */
+.texto-detras {
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  white-space: nowrap;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+/* Texto escalable */
 .texto-detras-inner {
   font-size: 0.7rem;
   transition: font-size 0.4s ease;
   will-change: font-size;
 }
 
+/* Hover animaciones */
 .boton-centro-prueba:hover .texto-detras {
   opacity: 1;
-  transform: translate(-50%, -50%) translateY(2.5rem) translateZ(0);
+  transform: translateY(2.5rem);
 }
 
 .boton-centro-prueba:hover .texto-detras-inner {
@@ -76,7 +88,7 @@ TEXTO DETRÁS DEL BOTÓN CON ANIMACIÓN DE DESPLAZAMIENTO Y ESCALA
 }
 
 /* ============================
-PERSONALIZACIÓN MENU PERSONALIZAR TOLDOS
+PERSONALIZACIÓN MENU POPUP
 ============================ */
 .popup-overlay {
   position: fixed;
@@ -99,9 +111,6 @@ PERSONALIZACIÓN MENU PERSONALIZAR TOLDOS
   pointer-events: auto;
 }
 
-/* ================================
-   CONTENIDO DEL POPUP
-================================ */
 .popup-contenido {
   background-color: #fff;
   width: 90vw;

@@ -5,8 +5,7 @@ import { useIdioma } from "../../Hooks/General/useIdioma.js";
 import useInformacionBoton from "../../constants/infoBotones.js";
 
 //Importamos los iconos
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 //Importamos el estilo
 import "./BotonProductos.css";
@@ -14,11 +13,6 @@ import "./BotonProductos.css";
 const BotonProductos = ({ onAbrir }) => {
   const { idioma } = useIdioma();
   const titulo = useInformacionBoton(idioma, "Productos");
-
-  const onHover = () => {
-    const onHoverButton = document.querySelector(".boton-centro-prueba");
-    onHoverButton.classList.add("hovered");
-  };
 
   const label = {
     es: "Personaliza tu toldo y envía la petición",
@@ -37,7 +31,6 @@ const BotonProductos = ({ onAbrir }) => {
   return (
     <div className="boton-centro-prueba">
       <button
-        onMouseOver={onHover}
         onClick={onAbrir}
         className="boton-producto"
         aria-label={label[idioma]}
@@ -45,12 +38,13 @@ const BotonProductos = ({ onAbrir }) => {
         <MdOutlineKeyboardDoubleArrowRight size={20} />
         &nbsp;{titulo?.texto}
       </button>
-      <p
-        className="texto-detras"
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <MdOutlineKeyboardArrowRight />
-        <span className="texto-detras-inner">{texto[idioma]}</span>
+
+      {/* Nuevo wrapper para corregir Safari */}
+      <p className="texto-detras-wrapper">
+        <span className="texto-detras">
+          <MdOutlineKeyboardArrowRight />
+          <span className="texto-detras-inner">{texto[idioma]}</span>
+        </span>
       </p>
     </div>
   );

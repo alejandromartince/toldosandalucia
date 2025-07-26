@@ -1,4 +1,4 @@
-import { Suspense, useMemo } from "react";
+import { Suspense, useMemo, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 
@@ -12,27 +12,43 @@ import useTipoDispositivo from "../Hooks/useTipoDispositivo.js";
 import { infoProductos } from "../constants/infoProductos.jsx";
 
 const ToldosProductos = ({ id }) => {
-
   const dispositivo = useTipoDispositivo(); // Obtenemos el tipo de dispositivo
 
   // Usamos useMemo para evitar recomputaciones innecesarias si el ID no cambia
-  const producto = useMemo(() => infoProductos.find((item) => item.id === id), [id]);
+  const producto = useMemo(
+    () => infoProductos.find((item) => item.id === id),
+    [id]
+  );
 
   // Si no se encuentra el producto, mostramos un mensaje
   if (!producto) return <div>Producto no encontrado</div>;
 
-
   // Desestructuramos las propiedades del producto para que haya un por defecto si no se encuentra la propiedad
   const {
-    modelo: Modelo,
-    position = [0, 0, 0],
-    rotation = [0, 0, 0],
-    escala = 1,
-    escalaMovil = 1,
-    positionMovil = [0, 0, 0],
+    // modelo: Modelo,
+    position = producto.position,
+    rotation = producto.rotation,
+    escala = producto.scale,
+    escalaMovil = producto.escalaMovil,
+    positionMovil = producto.positionMovil,
   } = producto;
 
-
+  const Modelo = useMemo(() => {
+    switch (producto.id) {
+      case 1:
+        return lazy(() => import("../components/Objetos 3D/Toldos/Toldo.jsx"));
+      case 2:
+        return lazy(() => import("../components/Objetos 3D/Toldos/Cofre.jsx"));
+      case 3:
+        return lazy(() => import("../components/Objetos 3D/Toldos/Veranda.jsx"));
+      case 4:
+        return lazy(() => import("../components/Objetos 3D/Toldos/Capota.jsx"));
+      case 5:
+        return lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx"));
+      default:
+        return null; // O un componente fallback si quieres
+    }
+  }, [producto.id]);
 
   return (
     <div className="model-proyecto-container">
@@ -47,7 +63,11 @@ const ToldosProductos = ({ id }) => {
         />
 
         <Suspense fallback={<PantallaCargaProductos />}>
-          <Modelo position={dispositivo !== 'movil' ? position : positionMovil} rotation={rotation} scale={dispositivo !== 'movil' ? escala : escalaMovil}/>
+          <Modelo
+            position={dispositivo !== "movil" ? position : positionMovil}
+            rotation={rotation}
+            scale={dispositivo !== "movil" ? escala : escalaMovil}
+          />
         </Suspense>
 
         <OrbitControls

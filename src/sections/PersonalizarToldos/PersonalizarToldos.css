@@ -114,13 +114,13 @@ OPCIONES DEL CONTENEDOR DERECHA
   display: flex;
   flex-direction: column;
 
-  /* background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp"); */
-  background-image: url("/assets/PersonalizarToldos/Cofre/Cofre-1.jpg");
+  background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp");
+  /* background-image: url("/assets/PersonalizarToldos/Cofre/Cofre-1.jpg"); */
   background-size: cover;
   padding: 2rem;
 }
 
-/* .contenido-PersonalizarToldos-derecha::after {
+.contenido-PersonalizarToldos-derecha::after {
   content: "";
   position: absolute;
   top: 0;
@@ -129,7 +129,7 @@ OPCIONES DEL CONTENEDOR DERECHA
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
-} */
+}
 
 .contenido-PersonalizarToldos-derecha > * {
   position: relative;

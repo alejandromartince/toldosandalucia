@@ -5,33 +5,35 @@ const usePosicionTop = (refPadre) => {
   const [top, setTop] = useState(0);
 
   useEffect(() => {
-  if (!ref.current || !refPadre?.current) return;
+    if (!ref.current || !refPadre?.current) return;
 
-  const calcularTop = () => {
-    let topRelativo = 0;
-    let elemento = ref.current;
+    const calcularTop = () => {
+      let topRelativo = 0;
+      let elemento = ref.current;
 
-    while (elemento && elemento !== refPadre.current) {
-      topRelativo += elemento.offsetTop;
-      elemento = elemento.offsetParent;
-    }
+      while (elemento && elemento !== refPadre.current) {
+        topRelativo += elemento.offsetTop;
+        elemento = elemento.offsetParent;
+      }
 
-    setTop(topRelativo);
-  };
+      setTop(topRelativo);
+    };
 
-  // Ejecutar con retraso para asegurar que el DOM esté listo
-  const timeoutId = setTimeout(calcularTop, 100);
+    // Esperar 1 segundo antes de calcular
+    const timeoutId = setTimeout(() => {
+      calcularTop();
+      // También agregar eventos después del delay
+      window.addEventListener("scroll", calcularTop);
+      window.addEventListener("resize", calcularTop);
+    }, 300);
 
-  window.addEventListener("scroll", calcularTop);
-  window.addEventListener("resize", calcularTop);
-
-  return () => {
-    clearTimeout(timeoutId);
-    window.removeEventListener("scroll", calcularTop);
-    window.removeEventListener("resize", calcularTop);
-  };
-}, [refPadre]);
-
+    // Cleanup
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", calcularTop);
+      window.removeEventListener("resize", calcularTop);
+    };
+  }, [refPadre]);
 
   return [ref, top];
 };
