@@ -1,3 +1,16 @@
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: white;
+
+  /* QUITAMOS EL FONDO AZUL EN LOS MOVILES CUANDO SE HACE TAP */
+  -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   /* COLORES */
   --negro: #131313;
@@ -5,14 +18,13 @@
   --negro-muy-claro: #3b3b3b;
 
   --gris: #808080;
-  --gris-pocoVisible: #c7c7c734;
   --gris-claro: #ffffff94;
   --gris-invisible: #50505080;
 
   --blanco: #fff;
   --blanco-claro: #f1f1f1;
+  /* Fondo gris claro */
   --blanco-muy-claro: #dddddd;
-  --blanco-transparente: #dddddde2;
   --blanco-texto-navbar: #ddddddb6;
   --blanco-footer: #ffffff77;
 
@@ -29,48 +41,63 @@
 }
 
 body {
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  background-size: cover;
+
+  /*Para una mejor lectura de las letras */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
 
   /* Para inputs y textarea con autocompletado */
   input:-webkit-autofill,
   textarea:-webkit-autofill {
     -webkit-text-fill-color: white !important;
+    /* color del texto */
     -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    /* fondo transparente */
     transition: background-color 5000s ease-in-out 0s;
   }
 }
 
+h1 {
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 p {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  /* Sombra con desplazamiento y difusa */
+  font-family: "Poppins", sans-serif;
+
   font-weight: 300;
 }
 
 footer a {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   line-height: 2rem;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: white;
   text-shadow: none;
   text-decoration: none;
 }
 
-.react-select__menu {
-  z-index: 9999 !important;
-}
-
 /* ============================
 OPCIONES PARA LAS ESTRELLAS DE GOOGLE REVIEW
 ============================ */
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 1;
+  font-variation-settings:
+    'FILL' 1;
+  /* 1 para relleno, 0 para contorno */
   color: #ffbb29;
-  font-size: 1rem;
+  /* amarillo */
+  font-size: 16px;
 }

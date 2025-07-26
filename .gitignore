@@ -23,10 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-deploy.ps1
-
-sitemap.xml
-robots.txt
+#archivos especiales
+src/sections/Admin/
 
 #env
 .env

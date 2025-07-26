@@ -25,6 +25,15 @@ const BotonProductos = ({ onAbrir }) => {
     en: "Customize your awning and send your request",
   };
 
+  const texto = {
+    es: "Solicita tu presupuesto sin compromiso",
+    en: "Request your quote without obligation!",
+    fr: "Demandez votre devis sans engagement",
+    de: "Fordern Sie Ihr Angebot unverbindlich an",
+    da: "Anmod om dit tilbud uden forpligtelse",
+    ru: "Запросите свой прайс без обязательств",
+  };
+
   return (
     <div className="boton-centro-prueba">
       <button
@@ -36,7 +45,8 @@ const BotonProductos = ({ onAbrir }) => {
         <MdOutlineKeyboardDoubleArrowRight size={20} />
         &nbsp;{titulo?.texto}
       </button>
-      <p className="texto-detras">&gt;Solicita tu presupuesto sin compromiso</p>
+      <p className="texto-detras" style={{ display: "flex", alignItems: "center" }}>
+        <MdOutlineKeyboardArrowRight/>{texto[idioma]}</p>
     </div>
   );
 };
