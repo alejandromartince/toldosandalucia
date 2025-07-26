@@ -27,6 +27,10 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   min-width: 80px; /* Evita que el tamaño cambie por el contenido */
 }
 
+.boton-idioma-actual img{
+  border-radius: 5px;
+}
+
 .boton-idioma-actual:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2); /* mismo grosor que antes */
@@ -61,6 +65,10 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+
+.menu-idiomas.visible img {
+  border-radius: 5px;
 }
 
 /* Botones del menú */

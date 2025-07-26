@@ -51,6 +51,10 @@ const Products = () => {
   const tituloProducto = {
     es: "Nuestros productos",
     en: "Our products",
+    fr: "Nos produits",
+    de: "Unsere Produkte",
+    da: "Vores produkter",
+    ru: "Наши продукты",
   };
 
   

@@ -1,6 +1,7 @@
 export const infoFooter = {
   es: {
     copy: "Todos los Derechos Reservados",
+    actualizacion: "Última actualización: Junio de 2025",
     titulos: {
       politica: "Políticas",
       ayuda: "¿Necesitas ayuda?",
@@ -17,6 +18,7 @@ export const infoFooter = {
 
   en: {
     copy: "All Rights Reserved",
+    actualizacion: "Last updated: June 2025",
     titulos: {
       politica: "Policies",
       ayuda: "Need help?",
@@ -33,6 +35,7 @@ export const infoFooter = {
 
   fr: {
     copy: "Tous droits réservés",
+    actualizacion: "Dernière mise à jour : Juin 2025",
     titulos: {
       politica: "Politiques",
       ayuda: "Besoin d’aide ?",
@@ -49,6 +52,7 @@ export const infoFooter = {
 
   de: {
     copy: "Alle Rechte vorbehalten",
+    actualizacion: "Letzte Aktualisierung: Juni 2025",
     titulos: {
       politica: "Richtlinien",
       ayuda: "Brauchen Sie Hilfe?",
@@ -65,6 +69,7 @@ export const infoFooter = {
 
   ru: {
     copy: "Все права защищены",
+    actualizacion: "Последнее обновление: июнь 2025 г.",
     titulos: {
       politica: "Политики",
       ayuda: "Нужна помощь?",
@@ -81,6 +86,7 @@ export const infoFooter = {
 
   da: {
     copy: "Alle rettigheder forbeholdes",
+    actualizacion: "Senest opdateret: juni 2025",
     titulos: {
       politica: "Politikker",
       ayuda: "Har du brug for hjælp?",
@@ -95,6 +101,7 @@ export const infoFooter = {
     telefono: "Tlf. 952 56 26 68"
   }
 };
+
 
 export const alts = {
   es: {

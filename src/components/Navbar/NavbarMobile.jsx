@@ -11,6 +11,7 @@ import SelectorIdioma from '../../components/Navbar/SelectorIdioma.jsx';
 
 //Importamos la info
 import { secciones } from '../../constants/infoNavbar.js';
+import useInformacionBoton from "../../constants/infoBotones.js";
 
 //Importamos los iconos
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
@@ -28,6 +29,8 @@ const NavbarMobile = ({ pagina }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
+
+  const i = useInformacionBoton(idioma, 'Presupuesto'); 
 
   const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
 
@@ -59,7 +62,23 @@ const NavbarMobile = ({ pagina }) => {
     en: {
       abrir: "Open menu",
       cerrar: "Close menu"
-    }
+    },
+    fr: {
+      abrir: "Ouvrir le menu",
+      cerrar: "Fermer le menu"
+    },
+    ru: {
+      abrir: "Открыть меню",
+      cerrar: "Закрыть меню"
+    },
+    de: {
+      abrir: "Menü öffnen",
+      cerrar: "Menü schließen"
+    },
+    da: {
+      abrir: "Åbn menu", 
+      cerrar: "Luk menu"
+    },
   }
 
   return (
@@ -75,7 +94,7 @@ const NavbarMobile = ({ pagina }) => {
           )}
 
           {pagina !== 'principal' && (
-            <a href="/" className="navbar__atrasEnlace">
+            <a href="/:lang" className="navbar__atrasEnlace">
               <div className="navbar__atras">
                 <HiOutlineArrowLongLeft size={25} className="iconNavbar_Atras" />
                 <p>{idioma === 'es' ? 'Volver' : 'Go back'}</p>
@@ -132,7 +151,7 @@ const NavbarMobile = ({ pagina }) => {
           </div>
 
           <div className="contenedor-boton-menu-desplegado">
-            <a href="https://wa.me/34679847618">{idioma === 'es' ? "REALIZA TU PRESUPUESTO AQUÍ" : "GET YOUR QUOTE HERE"}</a>
+            <a href="https://wa.me/34679847618">{i?.texto}</a>
           </div>
         </div>
 

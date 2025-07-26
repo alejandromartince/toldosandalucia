@@ -12,105 +12,98 @@ import { FaInstagram } from "react-icons/fa6";
 import './FooterDefault.css'
 
 const FooterDefault = () => {
-
+  
     const { idioma } = useIdioma();
     const i = infoFooter[idioma];
     const alt = alts[idioma];
     
 
     return (
-        <div className="footer-seccion">
-            <div className="info-container">
-                <div className="info-politicas">
-                    <div className="info-politicas-titulo">
-                        <h2>{i.titulos.politica}</h2>
-                        <span>
-                            <hr />
-                        </span>
-                    </div>
-                    <div className="info-politicas-opciones">
-                        <a href="/Privacidad" aria-label={alt.privacidad}>{i.politica.privacidad}</a>
-                        <a href="/Cookies" aria-label={alt.cookies}>{i.politica.cookies}</a>
-                        <a href="/AvisosLegales" aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
-                    </div>
-                </div>
-                <div className="info-ayuda">
-                    <div className="info-ayuda-titulo">
-                        <h2>{i.titulos.ayuda}</h2>
-                        <span>
-                            <hr />
-                        </span>
-                    </div>
-                    <div className="info-ayuda-parrafos">
-                        <div>
-                            <a
-                                href="https://web.whatsapp.com/send?phone=34679847618&text="
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Whatsapp"
-                            >
-                                <p style={{ textShadow: "none" }}>{i.ayuda} </p>
-                                <FaWhatsapp size={25} />
-                            </a>
-                        </div>
-                        <p style={{ textShadow: "none" }}>{i.telefono}</p>
-                        <div className="espaciador"></div>
-                    </div>
-                </div>
-                <div className="info-redes">
-                    <div className="info-redes-titulo">
-                        <h2>{i.titulos.redes}</h2>
-                        <span>
-                            <hr />
-                        </span>
-                    </div>
-                    <div className="iconos-redes">
-                        <a
-                            href="https://m.facebook.com/profile.php?id=100069359261072"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Facebook"
-                        >
-                            <FaFacebookF size={25} className="icono-footer" color="white" />
-                        </a>
-
-                        <a
-                            href="https://www.tiktok.com/@toldos.andalucia"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Tik Tok"
-                        >
-                            <FaTiktok size={25} className="icono-footer" color="white" />
-                        </a>
-
-                        <a
-                            href="https://www.instagram.com/toldosandalucia/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >
-                            <FaInstagram size={25} className="icono-footer" color="white" />
-                        </a>
-                    </div>
-                </div>
-                <div className="logo">
-                    <a href="/" aria-label={alt.logo}>
-                        <img
-                            src="/assets/Logo/Logo_Transparent.png"
-                            alt={alt.logo}
-                            style={{ cursor: "Pointer" }}
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <div className="copyright">
-                <p>
-                    © {new Date().getFullYear()} Toldos Andalucía -&nbsp;{i.copy}
-                </p>
-            </div>
+    <div className="footer-seccion">
+      <div className="info-container">
+        <div className="info-politicas">
+          <div className="info-politicas-titulo">
+            <h2>{i.titulos.politica}</h2>
+            <span><hr /></span>
+          </div>
+          <div className="info-politicas-opciones">
+            <a href={`/${idioma}/Privacidad`} aria-label={alt.privacidad}>{i.politica.privacidad}</a>
+            <a href={`/${idioma}/Cookies`} aria-label={alt.cookies}>{i.politica.cookies}</a>
+            <a href={`/${idioma}/AvisosLegales`} aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
+          </div>
         </div>
-    );
-}
+
+        <div className="info-ayuda">
+          <div className="info-ayuda-titulo">
+            <h2>{i.titulos.ayuda}</h2>
+            <span><hr /></span>
+          </div>
+          <div className="info-ayuda-parrafos">
+            <div>
+              <a
+                href="https://web.whatsapp.com/send?phone=34679847618&text="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Whatsapp"
+              >
+                <p style={{ textShadow: "none" }}>{i.ayuda}</p>
+                <FaWhatsapp size={25} />
+              </a>
+            </div>
+            <p style={{ textShadow: "none" }}>{i.telefono}</p>
+            <div className="espaciador"></div>
+          </div>
+        </div>
+
+        <div className="info-redes">
+          <div className="info-redes-titulo">
+            <h2>{i.titulos.redes}</h2>
+            <span><hr /></span>
+          </div>
+          <div className="iconos-redes">
+            <a
+              href="https://m.facebook.com/profile.php?id=100069359261072"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF size={25} className="icono-footer" color="white" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@toldos.andalucia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Tik Tok"
+            >
+              <FaTiktok size={25} className="icono-footer" color="white" />
+            </a>
+            <a
+              href="https://www.instagram.com/toldosandalucia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={25} className="icono-footer" color="white" />
+            </a>
+          </div>
+        </div>
+
+        <div className="logo">
+          <a href={`/${idioma}`} aria-label={alt.logo}>
+            <img
+              src="/assets/Logo/Logo_Transparent.png"
+              alt={alt.logo}
+              style={{ cursor: "pointer" }}
+            />
+          </a>
+        </div>
+      </div>
+
+      <div className="copyright">
+        <p>© {new Date().getFullYear()} Toldos Andalucía - {i.copy}</p>
+      </div>
+    </div>
+  );
+};
 
 export default FooterDefault

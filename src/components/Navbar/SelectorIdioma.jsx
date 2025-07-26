@@ -24,6 +24,8 @@ const SelectorIdioma = () => {
     setDesplegado(false);
   };
 
+  console.log("SelectorIdioma renderizado con idioma:", idioma);
+
   // Detectar clic fuera para cerrar menú
   useEffect(() => {
     const handleClickOutside = (event) => {

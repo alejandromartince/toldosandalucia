@@ -78,6 +78,17 @@ const useInformacionBoton = (idioma, id) => {
       da: "Bedøm os på Google!"
     },
     url: "https://search.google.com/local/writereview?placeid=ChIJZbTMBpr8cg0R-sIe7716UhQ"
+  },
+  {
+    id: "Presupuesto",
+    texto: {
+      es: "Realiza tu presupuesto aquí",
+      en: "Get your quote here",
+      fr: "Faites votre devis ici",
+      de: "Holen Sie sich Ihr Angebot hier",
+      ru: "Сделайте свой расчет здесь",
+      da: "Få dit tilbud her"
+    },
   }
 ];
 
