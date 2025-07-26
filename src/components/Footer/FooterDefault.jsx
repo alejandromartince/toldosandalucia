@@ -27,9 +27,9 @@ const FooterDefault = () => {
             <span><hr /></span>
           </div>
           <div className="info-politicas-opciones">
-            <a href={`/${idioma}/Privacidad`} aria-label={alt.privacidad}>{i.politica.privacidad}</a>
-            <a href={`/${idioma}/Cookies`} aria-label={alt.cookies}>{i.politica.cookies}</a>
-            <a href={`/${idioma}/AvisosLegales`} aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
+            <a href={`/Privacidad`} aria-label={alt.privacidad}>{i.politica.privacidad}</a>
+            <a href={`/Cookies`} aria-label={alt.cookies}>{i.politica.cookies}</a>
+            <a href={`/AvisosLegales`} aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
           </div>
         </div>
 
@@ -89,7 +89,7 @@ const FooterDefault = () => {
         </div>
 
         <div className="logo">
-          <a href={`/${idioma}`} aria-label={alt.logo}>
+          <a href={`/`} aria-label={alt.logo}>
             <img
               src="/assets/Logo/Logo_Transparent.png"
               alt={alt.logo}
