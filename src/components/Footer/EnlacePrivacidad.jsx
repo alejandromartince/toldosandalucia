@@ -2,14 +2,14 @@
 import { infoPrivacidad } from "../../constants/infoEnlacesFooter.jsx";
 import { infoFooter } from "../../constants/infoFooter.js";
 
-//Importamos el contexto del idioma
-import { useIdiomaCambiado } from "../../Hooks/General/useIdiomaCambiado.js";
+//Importamos el idioma
+import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
 //Importamos el estilo
 import "./Enlaces.css";
 
 const EnlacePrivacidad = () => {
-  const { idioma } = useIdiomaCambiado();
+  const { idioma } = useIdioma();
   const infoormacionF = infoFooter[idioma];
   const i = infoPrivacidad[idioma];
 

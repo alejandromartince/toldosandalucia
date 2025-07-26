@@ -51,3 +51,24 @@
   transform: translateY(-50%);
   font-size: 1.125rem; /* 18px */
 }
+
+/* ============================
+MEDIA QUERIES PANTALLAS PEQUEÑAS
+============================ */
+@media (max-width: 1550px) {
+  .select-personalizado-tutorial {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 1300px){
+  .select-personalizado-tutorial {
+    font-size: 0.6875rem; /* 11px */
+  }
+}
+
+@media (max-width: 1200px){
+  .select-personalizado-tutorial{
+    font-size: 0.6rem;
+  }
+}

@@ -13,6 +13,10 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   overflow-anchor: none; /* evita movimientos por cambio dinámico */
 }
 
+.selector-idioma-dropdown img{
+  border-radius: 6px;
+}
+
 /* Botón actual con idioma visible */
 .boton-idioma-actual {
   background-color: transparent;
@@ -20,16 +24,13 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   display: flex;
   align-items: center;
   gap: 8px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid transparent; /* reserva espacio para el hover */
   padding: 0.4rem 0.6rem;
-  transition: background-color 0.2s ease, border 0.2s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
   min-width: 80px; /* Evita que el tamaño cambie por el contenido */
 }
 
-.boton-idioma-actual img{
-  border-radius: 5px;
-}
 
 .boton-idioma-actual:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -44,8 +45,8 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   margin-top: 8px;
   background-color: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(8px);
-  border-radius: 8px;
-  padding: 0.5rem;
+  border-radius: 6px;
+  padding: 0.4rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
   display: flex;
@@ -59,6 +60,9 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   pointer-events: none;
 
 }
+.menu-idiomas img {
+  border-radius: 6px;
+}
 
 /* Mostrar el menú */
 .menu-idiomas.visible {
@@ -67,9 +71,6 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   pointer-events: auto;
 }
 
-.menu-idiomas.visible img {
-  border-radius: 5px;
-}
 
 /* Botones del menú */
 .idioma-opcion {

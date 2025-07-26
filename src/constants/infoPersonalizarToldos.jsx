@@ -16,12 +16,12 @@ export const infoPersonalizarToldos = {
     da: "Ønsker du flere muligheder? Vi står klar til at hjælpe dig på vores kontor – helt uforpligtende.",
   },
   ajustes: {
-    es: "Ajustes de Personalización",
-    en: "Personalization settings",
-    fr: "Paramètres de personnalisation",
-    de: "Personalisierungseinstellungen",
-    ru: "Настройки персонализации",
-    da: "Tilpasningsindstillinger",
+    es: "Ajustes",
+    en: "Settings",
+    fr: "Paramètres",
+    de: "Einstellungen",
+    ru: "Настройки",
+    da: "Indstillinger",
   },
   descripcion: {
     es: (
