@@ -9,7 +9,7 @@ const RutaGaleria = lazy(() => import("./paginas/galeria/RutaGaleria.jsx"));
 const RutaPrivacidad = lazy(() => import("./paginas/Privacidad/RutaPrivacidad.jsx"));
 const RutaCookies = lazy(() => import("./paginas/Cookies/RutaCookies.jsx"));
 const RutaAvisosLegales = lazy(() => import("./paginas/AvisosLegales/RutaAvisosLegales.jsx"));
-const Admin = lazy(() => import('./sections/Admin/Admin.jsx'))
+// const Admin = lazy(() => import('./sections/Admin/Admin.jsx'))
 
 // Contexto
 import { IdiomaProvider } from "./contexts/IdiomaContext.jsx";
@@ -37,7 +37,7 @@ const App = () => {
             <Route path="/Galeria" element={<RutaGaleria />} />
             <Route path="/Cookies" element={<RutaCookies />} />
             <Route path="/AvisosLegales" element={<RutaAvisosLegales />} />
-            <Route path="/Dashboard" element={<Admin />} />
+            {/* <Route path="/Dashboard" element={<Admin />} /> */}
           </Routes>
         </Suspense>
       </Router>
