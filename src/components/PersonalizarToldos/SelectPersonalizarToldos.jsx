@@ -45,6 +45,7 @@ const SelectPersonalizarToldos = ({
               key={value}
               value={value}
               className="optionSelectPersonalizado"
+              style={{color: "black"}}
               disabled={opcionesDeshabilitadas.includes(value)}
             >
               {label}

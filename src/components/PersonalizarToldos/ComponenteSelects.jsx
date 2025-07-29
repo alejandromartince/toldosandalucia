@@ -5,11 +5,10 @@ import React, { forwardRef, Suspense, useState } from "react";
 const SelectPersonalizarToldos = React.lazy(() =>
   import("../../components/PersonalizarToldos/SelectPersonalizarToldos.jsx")
 );
+import BotonWhatsapp from "../Botones/BotonWhatsapp.jsx";
 
 //Importamos la informacion
-import {
-  infoSelect,
-} from "../../constants/infoPersonalizarToldos.jsx";
+import { infoSelect } from "../../constants/infoPersonalizarToldos.jsx";
 import {
   useOpcionesTipoTela,
   useOpcionesTipoToldos,
@@ -118,6 +117,8 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
           />
         </Suspense>
       </div>
+
+      
     </div>
   );
 });

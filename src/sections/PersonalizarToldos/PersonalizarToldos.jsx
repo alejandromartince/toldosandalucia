@@ -12,13 +12,14 @@ import ComponenteSelects from "../../components/PersonalizarToldos/ComponenteSel
 import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos.jsx";
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../Hooks/General/useIdioma.js'
+import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
 //Importamos los iconos
 import { BsArrowLeft } from "react-icons/bs";
 
 //Importamos el estilo de la pagina
 import "./PersonalizarToldos.css";
+import BotonWhatsapp from "../../components/Botones/BotonWhatsapp.jsx";
 
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
@@ -58,9 +59,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
   }, [cerrando, onCerrar]);
 
   return (
-    <div
-      className={`menu-main ${cerrando ? "salida" : ""} `}
-    >
+    <div className={`menu-main ${cerrando ? "salida" : ""} `}>
       <div
         className={`popup-contenido-prueba ${cerrando ? "salida" : ""}`}
         ref={refContenedorPadre} // Aquí asignamos la referencia al padre
@@ -73,7 +72,10 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
           <div className="contenedorCentrado">
             <div className="contenedorOpcionesPT">
-              <div className="contenedorHRPT" style={{ padding: "1.5rem 0" }}>
+              <div
+                className="contenedorHRPT"
+                style={{ padding: "0rem 0 .5rem 0" }}
+              >
                 <p>{contenido.ajustes[idioma]}</p>
                 <hr style={{ width: "100%", margin: "0 auto" }} />
               </div>
@@ -86,11 +88,22 @@ const PersonalizarToldos = ({ onCerrar }) => {
               />
             </div>
           </div>
+          
+          <div className="contenedorBotonWhatsappPT">
+            <BotonWhatsapp idioma={idioma} />
+          </div>
         </div>
+
+        <hr
+          style={{ width: ".25rem", backgroundColor: "white", border: "none" }}
+        />
 
         <div className="contenido-PersonalizarToldos-derecha">
           <div className="contenido-bloqueado">
-            <BotonCerrarMenu onClick={() => setCerrando(true)} idioma={idioma} />
+            <BotonCerrarMenu
+              onClick={() => setCerrando(true)}
+              idioma={idioma}
+            />
 
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
             {!selectMenuActivo && (
@@ -113,7 +126,6 @@ const PersonalizarToldos = ({ onCerrar }) => {
               <p>{contenido.descripcion[idioma]}</p>
             </div>
           </div>
-
 
           {/* <div style={{display:"flex", gap:"1rem"}}>
               <img src="/assets/Lonas/Arizona.webp" alt="beige" style={{width:"4rem"}} />

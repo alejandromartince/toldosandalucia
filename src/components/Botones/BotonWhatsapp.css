@@ -1,0 +1,22 @@
+.botonWhatsappPT {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  background-color: #ffffff4e;
+  color: black;
+  border: none;
+  border-radius: 2.8125rem;
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}

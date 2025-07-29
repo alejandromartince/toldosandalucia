@@ -29,6 +29,7 @@
   cursor: pointer;
 }
 
+
 .select-personalizado-tutorial:focus {
   border-color: #999;
   box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.1); /* 3px */

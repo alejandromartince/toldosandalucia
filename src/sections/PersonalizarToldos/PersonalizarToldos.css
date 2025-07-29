@@ -44,10 +44,12 @@ CONTENEDOR IZQUIERDA
   position: relative;
   flex: 0 0 20%; /* Ocupa el 20% */
 
+  height: 100%;
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 0rem 6rem 0;
+  padding: 2rem 0rem 4rem 0;
 
   background-image: url("/assets/Fondo/fondoIzquierdaPersonalizarToldos.webp");
   background-size: cover;
@@ -104,6 +106,10 @@ CONTENEDOR IZQUIERDA
   border: 0px;
 }
 
+.contenedorBotonWhatsappPT{
+  display: flex;
+  justify-content: center;
+}
 /* ============================
 OPCIONES DEL CONTENEDOR DERECHA
 ============================ */
@@ -114,13 +120,13 @@ OPCIONES DEL CONTENEDOR DERECHA
   display: flex;
   flex-direction: column;
 
-  background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp");
-  /* background-image: url("/assets/PersonalizarToldos/Cofre/Cofre-1.jpg"); */
+  /* background-image: url("/assets/Fondo/fondoDerechaPersonalizarToldos.webp"); */
+  background-image: url("/assets/PersonalizarToldos/1.jpeg");
   background-size: cover;
   padding: 2rem;
 }
 
-.contenido-PersonalizarToldos-derecha::after {
+/* .contenido-PersonalizarToldos-derecha::after {
   content: "";
   position: absolute;
   top: 0;
@@ -129,7 +135,7 @@ OPCIONES DEL CONTENEDOR DERECHA
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
-}
+} */
 
 .contenido-PersonalizarToldos-derecha > * {
   position: relative;
@@ -228,5 +234,17 @@ ANIMACION FLECHA DEL MENU SELECT
   }
   100% {
     transform: translateX(-10px);
+  }
+}
+
+/*=============================
+MEDIA QUERIES
+=============================*/
+@media (max-width: 1200px){
+
+  .contenido-PersonalizarToldos-derecha {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
