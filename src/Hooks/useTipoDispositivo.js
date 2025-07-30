@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react';
 const getTipoDispositivo = () => {
   const width = window.innerWidth;
 
-  if (width <= 768) return 'movil';
-  if (width <= 1024) return 'tablet';
+  if (width < 768) return 'movil';
+  if (width < 1024) return 'tablet';
   return 'ordenador';
 };
+
+
+
+
 
 // Actualiza la variable al cambiar el tamaño de la pantalla (solo se dispara el hook cuando cambia de variable)
 const useTipoDispositivo = () => {

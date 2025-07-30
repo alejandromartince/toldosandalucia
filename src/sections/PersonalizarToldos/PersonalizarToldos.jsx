@@ -4,9 +4,11 @@ import { useState, useEffect, useRef } from "react";
 //Importamos los hooks personalizados
 import usePosicionTop from "../../Hooks/usePosicionTop.js";
 
-//Importamos los compoenntes
+//Importamos los componentes
 import BotonCerrarMenu from "../../components/Botones/BotonCerrarMenu.jsx";
+import BotonWhatsapp from "../../components/Botones/BotonWhatsapp.jsx";
 import ComponenteSelects from "../../components/PersonalizarToldos/ComponenteSelects.jsx";
+import ComponenteLonas from "../../components/PersonalizarToldos/ComponenteLonas.jsx";
 
 //Importamos la informacion
 import { infoPersonalizarToldos } from "../../constants/infoPersonalizarToldos.jsx";
@@ -19,7 +21,6 @@ import { BsArrowLeft } from "react-icons/bs";
 
 //Importamos el estilo de la pagina
 import "./PersonalizarToldos.css";
-import BotonWhatsapp from "../../components/Botones/BotonWhatsapp.jsx";
 
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
@@ -88,7 +89,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
               />
             </div>
           </div>
-          
+
           <div className="contenedorBotonWhatsappPT">
             <BotonWhatsapp idioma={idioma} />
           </div>
@@ -127,17 +128,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
             </div>
           </div>
 
-          {/* <div style={{display:"flex", gap:"1rem"}}>
-              <img src="/assets/Lonas/Arizona.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/AzulX.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/BeigeX.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/Beige.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/Castor.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/Marfil.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/Natural.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/Sand.webp" alt="beige" style={{width:"4rem"}} />
-              <img src="/assets/Lonas/VerdeX.webp" alt="beige" style={{width:"4rem"}} />
-            </div> */}
+          {/*ELEMENTOS PARA LAS LONAS*/}
+          <ComponenteLonas idioma={idioma} />
         </div>
       </div>
     </div>

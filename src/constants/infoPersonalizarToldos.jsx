@@ -230,3 +230,32 @@ export const traducciones = {
     malagaeste: "Málaga Este",
   },
 };
+
+export const infoLonas = {
+  pc: {
+    es: "Selecciona tu lona",
+    en: "Select your fabric",
+    fr: "Sélectionnez votre toile",
+    ru: "Выберите свою ткань",
+    da: "Vælg dit dug",
+    de: "Wähle deinen Stoff aus",
+  },
+
+  movil: {
+    es: "Clica para seleccionar tu lona",
+    en: "Click to select your fabric",
+    fr: "Cliquez pour sélectionner votre toile",
+    ru: "Нажмите, чтобы выбрать вашу ткань",
+    da: "Klik for at vælge dit dug",
+    de: "Klicke, um deinen Stoff auszuwählen",
+  },
+
+  catalogo: {
+    es: "Catálogo",
+    en: "Catalogue",
+    fr: "Catalogue",
+    ru: "Каталог",
+    da: "Katalog",
+    de: "Katalog",
+  },
+};
