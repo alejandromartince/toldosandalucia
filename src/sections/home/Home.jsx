@@ -9,6 +9,8 @@ import BotonLinea from "../../components/Botones/BotonLinea.jsx";
 //Importamos los hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
 
+
+
 // Importamos el contexto del idioma
 import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
