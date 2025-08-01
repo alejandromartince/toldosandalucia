@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 
 //Vemos que dispositivo es
 const getTipoDispositivo = () => {
-  const width = window.innerWidth;
+let width = window.innerWidth;
 
-  if (width < 768) return 'movil';
+  if (width <= 769) return 'movil';
   if (width < 1024) return 'tablet';
   return 'ordenador';
+
 };
-
-
 
 
 

@@ -1,54 +1,45 @@
-import { Suspense, useMemo, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-
-//Importamos los hooks/componentes de carga para cuando se cargan los productos
 import PantallaCargaProductos from "../components/General/PantallaCargaProductos";
-
-//Importamos el hook de dispositivo
 import useTipoDispositivo from "../Hooks/useTipoDispositivo.js";
-
-//Importamos la informacion de los productos
 import { infoProductos } from "../constants/infoProductos.jsx";
 
 const ToldosProductos = ({ id }) => {
-  const dispositivo = useTipoDispositivo(); // Obtenemos el tipo de dispositivo
+  const dispositivo = useTipoDispositivo();
+  const producto = infoProductos.find((item) => item.id === id);
 
-  // Usamos useMemo para evitar recomputaciones innecesarias si el ID no cambia
-  const producto = useMemo(
-    () => infoProductos.find((item) => item.id === id),
-    [id]
-  );
-
-  // Si no se encuentra el producto, mostramos un mensaje
   if (!producto) return <div>Producto no encontrado</div>;
 
-  // Desestructuramos las propiedades del producto para que haya un por defecto si no se encuentra la propiedad
   const {
-    // modelo: Modelo,
-    position = producto.position,
-    rotation = producto.rotation,
-    escala = producto.scale,
-    escalaMovil = producto.escalaMovil,
-    positionMovil = producto.positionMovil,
+    position,
+    rotation,
+    escala,
+    escalaMovil,
+    positionMovil,
   } = producto;
 
-  const Modelo = useMemo(() => {
-    switch (producto.id) {
-      case 1:
-        return lazy(() => import("../components/Objetos 3D/Toldos/Toldo.jsx"));
-      case 2:
-        return lazy(() => import("../components/Objetos 3D/Toldos/Cofre.jsx"));
-      case 3:
-        return lazy(() => import("../components/Objetos 3D/Toldos/Veranda.jsx"));
-      case 4:
-        return lazy(() => import("../components/Objetos 3D/Toldos/Capota.jsx"));
-      case 5:
-        return lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx"));
-      default:
-        return null; // O un componente fallback si quieres
-    }
-  }, [producto.id]);
+  let Modelo;
+
+  switch (producto.id) {
+    case 1:
+      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Toldo.jsx"));
+      break;
+    case 2:
+      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Cofre.jsx"));
+      break;
+    case 3:
+      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Veranda.jsx"));
+      break;
+    case 4:
+      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Capota.jsx"));
+      break;
+    case 5:
+      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx"));
+      break;
+    default:
+      Modelo = null;
+  }
 
   return (
     <div className="model-proyecto-container">
@@ -61,15 +52,17 @@ const ToldosProductos = ({ id }) => {
           shadow-mapSize={[2048, 2048]}
           castShadow
         />
-
         <Suspense fallback={<PantallaCargaProductos />}>
-          <Modelo
-            position={dispositivo !== "movil" ? position : positionMovil}
-            rotation={rotation}
-            scale={dispositivo !== "movil" ? escala : escalaMovil}
-          />
+          {Modelo ? (
+            <Modelo
+              position={dispositivo !== "movil" ? position : positionMovil}
+              rotation={rotation}
+              scale={dispositivo !== "movil" ? escala : escalaMovil}
+            />
+          ) : (
+            <div>Modelo no disponible</div>
+          )}
         </Suspense>
-
         <OrbitControls
           enablePan={false}
           autoRotate

@@ -51,11 +51,7 @@ const Home = () => {
   return (
     <section className="home" id="home">
       {/* Fondo actual */}
-      <div
-        className="fondo-img"
-        style={{
-          backgroundImage: `url(${fondoActual})`,
-        }}
+      <div className="fondo-img" style={{backgroundImage: `url(${fondoActual})`}}
       />
 
       {/* Fondo en transición */}
@@ -82,6 +78,7 @@ const Home = () => {
             <>
               {/* <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1> */}
               {/* <p>{textoHome.subtituloMovil[idioma]}</p> */}
+              {dispositivo}
             </>
           )}
         </div>

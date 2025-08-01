@@ -11,6 +11,7 @@ const RutaCookies = lazy(() => import("./paginas/Cookies/RutaCookies.jsx"));
 const RutaAvisosLegales = lazy(() => import("./paginas/AvisosLegales/RutaAvisosLegales.jsx"));
 // const Admin = lazy(() => import('./sections/Admin/Admin.jsx'))
 
+
 // Contexto
 import { IdiomaProvider } from "./contexts/IdiomaProvider.jsx";
 import PantallaCarga from "./components/General/PantallaCarga.jsx";
