@@ -149,7 +149,6 @@ OPCIONES DEL CONTENEDOR DERECHA
   font-size: 1rem;
 }
 
-
 /* ============================
 OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
 ============================ */
@@ -173,9 +172,10 @@ OPCIONES DEL CONTENIDOD DE LA DEREHCA EN BLOQUEO
   text-align: center;
 }
 
-.descripcionBloqueoPT {
-  width: 100%;
+.descripcionBloqueoPT{
+  text-align: center;
 }
+
 
 /* ============================
 ANIMACIONES DE OPACIDAD Y ENTRADA Y SALIDA DEL MENU

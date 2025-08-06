@@ -27,11 +27,33 @@ const PersonalizarToldos = ({ onCerrar }) => {
   const contenido = infoPersonalizarToldos;
 
   const [selectMenuActivo, setSelectMenuActivo] = useState(false);
+  const [tipoToldoSeleccionado, setTipoToldoSeleccionado] = useState(""); // <-- Estado subido
+
+  // Estado para controlar la visibilidad de la flecha con delay
+  const [showArrow, setShowArrow] = useState(false);
+
   const refContenedorPadre = useRef(null);
   const [refSelects, top] = usePosicionTop(refContenedorPadre);
 
+  // Script para mostrar la flecha después de 400ms cuando selectMenuActivo es false
+  useEffect(() => {
+    // Ocultamos la flecha inmediatamente al cambiar selectMenuActivo
+    setShowArrow(false);
+
+    if (!selectMenuActivo) {
+      // Mostramos la flecha tras 400ms
+      const timer = setTimeout(() => {
+        setShowArrow(true);
+      }, 400);
+
+      // Limpiamos el timeout si selectMenuActivo cambia o componente se desmonta
+      return () => clearTimeout(timer);
+    }
+  }, [selectMenuActivo]);
+
   //Script para bloquear el scroll cuando se abre el pop-up de Personalziar Toldos
   const [cerrando, setCerrando] = useState(false);
+
   useEffect(() => {
     const popup = document.querySelector(".popup-contenido-prueba ");
     const handleWheel = (e) => e.preventDefault();
@@ -86,6 +108,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
                 ref={refSelects}
                 selectMenuActivo={selectMenuActivo}
                 setSelectMenuActivo={setSelectMenuActivo}
+                tipoToldoSeleccionado={tipoToldoSeleccionado}
+                setTipoToldoSeleccionado={setTipoToldoSeleccionado}
               />
             </div>
           </div>
@@ -107,7 +131,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
             />
 
             {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
-            {!selectMenuActivo && (
+            {/* Ahora se muestra después de 400ms */}
+            {!selectMenuActivo && showArrow && (
               <div className="contenedorFlechaTutorial">
                 <BsArrowLeft
                   className="flecha-animada "
@@ -122,14 +147,13 @@ const PersonalizarToldos = ({ onCerrar }) => {
                 ></BsArrowLeft>
               </div>
             )}
-
-            <div className="descripcionBloqueoPT">
-              <p>{contenido.descripcion[idioma]}</p>
-            </div>
+          </div>
+          <div className="descripcionBloqueoPT">
+            <p>{contenido.descripcion[idioma]}</p>
           </div>
 
           {/*ELEMENTOS PARA LAS LONAS*/}
-          <ComponenteLonas idioma={idioma} />
+          <ComponenteLonas idioma={idioma} tipoToldoSeleccionado={tipoToldoSeleccionado}/>
         </div>
       </div>
     </div>

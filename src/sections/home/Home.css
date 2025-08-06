@@ -9,7 +9,7 @@ OPCIONES GENERALES
 }
 
 .home::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -23,27 +23,37 @@ OPCIONES GENERALES
   transition: background-image 1s ease-in-out;
 }
 
-.fondo-img,
-.fondo-img-fade {
+.fondo-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.fondo-container img {
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  top: 0;
+  left: 0;
   transition: opacity 1s ease-in-out;
-  z-index: -2;
+  opacity: 0;
+}
+
+.fondo-img.visible {
+  opacity: 1;
+  z-index: 1;
 }
 
 .fondo-img-fade {
-  opacity: 0;
-  z-index: -1;
+  z-index: 2;
 }
 
 .fondo-img-fade.mostrar {
   opacity: 1;
 }
+
 
 .overlay-capa {
   position: absolute;
@@ -56,13 +66,10 @@ OPCIONES GENERALES
   transition: background 0.5s ease-in-out;
 }
 
-
-
 /* ============================
 OPCIONES DE CONTENIDO
 ============================ */
 .contenedor-home {
-
   height: 100%;
   max-width: 42rem;
 
@@ -76,18 +83,16 @@ OPCIONES DE CONTENIDO
 
 .contenedor-home p {
   text-align: justify;
-  hyphens: none;        /* Desactiva guiones */
-  
+  hyphens: none; /* Desactiva guiones */
+
   font-weight: 300;
-  font-size: 1.125rem;    /* 18px / 16 = 1.125rem */
+  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
   line-height: 2rem;
-  
+
   word-spacing: normal; /* Deja que el navegador maneje el espacio */
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
-
-
 
 /* ============================
 MEDIA QUERIES
@@ -129,7 +134,7 @@ MEDIA QUERIES
   }
 
   .home::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -140,7 +145,7 @@ MEDIA QUERIES
   }
 
   .tituloMovilVacio {
-    font-size: 1.5rem;    /* 24px / 16 = 1.5rem */
+    font-size: 1.5rem; /* 24px / 16 = 1.5rem */
     color: rgba(255, 255, 255, 0.4);
     font-family: "Bebas", sans-serif;
     /* Blanco con opacidad */
@@ -156,7 +161,7 @@ MEDIA QUERIES
   }
 
   .contenedor-home p {
-    font-size: 1rem;      /* 16px / 16 = 1rem */
+    font-size: 1rem; /* 16px / 16 = 1rem */
     line-height: 1.7rem;
     text-align: justify;
     hyphens: auto;

@@ -1,12 +1,24 @@
 import { useEffect, useRef, useState } from "react";
+
+// Importamos los iconos
 import { IoIosArrowDown } from "react-icons/io";
+
+// Importamos los hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
+import { seleccionarColorToldo } from "../../Hooks/PersonalizarToldos/seleccionarColorToldo.jsx";
+
+// Importamos la informacion
 import { infoLonas } from "../../constants/infoPersonalizarToldos";
+
+// Importamos los estilos
 import "./ComponenteLonas.css";
 
-const ComponenteLonas = ({ idioma }) => {
+const ComponenteLonas = ({ idioma, tipoToldoSeleccionado }) => {
   const dispositivo = useTipoDispositivo();
   const info = infoLonas;
+
+  // Estado para guardar el color seleccionado
+  const [colorSeleccionado, setColorSeleccionado] = useState(null);
 
   const [abierto, setAbierto] = useState(false);
   const contenedorRef = useRef(null);
@@ -34,11 +46,10 @@ const ComponenteLonas = ({ idioma }) => {
   return (
     <div
       ref={contenedorRef}
-      className={`contenedorLonasFlotante ${
-        abierto ? "abierto" : "cerrado"
-      }`}
+      className={`contenedorLonasFlotante ${abierto ? "abierto" : "cerrado"}`}
     >
       <div className="lonasContainer">
+        {/* Mostrar texto o botón según tipo de dispositivo */}
         {dispositivo === "ordenador" ? (
           <div className="deslizarArribaPT">
             <p>{info.pc[idioma]}</p>
@@ -49,9 +60,32 @@ const ComponenteLonas = ({ idioma }) => {
             className="botonColoresPT"
             onClick={() => setAbierto(!abierto)}
           >
-						{dispositivo}
             {info.movil[idioma]}
           </button>
+        )}
+
+        {/* Mostrar el selector de colores, pasando la función para actualizar el color seleccionado */}
+        <div style={{ marginTop: "1rem", color: "#fff" }}>
+          {seleccionarColorToldo(tipoToldoSeleccionado, setColorSeleccionado)}
+        </div>
+
+        {/* Mostrar el color seleccionado con nombre e imagen */}
+        {colorSeleccionado && (
+          <div style={{ marginTop: "1rem", color: "#fff", textAlign: "center" }}>
+            <h4>Color seleccionado: {colorSeleccionado}</h4>
+            <picture>
+              <source
+                srcSet={`/assets/Lonas/${colorSeleccionado}.webp`}
+                type="image/webp"
+              />
+              <img
+                src={`/assets/Lonas/${colorSeleccionado}.webp`}
+                alt={`Color seleccionado ${colorSeleccionado}`}
+                style={{ width: "150px", height: "auto", marginTop: "0.5rem" }}
+                loading="lazy"
+              />
+            </picture>
+          </div>
         )}
       </div>
     </div>

@@ -45,12 +45,12 @@ body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   background-size: cover;
+  background-color: transparent;
 
   /*Para una mejor lectura de las letras */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
 
   /* Para inputs y textarea con autocompletado */
   input:-webkit-autofill,
@@ -95,8 +95,7 @@ footer a {
 OPCIONES PARA LAS ESTRELLAS DE GOOGLE REVIEW
 ============================ */
 .material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 1;
+  font-variation-settings: "FILL" 1;
   /* 1 para relleno, 0 para contorno */
   color: #ffbb29;
   /* amarillo */

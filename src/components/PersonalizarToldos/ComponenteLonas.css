@@ -8,8 +8,8 @@ COMPORTAMIENTO FLOTANTE DE LONAS
   transform: translateX(-50%);
   height: 18rem;
   border-radius: 1rem;
-  background-color: black;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.642);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   z-index: 2;
   transition: bottom 0.4s ease;
@@ -18,7 +18,7 @@ COMPORTAMIENTO FLOTANTE DE LONAS
 
 /* Estado cerrado */
 .contenedorLonasFlotante.cerrado {
-  bottom: -14rem;
+  bottom: -13rem;
 }
 
 /* Estado abierto */
@@ -26,21 +26,22 @@ COMPORTAMIENTO FLOTANTE DE LONAS
   bottom: -2rem;
 }
 
-
 /* Al hacer hover, aparece */
 .contenedorLonasFlotante:hover {
   bottom: -2rem;
 }
 
-.lonasContainer{
-    display: flex;
-    justify-content: center;
+.lonasContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.deslizarArribaPT{
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+.deslizarArribaPT {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .flechaLonas {
@@ -50,4 +51,30 @@ COMPORTAMIENTO FLOTANTE DE LONAS
 
 .contenedorLonasFlotante:hover .deslizarArribaPT .flechaLonas {
   transform: rotate(360deg);
+}
+/*=============================
+ESTILOS PARA LAS LONAS
+=============================*/
+.selector-colores {
+  display: flex;
+  gap: 2rem;
+}
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.25rem;
+}
+
+.color-item h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.color-item picture img{
+  height: 5rem;
+  width: auto;
 }

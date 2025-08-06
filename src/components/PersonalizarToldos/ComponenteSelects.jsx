@@ -20,11 +20,10 @@ import {
 //Importamos el contexto del idioma
 import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
-const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
+const ComponenteSelects = forwardRef(({ setSelectMenuActivo, tipoToldoSeleccionado, setTipoToldoSeleccionado }, ref) => {
   const { idioma } = useIdioma();
 
   //OPCIONES PARA LOS SELECTS
-  const [tipoToldoSeleccionado, setTipoToldoSeleccionado] = useState("");
   const [tipoTelaSeleccionado, setTipoTelaSeleccionado] = useState("");
   const [tipoSistemaToldo, setTipoSistemaToldo] = useState("");
   const [lugarUbicacion, setLugarUbicacion] = useState("");
@@ -78,7 +77,7 @@ const ComponenteSelects = forwardRef(({ setSelectMenuActivo }, ref) => {
             palabra={palabras.tela}
             valorSeleccionado={tipoTelaSeleccionado}
             onChange={(valor) => setTipoTelaSeleccionado(valor)}
-            deshabilitado={!tipoToldoSeleccionado} // No se puede seleccionar si no hay toldo
+            deshabilitado={!tipoToldoSeleccionado}
             opcionesDeshabilitadas={
               tipoToldoSeleccionado === "Cofre" ? ["1"] : []
             }
