@@ -1,50 +1,47 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import PantallaCargaProductos from "../components/General/PantallaCargaProductos";
-import useTipoDispositivo from "../Hooks/useTipoDispositivo.js";
+
+// Info de productos
 import { infoProductos } from "../constants/infoProductos.jsx";
 
+// Componentes
+import PantallaCargaProductos from "../components/General/PantallaCargaProductos";
+
+// Hooks
+import useTipoDispositivo from "../Hooks/useTipoDispositivo.js";
+import { preloadModelos } from "../Hooks/Productos/preloadModelos.js";
+
+// Lazy load de modelos (todos usan DRACO)
+const modelosMap = {
+  1: lazy(() => import("../components/Objetos 3D/Toldos/Toldo.jsx")),
+  2: lazy(() => import("../components/Objetos 3D/Toldos/Cofre.jsx")),
+  3: lazy(() => import("../components/Objetos 3D/Toldos/Veranda.jsx")),
+  4: lazy(() => import("../components/Objetos 3D/Toldos/Capota.jsx")),
+  5: lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx")),
+};
+
 const ToldosProductos = ({ id }) => {
+  // Precargar modelos al entrar en la página
+  useEffect(() => {
+    preloadModelos();
+  }, []);
+
   const dispositivo = useTipoDispositivo();
   const producto = infoProductos.find((item) => item.id === id);
 
   if (!producto) return <div>Producto no encontrado</div>;
 
-  const {
-    position,
-    rotation,
-    escala,
-    escalaMovil,
-    positionMovil,
-  } = producto;
-
-  let Modelo;
-
-  switch (producto.id) {
-    case 1:
-      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Toldo.jsx"));
-      break;
-    case 2:
-      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Cofre.jsx"));
-      break;
-    case 3:
-      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Veranda.jsx"));
-      break;
-    case 4:
-      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Capota.jsx"));
-      break;
-    case 5:
-      Modelo = lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx"));
-      break;
-    default:
-      Modelo = null;
-  }
+  const { position, rotation, escala, escalaMovil, positionMovil } = producto;
+  const Modelo = modelosMap[producto.id] || null;
 
   return (
     <div className="model-proyecto-container">
       <Canvas className="model-productos" shadows style={{ width: "100%" }}>
+        {/* Cámara */}
         <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={75} />
+
+        {/* Luces */}
         <ambientLight intensity={1} />
         <directionalLight
           position={[0, 10, 2]}
@@ -52,17 +49,19 @@ const ToldosProductos = ({ id }) => {
           shadow-mapSize={[2048, 2048]}
           castShadow
         />
+
+        {/* Suspense para lazy load */}
         <Suspense fallback={<PantallaCargaProductos />}>
-          {Modelo ? (
+          {Modelo && (
             <Modelo
               position={dispositivo !== "movil" ? position : positionMovil}
               rotation={rotation}
               scale={dispositivo !== "movil" ? escala : escalaMovil}
             />
-          ) : (
-            <div>Modelo no disponible</div>
           )}
         </Suspense>
+
+        {/* Controles */}
         <OrbitControls
           enablePan={false}
           autoRotate

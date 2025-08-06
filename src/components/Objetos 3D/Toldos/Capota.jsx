@@ -1,8 +1,17 @@
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 
+// Crear el DRACOLoader y configurar la ruta donde están los decoders
+const dracoLoader = new DRACOLoader()
+dracoLoader.setDecoderPath('/draco/') // ruta pública con los archivos draco
+
+// Decirle a useGLTF que use el dracoLoader para cargar modelos comprimidos
+useGLTF.loader = dracoLoader
 
 const Capota = (props) => {
-  const { nodes, materials } = useGLTF('/models/capota.glb')
+  // Cargar el modelo comprimido con draco
+  const { nodes, materials } = useGLTF('/models/capota-draco.glb')
 
   return (
     <group {...props} dispose={null}>
@@ -14,12 +23,14 @@ const Capota = (props) => {
             geometry={nodes.Group_001_1_Mat_0.geometry}
             material={materials.material}
             position={[0, 322.796, 0]}
-            />
+          />
         </group>
       </group>
     </group>
   )
 }
 
-useGLTF.preload('/models/capota.glb')
+// Pre-cargar el modelo comprimido para mejor experiencia
+useGLTF.preload('/models/capota-draco.glb')
+
 export default Capota

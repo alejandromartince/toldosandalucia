@@ -139,9 +139,11 @@ MEDIA QUERIES PORTATIL
 @MEDIA QUERIES TABLETS
 ============================ */
 @media (max-width: 1024px) {
-
   .contacto-section {
     height: fit-content;
+    background-size: cover; /* Ajusta la imagen completa al contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .contacto-container {
@@ -152,11 +154,13 @@ MEDIA QUERIES PORTATIL
 }
 
 /* ============================
-@MEDIA QUERIES MOVILES
+@MEDIA QUERIES MÓVILES
 ============================ */
 @media (max-width: 769px) {
   .contacto-section {
-    background-attachment: local;
+    background-size: cover; /* Ajusta la imagen completa al contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .contacto-container {
