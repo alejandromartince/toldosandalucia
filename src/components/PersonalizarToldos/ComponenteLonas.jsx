@@ -13,12 +13,14 @@ import { infoLonas } from "../../constants/infoPersonalizarToldos";
 // Importamos los estilos
 import "./ComponenteLonas.css";
 
-const ComponenteLonas = ({ idioma, tipoToldoSeleccionado }) => {
+const ComponenteLonas = ({
+  idioma,
+  tipoToldoSeleccionado,
+  colorSeleccionado,
+  setColorSeleccionado,
+}) => {
   const dispositivo = useTipoDispositivo();
   const info = infoLonas;
-
-  // Estado para guardar el color seleccionado
-  const [colorSeleccionado, setColorSeleccionado] = useState(null);
 
   const [abierto, setAbierto] = useState(false);
   const contenedorRef = useRef(null);
@@ -43,9 +45,25 @@ const ComponenteLonas = ({ idioma, tipoToldoSeleccionado }) => {
     };
   }, [dispositivo]);
 
+  useEffect(() => {
+    if (!tipoToldoSeleccionado) {
+      setAbierto(false);
+    }
+  }, [tipoToldoSeleccionado]);
+
   return (
     <div
       ref={contenedorRef}
+      onMouseEnter={() => {
+        if (tipoToldoSeleccionado) {
+          setAbierto(true);
+        }
+      }}
+      onMouseLeave={()=> {
+        if(tipoToldoSeleccionado){
+          setAbierto(false);
+        }
+      }}
       className={`contenedorLonasFlotante ${abierto ? "abierto" : "cerrado"}`}
     >
       <div className="lonasContainer">
@@ -71,7 +89,9 @@ const ComponenteLonas = ({ idioma, tipoToldoSeleccionado }) => {
 
         {/* Mostrar el color seleccionado con nombre e imagen */}
         {colorSeleccionado && (
-          <div style={{ marginTop: "1rem", color: "#fff", textAlign: "center" }}>
+          <div
+            style={{ marginTop: "1rem", color: "#fff", textAlign: "center" }}
+          >
             <h4>Color seleccionado: {colorSeleccionado}</h4>
             <picture>
               <source

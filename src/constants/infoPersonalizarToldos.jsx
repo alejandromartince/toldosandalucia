@@ -233,12 +233,12 @@ export const traducciones = {
 
 export const infoLonas = {
   pc: {
-    es: "Selecciona tu lona",
-    en: "Select your fabric",
-    fr: "Sélectionnez votre toile",
-    ru: "Выберите свою ткань",
-    da: "Vælg dit dug",
-    de: "Wähle deinen Stoff aus",
+    es: "Selecciona tu lona aquí",
+    en: "Select your fabric here",
+    fr: "Sélectionnez votre toile ici",
+    ru: "Выберите свою ткань здесь",
+    da: "Vælg dit dug her",
+    de: "Wähle deinen Stoff hier",
   },
 
   movil: {

@@ -27,7 +27,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
   const contenido = infoPersonalizarToldos;
 
   const [selectMenuActivo, setSelectMenuActivo] = useState(false);
-  const [tipoToldoSeleccionado, setTipoToldoSeleccionado] = useState(""); // <-- Estado subido
+  const [tipoToldoSeleccionado, setTipoToldoSeleccionado] = useState("");
+  const [colorSeleccionado, setColorSeleccionado] = useState(null);
 
   // Estado para controlar la visibilidad de la flecha con delay
   const [showArrow, setShowArrow] = useState(false);
@@ -35,50 +36,37 @@ const PersonalizarToldos = ({ onCerrar }) => {
   const refContenedorPadre = useRef(null);
   const [refSelects, top] = usePosicionTop(refContenedorPadre);
 
-  // Script para mostrar la flecha después de 400ms cuando selectMenuActivo es false
+  const [cerrando, setCerrando] = useState(false);
+  const refPopup = useRef(null);
+
+  // Mostrar flecha después de 400ms si el menú no está activo
   useEffect(() => {
-    // Ocultamos la flecha inmediatamente al cambiar selectMenuActivo
     setShowArrow(false);
-
     if (!selectMenuActivo) {
-      // Mostramos la flecha tras 400ms
-      const timer = setTimeout(() => {
-        setShowArrow(true);
-      }, 400);
-
-      // Limpiamos el timeout si selectMenuActivo cambia o componente se desmonta
+      const timer = setTimeout(() => setShowArrow(true), 400);
       return () => clearTimeout(timer);
     }
   }, [selectMenuActivo]);
 
-  //Script para bloquear el scroll cuando se abre el pop-up de Personalziar Toldos
-  const [cerrando, setCerrando] = useState(false);
-
+  // Bloquear scroll y cerrar con animación
   useEffect(() => {
-    const popup = document.querySelector(".popup-contenido-prueba ");
+    const popup = refPopup.current;
     const handleWheel = (e) => e.preventDefault();
 
     if (!cerrando) {
       document.body.style.overflow = "hidden";
       popup?.addEventListener("wheel", handleWheel, { passive: false });
     } else {
+      const timer = setTimeout(onCerrar, 400);
       document.body.style.overflow = "auto";
       popup?.removeEventListener("wheel", handleWheel);
+      return () => clearTimeout(timer);
     }
 
     return () => {
       document.body.style.overflow = "auto";
       popup?.removeEventListener("wheel", handleWheel);
     };
-  }, [cerrando]);
-
-  useEffect(() => {
-    if (cerrando) {
-      const timer = setTimeout(() => {
-        onCerrar(); // Avisamos al padre que cierre el popup y lo desmonte
-      }, 400); // Duración animación salida
-      return () => clearTimeout(timer);
-    }
   }, [cerrando, onCerrar]);
 
   return (
@@ -110,6 +98,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
                 setSelectMenuActivo={setSelectMenuActivo}
                 tipoToldoSeleccionado={tipoToldoSeleccionado}
                 setTipoToldoSeleccionado={setTipoToldoSeleccionado}
+                colorSeleccionado={colorSeleccionado}
+                setColorSeleccionado={setColorSeleccionado}
               />
             </div>
           </div>
@@ -123,15 +113,16 @@ const PersonalizarToldos = ({ onCerrar }) => {
           style={{ width: ".25rem", backgroundColor: "white", border: "none" }}
         />
 
-        <div className="contenido-PersonalizarToldos-derecha">
+        <div
+          className="contenido-PersonalizarToldos-derecha"
+          style={colorSeleccionado ? { backgroundImage: "none" } : {}}
+        >
           <div className="contenido-bloqueado">
             <BotonCerrarMenu
               onClick={() => setCerrando(true)}
               idioma={idioma}
             />
 
-            {/* FLECHA QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO PARA EL TUTORIAL DE LA SECCION PERSONALIZAR TOLDOS */}
-            {/* Ahora se muestra después de 400ms */}
             {!selectMenuActivo && showArrow && (
               <div className="contenedorFlechaTutorial">
                 <BsArrowLeft
@@ -144,16 +135,31 @@ const PersonalizarToldos = ({ onCerrar }) => {
                     transform: "translateX(0)",
                     zIndex: 1000,
                   }}
-                ></BsArrowLeft>
+                />
               </div>
             )}
           </div>
-          <div className="descripcionBloqueoPT">
-            <p>{contenido.descripcion[idioma]}</p>
-          </div>
 
-          {/*ELEMENTOS PARA LAS LONAS*/}
-          <ComponenteLonas idioma={idioma} tipoToldoSeleccionado={tipoToldoSeleccionado}/>
+          {!colorSeleccionado && (
+            <div className="descripcionBloqueoPT">
+              <p>{contenido.descripcion[idioma]}</p>
+            </div>
+          )}
+
+          <ComponenteLonas
+            idioma={idioma}
+            tipoToldoSeleccionado={tipoToldoSeleccionado}
+            colorSeleccionado={colorSeleccionado}
+            setColorSeleccionado={setColorSeleccionado}
+          />
+
+          {colorSeleccionado && (
+            <img
+              src="/assets/PersonalizarToldos/1.jpeg"
+              alt="fondo"
+              className="imagen-fondo-lona"
+            />
+          )}
         </div>
       </div>
     </div>

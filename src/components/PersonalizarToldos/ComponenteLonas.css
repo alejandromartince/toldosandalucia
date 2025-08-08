@@ -18,7 +18,7 @@ COMPORTAMIENTO FLOTANTE DE LONAS
 
 /* Estado cerrado */
 .contenedorLonasFlotante.cerrado {
-  bottom: -13rem;
+  bottom: -14rem;
 }
 
 /* Estado abierto */
@@ -27,7 +27,7 @@ COMPORTAMIENTO FLOTANTE DE LONAS
 }
 
 /* Al hacer hover, aparece */
-.contenedorLonasFlotante:hover {
+.contenedorLonasFlotante.abierto:hover {
   bottom: -2rem;
 }
 
@@ -49,7 +49,7 @@ COMPORTAMIENTO FLOTANTE DE LONAS
   transform: rotate(180deg);
 }
 
-.contenedorLonasFlotante:hover .deslizarArribaPT .flechaLonas {
+.contenedorLonasFlotante.abierto:hover .deslizarArribaPT .flechaLonas {
   transform: rotate(360deg);
 }
 /*=============================
@@ -74,7 +74,14 @@ ESTILOS PARA LAS LONAS
   margin: 0;
 }
 
-.color-item picture img{
+.color-item picture img {
   height: 5rem;
   width: auto;
+}
+
+@media (max-width: 1024px) {
+  /* Al hacer hover, aparece */
+  .contenedorLonasFlotante:hover {
+    bottom: -14rem;
+  }
 }
