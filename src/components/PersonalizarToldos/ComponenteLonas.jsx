@@ -87,26 +87,6 @@ const ComponenteLonas = ({
           {seleccionarColorToldo(tipoToldoSeleccionado, setColorSeleccionado)}
         </div>
 
-        {/* Mostrar el color seleccionado con nombre e imagen */}
-        {colorSeleccionado && (
-          <div
-            style={{ marginTop: "1rem", color: "#fff", textAlign: "center" }}
-          >
-            <h4>Color seleccionado: {colorSeleccionado}</h4>
-            <picture>
-              <source
-                srcSet={`/assets/Lonas/${colorSeleccionado}.webp`}
-                type="image/webp"
-              />
-              <img
-                src={`/assets/Lonas/${colorSeleccionado}.webp`}
-                alt={`Color seleccionado ${colorSeleccionado}`}
-                style={{ width: "150px", height: "auto", marginTop: "0.5rem" }}
-                loading="lazy"
-              />
-            </picture>
-          </div>
-        )}
       </div>
     </div>
   );

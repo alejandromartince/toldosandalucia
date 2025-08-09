@@ -137,3 +137,12 @@ PERSONALIZACIÓN MENU POPUP
     transform: scale(1);
   }
 }
+
+/*=============================
+MEDIA QUERIES PARA TABLET Y MOVILES
+=============================*/
+@media (max-width: 1024px){
+  .texto-detras-wrapper{
+    top: 80%;
+  }
+}
