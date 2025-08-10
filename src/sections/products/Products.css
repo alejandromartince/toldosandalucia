@@ -125,11 +125,11 @@ SECCION INFERIOR (BOTONES)
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 30vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: end;
-  padding-bottom: 6rem;
+  padding-bottom: 7rem;
   background: transparent;
 }
 

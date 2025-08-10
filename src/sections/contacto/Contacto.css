@@ -28,15 +28,22 @@ OPCIONES GENERALES
 }
 
 .contacto-container {
-  width: 85%;
+  width: 70%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* cambiado de space-around a space-between */
   align-items: center;
 }
 
 /* =====================================
- OPCIONES IZQUIERDA
- ================================= */
+ OPCIONES IZQUIERDA Y DERECHA AJUSTADAS
+ ===================================== */
+.contacto-izquierda,
+.contacto-derecha {
+  width: 45%;
+  min-width: 350px;
+  max-width: 500px;
+}
+
 .contacto-izquierda {
   display: flex;
   flex-direction: column;
@@ -63,7 +70,7 @@ OPCIONES GENERALES
   border: none;
 }
 
-.contacto-izquierda-info>div {
+.contacto-izquierda-info > div {
   line-height: 1rem;
   margin-left: 2rem;
   width: 100%;
@@ -73,11 +80,11 @@ OPCIONES GENERALES
   text-transform: uppercase;
 }
 
-.contacto-izquierda-info>div {
+.contacto-izquierda-info > div {
   font-size: 1rem;
 }
 
-.contacto-izquierda-info>div>div {
+.contacto-izquierda-info > div > div {
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -85,7 +92,7 @@ OPCIONES GENERALES
 
 /* =====================================
  OPCIONES DERECHA
- ================================= */
+ ===================================== */
 .contacto-derecha {
   display: flex;
   margin-top: 2rem;
@@ -93,10 +100,9 @@ OPCIONES GENERALES
   flex-direction: column;
 }
 
-
 .tituloContactForm {
   text-align: center;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .tituloContactForm h2 {
@@ -105,9 +111,9 @@ OPCIONES GENERALES
 
 .botonMensajeForm {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  margin-top: 1rem;
-  gap: 2rem;
 }
 
 .contactarFuturoForm {
@@ -124,6 +130,24 @@ OPCIONES GENERALES
   /* Para que no se pueda interactuar cuando esté invisible */
   transition: opacity 0.5s ease-in-out;
   /* Opcional repetir la transición para consistencia */
+}
+
+.conctactCheckbox{
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* =====================================
+ ROMPE LÍNEAS EN TEXTOS PARA EVITAR AGRANDAR CONTENEDORES
+ ===================================== */
+.contacto-izquierda-info p,
+.contacto-izquierda-info div p,
+.contacto-derecha p,
+.contacto-derecha div p {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ============================
@@ -172,7 +196,15 @@ MEDIA QUERIES PORTATIL
     padding: 0rem 1rem;
   }
 
-  .contacto-izquierda-info>div {
+  .contacto-izquierda-info > div {
     margin: 0;
+  }
+
+  /* En móviles, para que tome todo el ancho y no se vea raro */
+  .contacto-izquierda,
+  .contacto-derecha {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
   }
 }

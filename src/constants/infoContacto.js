@@ -11,6 +11,8 @@ export const infoContacto = {
     enviado: "Enviando...",
     exito: "¡Mensaje enviado con éxito!",
     contactarFuturo: "Nos pondremos en contacto lo antes posible.",
+    aceptarTerminos: "Acepto los",
+    terminos: "Términos y Condiciones"
   },
   en: {
     titulo: "Contact Us",
@@ -23,7 +25,9 @@ export const infoContacto = {
     boton: "Send",
     enviado: "Sending...",
     exito: "Form Submitted Successfully!",
-    contactarFuturo: "We will get in touch as soon as possible"
+    contactarFuturo: "We will get in touch as soon as possible",
+    aceptarTerminos: "I accept the",
+    terminos: "Terms and Conditions"
   },
   fr: {
     titulo: "Contactez-nous",
@@ -36,7 +40,9 @@ export const infoContacto = {
     boton: "Envoyer",
     enviado: "Envoi en cours...",
     exito: "Formulaire soumis avec succès !",
-    contactarFuturo: "Nous vous contacterons dès que possible."
+    contactarFuturo: "Nous vous contacterons dès que possible.",
+    aceptarTerminos: "J'accepte les",
+    terminos: "Termes et Conditions"
   },
   de: {
     titulo: "Kontaktieren Sie uns",
@@ -49,7 +55,9 @@ export const infoContacto = {
     boton: "Senden",
     enviado: "Senden...",
     exito: "Formular erfolgreich eingereicht!",
-    contactarFuturo: "Wir werden uns so schnell wie möglich bei Ihnen melden."
+    contactarFuturo: "Wir werden uns so schnell wie möglich bei Ihnen melden.",
+    aceptarTerminos: "Ich akzeptiere die",
+    terminos: "Geschäftsbedingungen"
   },
   ru: {
     titulo: "Свяжитесь с нами",
@@ -62,7 +70,9 @@ export const infoContacto = {
     boton: "Отправить",
     enviado: "Отправка...",
     exito: "Сообщение успешно отправлено!",
-    contactarFuturo: "Мы свяжемся с вами как можно скорее."
+    contactarFuturo: "Мы свяжемся с вами как можно скорее.",
+    aceptarTerminos: "Я принимаю",
+    terminos: "Условия и положения"
   },
   da: {
     titulo: "Kontakt os",
@@ -75,6 +85,8 @@ export const infoContacto = {
     boton: "Send",
     enviado: "Sender...",
     exito: "Besked sendt succesfuldt!",
-    contactarFuturo: "Vi kontakter dig så hurtigt som muligt."
+    contactarFuturo: "Vi kontakter dig så hurtigt som muligt.",
+    aceptarTerminos: "Jeg accepterer",
+    terminos: "Vilkår og betingelser"
   }
 };

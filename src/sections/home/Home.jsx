@@ -1,4 +1,9 @@
-import { useEffect, useState } from "react";
+//Importamos los hooks de swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 // Importamos las constantes
 import { textoHome } from "../../constants/infoHome.js";
@@ -20,70 +25,47 @@ const Home = () => {
   const fondos = Object.values(textoHome.fondo);
   const dispositivo = useTipoDispositivo();
 
-  const [fondoActual, setFondoActual] = useState(fondos[0]);
-  const [fondoNuevo, setFondoNuevo] = useState(null);
-  const [mostrarNuevo, setMostrarNuevo] = useState(false);
-  const [imgCargada, setImgCargada] = useState(false);
-
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      const siguienteFondo =
-        fondos[(fondos.indexOf(fondoActual) + 1) % fondos.length];
-
-      const img = new Image();
-      img.src = siguienteFondo;
-
-      img.onload = () => {
-        setFondoNuevo(siguienteFondo);
-        setImgCargada(true);
-      };
-    }, 5000);
-
-    return () => clearInterval(intervalo);
-  }, [fondoActual, fondos]);
-
-  // Cuando la imagen ya esté cargada, aplicamos la transición
-  useEffect(() => {
-    if (imgCargada && fondoNuevo) {
-      requestAnimationFrame(() => {
-        setMostrarNuevo(true);
-      });
-    }
-  }, [imgCargada, fondoNuevo]);
-
-  const handleTransicionFinalizada = () => {
-    setFondoActual(fondoNuevo);
-    setFondoNuevo(null);
-    setMostrarNuevo(false);
-    setImgCargada(false);
-  };
+  // Ya no usamos estados ni efectos para el fondo con cambio manual
 
   return (
-    <section className="home" id="home">
-      {/* Fondo actual */}
-      <div
-        className="fondo-img"
-        style={{ backgroundImage: `url(${fondoActual})` }}
-      />
-
-      <div className="fondo-container">
-        <img
-          src={fondoActual}
-          className="fondo-img visible"
-          alt="Fondo actual"
-        />
-        {fondoNuevo && (
-          <img
-            src={fondoNuevo}
-            className={`fondo-img-fade ${mostrarNuevo ? "mostrar" : ""}`}
-            alt="Fondo nuevo"
-            onTransitionEnd={handleTransicionFinalizada}
-          />
-        )}
-      </div>
+    <section className="home" id="home" style={{ position: "relative" }}>
+      
+      {/* Fondo con Swiper */}
+      <Swiper
+        modules={[EffectFade, Autoplay]}
+        effect="fade"
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop={true}
+        speed={600}
+        style={{
+          position: "absolute", // posición absoluta para que sea fondo
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0, // detrás del contenido
+        }}
+      >
+        {fondos.map((url, i) => (
+          <SwiperSlide key={i}>
+            <div
+              style={{
+                backgroundImage: `url(${url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Contenido principal */}
-      <div className="contenedor-home">
+      <div
+        className="contenedor-home"
+        style={{ position: "relative", zIndex: 10 }} // contenido encima del fondo
+      >
         <div className="contenido-home">
           {dispositivo !== "movil" ? (
             <>

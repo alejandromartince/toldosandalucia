@@ -23,49 +23,6 @@ OPCIONES GENERALES
   transition: background-image 1s ease-in-out;
 }
 
-.fondo-container {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  overflow: hidden;
-}
-
-.fondo-container img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-}
-
-.fondo-img.visible {
-  opacity: 1;
-  z-index: 1;
-}
-
-.fondo-img-fade {
-  z-index: 2;
-}
-
-.fondo-img-fade.mostrar {
-  opacity: 1;
-}
-
-
-.overlay-capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  transition: background 0.5s ease-in-out;
-}
-
 /* ============================
 OPCIONES DE CONTENIDO
 ============================ */
@@ -94,38 +51,7 @@ OPCIONES DE CONTENIDO
   margin-bottom: 1.5rem;
 }
 
-/* ============================
-MEDIA QUERIES
-============================ */
-/* @media (max-width: 1024px) {
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-  }
-
-  .contenedor-home {
-    align-items: center;
-    gap: 8rem;
-  }
-
-  .contenido-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-} */
 
 @media (max-width: 767px) {
   .contenedor-home {
