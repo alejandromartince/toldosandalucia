@@ -154,7 +154,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
           {colorSeleccionado && (
             <img
-              src="/assets/PersonalizarToldos/1.jpeg"
+              src="/assets/PersonalizarToldos/2.jpeg"
               alt="fondo"
               className="imagen-fondo-lona"
             />

@@ -11,7 +11,6 @@ import './Navbar.css';
 const Navbar = ({pagina}) => {
 
   const dispositivo = useTipoDispositivo(); //Asi sabemos que dispositivo manejamos
-  
 
   return (
     <>

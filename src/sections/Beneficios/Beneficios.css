@@ -86,6 +86,7 @@ IMAGENES
 }
 
 .imagen-item {
+  position: relative;
   height: 100%;
   flex: 1;
   position: relative;
@@ -93,6 +94,18 @@ IMAGENES
   opacity: 1;
   overflow: hidden;
   cursor: pointer;
+}
+
+.imagen-item svg {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: white; /* o el color que quieras para el icono */
+  background-color: rgba(0, 0, 0, 0.171); /* para que destaque sobre la imagen */
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .imagen-item.oculto {
@@ -123,7 +136,7 @@ INFORMACION CARTAS
   background-color: aliceblue;
   padding: 2rem;
   min-height: 21.875rem; /* 350px */
-  width: 21.875rem;       /* 350px */
+  width: 21.875rem; /* 350px */
   box-sizing: border-box;
   cursor: auto;
 
@@ -133,7 +146,7 @@ INFORMACION CARTAS
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility .25s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .imagen-item.expandida .info-carta {

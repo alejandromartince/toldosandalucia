@@ -1,0 +1,51 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2e7d32; /* verde oscuro */
+  color: #ffffff; /* blanco */
+  padding: 1em 2em;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-banner__message {
+  flex: 1;
+  padding-right: 1em;
+}
+
+.cookie-banner__buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-banner__button {
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.cookie-banner__button--accept {
+  background-color: #66bb6a; /* verde claro */
+}
+
+.cookie-banner__button--accept:hover {
+  background-color: #81c784; /* verde más claro al pasar el mouse */
+}
+
+.cookie-banner__button--reject {
+  background-color: #a5d6a7; /* verde muy claro */
+  color: #2e7d32; /* verde oscuro para texto */
+}
+
+.cookie-banner__button--reject:hover {
+  background-color: #c8e6c9; /* aún más claro */
+}
