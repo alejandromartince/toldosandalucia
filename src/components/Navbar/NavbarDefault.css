@@ -96,6 +96,7 @@ OPCIONES DEL MENU CENTRAL
 
 .nav_link {
   cursor: pointer;
+  text-decoration: none;
   transition: color 0.3s ease;
   color: var(--blanco-texto-navbar);
 }

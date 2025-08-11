@@ -1,6 +1,6 @@
 //Importamos los compoentnes de react
-import { Link } from "react-scroll";
 import { useState } from "react";
+import { scroller } from "react-scroll"; // scroller importado para scroll suave
 
 //Importamos los compoententes
 import SelectorIdioma from "../../components/Navbar/SelectorIdioma";
@@ -25,7 +25,7 @@ const NavbarDefault = ({ pagina }) => {
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState("home"); // Estado para la sección activa
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
-  const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
+  const scrollY = useScrollPositionY(); //Obtenemos el scroll vertical
 
   const volver = {
     es: "Volver",
@@ -44,6 +44,16 @@ const NavbarDefault = ({ pagina }) => {
     return docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   })();
 
+  // Función para hacer scroll suave con scroller
+  const handleScrollClick = (e, id, offset) => {
+    e.preventDefault(); // Evitar salto instantáneo
+    scroller.scrollTo(id, {
+      duration: 800,
+      smooth: true,
+      offset: offset,
+    });
+  };
+
   return (
     <>
       <header
@@ -53,9 +63,13 @@ const NavbarDefault = ({ pagina }) => {
       >
         <div className="navbar__logo">
           {pagina === "principal" && (
-            <Link to="home" smooth={true} duration={800}>
+            <a
+              href="#home"
+              onClick={(e) => handleScrollClick(e, "home", 0)}
+              aria-label="Ir a inicio"
+            >
               <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
-            </Link>
+            </a>
           )}
 
           {pagina !== "principal" && (
@@ -77,18 +91,17 @@ const NavbarDefault = ({ pagina }) => {
             .map(({ id, texto, offset }) => {
               if (pagina === "principal") {
                 return (
-                  <Link
+                  <a
                     key={id}
-                    to={id}
-                    smooth={true}
-                    duration={800}
-                    offset={offset}
+                    href={`#${id}`}
                     className={`nav_link ${
                       activeSection === id ? "active_link" : ""
                     }`}
+                    onClick={(e) => handleScrollClick(e, id, offset)}
+                    aria-current={activeSection === id ? "page" : undefined}
                   >
                     {texto[idioma]}
-                  </Link>
+                  </a>
                 );
               } else {
                 return null;

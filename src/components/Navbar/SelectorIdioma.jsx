@@ -59,6 +59,15 @@ const SelectorIdioma = () => {
     da: "Skift sprog",
   };
 
+  const altIdiomas = {
+    es: "Español",
+    en: "English",
+    de: "Deutsch",
+    ru: "Русский",
+    fr: "Français",
+    da: "Dansk",
+  };
+
   return (
     <div className="selector-idioma-dropdown" ref={contenedorRef}>
       <button
@@ -66,7 +75,7 @@ const SelectorIdioma = () => {
         onClick={toggleMenu}
         aria-label={labels[idioma]}
       >
-        <img src={idiomas[idioma]} alt={idioma} width={30} height={20} />
+        <img src={idiomas[idioma]} alt={altIdiomas[idioma]} width={30} height={20} />
         <IoIosArrowDown
           size={20}
           style={{

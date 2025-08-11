@@ -13,10 +13,6 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   overflow-anchor: none; /* evita movimientos por cambio dinámico */
 }
 
-.selector-idioma-dropdown img{
-  border-radius: 3px;
-}
-
 /* Botón actual con idioma visible */
 .boton-idioma-actual {
   background-color: transparent;
