@@ -140,45 +140,7 @@ SECCION INFERIOR (BOTONES)
 /* ============================
 MENSAJE INVISIBLE DE COPYRIGHT
 ============================ */
-.boton-derecha-prueba {
-  display: flex;
-  justify-content: end;
-  padding-bottom: 7.5rem;
-  position: relative;
-  z-index: 20;
-  /* más alto que el botón principal inferior */
-}
 
-
-.tooltip-container {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip-mensaje {
-  position: absolute;
-  bottom: 125%;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgb(66, 66, 66);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.875rem; /* 14px / 16 = 0.875rem */
-  white-space: nowrap;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 30;
-  /* asegúrate que está por encima de todo */
-}
-
-
-.boton-interrogacion:hover .tooltip-mensaje {
-  opacity: 0.8;
-  /* Visibilidad flojita */
-  visibility: visible;
-}
 
 /* ============================
 MEDIA QUERIES

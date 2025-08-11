@@ -111,12 +111,3 @@ BOTON LINEA
 .boton-linea-negra:active {
   transform: scale(0.98);
 }
-
-/* ============================
-MEDIA QUERIES
-============================ */
-/* @media (max-width: 767px) {
-  .boton-linea {
-    padding: 0.5rem .5rem;
-  }
-} */

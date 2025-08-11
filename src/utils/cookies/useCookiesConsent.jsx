@@ -3,14 +3,19 @@ import { getCookie, setCookie } from "./cookies.js";
 
 export function useCookieConsent() {
   const [consent, setConsent] = useState({
-    necesarias: true, // Siempre true, no se puede rechazar
-    preferencias: false, // Pendiente hasta que el usuario acepte
+    necesarias: true,
+    preferencias: null, // null = aún no decide
   });
 
   useEffect(() => {
     const consentCookie = getCookie("cookie-consent");
     if (consentCookie) {
-      setConsent(JSON.parse(consentCookie));
+      try {
+        setConsent(JSON.parse(consentCookie));
+      } catch {
+        // Si hay un valor corrupto en la cookie, la ignoramos
+        setConsent({ necesarias: true, preferencias: null });
+      }
     }
   }, []);
 

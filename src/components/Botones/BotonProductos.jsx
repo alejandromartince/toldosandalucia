@@ -5,7 +5,10 @@ import { useIdioma } from "../../Hooks/General/useIdioma.js";
 import useInformacionBoton from "../../constants/infoBotones.js";
 
 //Importamos los iconos
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import {
+  MdOutlineKeyboardDoubleArrowRight,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 
 //Importamos el estilo
 import "./BotonProductos.css";
@@ -17,6 +20,10 @@ const BotonProductos = ({ onAbrir }) => {
   const label = {
     es: "Personaliza tu toldo y envía la petición",
     en: "Customize your awning and send your request",
+    da: "Tilpas din markise og send din anmodning",
+    ru: "Настройте свой тент и отправьте запрос",
+    fr: "Personnalisez votre store et envoyez votre demande",
+    de: "Passen Sie Ihre Markise an und senden Sie Ihre Anfrage",
   };
 
   const texto = {

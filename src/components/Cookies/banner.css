@@ -1,21 +1,57 @@
+:root {
+  --negro: #131313;
+  --negro-claro: #272727;
+  --negro-muy-claro: #3b3b3b;
+  --gris: #808080;
+  --gris-claro: #ffffff94;
+  --gris-invisible: #50505080;
+  --gris-pocoVisible: #505050a6;
+  --blanco: #fff;
+  --blanco-claro: #f1f1f1;
+  --blanco-muy-claro: #dddddd;
+  --blanco-texto-navbar: #dddddd62;
+  --blanco-footer: #ffffff77;
+  --verde: #1b4332;
+  --verde2: #2c664e;
+  --verde-logo: #138559;
+  --verde-claro: #00ff95;
+  --verde-navbar: #283935;
+}
+
+/* =============================
+BANNER PRINCIPAL
+============================= */
 .cookie-banner {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #2e7d32; /* verde oscuro */
-  color: #ffffff; /* blanco */
-  padding: 1em 2em;
-  z-index: 1000;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(110%);
+  background: linear-gradient(180deg, var(--negro-claro), var(--negro));
+  color: var(--blanco);
+  padding: 1rem 1.5rem;
+  width: min(800px, calc(100% - 2rem));
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   align-items: center;
-  font-size: 14px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  z-index: 1000;
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1),
+    opacity 0.4s ease;
+  opacity: 0;
+  font-size: 0.95rem;
+}
+
+.cookie-banner.mostrar {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 .cookie-banner__message {
   flex: 1;
   padding-right: 1em;
+  color: var(--blanco-muy-claro);
 }
 
 .cookie-banner__buttons {
@@ -23,29 +59,149 @@
   gap: 10px;
 }
 
+/* =============================
+BOTONES DEL BANNER
+============================= */
 .cookie-banner__button {
-  padding: 0.5em 1em;
+  padding: 0.6em 1.2em;
   border: none;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  font-size: 0.85rem;
 }
 
 .cookie-banner__button--accept {
-  background-color: #66bb6a; /* verde claro */
+  background-color: var(--verde-logo);
+  color: var(--blanco);
 }
 
 .cookie-banner__button--accept:hover {
-  background-color: #81c784; /* verde más claro al pasar el mouse */
+  background-color: var(--verde-claro);
+  transform: scale(1.05);
 }
 
 .cookie-banner__button--reject {
-  background-color: #a5d6a7; /* verde muy claro */
-  color: #2e7d32; /* verde oscuro para texto */
+  background-color: var(--negro-muy-claro);
+  color: var(--blanco-muy-claro);
 }
 
 .cookie-banner__button--reject:hover {
-  background-color: #c8e6c9; /* aún más claro */
+  background-color: var(--gris-invisible);
+  transform: scale(1.05);
+}
+
+.cookie-banner__button--config {
+  background-color: transparent;
+  border: 1px solid var(--gris-pocoVisible);
+  color: var(--gris-claro);
+}
+
+.cookie-banner__button--config:hover {
+  border-color: var(--blanco);
+  color: var(--blanco);
+  transform: scale(1.05);
+}
+
+/* =============================
+OVERLAY Y MODAL CONFIG
+============================= */
+.config-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.config-panel {
+  width: min(720px, 96%);
+  background: linear-gradient(180deg, var(--negro-muy-claro), var(--negro-claro));
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  color: var(--blanco);
+  opacity: 0;
+  transform: scale(0.92);
+  animation: scaleIn 0.3s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+.config-panel h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--blanco);
+}
+
+.config-panel p {
+  font-size: 0.95rem;
+  color: var(--gris-claro);
+}
+
+/* =============================
+TOGGLES PERSONALIZADOS
+============================= */
+.toggle {
+  --w: 50px;
+  --h: 26px;
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  background: var(--gris-invisible);
+  border-radius: var(--h);
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.toggle.on {
+  background: var(--verde-logo);
+}
+
+.toggle .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(var(--h) - 6px);
+  height: calc(var(--h) - 6px);
+  border-radius: 50%;
+  background: #fff;
+  transform: translateX(0);
+  transition: transform 220ms cubic-bezier(0.25, 1.4, 0.5, 1),
+              background 180ms ease;
+}
+
+.toggle.on .knob {
+  transform: translateX(26px);
+}
+
+/* =============================
+KEYFRAMES
+============================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* =============================
+RESPONSIVE
+============================= */
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .cookie-banner__buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
