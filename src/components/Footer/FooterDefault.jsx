@@ -101,7 +101,7 @@ const FooterDefault = () => {
 
       <div className="copyright">
         <p>© {new Date().getFullYear()} Toldos Andalucía - {i.copy}</p>
-        <p>Hecho por <img src="/assets/Logo/LogoKomettaBlanco.png" alt="Logo de nuestra querida empresa" width={200}/></p>
+        <p>Hecho por <img src="/assets/Logo/LogoKomettaBlanco.png" alt="Logo de nuestra querida empresa" width={100}/></p>
       </div>
     </div>
   );
