@@ -212,7 +212,7 @@ export default function Formulario({ onSubmissionChange }) {
               href="/Privacidad"
               style={{ color: "white", textDecoration: "none" }}
             >
-              <span style={{ color: "var(--verde-claro)" }}>{i.terminos}</span>
+              <span className="terminosCondiciones" style={{ color: "var(--verde-claro)" }}>{i.terminos}</span>
             </a>
           </span>
         }

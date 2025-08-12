@@ -139,6 +139,10 @@ OPCIONES GENERALES
   -ms-user-select: none;
 }
 
+.terminosCondiciones:hover{
+  text-decoration: underline;
+}
+
 /* =====================================
  ROMPE LÍNEAS EN TEXTOS PARA EVITAR AGRANDAR CONTENEDORES
  ===================================== */

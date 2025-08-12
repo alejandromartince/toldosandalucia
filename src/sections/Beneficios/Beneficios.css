@@ -2,7 +2,7 @@
 OPCIONES GENERALES
 ============================ */
 .beneficios {
-  height: 120vh;
+  height: 115vh;
   background-color: aliceblue;
   color: var(--negro-claro);
   padding: 2rem 1rem 1rem 1rem;

@@ -2,7 +2,6 @@ import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 export const DriverProductos = (idioma) => {
-
   const driverObj = driver({
     showProgress: true,
     smoothScroll: true,
@@ -17,7 +16,7 @@ export const DriverProductos = (idioma) => {
         : "{{current}} of {{total}}",
     steps: [
       {
-        element: ".model-productos",
+        element: ".model-productos div",
         popover: {
           title: idioma === "es" ? "Ver el modelo 3D" : "View the 3D Model",
           description:
@@ -42,7 +41,7 @@ export const DriverProductos = (idioma) => {
         },
       },
       {
-        element: ".boton-centro-prueba",
+        element: ".boton-producto",
         popover: {
           title:
             idioma === "es"
@@ -52,7 +51,7 @@ export const DriverProductos = (idioma) => {
             idioma === "es"
               ? "Aquí puedes personalizar tu toldo con diferentes opciones."
               : "Here you can customize your awning with different options.",
-          side: "right",
+          side: "top", // <-- Cambiado a 'top'
           align: "start",
         },
       },

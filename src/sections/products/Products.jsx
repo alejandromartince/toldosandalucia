@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 // Hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
@@ -19,6 +20,7 @@ import { useIdioma } from "../../Hooks/General/useIdioma.js";
 
 // Estilos
 import "./Products.css";
+import BotonTutorial from "../../components/Botones/BotonTutorial.jsx";
 
 const Products = () => {
   const { idioma } = useIdioma();
@@ -60,7 +62,10 @@ const Products = () => {
 
           <div className="contenedor-navegacion-productos">
             <IoIosArrowBack onClick={prevProduct} className="icono-productos" />
-            <IoIosArrowForward onClick={nextProduct} className="icono-productos" />
+            <IoIosArrowForward
+              onClick={nextProduct}
+              className="icono-productos"
+            />
           </div>
         </div>
 
@@ -73,7 +78,9 @@ const Products = () => {
             </h1>
             <hr className="hr-productos" />
             <div className="text-productos">
-              <h3>{dispositivo !== "movil" ? productoActual.titulo[idioma] : ""}</h3>
+              <h3>
+                {dispositivo !== "movil" ? productoActual.titulo[idioma] : ""}
+              </h3>
               <p>
                 {dispositivo === "movil"
                   ? productoActual.descripcion.movil[idioma]
@@ -81,21 +88,29 @@ const Products = () => {
               </p>
             </div>
           </div>
-          {/* <div className="boton-derecha-prueba">
+        </div>
+      </div>
+
+      {/* <div className="boton-derecha-prueba">
             <BotonInterrogacion mensaje={i.texto} onClick={() => {
                 console.log("Boton Clicado")
                 runDriver(true);
               }} />
           </div> */}
-
-        </div>
-      </div>
-
       <div className="contenedor-botones-prueba">
+        <div></div> {/* EQUILIBRADOR */}
         <BotonProductos onAbrir={() => setMostrarPopup(true)} />
+        <BotonTutorial
+          onClick={() => {
+            runDriver(true);
+          }}
+          idioma={idioma}
+        />
       </div>
 
-      {mostrarPopup && <PersonalizarToldos onCerrar={() => setMostrarPopup(false)} />}
+      {mostrarPopup && (
+        <PersonalizarToldos onCerrar={() => setMostrarPopup(false)} />
+      )}
     </section>
   );
 };
