@@ -1,13 +1,13 @@
-import { useGLTF } from '@react-three/drei'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
+import { useGLTF } from "@react-three/drei";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 // Configuración de DRACO
-const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/draco/')
-useGLTF.loader = dracoLoader
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("/draco/");
+useGLTF.loader = dracoLoader;
 
 const Pergola = (props) => {
-  const { nodes, materials } = useGLTF('/models/pergola-draco.glb')
+  const { nodes, materials } = useGLTF("/models/pergola-draco.glb");
 
   return (
     <group {...props} dispose={null}>
@@ -16,7 +16,7 @@ const Pergola = (props) => {
           castShadow
           receiveShadow
           geometry={nodes.Material2.geometry}
-          material={materials['0056_Yellow']}
+          material={materials["0056_Yellow"]}
           scale={[1, 0.543, 1]}
         />
         <mesh
@@ -54,10 +54,10 @@ const Pergola = (props) => {
         />
       </group>
     </group>
-  )
-}
+  );
+};
 
 // Precarga del modelo DRACO
-useGLTF.preload('/models/pergola-draco.glb')
+useGLTF.preload("/models/pergola-draco.glb");
 
-export default Pergola
+export default Pergola;
