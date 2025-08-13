@@ -25,6 +25,10 @@ SELECTOR DE IDIOMA - ESTILOS MEJORADOS SIN SALTO
   padding: 0.4rem 0.6rem;
   transition: background-color 0.3s ease, border 0.3s ease;
   min-width: 80px; /* Evita que el tamaño cambie por el contenido */
+} 
+
+.boton-idioma-actual img{
+  border-radius: 3px;
 }
 
 

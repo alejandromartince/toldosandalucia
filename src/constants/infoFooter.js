@@ -1,6 +1,7 @@
 export const infoFooter = {
   es: {
     copy: "Todos los Derechos Reservados",
+    hechoPor:"Hecho por", 
     actualizacion: "Última actualización: Junio de 2025",
     titulos: {
       politica: "Políticas",
@@ -18,6 +19,7 @@ export const infoFooter = {
 
   en: {
     copy: "All Rights Reserved",
+    hechoPor:"Made by", 
     actualizacion: "Last updated: June 2025",
     titulos: {
       politica: "Policies",
@@ -35,6 +37,7 @@ export const infoFooter = {
 
   fr: {
     copy: "Tous droits réservés",
+    hechoPor:"Fait par", 
     actualizacion: "Dernière mise à jour : Juin 2025",
     titulos: {
       politica: "Politiques",
@@ -52,6 +55,7 @@ export const infoFooter = {
 
   de: {
     copy: "Alle Rechte vorbehalten",
+    hechoPor:"Gemacht von", 
     actualizacion: "Letzte Aktualisierung: Juni 2025",
     titulos: {
       politica: "Richtlinien",
@@ -68,6 +72,7 @@ export const infoFooter = {
   },
 
   ru: {
+    hechoPor:"Сделано", 
     copy: "Все права защищены",
     actualizacion: "Последнее обновление: июнь 2025 г.",
     titulos: {
@@ -85,7 +90,7 @@ export const infoFooter = {
   },
 
   da: {
-    copy: "Alle rettigheder forbeholdes",
+    hechoPor:"Lavet af", 
     actualizacion: "Senest opdateret: juni 2025",
     titulos: {
       politica: "Politikker",
@@ -98,7 +103,8 @@ export const infoFooter = {
       avisos: "Juridiske meddelelser",
     },
     ayuda: "Skriv til os",
-    telefono: "Tlf. 952 56 26 68"
+    telefono: "Tlf. 952 56 26 68",
+    copy: "Alle rettigheder forbeholdes",
   }
 };
 
