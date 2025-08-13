@@ -44,7 +44,7 @@ export const infoProductos = [
     },
     position: [0, 0, 0],
     positionMovil: [0, -0.5, 0],
-    rotation: [0.2, 0, 0],
+    rotation: [.3, 0, 0],
     escala: 2.1,
     escalaMovil: 2,
     copy: "Awning (https://skfb.ly/osVXs) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).",
@@ -70,8 +70,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los toldos cofre son una opción elegante y funcional para proteger espacios exteriores del sol y la lluvia. Su diseño compacto y retráctil permite un fácil almacenamiento cuando no están en uso, manteniendo la estética del lugar. Además, ofrecen una excelente resistencia a las inclemencias del tiempo, garantizando durabilidad y protección a largo plazo.",
-        en: "Chest awnings are an elegant and functional option for protecting outdoor spaces from sun and rain. Their compact and retractable design allows for easy storage when not in use, maintaining the aesthetics of the area. Additionally, they offer excellent resistance to weather conditions, ensuring long-lasting durability and protection.",
+        es: "Son una opción elegante y funcional para proteger espacios exteriores del sol y la lluvia. Su diseño compacto y retráctil permite un fácil almacenamiento cuando no están en uso, manteniendo la estética del lugar. Además, ofrecen una excelente resistencia a las inclemencias del tiempo, garantizando durabilidad y protección a largo plazo.",
+        en: "They are an elegant and functional option for protecting outdoor spaces from sun and rain. Their compact and retractable design allows for easy storage when not in use, maintaining the aesthetics of the area. Additionally, they offer excellent resistance to weather conditions, ensuring long-lasting durability and protection.",
         fr: "Les stores coffre sont une option élégante et fonctionnelle pour protéger les espaces extérieurs du soleil et de la pluie. Leur design compact et rétractable permet un rangement facile lorsqu'ils ne sont pas utilisés, tout en préservant l'esthétique du lieu. De plus, ils offrent une excellente résistance aux intempéries, garantissant durabilité et protection à long terme.",
         ru: "Маркизы-кофры — это элегантный и функциональный вариант защиты открытых пространств от солнца и дождя. Их компактный и выдвижной дизайн обеспечивает легкое хранение, когда они не используются, сохраняя эстетику места. Кроме того, они обладают отличной устойчивостью к погодным условиям, гарантируя долговечность и защиту.",
         da: "Kassemarkiser er en elegant og funktionel løsning til at beskytte udendørsarealer mod sol og regn. Deres kompakte og sammenklappelige design gør det nemt at opbevare dem, når de ikke er i brug, samtidig med at områdets æstetik bevares. De tilbyder desuden fremragende modstandsdygtighed over for vejret, hvilket sikrer langvarig holdbarhed og beskyttelse.",
@@ -88,6 +88,7 @@ export const infoProductos = [
     },
     position: [0, -4.5, 0],
     positionMovil: [0, -4.5, 0],
+    rotation: [.1,0,0],
     escala: 9,
     escalaMovil: 8,
     copy: "SKYSHADES™ - SkyLine - Night view (https://skfb.ly/putHY) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
@@ -113,8 +114,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los toldos veranda están diseñados para cubrir techos de cristal, pérgolas y estructuras similares, ofreciendo una protección solar eficiente sin comprometer la entrada de luz natural. Su instalación elegante y discreta se integra perfectamente con la arquitectura del espacio, proporcionando confort térmico y visual.",
-        en: "Veranda awnings are designed to cover glass roofs, pergolas, and similar structures, offering effective sun protection without compromising natural light. Their elegant and discreet installation blends seamlessly with the architecture, providing thermal and visual comfort.",
+        es: "Están diseñados para cubrir techos de cristal, pérgolas y estructuras similares, ofreciendo una protección solar eficiente sin comprometer la entrada de luz natural. Su instalación elegante y discreta se integra perfectamente con la arquitectura del espacio, proporcionando confort térmico y visual.",
+        en: "They are designed to cover glass roofs, pergolas, and similar structures, offering effective sun protection without compromising natural light. Their elegant and discreet installation blends seamlessly with the architecture, providing thermal and visual comfort.",
         fr: "Les stores véranda sont conçus pour couvrir les toits en verre, les pergolas et structures similaires, offrant une protection solaire efficace sans compromettre l'entrée de la lumière naturelle. Leur installation élégante et discrète s'intègre parfaitement à l'architecture, offrant confort thermique et visuel.",
         ru: "Маркизы для веранд предназначены для покрытия стеклянных крыш, пергол и подобных конструкций, обеспечивая эффективную защиту от солнца без ограничения естественного света. Их элегантная и незаметная установка гармонично вписывается в архитектуру, обеспечивая термический и визуальный комфорт.",
         da: "Verandamarkiser er designet til at dække glas tage, pergolaer og lignende strukturer og tilbyder effektiv solbeskyttelse uden at gå på kompromis med naturligt lys. Deres elegante og diskrete installation smelter sømløst sammen med arkitekturen og giver termisk og visuel komfort.",
@@ -156,8 +157,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los toldos tipo capota son ideales para ventanas y balcones, proporcionando una protección solar eficaz con un diseño clásico y elegante. Su forma curva no solo protege del sol frontal, sino también lateral, siendo perfectos para mantener interiores frescos y resguardar mobiliario del desgaste solar.",
-        en: "Capota awnings are ideal for windows and balconies, offering effective sun protection with a classic and elegant design. Their curved shape provides front and side shade, making them perfect for keeping interiors cool and protecting furniture from sun damage.",
+        es: "Son ideales para ventanas y balcones, proporcionando una protección solar eficaz con un diseño clásico y elegante. Su forma curva no solo protege del sol frontal, sino también lateral, siendo perfectos para mantener interiores frescos y resguardar mobiliario del desgaste solar.",
+        en: "They are ideal for windows and balconies, offering effective sun protection with a classic and elegant design. Their curved shape provides front and side shade, making them perfect for keeping interiors cool and protecting furniture from sun damage.",
         fr: "Les stores type capote sont idéaux pour les fenêtres et balcons, offrant une protection solaire efficace avec un design classique et élégant. Leur forme courbée protège non seulement du soleil frontal, mais aussi latéral, parfaits pour garder l'intérieur frais et protéger le mobilier de l'usure solaire.",
         ru: "Маркизы типа капота идеально подходят для окон и балконов, обеспечивая эффективную защиту от солнца с классическим и элегантным дизайном. Их изогнутая форма защищает не только от прямых солнечных лучей, но и сбоку, идеально сохраняя прохладу в помещениях и защищая мебель от выцветания.",
         da: "Capota-markiser er ideelle til vinduer og altaner og tilbyder effektiv solbeskyttelse med et klassisk og elegant design. Deres buede form giver skygge både forfra og fra siden, hvilket gør dem perfekte til at holde interiøret køligt og beskytte møbler mod solskader.",
@@ -199,8 +200,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Las pérgolas son estructuras elegantes y resistentes que permiten crear espacios exteriores funcionales y confortables. Ofrecen una excelente protección solar y contra la lluvia, ideales para jardines, patios o terrazas, y pueden personalizarse para integrarse perfectamente en cualquier entorno.",
-        en: "Pergolas are elegant and durable structures that create functional and comfortable outdoor spaces. They offer excellent protection from the sun and rain, making them ideal for gardens, patios, or terraces, and can be customized to blend seamlessly with any environment.",
+        es: "Son estructuras elegantes y resistentes que permiten crear espacios exteriores funcionales y confortables. Ofrecen una excelente protección solar y contra la lluvia, ideales para jardines, patios o terrazas, y pueden personalizarse para integrarse perfectamente en cualquier entorno.",
+        en: "They are elegant and durable structures that create functional and comfortable outdoor spaces. They offer excellent protection from the sun and rain, making them ideal for gardens, patios, or terraces, and can be customized to blend seamlessly with any environment.",
         fr: "Les pergolas sont des structures élégantes et durables qui créent des espaces extérieurs fonctionnels et confortables. Elles offrent une excellente protection contre le soleil et la pluie, idéales pour les jardins, patios ou terrasses, et peuvent être personnalisées pour s'intégrer parfaitement à n'importe quel environnement.",
         ru: "Перголы — это элегантные и прочные конструкции, создающие функциональные и комфортные наружные пространства. Они обеспечивают отличную защиту от солнца и дождя, идеально подходят для садов, патио или террас и могут быть адаптированы для гармоничного вписывания в любую среду.",
         da: "Pergolaer er elegante og holdbare strukturer, der skaber funktionelle og komfortable udendørsområder. De tilbyder fremragende beskyttelse mod sol og regn og er ideelle til haver, terrasser eller gårdhaver og kan tilpasses for at integrere perfekt i ethvert miljø.",
@@ -225,16 +226,16 @@ export const infoProductos = [
     id: 6,
     // modelo: CortinasInterior,
     nombre: {
-      es: "Estores de Interior",
-      en: "Indoor Blinds",
+      es: "Stores",
+      en: "Stores",
       fr: "Stores d'intérieur",
       ru: "Внутренние шторы-ролеты",
       da: "Indendørs rullegardiner",
       de: "Innenrollos",
     },
     titulo: {
-      es: "Estores de interior",
-      en: "Indoor blinds",
+      es: "Stores",
+      en: "Stores",
       fr: "Stores d'intérieur",
       ru: "Внутренние шторы-ролеты",
       da: "Indendørs rullegardiner",
@@ -242,8 +243,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los estores de interior son una solución práctica y elegante para controlar la luz y preservar la privacidad en cualquier espacio. Disponibles en tejidos variados, ofrecen un estilo moderno que se adapta a oficinas y hogares.",
-        en: "Indoor blinds offer a practical and stylish solution to control light and maintain privacy in any space. Available in a variety of fabrics, they provide a modern look suited for offices and homes.",
+        es: "Son una solución práctica y elegante para controlar la luz y preservar la privacidad en cualquier espacio. Disponibles en tejidos variados, ofrecen un estilo moderno que se adapta a oficinas y hogares.",
+        en: "They offer a practical and stylish solution to control light and maintain privacy in any space. Available in a variety of fabrics, they provide a modern look suited for offices and homes.",
         fr: "Les stores d'intérieur offrent une solution pratique et élégante pour contrôler la lumière et préserver l'intimité dans n'importe quel espace. Disponibles en divers tissus, ils apportent un look moderne adapté aux bureaux et aux maisons.",
         ru: "Внутренние шторы-ролеты — это практичное и стильное решение для регулировки освещения и обеспечения приватности в любом помещении. Доступны в различных тканях, они обеспечивают современный вид, подходящий для офисов и домов.",
         da: "Indendørs rullegardiner er en praktisk og stilfuld løsning til at kontrollere lys og bevare privatliv i ethvert rum. Fås i forskellige stoffer og giver et moderne look, der passer til kontorer og hjem.",
@@ -268,16 +269,16 @@ export const infoProductos = [
     id: 7,
     // modelo: CortinasInterior,
     nombre: {
-      es: "Estores de Interior",
-      en: "Indoor Blinds",
+      es: "Stores",
+      en: "Stores",
       fr: "Stores d'intérieur",
       ru: "Внутренние шторы-ролеты",
       da: "Indendørs rullegardiner",
       de: "Innenrollos",
     },
     titulo: {
-      es: "Estores de interior",
-      en: "Indoor blinds",
+      es: "Stores",
+      en: "Stores",
       fr: "Stores d'intérieur",
       ru: "Внутренние шторы-ролеты",
       da: "Indendørs rullegardiner",
@@ -285,8 +286,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los estores de interior son una solución práctica y elegante para controlar la luz y preservar la privacidad en cualquier espacio. Disponibles en tejidos variados, ofrecen un estilo moderno que se adapta a oficinas y hogares.",
-        en: "Indoor blinds offer a practical and stylish solution to control light and maintain privacy in any space. Available in a variety of fabrics, they provide a modern look suited for offices and homes.",
+        es: "Son una solución práctica y elegante para controlar la luz y preservar la privacidad en cualquier espacio. Disponibles en tejidos variados, ofrecen un estilo moderno que se adapta a oficinas y hogares.",
+        en: "They offer a practical and stylish solution to control light and maintain privacy in any space. Available in a variety of fabrics, they provide a modern look suited for offices and homes.",
         fr: "Les stores d'intérieur offrent une solution pratique et élégante pour contrôler la lumière et préserver l'intimité dans n'importe quel espace. Disponibles en divers tissus, ils apportent un look moderne adapté aux bureaux et aux maisons.",
         ru: "Внутренние шторы-ролеты — это практичное и стильное решение для регулировки освещения и обеспечения приватности в любом помещении. Доступны в различных тканях, они обеспечивают современный вид, подходящий для офисов и домов.",
         da: "Indendørs rullegardiner er en praktisk og stilfuld løsning til at kontrollere lys og bevare privatliv i ethvert rum. Fås i forskellige stoffer og giver et moderne look, der passer til kontorer og hjem.",
@@ -328,8 +329,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "El toldo terraza ofrece protección contra el sol y la lluvia, creando un espacio exterior cómodo y agradable. Disponible en diversos tejidos resistentes y colores modernos, se integra perfectamente en cualquier diseño de terraza o jardín.",
-        en: "The terrace awning provides protection from sun and rain, creating a comfortable and pleasant outdoor space. Available in various durable fabrics and modern colors, it perfectly complements any terrace or garden design.",
+        es: "Ofrece protección contra el sol y la lluvia, creando un espacio exterior cómodo y agradable. Disponible en diversos tejidos resistentes y colores modernos, se integra perfectamente en cualquier diseño de terraza o jardín.",
+        en: "They provide protection from sun and rain, creating a comfortable and pleasant outdoor space. Available in various durable fabrics and modern colors, it perfectly complements any terrace or garden design.",
         fr: "Le store de terrasse offre une protection contre le soleil et la pluie, créant un espace extérieur confortable et agréable. Disponible dans différents tissus résistants et couleurs modernes, il s'intègre parfaitement à tout design de terrasse ou de jardin.",
         ru: "Маркиза для террасы обеспечивает защиту от солнца и дождя, создавая комфортное и приятное открытое пространство. Доступна в различных прочных тканях и современных цветах, она идеально вписывается в любой дизайн террасы или сада.",
         da: "Terrassetæppet giver beskyttelse mod sol og regn og skaber et komfortabelt og behageligt udendørsområde. Fås i forskellige holdbare stoffer og moderne farver, som passer perfekt til ethvert terrasse- eller havedesign.",
@@ -370,8 +371,8 @@ export const infoProductos = [
     },
     descripcion: {
       pc: {
-        es: "Los toldos vela combinan diseño innovador y funcionalidad para crear zonas sombreadas con estilo. Su estructura ligera y resistente los hace perfectos para cualquier espacio exterior, aportando frescura, protección contra el sol y durabilidad en cualquier clima.",
-        en: "Sail awnings blend innovative design and functionality to create stylish shaded areas. Their lightweight yet sturdy structure makes them ideal for any outdoor space, offering coolness, sun protection, and durability in all weather conditions.",
+        es: "Combinan diseño innovador y funcionalidad para crear zonas sombreadas con estilo. Su estructura ligera y resistente los hace perfectos para cualquier espacio exterior, aportando frescura, protección contra el sol y durabilidad en cualquier clima.",
+        en: "They blend innovative design and functionality to create stylish shaded areas. Their lightweight yet sturdy structure makes them ideal for any outdoor space, offering coolness, sun protection, and durability in all weather conditions.",
         fr: "Les toiles d'ombrage allient design innovant et fonctionnalité pour créer des zones ombragées élégantes. Leur structure légère et robuste les rend parfaites pour tous les espaces extérieurs, offrant fraîcheur, protection solaire et durabilité quelles que soient les conditions climatiques.",
         ru: "Тентовые покрытия сочетают инновационный дизайн и функциональность, создавая стильные затенённые зоны. Их легкая и прочная конструкция идеально подходит для любых открытых пространств, обеспечивая прохладу, защиту от солнца и долговечность в любых погодных условиях.",
         da: "Sejldug markiser kombinerer innovativt design og funktionalitet for at skabe stilfulde skyggeområder. Deres lette, men robuste konstruktion gør dem ideelle til ethvert udendørsområde, og de tilbyder friskhed, solbeskyttelse og holdbarhed under alle vejrforhold.",
