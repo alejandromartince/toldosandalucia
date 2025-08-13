@@ -10,7 +10,7 @@ OPCIONES GENERALES
 .info-container {
   display: flex;
   justify-content: space-around;
-  height: 80%;
+  height: 75%;
 }
 
 .info-container h2 {
@@ -147,6 +147,6 @@ MEDIA QUERIES PARA PANTALLAS PEQUEÑAS
 @media (max-width: 1500px) and (min-width:1024px){
 
   .footer-seccion{
-    height: 60vh;
+    height: 55vh;
   }
 }

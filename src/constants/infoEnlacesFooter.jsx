@@ -788,3 +788,193 @@ export const avisoLegal = {
     },
   },
 };
+
+export const politicaCookies = {
+    es: {
+        descripcionIntroductoria: "Esta Política de Cookies explica qué son las cookies, cómo las utilizamos en nuestro sitio web y cómo puede gestionarlas.",
+        QueSonCookies: {
+            titulo: "¿Qué son las cookies?",
+            descripcion: "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Sirven para recordar sus preferencias, mejorar la experiencia de navegación y recopilar información estadística."
+        },
+        TiposCookies: {
+            titulo: "Tipos de cookies que utilizamos",
+            datos: [
+                "Cookies técnicas: necesarias para el funcionamiento básico del sitio.",
+                "Cookies de personalización: permiten recordar sus preferencias.",
+                "Cookies de análisis: nos ayudan a entender el uso del sitio.",
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Finalidad de las cookies",
+            descripcion: "Utilizamos cookies para mejorar su experiencia en el sitio, recordar configuraciones y ofrecer contenido adaptado."
+        },
+        GestionCookies: {
+            titulo: "Cómo gestionar las cookies",
+            descripcion: "Puede configurar su navegador para aceptar, rechazar o eliminar cookies. Tenga en cuenta que desactivar cookies puede afectar el funcionamiento del sitio."
+        },
+        CookiesTerceros: {
+            titulo: "Cookies de terceros",
+            descripcion: "Algunas cookies pueden ser establecidas por servicios externos como Google Analytics, redes sociales o proveedores de publicidad."
+        },
+        CambiosPolitica: {
+            titulo: "Cambios en la Política de Cookies",
+            descripcion: "Podemos actualizar esta política ocasionalmente para reflejar cambios en nuestras prácticas o en la legislación vigente."
+        }
+    },
+    en: {
+        descripcionIntroductoria: "This Cookie Policy explains what cookies are, how we use them on our website, and how you can manage them.",
+        QueSonCookies: {
+            titulo: "What are cookies?",
+            descripcion: "Cookies are small text files stored on your device when you visit a website. They help remember your preferences, improve browsing experience, and collect statistical information."
+        },
+        TiposCookies: {
+            titulo: "Types of cookies we use",
+            datos: [
+                "Technical cookies: required for the basic functioning of the site.",
+                "Customization cookies: allow remembering your preferences.",
+                "Analytics cookies: help us understand site usage.",
+                "Advertising cookies: used to display relevant ads."
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Purpose of cookies",
+            descripcion: "We use cookies to improve your site experience, remember settings, and offer tailored content."
+        },
+        GestionCookies: {
+            titulo: "How to manage cookies",
+            descripcion: "You can set your browser to accept, reject, or delete cookies. Disabling cookies may affect the site's functionality."
+        },
+        CookiesTerceros: {
+            titulo: "Third-party cookies",
+            descripcion: "Some cookies may be set by external services like Google Analytics, social networks, or advertising providers."
+        },
+        CambiosPolitica: {
+            titulo: "Changes to the Cookie Policy",
+            descripcion: "We may update this policy occasionally to reflect changes in our practices or applicable laws."
+        }
+    },
+    fr: {
+        descripcionIntroductoria: "Cette politique de cookies explique ce que sont les cookies, comment nous les utilisons sur notre site Web et comment vous pouvez les gérer.",
+        QueSonCookies: {
+            titulo: "Que sont les cookies ?",
+            descripcion: "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site Web. Ils permettent de se souvenir de vos préférences, d'améliorer la navigation et de collecter des informations statistiques."
+        },
+        TiposCookies: {
+            titulo: "Types de cookies que nous utilisons",
+            datos: [
+                "Cookies techniques : nécessaires au fonctionnement de base du site.",
+                "Cookies de personnalisation : permettent de mémoriser vos préférences.",
+                "Cookies d'analyse : nous aident à comprendre l'utilisation du site.",
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Finalité des cookies",
+            descripcion: "Nous utilisons des cookies pour améliorer votre expérience sur le site, mémoriser vos paramètres et offrir un contenu adapté."
+        },
+        GestionCookies: {
+            titulo: "Comment gérer les cookies",
+            descripcion: "Vous pouvez configurer votre navigateur pour accepter, refuser ou supprimer les cookies. La désactivation des cookies peut affecter le fonctionnement du site."
+        },
+        CookiesTerceros: {
+            titulo: "Cookies tiers",
+            descripcion: "Certains cookies peuvent être placés par des services externes comme Google Analytics, les réseaux sociaux ou les fournisseurs de publicité."
+        },
+        CambiosPolitica: {
+            titulo: "Modifications de la politique de cookies",
+            descripcion: "Nous pouvons mettre à jour cette politique pour refléter des changements dans nos pratiques ou dans la législation."
+        }
+    },
+    de: {
+        descripcionIntroductoria: "Diese Cookie-Richtlinie erklärt, was Cookies sind, wie wir sie auf unserer Website verwenden und wie Sie sie verwalten können.",
+        QueSonCookies: {
+            titulo: "Was sind Cookies?",
+            descripcion: "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie helfen, Ihre Präferenzen zu speichern, das Surferlebnis zu verbessern und statistische Informationen zu sammeln."
+        },
+        TiposCookies: {
+            titulo: "Arten von Cookies, die wir verwenden",
+            datos: [
+                "Technische Cookies: erforderlich für die grundlegende Funktion der Website.",
+                "Personalisierungs-Cookies: speichern Ihre Einstellungen.",
+                "Analyse-Cookies: helfen uns, die Nutzung der Website zu verstehen.",
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Zweck der Cookies",
+            descripcion: "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, Einstellungen zu speichern und angepasste Inhalte bereitzustellen."
+        },
+        GestionCookies: {
+            titulo: "Wie man Cookies verwaltet",
+            descripcion: "Sie können Ihren Browser so einstellen, dass er Cookies akzeptiert, ablehnt oder löscht. Das Deaktivieren von Cookies kann die Funktionalität der Website beeinträchtigen."
+        },
+        CookiesTerceros: {
+            titulo: "Cookies von Drittanbietern",
+            descripcion: "Einige Cookies können von externen Diensten wie Google Analytics, sozialen Netzwerken oder Werbeanbietern gesetzt werden."
+        },
+        CambiosPolitica: {
+            titulo: "Änderungen der Cookie-Richtlinie",
+            descripcion: "Wir können diese Richtlinie gelegentlich aktualisieren, um Änderungen unserer Praktiken oder der geltenden Gesetze widerzuspiegeln."
+        }
+    },
+    da: {
+        descripcionIntroductoria: "Denne cookiepolitik forklarer, hvad cookies er, hvordan vi bruger dem på vores hjemmeside, og hvordan du kan administrere dem.",
+        QueSonCookies: {
+            titulo: "Hvad er cookies?",
+            descripcion: "Cookies er små tekstfiler, der gemmes på din enhed, når du besøger en hjemmeside. De hjælper med at huske dine præferencer, forbedre brugeroplevelsen og indsamle statistiske oplysninger."
+        },
+        TiposCookies: {
+            titulo: "Typer af cookies vi bruger",
+            datos: [
+                "Tekniske cookies: nødvendige for sidens grundlæggende funktion.",
+                "Tilpasningscookies: husker dine præferencer.",
+                "Analyse-cookies: hjælper os med at forstå brugen af siden.",
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Formålet med cookies",
+            descripcion: "Vi bruger cookies til at forbedre din oplevelse, huske indstillinger og levere tilpasset indhold."
+        },
+        GestionCookies: {
+            titulo: "Sådan administrerer du cookies",
+            descripcion: "Du kan indstille din browser til at acceptere, afvise eller slette cookies. Deaktivering af cookies kan påvirke sidens funktionalitet."
+        },
+        CookiesTerceros: {
+            titulo: "Tredjepartscookies",
+            descripcion: "Nogle cookies kan blive sat af eksterne tjenester som Google Analytics, sociale medier eller reklameudbydere."
+        },
+        CambiosPolitica: {
+            titulo: "Ændringer i cookiepolitikken",
+            descripcion: "Vi kan opdatere denne politik for at afspejle ændringer i vores praksis eller gældende lovgivning."
+        }
+    },
+    ru: {
+        descripcionIntroductoria: "В данной Политике использования файлов cookie объясняется, что такое cookie, как мы используем их на нашем сайте и как вы можете управлять ими.",
+        QueSonCookies: {
+            titulo: "Что такое файлы cookie?",
+            descripcion: "Файлы cookie — это небольшие текстовые файлы, которые сохраняются на вашем устройстве при посещении сайта. Они помогают запомнить ваши предпочтения, улучшить работу сайта и собирать статистическую информацию."
+        },
+        TiposCookies: {
+            titulo: "Типы файлов cookie, которые мы используем",
+            datos: [
+                "Технические cookie: необходимы для базовой работы сайта.",
+                "Cookie персонализации: позволяют запомнить ваши настройки.",
+                "Аналитические cookie: помогают понять, как используется сайт.",
+            ]
+        },
+        FinalidadCookies: {
+            titulo: "Цель использования cookie",
+            descripcion: "Мы используем cookie для улучшения вашего опыта работы на сайте, сохранения настроек и предоставления персонализированного контента."
+        },
+        GestionCookies: {
+            titulo: "Как управлять файлами cookie",
+            descripcion: "Вы можете настроить браузер так, чтобы он принимал, отклонял или удалял cookie. Отключение cookie может повлиять на работу сайта."
+        },
+        CookiesTerceros: {
+            titulo: "Сторонние cookie",
+            descripcion: "Некоторые cookie могут устанавливаться внешними сервисами, такими как Google Analytics, социальные сети или рекламные поставщики."
+        },
+        CambiosPolitica: {
+            titulo: "Изменения в политике использования cookie",
+            descripcion: "Мы можем периодически обновлять эту политику, чтобы отразить изменения в нашей практике или применимых законах."
+        }
+    }
+};

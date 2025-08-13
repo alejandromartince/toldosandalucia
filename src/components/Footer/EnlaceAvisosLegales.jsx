@@ -12,8 +12,6 @@ const EnlaceAvisoLegal = () => {
     const infoormacionF = infoFooter[idioma];
     const i = avisoLegal[idioma];
 
-    
-
     return (
         <section className="enlacePrivacidadSection">
             <div className="encabezadoPoliticas">

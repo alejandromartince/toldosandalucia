@@ -16,7 +16,7 @@ OPCIONES GENERALES
 ENCABEZADO
 ============================ */
 .encabezado-beneficios {
-  gap: 1rem;
+  gap: .5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ GALERIA DE FOTOS
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1rem;
   box-sizing: border-box;
 }
 
