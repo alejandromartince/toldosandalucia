@@ -89,7 +89,7 @@ const FooterDefault = () => {
         </div>
 
         <div className="logo">
-          <a href={`/`} aria-label={alt.logo}>
+          <a href={`/`} aria-label={alt.logo} style={{display:"flex", height:"auto"}}>
             <img
               src="/assets/Logo/Logo_Transparent.png"
               alt={alt.logo}
