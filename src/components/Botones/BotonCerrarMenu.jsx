@@ -13,7 +13,7 @@ const BotonCerrarMenu = ({ onClick, idioma }) => {
       onClick={onClick}
       aria-label={labels[idioma]}
     >
-      <IoMdClose size={25} color="black" />
+      <IoMdClose size={20} color="black" />
     </button>
   );
 };

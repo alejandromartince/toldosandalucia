@@ -38,6 +38,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
   const [refSelects, top] = usePosicionTop(refContenedorPadre);
   const refPopup = useRef(null);
 
+  const disabled = useState(true);
+
   // Mostrar flecha después de 400ms si el menú no está activo
   useEffect(() => {
     setShowArrow(false);
@@ -107,7 +109,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
           </div>
 
           <div className="contenedorBotonWhatsappPT">
-            <BotonWhatsapp idioma={idioma} />
+            <BotonWhatsapp idioma={idioma} disabled={disabled}/>
           </div>
         </div>
 

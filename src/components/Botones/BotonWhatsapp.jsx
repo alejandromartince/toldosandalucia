@@ -5,20 +5,20 @@ import "./BotonWhatsapp.css";
 import { FaWhatsapp } from "react-icons/fa"
 
 const enviarMensaje = {
-  es: "Enviar petición personalizada",
-  en: "Send custom request",
-  fr: "Envoyer une demande personnalisée",
-  de: "Individuelle Anfrage senden",
-  da: "Send tilpasset anmodning",
-  ru: "Отправить индивидуальный запрос",
+  es: "Enviar petición",
+  en: "Send request",
+  fr: "Envoyer une demande",
+  de: "Individuelle senden",
+  da: "Send anmodning",
+  ru: "Отправить запрос",
 };
 
-const BotonWhatsapp = ({idioma}) => {
+const BotonWhatsapp = ({idioma, disabled}) => {
 
   const texto = enviarMensaje[idioma]
 
   return (
-      <button className="botonWhatsappPT" style={{color:"gray"}}>{texto} <FaWhatsapp size={20}color="gray"/></button>
+      <a className="botonWhatsappPT" href={!disabled ? "https://web.whatsapp.com/send?phone=34679847618&text=" : ""} target="_blank">{texto} <FaWhatsapp size={24}color="#ffffff58"/></a>
   );
 };
 

@@ -16,7 +16,6 @@ import "./ComponenteLonas.css";
 const ComponenteLonas = ({
   idioma,
   tipoToldoSeleccionado,
-  colorSeleccionado,
   setColorSeleccionado,
 }) => {
   const dispositivo = useTipoDispositivo();

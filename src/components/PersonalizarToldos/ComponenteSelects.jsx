@@ -62,7 +62,7 @@ const ComponenteSelects = forwardRef(
                 setTipoToldoSeleccionado(valor);
                 setColorSeleccionado(null);
                 setTipoTelaSeleccionado("");
-                setTipoSistemaToldo(""); // limpiar si era un sistema no permitido
+                setTipoSistemaToldo("");
               }}
               onSelectMenuChange={(activo) => {
                 if (activo) setSelectMenuActivo(true);
