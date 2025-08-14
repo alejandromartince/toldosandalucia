@@ -16,7 +16,6 @@ const FooterDefault = () => {
     const { idioma } = useIdioma();
     const i = infoFooter[idioma];
     const alt = alts[idioma];
-    
 
     return (
     <div className="footer-seccion">
@@ -27,9 +26,9 @@ const FooterDefault = () => {
             <span><hr /></span>
           </div>
           <div className="info-politicas-opciones">
-            <a href={`/Privacidad`} aria-label={alt.privacidad}>{i.politica.privacidad}</a>
-            <a href={`/Cookies`} aria-label={alt.cookies}>{i.politica.cookies}</a>
-            <a href={`/AvisosLegales`} aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
+            <a href={`/Privacidad`} target="_blank" aria-label={alt.privacidad}>{i.politica.privacidad}</a>
+            <a href={`/Cookies`} target="_blank" aria-label={alt.cookies}>{i.politica.cookies}</a>
+            <a href={`/AvisosLegales`} target="_blank" aria-label={alt.avisosLegales}>{i.politica.avisos}</a>
           </div>
         </div>
 

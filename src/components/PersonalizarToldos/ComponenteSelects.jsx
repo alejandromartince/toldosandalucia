@@ -1,13 +1,10 @@
 //Importamos los hooks de react
-import React, { forwardRef, Suspense, useState } from "react";
+import React, { forwardRef, Suspense, useState, useEffect } from "react";
 
 //Impotamos los componentes
 const SelectPersonalizarToldos = React.lazy(() =>
   import("../../components/PersonalizarToldos/SelectPersonalizarToldos.jsx")
 );
-
-//Importamos los hooks
-import { seleccionarColorToldo } from "../../Hooks/PersonalizarToldos/seleccionarColorToldo.jsx";
 
 //Importamos la informacion
 import { infoSelect } from "../../constants/infoPersonalizarToldos.jsx";
@@ -39,13 +36,33 @@ const ComponenteSelects = forwardRef(
     //HOOKS PARA LOS SELECTS
     const [tipoTelaSeleccionado, setTipoTelaSeleccionado] = useState("");
     const [tipoSistemaToldo, setTipoSistemaToldo] = useState("");
-    const [lugarUbicacion, setLugarUbicacion] = useState("");
+    const [ubicacionSeleccionada, setLugarUbicacion] = useState("");
 
     const opcionesTipoToldos = useOpcionesTipoToldos(idioma);
     const opcionesTipoTela = useOpcionesTipoTela(idioma);
     const opcionesTipoSistemaToldo = useTipoSistemaToldo(idioma);
     const ubicaciones = useUbicacion(idioma);
     const palabras = usePalabras[idioma];
+
+    // 🔹 Lógica para verificar si todos los selects tienen valor
+    useEffect(() => {
+      if (
+        tipoToldoSeleccionado &&
+        tipoTelaSeleccionado &&
+        tipoSistemaToldo &&
+        ubicacionSeleccionada
+      ) {
+        setSeleccionCompletada(true);
+      } else {
+        setSeleccionCompletada(false);
+      }
+    }, [
+      tipoToldoSeleccionado,
+      tipoTelaSeleccionado,
+      tipoSistemaToldo,
+      ubicacionSeleccionada,
+      setSeleccionCompletada,
+    ]);
 
     return (
       <div className="contenedorPadreSelectPT">
@@ -105,8 +122,10 @@ const ComponenteSelects = forwardRef(
               deshabilitado={!tipoToldoSeleccionado} // No se puede seleccionar si no hay toldo
               opcionesDeshabilitadas={[
                 ...(tipoToldoSeleccionado === "Capota" ? ["2", "3"] : []),
-                ...(tipoToldoSeleccionado === "Cortinas de Interior" ? ["3"]: []),
-                ...(tipoToldoSeleccionado === "Toldo Terraza" ? ["3"] : [])
+                ...(tipoToldoSeleccionado === "Cortinas de Interior"
+                  ? ["3"]
+                  : []),
+                ...(tipoToldoSeleccionado === "Toldo Terraza" ? ["3"] : []),
               ]}
             />
           </Suspense>
@@ -120,13 +139,12 @@ const ComponenteSelects = forwardRef(
             <SelectPersonalizarToldos
               opcionesSelect={ubicaciones}
               palabra={palabras.ubicacion}
-              valorSeleccionado={lugarUbicacion}
+              valorSeleccionado={ubicacionSeleccionada}
               onChange={(valor) => setLugarUbicacion(valor)}
             />
           </Suspense>
         </div>
       </div>
-
     );
   }
 );

@@ -31,8 +31,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
   const [colorSeleccionado, setColorSeleccionado] = useState(null);
   const [seleccionCompletada, setSeleccionCompletada] = useState(false);
 
-  const [showArrow, setShowArrow] = useState(false); 
-  const [cerrando, setCerrando] = useState(false); 
+  const [showArrow, setShowArrow] = useState(false);
+  const [cerrando, setCerrando] = useState(false);
 
   const refContenedorPadre = useRef(null);
   const [refSelects, top] = usePosicionTop(refContenedorPadre);
@@ -89,7 +89,10 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
           <div className="contenedorCentrado">
             <div className="contenedorOpcionesPT">
-              <div className="contenedorHRPT" style={{ padding: "0rem 0 .5rem 0" }}>
+              <div
+                className="contenedorHRPT"
+                style={{ padding: "0rem 0 .5rem 0" }}
+              >
                 <p>{contenido.ajustes[idioma]}</p>
                 <hr style={{ width: "100%", margin: "0 auto" }} />
               </div>
@@ -109,11 +112,19 @@ const PersonalizarToldos = ({ onCerrar }) => {
           </div>
 
           <div className="contenedorBotonWhatsappPT">
-            <BotonWhatsapp idioma={idioma} disabled={disabled}/>
+            <BotonWhatsapp
+              idioma={idioma}
+              disabled={!seleccionCompletada || !colorSeleccionado}
+              mensaje={`Tipo de toldo: ${tipoToldoSeleccionado}\nColor: ${
+                colorSeleccionado || "No seleccionado"
+              }`}
+            />
           </div>
         </div>
 
-        <hr style={{ width: ".25rem", backgroundColor: "white", border: "none" }} />
+        <hr
+          style={{ width: ".25rem", backgroundColor: "white", border: "none" }}
+        />
 
         {/* Columna derecha */}
         <div
@@ -122,7 +133,10 @@ const PersonalizarToldos = ({ onCerrar }) => {
           ref={refPopup}
         >
           <div className="contenido-bloqueado">
-            <BotonCerrarMenu onClick={() => setCerrando(true)} idioma={idioma} />
+            <BotonCerrarMenu
+              onClick={() => setCerrando(true)}
+              idioma={idioma}
+            />
 
             {!selectMenuActivo && showArrow && (
               <div className="contenedorFlechaTutorial">
