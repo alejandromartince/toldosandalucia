@@ -187,7 +187,13 @@ SECCION INFERIOR (BOTONES)
 }
 
 
-
+.driver-popover-close-btn{
+  color: black;
+  font-size: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  margin-right: .5rem;
+}
 /* ============================
 MEDIA QUERIES
 ============================ */

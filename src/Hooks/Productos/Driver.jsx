@@ -5,7 +5,7 @@ export const DriverProductos = (idioma) => {
   const driverObj = driver({
     showProgress: true,
     smoothScroll: true,
-    allowClose: false,
+    allowClose: true,
     stagePadding: 0,
     nextBtnText: idioma === "es" ? "Siguiente" : "Next",
     prevBtnText: idioma === "es" ? "Anterior" : "Previous",
@@ -51,7 +51,7 @@ export const DriverProductos = (idioma) => {
             idioma === "es"
               ? "Aquí puedes personalizar tu toldo con diferentes opciones."
               : "Here you can customize your awning with different options.",
-          side: "top", // <-- Cambiado a 'top'
+          side: "top",
           align: "start",
         },
       },
@@ -59,4 +59,19 @@ export const DriverProductos = (idioma) => {
   });
 
   driverObj.drive();
+
+  // Guardar la posición inicial
+  const startScroll = window.scrollY;
+  const vh80 = window.innerHeight * 0.8;
+
+  setTimeout(() => {
+    const onScroll = () => {
+      if (Math.abs(window.scrollY - startScroll) > vh80) {
+        driverObj.destroy();
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+  }, 1000); // 1 segundo después
 };

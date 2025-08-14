@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 // Hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
 import { useDriverProductos } from "../../Hooks/Productos/useDriver.jsx";
-import useInformacionBoton from "../../constants/infoBotones.js";
 
 // Datos y componentes
 import { infoProductos } from "../../constants/infoProductos.jsx";
@@ -31,7 +30,6 @@ const Products = () => {
 
   const informacionProductos = infoProductos;
   const productoActual = informacionProductos[currentProductIndex];
-  const i = useInformacionBoton(idioma, "Tutorial");
 
   const nextProduct = () => {
     setCurrentProductIndex((prevIndex) =>
