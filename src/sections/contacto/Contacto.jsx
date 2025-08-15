@@ -59,7 +59,7 @@ const Contacto = () => {
                 <p>info@toldosandalucia.com</p>
               </div>
               <br />
-              <Mapa />
+              <Mapa idioma={idioma}/>
               <br />
               <br />
             </div>

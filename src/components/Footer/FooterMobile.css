@@ -2,8 +2,8 @@
 OPCIONES GENERALES
 ============================ */
 .fm-footer-seccion {
-  height: 85vh;
-  padding: 2rem 2rem 0 2rem;
+  height: auto;
+  padding: 2rem;
 }
 
 .fm-footer-seccion h2 {
@@ -97,7 +97,7 @@ QUERIES PARA TABLET
 ============================ */
 @media (min-width: 769px) {
   .fm-footer-seccion {
-    height: 45vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

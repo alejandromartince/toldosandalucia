@@ -122,28 +122,22 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
 /* ============================
 SECCION INFERIOR (BOTONES)
 ============================ */
-.contenedor-botones-prueba {
+.contenedorBotonesProductos {
   display: flex;
-  justify-content: space-between; /* Distribuye los hijos con espacio igual */
-  align-items: center;
-  width: 100%;
-  height: 10%;
-  margin: 0 auto;
-  position: relative;
-  background: transparent;
+  align-items: center; /* para mantenerlos en el mismo eje X */
+  padding-top: 1rem;
+  position: relative; /* por si quieres ajustar con absolute más tarde */
 }
 
-.contenedor-botones-prueba > div.equilibrador {
-  flex: 1; /* Ocupa espacio igual a los lados */
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 4rem;
+.centrado {
+  margin: 0 auto; /* mantiene el primer botón centrado */
 }
 
-.boton-centro-prueba {
-  flex: 0; /* Ocupa solo el ancho necesario */
-  z-index: 11;
+.derecha {
+  padding-right: 4rem; /* ajusta la separación del borde derecho */
 }
+
+
 
 
 .driver-popover-close-btn{
@@ -209,15 +203,10 @@ MEDIA QUERIES
   ============================ */
   .boton-centro-prueba,
   .boton-derecha-prueba {
-    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 0;
-  }
-
-  .boton-centro-prueba {
-    padding-top: 2rem;
   }
 
   .icono-productos:hover {

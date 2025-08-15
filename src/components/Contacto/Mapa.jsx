@@ -1,21 +1,10 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import { useIdioma } from "../../Hooks/General/useIdioma";
 
-// Corrige el problema del icono que no se carga
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-});
-
-const Mapa = () => {
+const Mapa = ({ idioma }) => {
+  const idiomaTexto = idioma;
+  const src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.845256782632!2d-4.533447524706247!3d36.606035778621425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72fc9a06ccb465%3A0x14527abdef1ec2fa!2sToldos%20Andaluc%C3%ADa!5e0!3m2!1ses!2ses!4v1755270407583!5m2!1s${idiomaTexto}!2sen`;
   return (
-    <MapContainer
-      center={[36.60616928800409, -4.530794341466971]}
-      zoom={16}
-      scrollWheelZoom={true}
+    <div
       style={{
         height: "250px",
         width: "100%",
@@ -24,17 +13,19 @@ const Mapa = () => {
         marginTop: "1rem",
       }}
     >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={[36.60616928800409, -4.530794341466971]}>
-        <Popup>
-          c/ Santo Tomás nº 19<br />
-          Benalmádena, Málaga
-        </Popup>
-      </Marker>
-    </MapContainer>
+      <iframe
+        title="Mapa Toldos Andalucía"
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        style={{ border: 0 }}
+        src={src}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer"      // ⚡ Evita enviar cookies del navegador a Google
+        sandbox="allow-scripts allow-same-origin allow-popups" // ⚡ Limita el iframe y reduce warnings
+      ></iframe>
+    </div>
   );
 };
 

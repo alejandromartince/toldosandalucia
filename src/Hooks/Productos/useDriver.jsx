@@ -24,8 +24,10 @@ export const useDriverProductos = () => {
 
     DriverProductos(idioma);
 
+    // Guardamos cookie o session según preferencias
     if (preferenciasAceptadas) {
-      setCookie("driver-products", "true", 365);
+      // PATH global para que se vea en todas las páginas
+      setCookie("driver-products", "true", 365, "/");
     } else {
       sessionStorage.setItem("driver-products-session", "true");
     }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
 
 // Hooks
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo.js";
@@ -96,23 +95,34 @@ const Products = () => {
               }} />
           </div> */}
 
-          
-      <div className="contenedor-botones-prueba">
-        <div className="equilibrador"></div> {/* Izquierda */}
+      {/* <div className="contenedor-botones-prueba">
+        <div><p>hola</p></div>
         <BotonProductos
           className="boton-centro-prueba"
           onAbrir={() => setMostrarPopup(true)}
-        />{" "}
-        {/* Centro */}
-        <div className="equilibrador">
-          <BotonTutorial
-            onClick={() => {
-              runDriver(true);
-            }}
-            idioma={idioma}
-          />{" "}
-          {/* Derecha */}
+        />
+        <BotonTutorial
+          className="boton-derecha-prueba"
+          onClick={() => runDriver(true)}
+          idioma={idioma}
+        />
+      </div> */}
+
+      <div className="contenedorBotonesProductos">
+        <div style={{paddingLeft:"10rem"}}></div>
+        <div className="centrado">
+          <BotonProductos
+            className="botonPersonalizarToldos"
+            onAbrir={() => setMostrarPopup(true)}
+          />
         </div>
+        <div className="derecha">
+        <BotonTutorial
+          className="boton-derecha-prueba"
+          onClick={() => runDriver(true)}
+          idioma={idioma}
+          />
+          </div>
       </div>
 
       {mostrarPopup && (
