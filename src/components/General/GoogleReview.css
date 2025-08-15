@@ -24,6 +24,26 @@ ESTRUCTURA GENERAL
 }
 
 /* ============================
+MORE OPINIONS
+============================ */
+.moreOpinions{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.moreOpinions a{
+  text-decoration: none;
+  color: white;
+  margin-right: 3rem;
+}
+
+.moreOpinions a:hover{
+  text-decoration: underline;
+}
+
+/* ============================
 ESTILO DE CADA REVIEW
 ============================ */
 .cardReview {
