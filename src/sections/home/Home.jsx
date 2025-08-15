@@ -29,7 +29,6 @@ const Home = () => {
 
   return (
     <section className="home" id="home" style={{ position: "relative" }}>
-      
       {/* Fondo con Swiper */}
       <Swiper
         modules={[EffectFade, Autoplay]}
@@ -74,9 +73,12 @@ const Home = () => {
             </>
           ) : (
             <>
-              {/* <h1 className="tituloMovilVacio">{textoHome.tituloMovil[idioma]}</h1> */}
-              {/* <p>{textoHome.subtituloMovil[idioma]}</p> */}
-              {dispositivo}
+              {/* Overlay semitransparente */}
+              <div className="overlay-movil" />
+              <h1 className="tituloMovil">{textoHome.tituloMovil[idioma]}</h1>
+              <p className="subtituloMovil">
+                {textoHome.subtituloMovil[idioma]}
+              </p>
             </>
           )}
         </div>
