@@ -95,15 +95,24 @@ const Products = () => {
                 runDriver(true);
               }} />
           </div> */}
+
+          
       <div className="contenedor-botones-prueba">
-        <div></div> {/* EQUILIBRADOR */}
-        <BotonProductos onAbrir={() => setMostrarPopup(true)} />
-        <BotonTutorial
-          onClick={() => {
-            runDriver(true);
-          }}
-          idioma={idioma}
-        />
+        <div className="equilibrador"></div> {/* Izquierda */}
+        <BotonProductos
+          className="boton-centro-prueba"
+          onAbrir={() => setMostrarPopup(true)}
+        />{" "}
+        {/* Centro */}
+        <div className="equilibrador">
+          <BotonTutorial
+            onClick={() => {
+              runDriver(true);
+            }}
+            idioma={idioma}
+          />{" "}
+          {/* Derecha */}
+        </div>
       </div>
 
       {mostrarPopup && (

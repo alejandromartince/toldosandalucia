@@ -16,7 +16,6 @@ const RutaAvisosLegales = lazy(() => import("./paginas/AvisosLegales/RutaAvisosL
 import { IdiomaProvider } from "./contexts/IdiomaProvider.jsx";
 import PantallaCarga from "./components/General/PantallaCarga.jsx";
 
-
 const App = () => {
 
   const [cargando, setCargando] = useState(true);

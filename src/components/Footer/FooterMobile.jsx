@@ -110,9 +110,9 @@ const FooterMobile = () => {
       <div className="fm-copyright">
         <p>
           © {new Date().getFullYear()} Toldos Andalucía - {i.copy}
-        <p style={{fontSize:".9rem", marginTop:"1rem"}}>{i.hechoPor} <span style={{fontWeight:"600"}}>&nbsp;Kometta</span></p>
 
         </p>
+        <p style={{fontSize:".9rem", marginTop:"1rem"}}>{i.hechoPor} <span style={{fontWeight:"600"}}>&nbsp;Kometta</span></p>
       </div>
     </div>
   );

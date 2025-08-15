@@ -1,5 +1,5 @@
 .botonTutorial {
-  background-color: var(--blanco-texto-navbar);
+  background-color: var(--negro-claro);
   padding: 0.5rem 1rem .5rem .7rem;
   border-radius: 8px;
   cursor: pointer;
@@ -12,7 +12,7 @@
 }
 
 .botonTutorial:hover {
-  background-color: var(--negro-claro);
+  background-color: var(--negro-muy-claro);
   transform: translateY(-3px);
   padding: 0.5rem 1rem .5rem .5rem;
   box-shadow: 0 8px 12px rgba(0,0,0,0.2);

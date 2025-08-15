@@ -4,6 +4,7 @@ OPCIONES GENERALES DEL BOTÓN
 .boton-centro-prueba {
   position: relative;
   display: inline-block;
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
 }
 
 .boton-producto {
@@ -141,8 +142,8 @@ PERSONALIZACIÓN MENU POPUP
 /*=============================
 MEDIA QUERIES PARA TABLET Y MOVILES
 =============================*/
-@media (max-width: 1024px){
-  .texto-detras-wrapper{
+@media (max-width: 1024px) {
+  .texto-detras-wrapper {
     top: 80%;
   }
 }

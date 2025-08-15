@@ -11,7 +11,7 @@ const Footer = () => {
   let dispositivo = useTipoDispositivo();
   
   return (
-    <footer>
+    <footer id="footer">
       {dispositivo === 'ordenador' ? <FooterDefault /> : <FooterMobile />}
     </footer>
   );

@@ -21,6 +21,7 @@ const modelosMap = {
   5: lazy(() => import("../components/Objetos 3D/Toldos/Pergola.jsx")),
   6: lazy(() => import("../components/Objetos 3D/Toldos/Store1.jsx")),
   7: lazy(() => import("../components/Objetos 3D/Toldos/Store2.jsx")),
+  // 8: lazy(() => import("../components/Objetos 3D/Toldos/Terraza.jsx")),
   9: lazy(() => import("../components/Objetos 3D/Toldos/Vela.jsx")),
 };
 
