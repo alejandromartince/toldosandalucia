@@ -3,7 +3,8 @@ ESTRUCTURA GENERAL
 ============================ */
 .googleReviews-container {
   width: 100%;
-  padding-bottom: 5rem;
+  margin-top: 2rem;
+  padding-bottom: 6rem;
   gap: 4rem;
   display: flex;
   justify-content: space-around;

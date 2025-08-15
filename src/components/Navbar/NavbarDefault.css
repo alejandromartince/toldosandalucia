@@ -57,7 +57,7 @@ OPCIONES DEL LOGO
 }
 
 .navbar__logo img {
-  width: 6.25rem;
+  width: 8rem;
   margin-left: 1rem;
   cursor: pointer;
 }
@@ -117,13 +117,14 @@ OPCIONES DEL MENU CENTRAL
 /* ===============================
 OPCIONES DE LA BARRA DE PROGRESO
 ================================*/
+/* Barra de progreso justo debajo del header */
 .navbar__progress-bar {
-  position: fixed;
-  top: 4rem;
+  position: absolute; /* Cambiado de fixed a absolute */
+  bottom: 0; /* Se coloca al final del header */
   left: 0;
   height: 3px;
   background-color: var(--blanco);
-  /* o el color que prefieras */
-  z-index: 20;
+  width: 0%; /* Se actualizará dinámicamente */
   transition: width 0.2s ease-out;
+  z-index: 20;
 }

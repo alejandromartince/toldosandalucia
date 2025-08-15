@@ -1,41 +1,28 @@
 .botonTutorial {
-  position: relative; /* necesario para posicionar el tooltip */
-  background-color: rgba(255, 255, 255, 0.6);
-  display: flex;
-  font-size: 1.6rem;
-  font-weight: 400;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  background-color: var(--blanco-texto-navbar);
+  padding: 0.5rem 1rem .5rem .7rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  color: black;
-  border: 1.5px solid transparent;
-}
-
-.botonTutorial::before {
-  content: attr(data-tooltip); /* usa el contenido dinámico */
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 400;
-  padding: 4px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.botonTutorial:hover::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-15px);
+.botonTutorial:hover {
+  background-color: var(--negro-claro);
+  transform: translateY(-3px);
+  padding: 0.5rem 1rem .5rem .5rem;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.iconoTutorial {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.botonTutorial:hover .iconoTutorial {
+  transform: translateX(5px);
 }

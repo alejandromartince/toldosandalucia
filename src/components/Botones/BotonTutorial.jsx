@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { FiPlay } from "react-icons/fi";
 import "./BotonTutorial.css";
 
 const BotonTutorial = ({ idioma, onClick }) => {
@@ -13,7 +14,6 @@ const BotonTutorial = ({ idioma, onClick }) => {
 
   return (
     <Link
-      data-tooltip={textos[idioma] || textos.es}
       to={"products"}
       smooth={true}
       duration={300}
@@ -21,7 +21,8 @@ const BotonTutorial = ({ idioma, onClick }) => {
       className="botonTutorial"
       onClick={onClick}
     >
-      ?
+      <FiPlay className="iconoTutorial" />
+      {textos[idioma]}
     </Link>
   );
 };
