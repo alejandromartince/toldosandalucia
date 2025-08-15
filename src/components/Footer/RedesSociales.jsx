@@ -1,5 +1,6 @@
 import { FaFacebookF, FaTiktok, FaInstagram } from 'react-icons/fa';
 
+
 function RedesSociales() {
   const abrirEnlace = (e, appLink, webLink) => {
     e.preventDefault(); // evita que el <a> redireccione de inmediato

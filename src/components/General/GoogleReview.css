@@ -3,7 +3,7 @@ ESTRUCTURA GENERAL
 ============================ */
 .googleReviews-container {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-bottom: 6rem;
   gap: 4rem;
   display: flex;
@@ -31,7 +31,6 @@ MORE OPINIONS
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
 }
 
 .moreOpinions a{

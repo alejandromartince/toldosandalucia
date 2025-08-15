@@ -6,7 +6,8 @@ import { useIdioma } from '../../Hooks/General/useIdioma.js'
 
 //Importamos los iconos
 import { FaTiktok, FaWhatsapp, FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { FaInstagram, FaPhone } from "react-icons/fa6";
 
 //Importamos los estilos
 import './FooterDefault.css'
@@ -49,8 +50,9 @@ const FooterDefault = () => {
                 <FaWhatsapp size={25} />
               </a>
             </div>
-            <p style={{ textShadow: "none" }}>{i.telefono}</p>
-            <div className="espaciador"></div>
+            <a href="tel:+34952562668" style={{ textShadow: "none" }} aria-label={alt.telefono}>{i.telefono}<FaPhone size={17}/></a>
+
+            <a href="mailto:info@toldosandalucia.com">info@toldosandalucia.com <MdEmail size={25}/></a>
           </div>
         </div>
 

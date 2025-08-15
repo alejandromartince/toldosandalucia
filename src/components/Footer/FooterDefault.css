@@ -82,8 +82,14 @@ INFO AYUDA
 .info-ayuda-parrafos a {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .7rem;
   text-decoration: none;
+}
+
+.info-ayuda-parrafos p{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
 }
 
 /*=============================

@@ -46,7 +46,7 @@ NECESITAS AYUDA?
 ============================ */
 .fm-info-ayuda-parrafos {
   padding-top: 1rem;
-  height: 80px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -55,6 +55,12 @@ NECESITAS AYUDA?
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+.fm-info-ayuda-parrafos a{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
 }
 
 /* ============================
